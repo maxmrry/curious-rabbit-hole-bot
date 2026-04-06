@@ -35,23 +35,23 @@ def save_memory(memory):
         json.dump(memory, f, indent=4)
 
 def get_research_strategy(memory):
+    """Gemini picks 3 distinct themes and 1 specific query for each."""
     prompt = f"""
-    You are an elite cultural researcher and documentary curator. Your goal is to find deeply interesting, 
-    fringe, or insightful content (documentaries, podcasts, anthropology, meta-discussions).
+    You are an elite cultural researcher. Your goal is to curate a daily variety feed of deeply interesting content.
     
     Here is your current profile:
-    - Core Interests: {', '.join(memory['core_interests'])}
+    - Core Interests: {', '.join(memory.get('core_interests', []))}
     - The Director's Current Curiosities: {', '.join(CURRENT_CURIOSITIES)}
-    - History (Do NOT repeat these): {', '.join(memory['history'][-10:])}
+    - History (Do NOT repeat these): {', '.join(memory.get('history', [])[-15:])}
     
     Task:
-    1. Define a 'Daily Theme'. You can either pick one of the 'Director's Current Curiosities' that hasn't been covered in History, OR pick a highly interesting adjacent topic to them. Be intelligent—don't get stuck on one topic for days.
-    2. Provide 3 distinct search queries to find different angles (e.g. one for a documentary, one for a podcast, one for a specific fringe expert).
+    1. Define exactly 3 distinct 'Daily Themes'. Mix them up! Pick one from the Director's Curiosities, one from Core Interests, and one completely surprising adjacent topic.
+    2. Provide exactly 1 highly specific YouTube search query for EACH theme (3 queries total) prioritizing documentaries, podcasts, and deep-dives.
     
     Format your response EXACTLY as a JSON object:
     {{
-        "daily_theme": "The psychological impact of declining birth rates in Gen Z",
-        "queries": ["Gen Z baby bust documentary", "The Gray Area birth rate podcast", "anthropology of modern family structures"]
+        "daily_themes": ["Gen Z birth rate psychology", "Heaven's Gate early internet cult", "Anthropology of digital nomads"],
+        "queries": ["Gen Z baby bust documentary", "Heaven's gate early internet cult deep dive", "digital nomad anthropology podcast"]
     }}
     """
     response = model.generate_content(prompt)
@@ -66,7 +66,7 @@ def search_youtube(queries):
         request = youtube.search().list(
             q=q,
             part='snippet',
-            maxResults=5,
+            maxResults=4, # Grabs top 4 for each of the 3 themes (12 total)
             type='video',
             order='relevance'
         )
@@ -81,42 +81,49 @@ def search_youtube(queries):
             })
     return raw_results
 
-def curate_videos(theme, videos):
+def curate_videos(themes, videos):
+    theme_str = ", ".join(themes)
     video_list_text = "\n".join([f"ID: {i} | Title: {v['title']} | Desc: {v['description']}" for i, v in enumerate(videos)])
     
     prompt = f"""
-    You are curating a feed about: "{theme}".
-    Review the following search results and pick the TOP 6 most high-quality, relevant items. 
-    Discard anything irrelevant, low-effort, or spam. Prioritize documentaries, deep-dives, podcasts, and academic research.
+    You are curating a feed covering these topics: {theme_str}.
+    Review the following search results and pick the TOP 6-8 most high-quality, relevant items that represent a good mix of all three topics. 
+    Discard anything irrelevant, low-effort, or spam.
     
     Results:
     {video_list_text}
     
-    Respond with ONLY a comma-separated list of the IDs you choose (e.g. 0, 2, 5, 9).
+    Respond with ONLY a comma-separated list of the IDs you choose (e.g. 0, 2, 5, 9, 10, 11).
     """
     response = model.generate_content(prompt)
     try:
         selected_ids = [int(i.strip()) for i in response.text.split(',')]
         return [videos[i] for i in selected_ids if i < len(videos)]
     except:
-        return videos[:6]
+        return videos[:8]
 
-def build_rss_feed(theme, videos, now):
+def build_rss_feed(themes, videos, now):
     fg = FeedGenerator()
     fg.title('Curious Agent: Intelligence Feed')
-    fg.link(href='https://maxmrry.github.io/curious-rabbit-hole-bot/docs/', rel='alternate')
+    fg.link(href='https://maxmrry.github.io/curious-rabbit-hole-bot/', rel='alternate')
     fg.description('An intelligent agent exploring anthropology, fringe culture, and social dynamics.')
     
     image_url = 'https://raw.githubusercontent.com/maxmrry/curious-rabbit-hole-bot/main/bot-logo.png'
     fg.logo(image_url)
-    fg.image(url=image_url, title='Curious Agent', link='https://maxmrry.github.io/curious-rabbit-hole-bot/docs/feed.xml')
+    fg.image(url=image_url, title='Curious Agent', link='https://maxmrry.github.io/curious-rabbit-hole-bot/feed.xml')
+
+    # Format the daily message: "Topic A, Topic B & Topic C"
+    if len(themes) > 1:
+        themes_formatted = ", ".join(themes[:-1]) + " & " + themes[-1]
+    else:
+        themes_formatted = themes[0]
 
     fe = fg.add_entry()
-    fe.title(f"🟦 Daily Rabbit Hole: {theme.upper()}")
-    fe.link(href=f"https://maxmrry.github.io/curious-rabbit-hole-bot/#theme-{now.strftime('%Y%m%d')}")
-    fe.description(f"Today the agent is exploring: <b>{theme}</b>. It has curated {len(videos)} deep-dives for you.")
+    fe.title(f"🔵 Daily Rabbit Holes: {themes_formatted.upper()}")
+    fe.link(href=f"https://maxmrry.github.io/curious-rabbit-hole-bot/#themes-{now.strftime('%Y%m%d')}")
+    fe.description(f"Today the agent is exploring: <b>{themes_formatted}</b>.<br><br>It has curated {len(videos)} deep-dives for you.")
     fe.pubDate(now)
-    fe.id(f"theme-{now.strftime('%Y%m%d')}")
+    fe.id(f"themes-{now.strftime('%Y%m%d')}")
 
     for v in videos:
         fe = fg.add_entry()
@@ -132,20 +139,19 @@ def build_rss_feed(theme, videos, now):
     fg.rss_file('docs/feed.xml')
 
 def build_error_feed(error_msg, now):
-    """Fallback generator that creates an SOS RSS feed if the bot crashes."""
     fg = FeedGenerator()
     fg.title('Curious Agent: SYSTEM OFFLINE')
-    fg.link(href='https://maxmrry.github.io/curious-rabbit-hole-bot/docs/', rel='alternate')
+    fg.link(href='https://maxmrry.github.io/curious-rabbit-hole-bot/', rel='alternate')
     fg.description('The agent encountered a critical error and requires maintenance.')
     
     image_url = 'https://raw.githubusercontent.com/maxmrry/curious-rabbit-hole-bot/main/bot-logo.png'
     fg.logo(image_url)
-    fg.image(url=image_url, title='Curious Agent Error', link='https://maxmrry.github.io/curious-rabbit-hole-bot/docs/feed.xml')
+    fg.image(url=image_url, title='Curious Agent Error', link='https://maxmrry.github.io/curious-rabbit-hole-bot/feed.xml')
 
     fe = fg.add_entry()
     fe.title("⚠️ CRITICAL ERROR: Agent requires maintenance")
     fe.link(href=f"https://maxmrry.github.io/curious-rabbit-hole-bot/#error-{now.strftime('%Y%m%d%H%M')}")
-    fe.description(f"The autonomous agent crashed during its last run. <br><br><b>Error Details:</b><br><code>{error_msg}</code><br><br>Please check the GitHub Actions logs to fix the issue.")
+    fe.description(f"The autonomous agent crashed during its last run. <br><br><b>Error Details:</b><br><code>{error_msg}</code>")
     fe.pubDate(now)
     fe.id(f"error-{now.strftime('%Y%m%d%H%M')}")
 
@@ -155,40 +161,41 @@ def build_error_feed(error_msg, now):
 def main():
     now = datetime.now(TIMEZONE)
     
-    # 🛡️ THE SHIELD: Try to run the bot normally
     try:
         memory = load_memory()
         today_str = now.strftime("%Y-%m-%d")
         
+        # Handle the transition from the old "current_theme" string to the new "current_themes" list
+        if 'current_theme' in memory:
+            memory['current_themes'] = [memory['current_theme']]
+            del memory['current_theme']
+            save_memory(memory)
+
         if memory.get('last_topic_date') != today_str:
-            print("Brain is thinking of new angles based on Director's Curiosities...")
+            print("Brain is thinking of new multi-topic angles...")
             strategy = get_research_strategy(memory)
-            memory['current_theme'] = strategy['daily_theme']
+            memory['current_themes'] = strategy['daily_themes']
             memory['current_queries'] = strategy['queries']
             memory['last_topic_date'] = today_str
-            memory['history'].append(strategy['daily_theme'])
+            # Add all 3 new themes to history
+            memory['history'].extend(strategy['daily_themes'])
             save_memory(memory)
         else:
-            print(f"Continuing research on: {memory.get('current_theme', 'Unknown')}")
+            print(f"Continuing research on: {', '.join(memory.get('current_themes', []))}")
 
         print(f"Searching for: {', '.join(memory['current_queries'])}")
         all_raw_videos = search_youtube(memory['current_queries'])
         
         print("Agent is curating the best content...")
-        curated_videos = curate_videos(memory['current_theme'], all_raw_videos)
+        curated_videos = curate_videos(memory['current_themes'], all_raw_videos)
         
         print("Publishing to RSS...")
-        build_rss_feed(memory['current_theme'], curated_videos, now)
+        build_rss_feed(memory['current_themes'], curated_videos, now)
         print("Mission Complete.")
         
-    # 🚨 THE FALLBACK: If anything crashes, catch the error and publish the SOS feed
     except Exception as e:
         print(f"\n🚨 CRITICAL ERROR ENCOUNTERED: {e}")
-        print("Publishing SOS to RSS feed...")
         build_error_feed(str(e), now)
-        
-        # We exit with code 1 so GitHub Actions still shows a red 'X' on the dashboard
-        # This ensures you can still see the failure in your GitHub repo history
         sys.exit(1)
 
 if __name__ == "__main__":
