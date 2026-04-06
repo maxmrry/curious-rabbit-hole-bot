@@ -1,2 +1,5 @@
 google-generativeai==0.4.1
 google-api-python-client==2.124.0
+feedgen==1.0.0
+pytz==2024.1
+python-dateutil==2.9.0.post0
