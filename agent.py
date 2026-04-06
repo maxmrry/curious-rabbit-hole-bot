@@ -13,7 +13,7 @@ TIMEZONE = pytz.timezone('Europe/London')
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 YOUTUBE_API_KEY = os.environ.get("YOUTUBE_API_KEY")
 
-# 🧠 YOUR DIRECTIVES: Change these whenever you want to steer the bot!
+# 🧠 YOUR DIRECTIVES: The jumping-off points for the bot to explore adjacent topics
 CURRENT_CURIOSITIES = [
     "declining birth rates and Gen Z",
     "the psychology of the manosphere",
@@ -35,23 +35,26 @@ def save_memory(memory):
         json.dump(memory, f, indent=4)
 
 def get_research_strategy(memory):
-    """Gemini picks 3 distinct themes and 1 specific query for each."""
     prompt = f"""
-    You are an elite cultural researcher. Your goal is to curate a daily variety feed of deeply interesting content.
+    You are an elite cultural researcher and curator. You look for highly intellectual, niche, and stimulating content.
     
-    Here is your current profile:
-    - Core Interests: {', '.join(memory.get('core_interests', []))}
-    - The Director's Current Curiosities: {', '.join(CURRENT_CURIOSITIES)}
-    - History (Do NOT repeat these): {', '.join(memory.get('history', [])[-15:])}
+    Profile:
+    - The Director's Curiosities: {', '.join(CURRENT_CURIOSITIES)}
+    
+    Taste Profile (CRITICAL):
+    - LIKES: {', '.join(memory.get('liked_examples', []))} (Seek meta-discussions, academic seminars, in-depth journalism, niche experts)
+    - DISLIKES: {', '.join(memory.get('disliked_examples', []))} (Avoid basic advice, life-hacks, uneducated rambling, pop-science)
+    
+    History (Do NOT repeat anything on this list or closely related to it): {', '.join(memory.get('history', [])[-15:])}
     
     Task:
-    1. Define exactly 3 distinct 'Daily Themes'. Mix them up! Pick one from the Director's Curiosities, one from Core Interests, and one completely surprising adjacent topic.
-    2. Provide exactly 1 highly specific YouTube search query for EACH theme (3 queries total) prioritizing documentaries, podcasts, and deep-dives.
+    1. Define exactly 3 distinct 'Daily Themes'. DO NOT just pick the Director's Curiosities literally. Instead, use them as inspiration to find highly interesting, specific, and niche ADJACENT topics. Connect the dots to something fringe or deeply intellectual that hasn't been covered in the History.
+    2. Provide 1 highly specific YouTube search query for EACH theme. Use keywords like "seminar", "lecture", "documentary", "meta-analysis", or "anthropology".
     
-    Format your response EXACTLY as a JSON object:
+    Format EXACTLY as JSON:
     {{
-        "daily_themes": ["Gen Z birth rate psychology", "Heaven's Gate early internet cult", "Anthropology of digital nomads"],
-        "queries": ["Gen Z baby bust documentary", "Heaven's gate early internet cult deep dive", "digital nomad anthropology podcast"]
+        "daily_themes": ["Adjacent Theme A", "Adjacent Theme B", "Adjacent Theme C"],
+        "queries": ["Query A", "Query B", "Query C"]
     }}
     """
     response = model.generate_content(prompt)
@@ -66,7 +69,7 @@ def search_youtube(queries):
         request = youtube.search().list(
             q=q,
             part='snippet',
-            maxResults=4, # Grabs top 4 for each of the 3 themes (12 total)
+            maxResults=6, # Grabs a wider net (18 total) so the curator has more to filter through
             type='video',
             order='relevance'
         )
@@ -81,19 +84,24 @@ def search_youtube(queries):
             })
     return raw_results
 
-def curate_videos(themes, videos):
+def curate_videos(themes, videos, memory):
     theme_str = ", ".join(themes)
     video_list_text = "\n".join([f"ID: {i} | Title: {v['title']} | Desc: {v['description']}" for i, v in enumerate(videos)])
     
     prompt = f"""
-    You are curating a feed covering these topics: {theme_str}.
-    Review the following search results and pick the TOP 6-8 most high-quality, relevant items that represent a good mix of all three topics. 
-    Discard anything irrelevant, low-effort, or spam.
+    You are the final editorial filter for a high-end intelligence feed covering: {theme_str}.
+    Your job is to aggressively filter out garbage and only keep the absolute best 6-8 videos.
+    
+    FILTERING RULES:
+    1. REJECT anything resembling these disliked topics: {', '.join(memory.get('disliked_examples', []))}
+    2. REJECT basic "how-to" advice, life-hacks, vlogs, and uneducated rambling.
+    3. KEEP highly specific, intellectually stimulating, meta-discussions, and in-depth niche lectures (even if they have low views).
+    4. KEEP content matching the tone of these liked topics: {', '.join(memory.get('liked_examples', []))}
     
     Results:
     {video_list_text}
     
-    Respond with ONLY a comma-separated list of the IDs you choose (e.g. 0, 2, 5, 9, 10, 11).
+    Respond with ONLY a comma-separated list of the IDs you choose (e.g. 0, 2, 5, 9, 10).
     """
     response = model.generate_content(prompt)
     try:
@@ -112,7 +120,6 @@ def build_rss_feed(themes, videos, now):
     fg.logo(image_url)
     fg.image(url=image_url, title='Curious Agent', link='https://maxmrry.github.io/curious-rabbit-hole-bot/feed.xml')
 
-    # Format the daily message: "Topic A, Topic B & Topic C"
     if len(themes) > 1:
         themes_formatted = ", ".join(themes[:-1]) + " & " + themes[-1]
     else:
@@ -165,19 +172,22 @@ def main():
         memory = load_memory()
         today_str = now.strftime("%Y-%m-%d")
         
-        # Handle the transition from the old "current_theme" string to the new "current_themes" list
+        # Clean up legacy 'core_interests' if they still exist in memory
+        if 'core_interests' in memory:
+            del memory['core_interests']
+            save_memory(memory)
+
         if 'current_theme' in memory:
             memory['current_themes'] = [memory['current_theme']]
             del memory['current_theme']
             save_memory(memory)
 
         if memory.get('last_topic_date') != today_str:
-            print("Brain is thinking of new multi-topic angles...")
+            print("Brain is thinking of new adjacent multi-topic angles...")
             strategy = get_research_strategy(memory)
             memory['current_themes'] = strategy['daily_themes']
             memory['current_queries'] = strategy['queries']
             memory['last_topic_date'] = today_str
-            # Add all 3 new themes to history
             memory['history'].extend(strategy['daily_themes'])
             save_memory(memory)
         else:
@@ -187,7 +197,7 @@ def main():
         all_raw_videos = search_youtube(memory['current_queries'])
         
         print("Agent is curating the best content...")
-        curated_videos = curate_videos(memory['current_themes'], all_raw_videos)
+        curated_videos = curate_videos(memory['current_themes'], all_raw_videos, memory)
         
         print("Publishing to RSS...")
         build_rss_feed(memory['current_themes'], curated_videos, now)
