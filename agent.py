@@ -64,10 +64,19 @@ def search_youtube(query):
 def build_rss_feed(topic, videos, now):
     fg = FeedGenerator()
     fg.title('Daily Rabbit Hole Feed')
-    fg.link(href='https://maxmrry.github.io/curious-rabbit-hole-bot/docs/', rel='alternate')
+    
+    # Point the alternate link to the docs folder so the RSS app finds the index.html favicon
+    fg.link(href='https://YOUR_USERNAME.github.io/YOUR_REPO/docs/', rel='alternate')
     fg.description('An autonomous agent exploring interesting topics.')
     
-    # 1. Add the "Daily Topic Reminder" (Using your previous logic!)
+    # --- ADD MAIN FEED IMAGE ---
+    # Replace with your actual raw image URL
+    image_url = 'https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/bot-logo.png'
+    fg.logo(image_url)
+    fg.image(url=image_url, title='Daily Rabbit Hole Feed', link='https://YOUR_USERNAME.github.io/YOUR_REPO/docs/feed.xml')
+    # ---------------------------
+
+    # 1. Add the "Daily Topic Reminder"
     fe = fg.add_entry()
     fe.title(f"🐇 Today's Rabbit Hole: {topic.upper()}")
     fe.link(href=f"https://maxmrry.github.io/curious-rabbit-hole-bot/#topic-{now.strftime('%Y%m%d')}")
