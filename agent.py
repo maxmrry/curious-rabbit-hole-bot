@@ -1,5 +1,6 @@
 import json
 import os
+import sys
 import google.generativeai as genai
 from googleapiclient.discovery import build
 from feedgen.feed import FeedGenerator
@@ -34,7 +35,6 @@ def save_memory(memory):
         json.dump(memory, f, indent=4)
 
 def get_research_strategy(memory):
-    """Gemini defines the theme and 3 specific search queries for variety."""
     prompt = f"""
     You are an elite cultural researcher and documentary curator. Your goal is to find deeply interesting, 
     fringe, or insightful content (documentaries, podcasts, anthropology, meta-discussions).
@@ -82,7 +82,6 @@ def search_youtube(queries):
     return raw_results
 
 def curate_videos(theme, videos):
-    """Gemini reviews the search results and picks the best ones, discarding junk."""
     video_list_text = "\n".join([f"ID: {i} | Title: {v['title']} | Desc: {v['description']}" for i, v in enumerate(videos)])
     
     prompt = f"""
@@ -112,7 +111,6 @@ def build_rss_feed(theme, videos, now):
     fg.logo(image_url)
     fg.image(url=image_url, title='Curious Agent', link='https://maxmrry.github.io/curious-rabbit-hole-bot/docs/feed.xml')
 
-    # 1. THE DAILY MESSAGE
     fe = fg.add_entry()
     fe.title(f"💡 Daily Rabbit Hole: {theme.upper()}")
     fe.link(href=f"https://maxmrry.github.io/curious-rabbit-hole-bot/#theme-{now.strftime('%Y%m%d')}")
@@ -120,7 +118,6 @@ def build_rss_feed(theme, videos, now):
     fe.pubDate(now)
     fe.id(f"theme-{now.strftime('%Y%m%d')}")
 
-    # 2. THE CURATED VIDEOS
     for v in videos:
         fe = fg.add_entry()
         fe.title(v['title'])
@@ -134,31 +131,65 @@ def build_rss_feed(theme, videos, now):
     os.makedirs('docs', exist_ok=True)
     fg.rss_file('docs/feed.xml')
 
-def main():
-    memory = load_memory()
-    now = datetime.now(TIMEZONE)
-    today_str = now.strftime("%Y-%m-%d")
+def build_error_feed(error_msg, now):
+    """Fallback generator that creates an SOS RSS feed if the bot crashes."""
+    fg = FeedGenerator()
+    fg.title('Curious Agent: SYSTEM OFFLINE')
+    fg.link(href='https://maxmrry.github.io/curious-rabbit-hole-bot/docs/', rel='alternate')
+    fg.description('The agent encountered a critical error and requires maintenance.')
     
-    if memory.get('last_topic_date') != today_str:
-        print("Brain is thinking of new angles based on Director's Curiosities...")
-        strategy = get_research_strategy(memory)
-        memory['current_theme'] = strategy['daily_theme']
-        memory['current_queries'] = strategy['queries']
-        memory['last_topic_date'] = today_str
-        memory['history'].append(strategy['daily_theme'])
-        save_memory(memory)
-    else:
-        print(f"Continuing research on: {memory.get('current_theme', 'Unknown')}")
+    image_url = 'https://raw.githubusercontent.com/maxmrry/curious-rabbit-hole-bot/main/bot-logo.png'
+    fg.logo(image_url)
+    fg.image(url=image_url, title='Curious Agent Error', link='https://maxmrry.github.io/curious-rabbit-hole-bot/docs/feed.xml')
 
-    print(f"Searching for: {', '.join(memory['current_queries'])}")
-    all_raw_videos = search_youtube(memory['current_queries'])
+    fe = fg.add_entry()
+    fe.title("⚠️ CRITICAL ERROR: Agent requires maintenance")
+    fe.link(href=f"https://maxmrry.github.io/curious-rabbit-hole-bot/#error-{now.strftime('%Y%m%d%H%M')}")
+    fe.description(f"The autonomous agent crashed during its last run. <br><br><b>Error Details:</b><br><code>{error_msg}</code><br><br>Please check the GitHub Actions logs to fix the issue.")
+    fe.pubDate(now)
+    fe.id(f"error-{now.strftime('%Y%m%d%H%M')}")
+
+    os.makedirs('docs', exist_ok=True)
+    fg.rss_file('docs/feed.xml')
+
+def main():
+    now = datetime.now(TIMEZONE)
     
-    print("Agent is curating the best content...")
-    curated_videos = curate_videos(memory['current_theme'], all_raw_videos)
-    
-    print("Publishing to RSS...")
-    build_rss_feed(memory['current_theme'], curated_videos, now)
-    print("Mission Complete.")
+    # 🛡️ THE SHIELD: Try to run the bot normally
+    try:
+        memory = load_memory()
+        today_str = now.strftime("%Y-%m-%d")
+        
+        if memory.get('last_topic_date') != today_str:
+            print("Brain is thinking of new angles based on Director's Curiosities...")
+            strategy = get_research_strategy(memory)
+            memory['current_theme'] = strategy['daily_theme']
+            memory['current_queries'] = strategy['queries']
+            memory['last_topic_date'] = today_str
+            memory['history'].append(strategy['daily_theme'])
+            save_memory(memory)
+        else:
+            print(f"Continuing research on: {memory.get('current_theme', 'Unknown')}")
+
+        print(f"Searching for: {', '.join(memory['current_queries'])}")
+        all_raw_videos = search_youtube(memory['current_queries'])
+        
+        print("Agent is curating the best content...")
+        curated_videos = curate_videos(memory['current_theme'], all_raw_videos)
+        
+        print("Publishing to RSS...")
+        build_rss_feed(memory['current_theme'], curated_videos, now)
+        print("Mission Complete.")
+        
+    # 🚨 THE FALLBACK: If anything crashes, catch the error and publish the SOS feed
+    except Exception as e:
+        print(f"\n🚨 CRITICAL ERROR ENCOUNTERED: {e}")
+        print("Publishing SOS to RSS feed...")
+        build_error_feed(str(e), now)
+        
+        # We exit with code 1 so GitHub Actions still shows a red 'X' on the dashboard
+        # This ensures you can still see the failure in your GitHub repo history
+        sys.exit(1)
 
 if __name__ == "__main__":
     main()
