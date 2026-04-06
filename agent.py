@@ -12,8 +12,17 @@ TIMEZONE = pytz.timezone('Europe/London')
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 YOUTUBE_API_KEY = os.environ.get("YOUTUBE_API_KEY")
 
+# 🧠 YOUR DIRECTIVES: Change these whenever you want to steer the bot!
+CURRENT_CURIOSITIES = [
+    "declining birth rates and Gen Z",
+    "the psychology of the manosphere",
+    "Louis Theroux style fringe documentaries",
+    "Human anthropology, ecology, sociology, psychology, why we do things, interesting biological mechanisms, environmental disruptors and ways to mitigate",
+    "the power of negativity bias"
+]
+
 genai.configure(api_key=GEMINI_API_KEY)
-model = genai.GenerativeModel('gemini-2.0-flash') # Using the latest active model
+model = genai.GenerativeModel('gemini-2.5-flash')
 # ---------------------
 
 def load_memory():
@@ -27,15 +36,16 @@ def save_memory(memory):
 def get_research_strategy(memory):
     """Gemini defines the theme and 3 specific search queries for variety."""
     prompt = f"""
-    You are an elite cultural researcher like Louis Theroux. Your goal is to find deeply interesting, 
+    You are an elite cultural researcher and documentary curator. Your goal is to find deeply interesting, 
     fringe, or insightful content (documentaries, podcasts, anthropology, meta-discussions).
     
-    Core Interests: {', '.join(memory['core_interests'])}
-    Last Rabbit Hole: '{memory['current_rabbit_hole']}'
-    History: {', '.join(memory['history'][-10:])}
+    Here is your current profile:
+    - Core Interests: {', '.join(memory['core_interests'])}
+    - The Director's Current Curiosities: {', '.join(CURRENT_CURIOSITIES)}
+    - History (Do NOT repeat these): {', '.join(memory['history'][-10:])}
     
     Task:
-    1. Define a 'Daily Theme' that is a logical but surprising jump from the last topic.
+    1. Define a 'Daily Theme'. You can either pick one of the 'Director's Current Curiosities' that hasn't been covered in History, OR pick a highly interesting adjacent topic to them. Be intelligent—don't get stuck on one topic for days.
     2. Provide 3 distinct search queries to find different angles (e.g. one for a documentary, one for a podcast, one for a specific fringe expert).
     
     Format your response EXACTLY as a JSON object:
@@ -45,7 +55,6 @@ def get_research_strategy(memory):
     }}
     """
     response = model.generate_content(prompt)
-    # Extract JSON from response (handling potential markdown formatting)
     json_str = re.search(r'\{.*\}', response.text, re.DOTALL).group()
     return json.loads(json_str)
 
@@ -79,8 +88,7 @@ def curate_videos(theme, videos):
     prompt = f"""
     You are curating a feed about: "{theme}".
     Review the following search results and pick the TOP 6 most high-quality, relevant items. 
-    Discard anything irrelevant (e.g. if the theme is a virtual community called 'The Well', discard physical water wells).
-    Prioritize documentaries, deep-dives, and academic research.
+    Discard anything irrelevant, low-effort, or spam. Prioritize documentaries, deep-dives, podcasts, and academic research.
     
     Results:
     {video_list_text}
@@ -92,7 +100,7 @@ def curate_videos(theme, videos):
         selected_ids = [int(i.strip()) for i in response.text.split(',')]
         return [videos[i] for i in selected_ids if i < len(videos)]
     except:
-        return videos[:6] # Fallback to first 6 if Gemini's list is messy
+        return videos[:6]
 
 def build_rss_feed(theme, videos, now):
     fg = FeedGenerator()
@@ -100,7 +108,6 @@ def build_rss_feed(theme, videos, now):
     fg.link(href='https://maxmrry.github.io/curious-rabbit-hole-bot/docs/', rel='alternate')
     fg.description('An intelligent agent exploring anthropology, fringe culture, and social dynamics.')
     
-    # Custom logo (index.html trick)
     image_url = 'https://raw.githubusercontent.com/maxmrry/curious-rabbit-hole-bot/main/bot-logo.png'
     fg.logo(image_url)
     fg.image(url=image_url, title='Curious Agent', link='https://maxmrry.github.io/curious-rabbit-hole-bot/docs/feed.xml')
@@ -113,6 +120,7 @@ def build_rss_feed(theme, videos, now):
     fe.pubDate(now)
     fe.id(f"theme-{now.strftime('%Y%m%d')}")
 
+    # 2. THE CURATED VIDEOS
     for v in videos:
         fe = fg.add_entry()
         fe.title(v['title'])
@@ -131,9 +139,8 @@ def main():
     now = datetime.now(TIMEZONE)
     today_str = now.strftime("%Y-%m-%d")
     
-    # 1. Determine Strategy
     if memory.get('last_topic_date') != today_str:
-        print("Brain is thinking of new angles...")
+        print("Brain is thinking of new angles based on Director's Curiosities...")
         strategy = get_research_strategy(memory)
         memory['current_theme'] = strategy['daily_theme']
         memory['current_queries'] = strategy['queries']
@@ -141,17 +148,14 @@ def main():
         memory['history'].append(strategy['daily_theme'])
         save_memory(memory)
     else:
-        print(f"Continuing research on: {memory['current_theme']}")
+        print(f"Continuing research on: {memory.get('current_theme', 'Unknown')}")
 
-    # 2. Execute Search
     print(f"Searching for: {', '.join(memory['current_queries'])}")
     all_raw_videos = search_youtube(memory['current_queries'])
     
-    # 3. Curation (The Filter)
     print("Agent is curating the best content...")
     curated_videos = curate_videos(memory['current_theme'], all_raw_videos)
     
-    # 4. Build RSS
     print("Publishing to RSS...")
     build_rss_feed(memory['current_theme'], curated_videos, now)
     print("Mission Complete.")
