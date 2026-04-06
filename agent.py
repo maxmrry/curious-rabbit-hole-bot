@@ -112,7 +112,7 @@ def build_rss_feed(theme, videos, now):
     fg.image(url=image_url, title='Curious Agent', link='https://maxmrry.github.io/curious-rabbit-hole-bot/docs/feed.xml')
 
     fe = fg.add_entry()
-    fe.title(f"💡 Daily Rabbit Hole: {theme.upper()}")
+    fe.title(f"🟦 Daily Rabbit Hole: {theme.upper()}")
     fe.link(href=f"https://maxmrry.github.io/curious-rabbit-hole-bot/#theme-{now.strftime('%Y%m%d')}")
     fe.description(f"Today the agent is exploring: <b>{theme}</b>. It has curated {len(videos)} deep-dives for you.")
     fe.pubDate(now)
