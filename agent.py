@@ -64,13 +64,13 @@ def search_youtube(query):
 def build_rss_feed(topic, videos, now):
     fg = FeedGenerator()
     fg.title('Daily Rabbit Hole Feed')
-    fg.link(href='https://YOUR_USERNAME.github.io/YOUR_REPO/docs/', rel='alternate')
+    fg.link(href='https://maxmrry.github.io/curious-rabbit-hole-bot/docs/', rel='alternate')
     fg.description('An autonomous agent exploring interesting topics.')
     
     # 1. Add the "Daily Topic Reminder" (Using your previous logic!)
     fe = fg.add_entry()
     fe.title(f"🐇 Today's Rabbit Hole: {topic.upper()}")
-    fe.link(href=f"https://YOUR_USERNAME.github.io/YOUR_REPO/#topic-{now.strftime('%Y%m%d')}")
+    fe.link(href=f"https://maxmrry.github.io/curious-rabbit-hole-bot/#topic-{now.strftime('%Y%m%d')}")
     fe.description(f"The agent is currently researching: <b>{topic}</b>")
     fe.pubDate(now)
     fe.id(f"topic-{now.strftime('%Y%m%d')}")
