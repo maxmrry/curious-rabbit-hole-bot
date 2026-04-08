@@ -196,17 +196,30 @@ def main():
     try:
         memory = load_memory()
         today_str = now.strftime("%Y-%m-%d")
+        
+        # 🛑 THE API QUOTA SAVER 🛑
+        # If the bot has already run today, exit immediately. 0 API calls made.
+        if memory.get('last_topic_date') == today_str:
+            print(f"Daily quota protected: Already published a feed for {today_str}. Going back to sleep.")
+            sys.exit(0) # Exits cleanly without failing the GitHub Action
 
-        if memory.get('last_topic_date') != today_str:
-            print("Brain is thinking of new adjacent multi-topic angles...")
-            strategy = get_research_strategy(memory)
-            memory['current_themes'] = strategy['daily_themes']
-            memory['current_queries'] = strategy['queries']
-            memory['last_topic_date'] = today_str
-            memory['history'].extend(strategy['daily_themes'])
+        # Clean up legacy 'core_interests' if they still exist in memory
+        if 'core_interests' in memory:
+            del memory['core_interests']
             save_memory(memory)
-        else:
-            print(f"Continuing research on: {', '.join(memory.get('current_themes', []))}")
+
+        if 'current_theme' in memory:
+            memory['current_themes'] = [memory['current_theme']]
+            del memory['current_theme']
+            save_memory(memory)
+
+        print("Brain is thinking of new adjacent multi-topic angles...")
+        strategy = get_research_strategy(memory)
+        memory['current_themes'] = strategy['daily_themes']
+        memory['current_queries'] = strategy['queries']
+        memory['last_topic_date'] = today_str
+        memory['history'].extend(strategy['daily_themes'])
+        save_memory(memory)
 
         print(f"Searching for initial queries: {', '.join(memory['current_queries'])}")
         all_raw_videos = search_youtube(memory['current_queries'])
@@ -217,7 +230,7 @@ def main():
         # --- THE ADAPTIVE LOOP WITH PACING ---
         if len(curated_videos) < 6:
             print(f"Only found {len(curated_videos)} good videos. Sleeping for 45 seconds to respect API limits...")
-            time.sleep(45) # Pause to reset the requests-per-minute counter
+            time.sleep(45)
             
             new_queries = get_broader_queries(memory['current_themes'], memory['current_queries'])
             print(f"Trying broader queries: {', '.join(new_queries)}")
@@ -228,7 +241,7 @@ def main():
             all_raw_videos = list(combined_raw)
             
             print("Sleeping for another 45 seconds before final curation pass...")
-            time.sleep(45) # Pause again before asking Gemini to read the new list
+            time.sleep(45)
             
             print("Running second curation pass on expanded pool...")
             curated_videos = curate_videos(memory['current_themes'], all_raw_videos, memory)
@@ -254,3 +267,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
