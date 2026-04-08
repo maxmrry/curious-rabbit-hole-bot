@@ -40,16 +40,17 @@ def get_research_strategy(memory):
     
     Profile:
     - The Director's Curiosities: {', '.join(CURRENT_CURIOSITIES)}
-    
-    Taste Profile (CRITICAL):
-    - LIKES: {', '.join(memory.get('liked_examples', []))} (Seek meta-discussions, academic seminars, in-depth journalism, niche experts)
-    - DISLIKES: {', '.join(memory.get('disliked_examples', []))} (Avoid basic advice, life-hacks, uneducated rambling, pop-science)
-    
-    History (Do NOT repeat anything on this list or closely related to it): {', '.join(memory.get('history', [])[-15:])}
+    - LIKES: {', '.join(memory.get('liked_examples', []))} 
+    - DISLIKES: {', '.join(memory.get('disliked_examples', []))}
+    - History: {', '.join(memory.get('history', [])[-15:])}
     
     Task:
-    1. Define exactly 3 distinct 'Daily Themes'. DO NOT just pick the Director's Curiosities literally. Instead, use them as inspiration to find highly interesting, specific, and niche ADJACENT topics. Connect the dots to something fringe or deeply intellectual that hasn't been covered in the History.
-    2. Provide 1 highly specific YouTube search query for EACH theme. Use keywords like "seminar", "lecture", "documentary", "meta-analysis", or "anthropology".
+    1. Define exactly 3 distinct 'Daily Themes' that are highly specific, niche, or anthropological, inspired by the Curiosities but NOT repeating the History.
+    2. Provide 1 YouTube search query for EACH theme. 
+       CRITICAL RULES FOR QUERIES: 
+       - YouTube search breaks if queries are too long. Keep queries SHORT AND PUNCHY (Max 3 to 5 words). 
+       - Good Example: "olfactory mate choice seminar"
+       - Bad Example: "The role of olfactory cues in human mate selection sociology lecture"
     
     Format EXACTLY as JSON:
     {{
@@ -61,6 +62,28 @@ def get_research_strategy(memory):
     json_str = re.search(r'\{.*\}', response.text, re.DOTALL).group()
     return json.loads(json_str)
 
+def get_broader_queries(themes, old_queries):
+    """If the first search fails, the bot asks for broader search terms."""
+    prompt = f"""
+    We are researching these themes: {', '.join(themes)}
+    The following YouTube search queries did NOT return enough high-quality academic/documentary results: {', '.join(old_queries)}
+    
+    Task: Provide exactly 3 NEW, alternative YouTube search queries.
+    - Make them BROADER and simpler.
+    - Use different academic synonyms. 
+    - STRICT RULE: Maximum 4 words per query.
+    
+    Format EXACTLY as a JSON array of strings:
+    ["new query 1", "new query 2", "new query 3"]
+    """
+    response = model.generate_content(prompt)
+    try:
+        json_str = re.search(r'\[.*\]', response.text, re.DOTALL).group()
+        return json.loads(json_str)
+    except:
+        # Failsafe if regex misses
+        return ["anthropology documentary", "sociology seminar", "psychology lecture"]
+
 def search_youtube(queries):
     youtube = build('youtube', 'v3', developerKey=YOUTUBE_API_KEY)
     raw_results = []
@@ -69,7 +92,7 @@ def search_youtube(queries):
         request = youtube.search().list(
             q=q,
             part='snippet',
-            maxResults=6, # Grabs a wider net (18 total) so the curator has more to filter through
+            maxResults=6,
             type='video',
             order='relevance'
         )
@@ -89,26 +112,27 @@ def curate_videos(themes, videos, memory):
     video_list_text = "\n".join([f"ID: {i} | Title: {v['title']} | Desc: {v['description']}" for i, v in enumerate(videos)])
     
     prompt = f"""
-    You are the final editorial filter for a high-end intelligence feed covering: {theme_str}.
-    Your job is to aggressively filter out garbage and only keep the absolute best 6-8 videos.
+    You are the strict editorial filter for a high-end intelligence feed covering: {theme_str}.
+    You have a list of {len(videos)} raw YouTube results. 
     
     FILTERING RULES:
     1. REJECT anything resembling these disliked topics: {', '.join(memory.get('disliked_examples', []))}
     2. REJECT basic "how-to" advice, life-hacks, vlogs, and uneducated rambling.
-    3. KEEP highly specific, intellectually stimulating, meta-discussions, and in-depth niche lectures (even if they have low views).
-    4. KEEP content matching the tone of these liked topics: {', '.join(memory.get('liked_examples', []))}
+    3. KEEP highly specific, intellectually stimulating, meta-discussions, and in-depth niche lectures.
+    4. BE RUTHLESS. Only select IDs that are genuinely high quality. If only 2 videos are good, only return 2 IDs. 
     
     Results:
     {video_list_text}
     
-    Respond with ONLY a comma-separated list of the IDs you choose (e.g. 0, 2, 5, 9, 10).
+    Respond with ONLY a comma-separated list of the IDs you choose (e.g. 0, 2, 5). Do not include any other text.
     """
     response = model.generate_content(prompt)
     try:
-        selected_ids = [int(i.strip()) for i in response.text.split(',')]
+        # Extract only the numbers to avoid AI conversational text
+        selected_ids = [int(i) for i in re.findall(r'\d+', response.text)]
         return [videos[i] for i in selected_ids if i < len(videos)]
     except:
-        return videos[:8]
+        return []
 
 def build_rss_feed(themes, videos, now):
     fg = FeedGenerator()
@@ -171,16 +195,6 @@ def main():
     try:
         memory = load_memory()
         today_str = now.strftime("%Y-%m-%d")
-        
-        # Clean up legacy 'core_interests' if they still exist in memory
-        if 'core_interests' in memory:
-            del memory['core_interests']
-            save_memory(memory)
-
-        if 'current_theme' in memory:
-            memory['current_themes'] = [memory['current_theme']]
-            del memory['current_theme']
-            save_memory(memory)
 
         if memory.get('last_topic_date') != today_str:
             print("Brain is thinking of new adjacent multi-topic angles...")
@@ -193,11 +207,37 @@ def main():
         else:
             print(f"Continuing research on: {', '.join(memory.get('current_themes', []))}")
 
-        print(f"Searching for: {', '.join(memory['current_queries'])}")
+        print(f"Searching for initial queries: {', '.join(memory['current_queries'])}")
         all_raw_videos = search_youtube(memory['current_queries'])
         
-        print("Agent is curating the best content...")
+        print("Agent is doing a strict curation pass...")
         curated_videos = curate_videos(memory['current_themes'], all_raw_videos, memory)
+        
+        # --- THE ADAPTIVE LOOP ---
+        if len(curated_videos) < 6:
+            print(f"Only found {len(curated_videos)} good videos. Tweaking queries to search again...")
+            new_queries = get_broader_queries(memory['current_themes'], memory['current_queries'])
+            print(f"Trying broader queries: {', '.join(new_queries)}")
+            
+            extra_raw_videos = search_youtube(new_queries)
+            
+            # Combine the pools and deduplicate videos by their ID
+            combined_raw = {v['id']: v for v in (all_raw_videos + extra_raw_videos)}.values()
+            all_raw_videos = list(combined_raw)
+            
+            print("Running second curation pass on expanded pool...")
+            curated_videos = curate_videos(memory['current_themes'], all_raw_videos, memory)
+            
+            # THE ULTIMATE FAILSAFE: If it STILL can't find 6, pad it with the least bad options so it doesn't crash
+            if len(curated_videos) < 6:
+                print("Still short on videos. Padding with the 'least bad' remaining options...")
+                selected_ids = [v['id'] for v in curated_videos]
+                for v in all_raw_videos:
+                    if v['id'] not in selected_ids:
+                        curated_videos.append(v)
+                    if len(curated_videos) >= 6:
+                        break
+        # -------------------------
         
         print("Publishing to RSS...")
         build_rss_feed(memory['current_themes'], curated_videos, now)
