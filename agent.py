@@ -216,7 +216,7 @@ def main():
         
         # --- THE ADAPTIVE LOOP WITH PACING ---
         if len(curated_videos) < 6:
-            print(f"Only found {len(curated_videos)} good videos. Sleeping for 15 seconds to respect API limits...")
+            print(f"Only found {len(curated_videos)} good videos. Sleeping for 45 seconds to respect API limits...")
             time.sleep(45) # Pause to reset the requests-per-minute counter
             
             new_queries = get_broader_queries(memory['current_themes'], memory['current_queries'])
