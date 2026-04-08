@@ -217,7 +217,7 @@ def main():
         # --- THE ADAPTIVE LOOP WITH PACING ---
         if len(curated_videos) < 6:
             print(f"Only found {len(curated_videos)} good videos. Sleeping for 15 seconds to respect API limits...")
-            time.sleep(15) # Pause to reset the requests-per-minute counter
+            time.sleep(45) # Pause to reset the requests-per-minute counter
             
             new_queries = get_broader_queries(memory['current_themes'], memory['current_queries'])
             print(f"Trying broader queries: {', '.join(new_queries)}")
@@ -227,8 +227,8 @@ def main():
             combined_raw = {v['id']: v for v in (all_raw_videos + extra_raw_videos)}.values()
             all_raw_videos = list(combined_raw)
             
-            print("Sleeping for another 15 seconds before final curation pass...")
-            time.sleep(15) # Pause again before asking Gemini to read the new list
+            print("Sleeping for another 45 seconds before final curation pass...")
+            time.sleep(45) # Pause again before asking Gemini to read the new list
             
             print("Running second curation pass on expanded pool...")
             curated_videos = curate_videos(memory['current_themes'], all_raw_videos, memory)
