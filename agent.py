@@ -203,6 +203,12 @@ def main():
     
     try:
         memory = load_memory()
+        
+        # 🛑 THE MANUAL KILL SWITCH 🛑
+        if memory.get('bot_status') == 'paused':
+            print("Bot is currently PAUSED via memory.json. Exiting peacefully.")
+            sys.exit(0)
+            
         today_str = now.strftime("%Y-%m-%d")
         
         # 🛑 THE API QUOTA SAVER 🛑
