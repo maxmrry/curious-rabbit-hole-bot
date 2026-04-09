@@ -14,7 +14,6 @@ TIMEZONE = pytz.timezone('Europe/London')
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 YOUTUBE_API_KEY = os.environ.get("YOUTUBE_API_KEY")
 
-# 🧠 YOUR DIRECTIVES: The jumping-off points for the bot to explore adjacent topics
 CURRENT_CURIOSITIES = [
     "declining birth rates and Gen Z",
     "the psychology of the manosphere",
@@ -35,6 +34,18 @@ def save_memory(memory):
     with open('memory.json', 'w') as f:
         json.dump(memory, f, indent=4)
 
+def safe_generate(prompt, retries=3):
+    """Wraps Gemini calls in a protective retry loop to survive 429 API limits."""
+    for attempt in range(retries):
+        try:
+            return model.generate_content(prompt)
+        except Exception as e:
+            if "429" in str(e) and attempt < retries - 1:
+                print(f"⚠️ API busy. Sleeping for 30 seconds before retry {attempt + 1}/{retries}...")
+                time.sleep(30)
+            else:
+                raise e
+
 def get_research_strategy(memory):
     prompt = f"""
     You are an elite cultural researcher and curator. You look for highly intellectual, niche, and stimulating content.
@@ -49,7 +60,7 @@ def get_research_strategy(memory):
     1. Define exactly 3 distinct 'Daily Themes' that are highly specific, niche, or anthropological, inspired by the Curiosities but NOT repeating the History.
     2. Provide 1 YouTube search query for EACH theme. 
        CRITICAL RULES FOR QUERIES: 
-       - YouTube search breaks if queries are too long. Keep queries SHORT AND PUNCHY (Max 3 to 5 words). 
+       - Keep queries SHORT AND PUNCHY (Max 3 to 5 words). 
        - Good Example: "olfactory mate choice seminar"
        - Bad Example: "The role of olfactory cues in human mate selection sociology lecture"
     
@@ -59,12 +70,11 @@ def get_research_strategy(memory):
         "queries": ["Query A", "Query B", "Query C"]
     }}
     """
-    response = model.generate_content(prompt)
+    response = safe_generate(prompt)
     json_str = re.search(r'\{.*\}', response.text, re.DOTALL).group()
     return json.loads(json_str)
 
 def get_broader_queries(themes, old_queries):
-    """If the first search fails, the bot asks for broader search terms."""
     prompt = f"""
     We are researching these themes: {', '.join(themes)}
     The following YouTube search queries did NOT return enough high-quality academic/documentary results: {', '.join(old_queries)}
@@ -77,12 +87,11 @@ def get_broader_queries(themes, old_queries):
     Format EXACTLY as a JSON array of strings:
     ["new query 1", "new query 2", "new query 3"]
     """
-    response = model.generate_content(prompt)
+    response = safe_generate(prompt)
     try:
         json_str = re.search(r'\[.*\]', response.text, re.DOTALL).group()
         return json.loads(json_str)
     except:
-        # Failsafe if regex misses
         return ["anthropology documentary", "sociology seminar", "psychology lecture"]
 
 def search_youtube(queries):
@@ -127,9 +136,8 @@ def curate_videos(themes, videos, memory):
     
     Respond with ONLY a comma-separated list of the IDs you choose (e.g. 0, 2, 5). Do not include any other text.
     """
-    response = model.generate_content(prompt)
+    response = safe_generate(prompt)
     try:
-        # Extract only the numbers to avoid AI conversational text
         selected_ids = [int(i) for i in re.findall(r'\d+', response.text)]
         return [videos[i] for i in selected_ids if i < len(videos)]
     except:
@@ -198,16 +206,13 @@ def main():
         today_str = now.strftime("%Y-%m-%d")
         
         # 🛑 THE API QUOTA SAVER 🛑
-        # If the bot has already run today, exit immediately. 0 API calls made.
         if memory.get('last_topic_date') == today_str:
             print(f"Daily quota protected: Already published a feed for {today_str}. Going back to sleep.")
-            sys.exit(0) # Exits cleanly without failing the GitHub Action
+            sys.exit(0)
 
-        # Clean up legacy 'core_interests' if they still exist in memory
         if 'core_interests' in memory:
             del memory['core_interests']
             save_memory(memory)
-
         if 'current_theme' in memory:
             memory['current_themes'] = [memory['current_theme']]
             del memory['current_theme']
@@ -227,7 +232,6 @@ def main():
         print("Agent is doing a strict curation pass...")
         curated_videos = curate_videos(memory['current_themes'], all_raw_videos, memory)
         
-        # --- THE ADAPTIVE LOOP WITH PACING ---
         if len(curated_videos) < 6:
             print(f"Only found {len(curated_videos)} good videos. Sleeping for 45 seconds to respect API limits...")
             time.sleep(45)
@@ -254,7 +258,6 @@ def main():
                         curated_videos.append(v)
                     if len(curated_videos) >= 6:
                         break
-        # -------------------------
         
         print("Publishing to RSS...")
         build_rss_feed(memory['current_themes'], curated_videos, now)
@@ -267,4 +270,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
