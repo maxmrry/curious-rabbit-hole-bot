@@ -1,5 +1,5 @@
 {
-    "bot_status": "paused", // paused to stop and active to start
+    "bot_status": "paused",
     "liked_examples": [
         "The Evolutionary Psychology of Mate Choice (Detailed Seminar)",
         "Endocrine-Disrupting Chemicals & implications on human health",
