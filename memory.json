@@ -3,7 +3,7 @@
     "liked_examples": [
         "The Evolutionary Psychology of Mate Choice (Detailed Seminar)",
         "Endocrine-Disrupting Chemicals & implications on human health",
-        "The Manosphere Isn’t What You Think - Louis Theroux"
+        "The Manosphere Isn\u2019t What You Think - Louis Theroux"
     ],
     "disliked_examples": [
         "remote work the art of self management (basic advice)",
@@ -13,7 +13,11 @@
         "huberman, and ManTalks",
         "pop-science and overly mainstream content"
     ],
-    "current_queries": [],
+    "current_queries": [
+        "Evolutionary mismatch fertility",
+        "Infrahumanization lecture",
+        "Urban sensory ecology"
+    ],
     "history": [
         "Usenet culture",
         "The WELL documentary",
@@ -29,8 +33,15 @@
         "Circadian Disruption as an Environmental Health Challenge: Mechanisms and Mitigation of Artificial Light at Night",
         "The Role of Olfactory Cues and Disruption in Human Mate Selection and Social Bonding",
         "The Semiotics of Apocalyptic Narratives in Contemporary Fringe Movements",
-        "The Psychological and Sociological Impact of Light Pollution Beyond Circadian Disruption"
+        "The Psychological and Sociological Impact of Light Pollution Beyond Circadian Disruption",
+        "Evolutionary Mismatch Theory & Modern Fertility",
+        "Infrahumanization & Outgroup Formation",
+        "Sensory Ecology of Urban Environments"
     ],
-    "last_topic_date": "2026-04-01",
-    "current_themes": []
+    "last_topic_date": "2026-04-11",
+    "current_themes": [
+        "Evolutionary Mismatch Theory & Modern Fertility",
+        "Infrahumanization & Outgroup Formation",
+        "Sensory Ecology of Urban Environments"
+    ]
 }
