@@ -228,9 +228,7 @@ def main():
         strategy = get_research_strategy(memory)
         memory['current_themes'] = strategy['daily_themes']
         memory['current_queries'] = strategy['queries']
-        memory['last_topic_date'] = today_str
         memory['history'].extend(strategy['daily_themes'])
-        save_memory(memory)
 
         print(f"Searching for initial queries: {', '.join(memory['current_queries'])}")
         all_raw_videos = search_youtube(memory['current_queries'])
@@ -267,6 +265,10 @@ def main():
         
         print("Publishing to RSS...")
         build_rss_feed(memory['current_themes'], curated_videos, now)
+        
+        # Move the save down here so it only locks the quota AFTER a successful feed build
+        memory['last_topic_date'] = today_str
+        save_memory(memory)
         print("Mission Complete.")
         
     except Exception as e:
