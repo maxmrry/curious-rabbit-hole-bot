@@ -102,7 +102,7 @@ def search_youtube(queries):
         request = youtube.search().list(
             q=q,
             part='snippet',
-            maxResults=6,
+            maxResults=8,
             type='video',
             order='relevance'
         )
