@@ -79,6 +79,8 @@ def get_broader_queries(themes, old_queries):
     We are researching these themes: {', '.join(themes)}
     The following YouTube search queries did NOT return enough high-quality academic/documentary results: {', '.join(old_queries)}
     
+    Make sure on collection to include videos with names of people in description to make sure theyre not faceless channels.
+    
     Task: Provide exactly 3 NEW, alternative YouTube search queries.
     - Make them BROADER and simpler.
     - Use different academic synonyms. 
