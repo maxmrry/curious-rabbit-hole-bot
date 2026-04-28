@@ -3,7 +3,9 @@ from src.adapters.podcast import fetch_listen_notes, fetch_podcast_index
 from src.adapters.news import fetch_relevant_news
 from src.adapters.youtube import fetch_youtube_whitelist
 from src.adapters.rss import fetch_rss_whitelist
+import time
 from src.pipeline.memory_mgr import is_unseen, passes_veto_check
+from src.pipeline.philosophy import semantic_triage
 
 def load_policy(filepath='policy/policy.yaml'):
     """Loads the hardcoded ratios and rules for the agent."""
@@ -14,51 +16,81 @@ def load_policy(filepath='policy/policy.yaml'):
         print("🚨 Critical: policy.yaml not found.")
         return {}
 
-def build_candidate_pool(memory):
+def select_daily_items(memory):
     """
-    Orchestrates all adapters, gathers data, and applies strict hard-filtering.
-    Returns a clean pool of highly vetted, unseen items.
+    Gathers data, applies hard age-limits, calls Gemini for Semantic Triage, 
+    and mathematically selects the 4 Positivity and 1 Deep Dive items.
     """
     candidates = []
+    now_ms = int(time.time() * 1000)
+    fourteen_days_ms = 14 * 24 * 60 * 60 * 1000
     
-    # --- 1. GATHER DATA ---
-    print("📡 Fetching from RSS Whitelist...")
-    candidates.extend(fetch_rss_whitelist())
-    
-    print("📡 Fetching from YouTube Whitelist...")
-    candidates.extend(fetch_youtube_whitelist())
-    
-    print("📡 Fetching Podcasts (Positivity & Deep Dives)...")
-    # We supply specific queries to guarantee we have material for both ratios
-    candidates.extend(fetch_listen_notes('post-traumatic growth OR resilience OR relationship psychology'))
-    candidates.extend(fetch_listen_notes('anthropology OR sociology OR subculture'))
-    
-    print("📡 Fetching Global News...")
-    news_items = fetch_relevant_news()
-    
-    # Apply the mathematical news filter immediately
-    for news in news_items:
-        metrics = news.get("scoring_metrics", {})
-        if metrics.get("hopeful_rewrite_eligible", False):
-            candidates.append(news)
-        else:
-            print(f"🛑 Dropped News: '{news['title']}' (Failed positivity math)")
+    print("📡 Fetching raw data from all sources...")
+    raw_items = []
+    raw_items.extend(fetch_rss_whitelist())
+    raw_items.extend(fetch_youtube_whitelist())
+    raw_items.extend(fetch_listen_notes('post-traumatic growth OR relationship psychology'))
+    raw_items.extend(fetch_listen_notes('anthropology OR sociology OR digital subculture'))
+    raw_items.extend(fetch_relevant_news())
 
-    # --- 2. HARD FILTERING ---
-    clean_pool = []
-    dropped_seen = 0
-    
-    for item in candidates:
-        # Check 1: Is it a duplicate?
+    # --- 1. PYTHON HARD FILTERING ---
+    for item in raw_items:
         if not is_unseen(item["canonical_hash"], memory):
-            dropped_seen += 1
             continue
-            
-        # Check 2: Does it contain apocalyptic/fearmongering veto words?
         if not passes_veto_check(item):
             continue
             
-        clean_pool.append(item)
-        
-    print(f"🧠 Brain Summary: Dropped {dropped_seen} seen items. Clean candidate pool size: {len(clean_pool)}")
-    return clean_pool
+        # Strict Freshness Rule for fast-moving media
+        if item["source_type"] in ["news", "rss"]:
+            if (now_ms - item["published_date_ms"]) > fourteen_days_ms:
+                continue # Drop old news silently
+                
+        candidates.append(item)
+
+    # Cap candidates to save Gemini tokens
+    candidates = candidates[:40]
+    if not candidates:
+        return []
+
+    print(f"🧠 Sending {len(candidates)} items to Gemini for Semantic Triage...")
+    
+    # --- 2. GEMINI SEMANTIC TRIAGE ---
+    scored_metrics = semantic_triage(candidates)
+    score_map = {s["native_id"]: s for s in scored_metrics}
+
+    pool_positivity = []
+    pool_deep_dive = []
+
+    # --- 3. THE SORTING HAT (Math) ---
+    for item in candidates:
+        scores = score_map.get(item["native_id"])
+        if not scores:
+            continue
+            
+        # Hard Brakes
+        if scores.get("fear_score", 0) > 5 or scores.get("ai_slop_penalty", 0) > 4 or scores.get("timelessness_score", 10) < 5:
+            continue
+
+        c_score = scores.get("constructive_score", 0)
+        a_score = scores.get("anthropology_score", 0)
+
+        # Sort into the correct bucket based on which score is higher
+        if c_score >= a_score and c_score >= 6:
+            item["sort_weight"] = c_score + scores.get("timelessness_score", 0)
+            item["category"] = "positivity"
+            pool_positivity.append(item)
+        elif a_score > c_score and a_score >= 6:
+            item["sort_weight"] = a_score + scores.get("timelessness_score", 0)
+            item["category"] = "deep_dive"
+            pool_deep_dive.append(item)
+
+    # Sort buckets highest to lowest
+    pool_positivity.sort(key=lambda x: x["sort_weight"], reverse=True)
+    pool_deep_dive.sort(key=lambda x: x["sort_weight"], reverse=True)
+
+    # --- 4. ENFORCE 4:1 RATIO ---
+    final_selection = []
+    final_selection.extend(pool_positivity[:4])
+    final_selection.extend(pool_deep_dive[:1])
+    
+    return final_selection
