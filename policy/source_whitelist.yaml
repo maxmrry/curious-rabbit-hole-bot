@@ -1,0 +1,6 @@
+youtube:
+  - "UCsooa4yRKGN_zEE8iknghZA" # TED-Ed (High quality, educational)
+  - "UCsXVk37bltHxD1rDPwtNM8Q" # Kurzgesagt (Optimistic nihilism/science)
+rss:
+  - "https://ourworldindata.org/atom.xml" # Data-driven global progress
+  - "https://greatergood.berkeley.edu/site/rss" # Science of a meaningful life
