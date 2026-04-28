@@ -1,7 +1,7 @@
 import sys
-from src.pipeline.brain import load_policy, build_candidate_pool
+from src.pipeline.brain import load_policy, select_daily_items
 from src.pipeline.memory_mgr import load_memory, update_memory, purge_memory, save_memory
-from src.pipeline.philosophy import select_and_rewrite, get_daily_principle
+from src.pipeline.philosophy import reframe_items, get_daily_principle
 from src.pipeline.rss_builder import build_feed
 
 def main():
@@ -12,16 +12,16 @@ def main():
         policy = load_policy()
         memory = load_memory()
         
-        # 2. Gather & Filter Data (Math & Rules)
-        clean_pool = build_candidate_pool(memory)
+        # 2. Gather, Score, & Select (Math, Rules & Triage)
+        selected_items = select_daily_items(memory)
         
-        if len(clean_pool) < 5:
-            print(f"⚠️ Only {len(clean_pool)} clean items found. Not enough to maintain 4:1 ratio. Aborting run to preserve feed quality.")
+        if len(selected_items) < 5:
+            print(f"⚠️ Only found {len(selected_items)} elite items. We require 5 to maintain the 4:1 ratio. Aborting run to preserve feed quality.")
             sys.exit(0)
             
-        # 3. Philosophy Engine (Gemini)
-        print("🧠 Handing clean pool to Philosophy Engine for selection and reframing...")
-        selected_items = select_and_rewrite(clean_pool)
+        # 3. Philosophy Engine (Reframing)
+        print("🧠 Reframing descriptions constructively...")
+        selected_items = reframe_items(selected_items)
         
         if not selected_items:
             print("🚨 Philosophy Engine failed to return items. Aborting.")
