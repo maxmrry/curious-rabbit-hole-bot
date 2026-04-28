@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "budget": {
+    "spent_today_usd": 0.00,
+    "spent_month_usd": 0.00
+  },
+  "seen_hashes": {},
+  "sources_health": {
+    "youtube": {},
+    "rss": {},
+    "podcast_index": {},
+    "listen_notes": {}
+  },
+  "runs": {}
+}
