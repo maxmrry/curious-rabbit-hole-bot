@@ -26,21 +26,24 @@ jobs:
       env:
         GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+        LISTEN_NOTES_API_KEY: ${{ secrets.LISTEN_NOTES_API_KEY }}
+        PODCAST_INDEX_API_KEY: ${{ secrets.PODCAST_INDEX_API_KEY }}
+        PODCAST_INDEX_API_SECRET: ${{ secrets.PODCAST_INDEX_API_SECRET }}
       run: python agent.py
       
     - name: Commit and push changes
       run: |
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
-        git add memory.json docs/feed.xml
         
-        # Check if there are actually changes to commit
+        # Track the new folder structure
+        git add state/memory.json docs/feed.xml
+        
         if git diff --quiet && git diff --staged --quiet; then
           echo "No changes to commit."
         else
-          git commit -m "🤖 Agent updated memory and RSS feed"
+          git commit -m "🤖 Brain updated memory and RSS feed"
           
-          # Retry loop specifically for git push to survive GitHub 500 errors
           max_attempts=3
           attempt=1
           while ! git push; do
@@ -54,4 +57,3 @@ jobs:
           done
           echo "Push successful!"
         fi
-
