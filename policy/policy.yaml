@@ -1,0 +1,14 @@
+version: 1.0
+profile:
+  locale: "en-GB"
+  timezone: "Europe/London"
+  philosophy: "anti-crisis, psychological shield, constructive framing"
+ratios:
+  positivity: 4
+  deep_dive: 1
+thresholds:
+  max_fear_score: 3
+  min_constructive_score: 5
+memory_limits:
+  ttl_days: 180
+  target_max_mb: 2.0
