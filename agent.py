@@ -16,6 +16,9 @@ YOUTUBE_API_KEY = os.environ.get("YOUTUBE_API_KEY")
 
 CURRENT_CURIOSITIES = [
     "declining birth rates and Gen Z",
+    "good news and hope for the future how the world is getting better",
+    "talks and webinars and videos featuring people",
+    "the crisis of crisis negativity bias permacrisis and how to disuade the power of bad and fear mongering being mentally robust",
     "the psychology of the manosphere",
     "Louis Theroux style fringe documentaries",
     "Human anthropology, ecology, sociology, psychology, why we do things, interesting biological mechanisms, environmental disruptors and ways to mitigate",
