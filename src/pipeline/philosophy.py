@@ -24,32 +24,72 @@ def safe_generate(prompt, retries=3):
                 print(f"🚨 Gemini completely failed: {e}")
                 return None
 
-def select_and_rewrite(clean_pool):
+def semantic_triage(candidates):
     """
-    Forces Gemini to select the 4:1 ratio and rewrite the descriptions constructively.
+    Passes the raw pool to Gemini to contextually score them on a 0-10 scale.
+    This prevents static keyword blacklists from blocking good content.
     """
-    if not clean_pool:
-        print("⚠️ No items in clean pool to process.")
+    if not candidates:
         return []
 
-    # To save tokens and avoid confusing the AI, we only send the top 15 candidates
-    candidates = clean_pool[:15]
-    
-    # Prepare the text we send to Gemini
     pool_text = ""
-    for i, item in enumerate(candidates):
-        pool_text += f"\nID: {item['native_id']} | Source: {item['source_name']}\nTitle: {item['title']}\nDesc: {item['description']}\n---"
+    for item in candidates:
+        # We include the publication date so Gemini can judge if it's outdated panic
+        import datetime
+        pub_date_str = datetime.datetime.fromtimestamp(item['published_date_ms'] / 1000.0).strftime('%Y-%m-%d')
+        pool_text += f"\nID: {item['native_id']} | Date: {pub_date_str} | Source: {item['source_name']}\nTitle: {item['title']}\nDesc: {item['description']}\n---"
 
-    prompt = f"""
-    You are the 'U-Curve Brain', a cognitive filter designed to protect a globally aware Gen Z user from algorithmic fear culture.
-    You follow the principles of 'The Power of Bad': Bad is stronger than good, so we must actively balance the scales with constructive truth.
-
-    I have provided a pool of vetted articles, videos, and podcasts below.
+    prompt = """
+    You are the 'U-Curve Brain' operating in the year 2026. 
+    Score the following content candidates from 0 to 10 based on these metrics:
     
-    TASK:
-    1. Select EXACTLY 4 items that represent 'Positivity' (constructive progress, resilience, human cooperation, scientific breakthroughs, or relationship psychology).
-    2. Select EXACTLY 1 item that represents a 'Deep Dive' (anthropology, sociology, or fascinating subcultures).
-    3. Rewrite the description for the 5 selected items.
+    1. constructive_score (0-10): Showcases progress, resilience, human cooperation, or actionable philosophy.
+    2. anthropology_score (0-10): Fascinating deep dive into human behavior, sociology, or niche subcultures.
+    3. fear_score (0-10): Engagement-bait, doom-mongering, or apocalyptic framing. (10 = maximum toxic panic).
+    4. timelessness_score (0-10): Is this universally relevant? (10 = timeless philosophy/science. 0 = outdated 2021 pandemic news or old election cycles).
+    5. ai_slop_penalty (0-10): Does this read like generic, faceless AI-generated garbage? (10 = absolute AI slop).
+
+    RETURN EXACTLY THIS JSON STRUCTURE:
+    {
+        "scores": [
+            {
+                "native_id": "the exact ID from the pool",
+                "constructive_score": 8,
+                "anthropology_score": 2,
+                "fear_score": 1,
+                "timelessness_score": 9,
+                "ai_slop_penalty": 0
+            }
+        ]
+    }
+
+    CANDIDATES:
+    """ + pool_text
+
+    response = safe_generate(prompt)
+    if not response:
+        return []
+
+    try:
+        parsed = json.loads(response.text)
+        return parsed.get("scores", [])
+    except json.JSONDecodeError:
+        print("🚨 Failed to parse Gemini Semantic Triage JSON.")
+        return []
+
+def reframe_items(selected_items):
+    """
+    Rewrites the descriptions of the final mathematically chosen 5 items.
+    """
+    if not selected_items:
+        return []
+
+    pool_text = ""
+    for item in selected_items:
+        pool_text += f"\nID: {item['native_id']}\nTitle: {item['title']}\nDesc: {item['description']}\n---"
+
+    prompt = """
+    Rewrite the descriptions for these 5 items constructively.
     
     REWRITE RULES:
     - Keep it under 80 words.
@@ -57,43 +97,32 @@ def select_and_rewrite(clean_pool):
     - Extract the constructive angle. Focus on resilience, solutions, or fascinating insights.
     
     RETURN EXACTLY THIS JSON STRUCTURE:
-    {{
-        "selected": [
-            {{
-                "native_id": "the exact ID from the pool",
-                "category": "positivity or deep_dive",
+    {
+        "rewrites": [
+            {
+                "native_id": "exact ID",
                 "rewritten_description": "your 80-word constructive summary"
-            }}
+            }
         ]
-    }}
+    }
 
-    CANDIDATE POOL:
-    {pool_text}
-    """
+    ITEMS:
+    """ + pool_text
 
     response = safe_generate(prompt)
     if not response:
-        return []
+        return selected_items # Fallback to original descriptions if API fails
 
     try:
-        # Gemini returns the structured JSON
-        parsed_response = json.loads(response.text)
-        selections = parsed_response.get("selected", [])
+        parsed = json.loads(response.text)
+        rewrites = {x["native_id"]: x["rewritten_description"] for x in parsed.get("rewrites", [])}
         
-        # Merge Gemini's rewrites back with the original URLs and metadata
-        final_feed_items = []
-        for selection in selections:
-            original_item = next((item for item in candidates if item["native_id"] == selection["native_id"]), None)
-            if original_item:
-                original_item["description"] = selection["rewritten_description"]
-                original_item["category"] = selection["category"]
-                final_feed_items.append(original_item)
-                
-        return final_feed_items
-        
+        for item in selected_items:
+            if item["native_id"] in rewrites:
+                item["description"] = rewrites[item["native_id"]]
+        return selected_items
     except json.JSONDecodeError:
-        print("🚨 Failed to parse Gemini JSON output.")
-        return []
+        return selected_items
 
 def get_daily_principle(filepath='policy/principles.json'):
     """Pulls a random psychological reminder from the Power of Bad principle bank."""
