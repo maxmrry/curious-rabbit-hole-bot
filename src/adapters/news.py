@@ -90,7 +90,7 @@ def fetch_relevant_news():
     url = "https://actually-relevant-api.onrender.com/api/stories?issueSlug=general-news"
     
     try:
-        response = requests.get(url, timeout=15)
+        response = requests.get(url, timeout=60)
         response.raise_for_status()
         data = response.json()
         
