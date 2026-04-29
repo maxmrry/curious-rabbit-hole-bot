@@ -44,8 +44,10 @@ def build_feed(selected_items):
         # Clean text prefixes instead of emojis
         if item["source_type"] == "podcast":
             prefix = "(Audio) "
-        elif item["source_type"] in ["news", "rss"]:
+        elif item["source_type"] == "rss":
             prefix = "(Research) "
+        elif item["source_type"] == "news":
+            prefix = "(News) "
         else:
             prefix = "" # YouTube gets no prefix, easily recognizable by thumbnail
             
