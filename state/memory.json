@@ -1,10 +1,36 @@
 {
   "version": 1,
   "budget": {
-    "spent_today_usd": 0.00,
-    "spent_month_usd": 0.00
+    "spent_today_usd": 0.0,
+    "spent_month_usd": 0.0
   },
-  "seen_hashes": {},
+  "seen_hashes": {
+    "b8f2b521a82e58b8a6759f102cab032de6fd09a4b98731109ce48356a7df5336": {
+      "native_id": "454b82baa8f2467fac5621fdc6173385",
+      "source_type": "podcast",
+      "last_seen_ms": 1777453289104
+    },
+    "c97181f5791cbddb671b84cdc34bf516f1997d46336e4c514ef2f6ad4f62c0bc": {
+      "native_id": "74c1ff7fe97248d285fc9bf290b3b0eb",
+      "source_type": "podcast",
+      "last_seen_ms": 1777453289104
+    },
+    "bdcc5d7abe45eb9ea1466306a59313dd50f9e10743cf7333b8f0e592a9d1e02e": {
+      "native_id": "4d75ee769f6042b0be689735632d6ee0",
+      "source_type": "podcast",
+      "last_seen_ms": 1777453289104
+    },
+    "dfd74ec64ec4e3ae4293213e22eaf6c71642506f672357dbf12af72dcdd98287": {
+      "native_id": "8d3222fadab04269b84dbab90e381a36",
+      "source_type": "podcast",
+      "last_seen_ms": 1777453289104
+    },
+    "f55b988aca9b7b31d506341932f68e7e987678a1f3baf8c399582329d308382d": {
+      "native_id": "4b0a5722a441429ea3f24ef1934f1de6",
+      "source_type": "podcast",
+      "last_seen_ms": 1777453289104
+    }
+  },
   "sources_health": {
     "youtube": {},
     "rss": {},
