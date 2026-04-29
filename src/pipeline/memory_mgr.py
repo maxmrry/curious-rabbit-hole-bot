@@ -32,9 +32,10 @@ def create_standard_item(
     source_type,
     source_name,
     date_ms=None,
-    image_url=None,  # NEW
-    audio_url=None   # NEW
+    image_url=None,  # NEW: Supports YouTube/Podcast thumbnails
+    audio_url=None   # NEW: Supports direct MP3 links
 ):
+    """Normalizes messy API data into our strict internal schema."""
     canonical_hash = generate_canonical_hash(native_id)
 
     return {
@@ -43,11 +44,11 @@ def create_standard_item(
         "title": title.strip() if title else "Untitled",
         "description": description.strip() if description else "No description provided.",
         "url": url,
-        "source_type": source_type, 
+        "source_type": source_type,  # 'podcast', 'youtube', 'news', 'rss'
         "source_name": source_name,
         "published_date_ms": date_ms or int(datetime.now().timestamp() * 1000),
-        "image_url": image_url,  # NEW
-        "audio_url": audio_url   # NEW
+        "image_url": image_url,
+        "audio_url": audio_url
     }
 
 
