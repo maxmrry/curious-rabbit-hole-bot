@@ -54,6 +54,51 @@
       "native_id": "d230bb7941714d499eea21cf489109f6",
       "source_type": "podcast",
       "last_seen_ms": 1777453725808
+    },
+    "08e3c99c6ae1a9190d12631c7dedec4ae593f7c3eb5d78e79972177a921b8ac3": {
+      "native_id": "https://greatergood.berkeley.edu/article/item/what_youre_listening_for_and_what_you_might_be_missing",
+      "source_type": "rss",
+      "last_seen_ms": 1777456534443
+    },
+    "d535cf190ea5f7cc37bee936a6df7155e05409c7694469149522d01bd78e94d8": {
+      "native_id": "https://greatergood.berkeley.edu/article/item/what_we_get_wrong_about_teaching_kids_to_apologize_and_forgive",
+      "source_type": "rss",
+      "last_seen_ms": 1777456534443
+    },
+    "1710f79f529029d9997fdd4d507772b648f85a1edd0c947322f30eb665d65fb3": {
+      "native_id": "https://reasonstobecheerful.world/the-one-dollar-visionary/",
+      "source_type": "rss",
+      "last_seen_ms": 1777456534443
+    },
+    "93dba0e220ad3116e7bd1957a5a306d9e95589efc98c9255d137539ffec7a600": {
+      "native_id": "KALXYgoYm6E",
+      "source_type": "youtube",
+      "last_seen_ms": 1777456534443
+    },
+    "f9961e2af26afac9fde5fea9393d735dd6c8810aea694337ad979db9d1c0cec6": {
+      "native_id": "O5rIj13djao",
+      "source_type": "youtube",
+      "last_seen_ms": 1777456534443
+    },
+    "3cee3f87fedfa5658040cb9c88a295a813d40e66097df0612db8dbe9185bbdb7": {
+      "native_id": "WtQ64nSbdY4",
+      "source_type": "youtube",
+      "last_seen_ms": 1777456534443
+    },
+    "6dda129c560d6e10cc61037f959a1ea12a847425793c2ecf2ddd8f3eb2481514": {
+      "native_id": "https://share.transistor.fm/s/f5c1a51a",
+      "source_type": "rss",
+      "last_seen_ms": 1777456534443
+    },
+    "88a0497066b5267f10891b103882548b184709504bf4e1f37efdab977f8f6ef3": {
+      "native_id": "https://greatergood.berkeley.edu/article/item/how_does_forgiveness_benefit_people_around_the_world",
+      "source_type": "rss",
+      "last_seen_ms": 1777456534443
+    },
+    "823ad651517ce2891e4810e11eb7b90221e81342816c451d32031203d38a7bea": {
+      "native_id": "https://psyche.co/ideas/why-its-so-hard-to-agree-on-what-counts-as-true?utm_source=rss-feed",
+      "source_type": "rss",
+      "last_seen_ms": 1777456534443
     }
   },
   "sources_health": {
