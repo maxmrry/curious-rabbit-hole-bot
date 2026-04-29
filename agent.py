@@ -1,7 +1,7 @@
 import sys
 from src.pipeline.brain import load_policy, select_daily_items
 from src.pipeline.memory_mgr import load_memory, update_memory, purge_memory, save_memory
-from src.pipeline.philosophy import reframe_items, get_daily_principle
+from src.pipeline.philosophy import reframe_items
 from src.pipeline.rss_builder import build_feed
 
 def main():
@@ -12,8 +12,8 @@ def main():
         policy = load_policy()
         memory = load_memory()
         
-        # 2. Gather, Score, & Select (Math, Rules & Triage)
-        # We need this function to return exactly 9 items (e.g., 7 positive, 2 deep-dive)
+        # 2. Gather, Score, & Select (Cognitive Equation)
+        # We need this function to return exactly 9 high-signal items
         selected_items = select_daily_items(memory, policy)
         
         if len(selected_items) < 9:
@@ -21,21 +21,18 @@ def main():
             sys.exit(0)
             
         # 3. Philosophy Engine (Reframing)
-        print("🧠 Reframing descriptions constructively...")
+        print("🧠 Reframing descriptions to highlight agency...")
         selected_items = reframe_items(selected_items)
         
         if not selected_items:
             print("🚨 Philosophy Engine failed to return items. Aborting.")
             sys.exit(1)
             
-        # 4. Generate Anchor Principle
-        daily_principle = get_daily_principle()
-        
-        # 5. Build RSS
+        # 4. Build RSS (Adage and Protocol are handled automatically inside)
         print("📝 Generating RSS Feed...")
-        build_feed(selected_items, daily_principle)
+        build_feed(selected_items)
         
-        # 6. Update & Purge Memory
+        # 5. Update & Purge Memory
         memory = update_memory(selected_items, memory)
         ttl_days = policy.get("memory_limits", {}).get("ttl_days", 180)
         memory = purge_memory(memory, ttl_days)
