@@ -29,6 +29,7 @@ def select_daily_items(memory, policy):
     q_podcasts = quotas.get("podcasts", 4)
     q_videos = quotas.get("videos", 4)
     q_research = quotas.get("research", 2)
+    q_news = quotas.get("news", 1)
     q_deep_dive = quotas.get("deep_dive", 1)
 
     # Extract Cognitive Fingerprint
@@ -126,7 +127,8 @@ def select_daily_items(memory, policy):
 
     podcasts = [i for i in valid_items if i["source_type"] == "podcast"]
     videos = [i for i in valid_items if i["source_type"] == "youtube"]
-    research = [i for i in valid_items if i["source_type"] in ["news", "rss"]]
+    research = [i for i in valid_items if i["source_type"] == "rss"]
+    news_items = [i for i in valid_items if i["source_type"] == "news"]
 
     # Podcasts
     count = 0
@@ -148,7 +150,7 @@ def select_daily_items(memory, policy):
             seen_ids.add(v["native_id"])
             count += 1
 
-    # Research
+    # Research (RSS Whitelist)
     count = 0
     for r in research:
         if count >= q_research: break
@@ -156,6 +158,16 @@ def select_daily_items(memory, policy):
             r["category"] = "positivity"
             final_selection.append(r)
             seen_ids.add(r["native_id"])
+            count += 1
+            
+    # News (Actually Relevant API)
+    count = 0
+    for n in news_items:
+        if count >= q_news: break
+        if n["native_id"] not in seen_ids:
+            n["category"] = "positivity"
+            final_selection.append(n)
+            seen_ids.add(n["native_id"])
             count += 1
 
     return final_selection
