@@ -41,25 +41,30 @@ def semantic_triage(candidates):
     current_year = datetime.datetime.now().year
 
     prompt = f"""
-    You are the 'U-Curve Brain' cognitive engine operating in the year {current_year}. 
-    Score the following content candidates from 0 to 10 based on their psychological impact:
-    
-    1. agency_score (0-10): Does this instill a sense of human agency, resilience, and problem-solving? (10 = highly empowering).
-    2. perspective_score (0-10): Does this provide mature, macro-level historical wisdom? (10 = timeless perspective).
-    3. fear_penalty (0-10): Does this trigger anxiety, outrage, or use apocalyptic framing? (10 = maximum toxic panic).
-    4. slop_penalty (0-10): Is this low-effort, generic AI-generated rambling? (10 = absolute slop).
-    5. anthropology_score (0-10): Is this a fascinating deep dive into human behavior, sociology, or niche subcultures?
-    
+    You are the 'U-Curve Brain', an advanced cognitive containment filter.
+
+    Score the following content candidates from 0 to 10 based on these highly specific metrics:
+
+    1. systemic_score (0-10): Focuses on structural mechanisms, ecologies, and how systems work (rather than personal drama).
+    2. nuance_score (0-10): Embraces complex, high-friction ambiguity and grey-areas.
+    3. temporal_score (0-10): Deep-time perspective, macro-history, or evolutionary anthropology.
+    4. constructive_score (0-10): Grounded realism, actionable truth, and resilience (NO fake toxic positivity).
+    5. abstraction_score (0-10): High-level theoretical concepts, big philosophical ideas, and deep frameworks.
+    6. fear_score (0-10): Engagement-bait, doom-mongering, or apocalyptic framing. (10 = maximum toxic panic).
+    7. ai_slop_penalty (0-10): Does this read like generic, faceless AI-generated garbage? (10 = absolute slop).
+
     RETURN EXACTLY THIS JSON STRUCTURE:
     {{
         "scores": [
             {{
                 "native_id": "the exact ID from the pool",
-                "agency_score": 8,
-                "perspective_score": 7,
-                "fear_penalty": 1,
-                "slop_penalty": 0,
-                "anthropology_score": 9
+                "systemic_score": 5,
+                "nuance_score": 8,
+                "temporal_score": 2,
+                "constructive_score": 7,
+                "abstraction_score": 9,
+                "fear_score": 1,
+                "ai_slop_penalty": 0
             }}
         ]
     }}
