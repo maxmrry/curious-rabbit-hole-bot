@@ -47,8 +47,9 @@ def select_daily_items(memory):
                 
         candidates.append(item)
 
-    # Cap candidates to save Gemini tokens
-    candidates = candidates[:40]
+        # Cap candidates to save Gemini tokens, but give it enough raw material
+    # Increased from 40 to 60 to ensure we survive strict filtering
+    candidates = candidates[:60] 
     if not candidates:
         return []
 
@@ -88,9 +89,13 @@ def select_daily_items(memory):
     pool_positivity.sort(key=lambda x: x["sort_weight"], reverse=True)
     pool_deep_dive.sort(key=lambda x: x["sort_weight"], reverse=True)
 
-    # --- 4. ENFORCE 4:1 RATIO ---
+    # --- 4. ENFORCE 7:2 WEIGHTING (9 Items Total) ---
     final_selection = []
-    final_selection.extend(pool_positivity[:4])
-    final_selection.extend(pool_deep_dive[:1])
+    
+    # Grab the top 7 positive items (can be a mix of podcasts, news, videos)
+    final_selection.extend(pool_positivity[:7])
+    
+    # Grab the top 2 deep-dive items (usually anthropology/sociology)
+    final_selection.extend(pool_deep_dive[:2])
     
     return final_selection
