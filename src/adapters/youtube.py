@@ -69,6 +69,10 @@ def fetch_youtube_whitelist(whitelist_filepath='policy/source_whitelist.yaml'):
                 except Exception:
                     date_ms = None  # fallback if parsing fails
 
+                # Extract high-res thumbnail
+                thumbnails = snippet.get('thumbnails', {})
+                high_res = thumbnails.get('high', {}).get('url') or thumbnails.get('default', {}).get('url')
+
                 normalized = create_standard_item(
                     native_id=video_id,
                     title=snippet.get('title'),
@@ -76,7 +80,8 @@ def fetch_youtube_whitelist(whitelist_filepath='policy/source_whitelist.yaml'):
                     url=f"https://www.youtube.com/watch?v={video_id}",
                     source_type="youtube",
                     source_name=snippet.get('channelTitle'),
-                    date_ms=date_ms
+                    date_ms=date_ms,
+                    image_url=high_res  # <--- ADDED
                 )
 
                 results.append(normalized)
