@@ -124,12 +124,16 @@ def reframe_items(selected_items):
     except json.JSONDecodeError:
         return selected_items
 
-def get_daily_principle(filepath='policy/principles.json'):
-    """Pulls a random psychological reminder from the Power of Bad principle bank."""
-    try:
-        with open(filepath, 'r') as f:
-            principles = json.load(f)
-            return random.choice(principles)
-    except Exception as e:
-        print("⚠️ Failed to load principles:", e)
-        return "Protect your attention. A frightening headline is not the same as a truthful forecast."
+def get_daily_principle():
+    """Uses Gemini to generate a timeless historical adage or proverb."""
+    prompt = """
+    Provide a single, timeless historical proverb, adage, or piece of Stoic/Zen wisdom 
+    that relates to resilience, perspective, or human endurance. 
+    Do not use clinical psychology terms. Keep it poetic but grounded.
+    
+    Format: "The quote." - Author/Origin
+    """
+    response = safe_generate(prompt)
+    if response and response.text:
+        return response.text.strip().replace('"', '').replace('{', '').replace('}', '')
+    return "A smooth sea never made a skilled sailor. - English Proverb"
