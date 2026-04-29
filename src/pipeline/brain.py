@@ -90,9 +90,21 @@ def select_daily_items(memory, policy):
     pool_positivity.sort(key=lambda x: x["sort_weight"], reverse=True)
     pool_deep_dive.sort(key=lambda x: x["sort_weight"], reverse=True)
 
-    # --- 4. ENFORCE POLICY RATIOS ---
+    # --- 4. ENFORCE POLICY RATIOS & SOURCE VARIETY ---
     final_selection = []
-    final_selection.extend(pool_positivity[:pos_quota])
-    final_selection.extend(pool_deep_dive[:dive_quota])
+    used_sources = set()
+
+    def add_unique_sources(pool, quota):
+        added = 0
+        for item in pool:
+            if item["source_name"] not in used_sources:
+                final_selection.append(item)
+                used_sources.add(item["source_name"])
+                added += 1
+            if added == quota:
+                break
+
+    add_unique_sources(pool_positivity, pos_quota)
+    add_unique_sources(pool_deep_dive, dive_quota)
     
     return final_selection
