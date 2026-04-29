@@ -124,6 +124,19 @@ def reframe_items(selected_items):
     except json.JSONDecodeError:
         return selected_items
 
+def get_daily_reminder():
+    """Generates an actionable psychological technique based on The Power of Bad."""
+    prompt = """
+    Write a short, single-sentence daily reminder based on the psychological principles from the book 'The Power of Bad' (e.g., negativity bias, the rule of 4, loss aversion, emotional contagion, reframing).
+    
+    Make it highly actionable and stoic for someone starting their day. Do not use hashtags or emojis.
+    Example: "Notice three neutral things today to actively break the brain's hunt for threats."
+    """
+    response = safe_generate(prompt)
+    if response and response.text:
+        return response.text.strip().replace('"', '')
+    return "Consciously pause to register a positive interaction today; the brain needs 4 of them to offset 1 negative."
+
 def get_daily_principle():
     """Uses Gemini to generate a timeless historical adage or proverb."""
     prompt = """
