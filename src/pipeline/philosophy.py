@@ -86,8 +86,8 @@ def semantic_triage(candidates):
 
 def reframe_items(selected_items):
     """
-    Actively rewrites the descriptions of the final mathematically chosen 9 items
-    to highlight human agency, solutions, and resilience.
+    Generates a clean, objective 60-word synopsis of the final chosen items.
+    Does not fabricate or inject artificial positivity.
     """
     if not selected_items:
         return []
@@ -97,21 +97,20 @@ def reframe_items(selected_items):
         pool_text += f"\nID: {item['native_id']}\nTitle: {item['title']}\nDesc: {item['description']}\n---"
 
     prompt = """
-    You are a cognitive reframing engine. Your job is to rewrite the descriptions of these media items to protect the user's psychological state.
+    You are a high-level cognitive filter. Your job is to rewrite the descriptions of these media items to provide a clean, objective synopsis.
     
     REWRITE RULES:
     - Keep it under 60 words.
-    - Be factually honest, but ruthlessly extract the 'agency'. 
-    - If it is a news story about a problem, focus entirely on the active solutions being deployed or the historical context.
-    - If it is anthropology or psychology, focus on why this knowledge makes the reader wiser or more resilient.
-    - Do not use toxic positivity. Speak with stoic, mature clarity.
+    - Be factually honest. DO NOT fabricate, editorialize, or inject artificial "toxic positivity."
+    - Clearly state what the content is about and what the user will learn from it.
+    - Speak with stoic, mature clarity.
     
     RETURN EXACTLY THIS JSON STRUCTURE:
     {
         "rewrites": [
             {
                 "native_id": "exact ID",
-                "rewritten_description": "your 60-word constructive, agency-focused summary"
+                "rewritten_description": "your 60-word objective synopsis"
             }
         ]
     }
@@ -121,7 +120,7 @@ def reframe_items(selected_items):
 
     response = safe_generate(prompt)
     if not response:
-        return selected_items # Fallback to original descriptions if API fails
+        return selected_items
 
     try:
         parsed = json.loads(response.text)
