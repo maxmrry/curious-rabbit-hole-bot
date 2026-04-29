@@ -13,10 +13,11 @@ def main():
         memory = load_memory()
         
         # 2. Gather, Score, & Select (Math, Rules & Triage)
+        # We need this function to return exactly 9 items (e.g., 7 positive, 2 deep-dive)
         selected_items = select_daily_items(memory)
         
-        if len(selected_items) < 5:
-            print(f"⚠️ Only found {len(selected_items)} elite items. We require 5 to maintain the 4:1 ratio. Aborting run to preserve feed quality.")
+        if len(selected_items) < 9:
+            print(f"⚠️ Only found {len(selected_items)} elite items. We require 9 to maintain the robust daily shield. Aborting run to preserve feed quality.")
             sys.exit(0)
             
         # 3. Philosophy Engine (Reframing)
@@ -44,7 +45,6 @@ def main():
         
     except Exception as e:
         print(f"\n🚨 CRITICAL ERROR ENCOUNTERED: {e}")
-        # Could implement an error RSS feed fallback here if desired
         sys.exit(1)
 
 if __name__ == "__main__":
