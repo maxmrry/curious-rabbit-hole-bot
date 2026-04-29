@@ -30,9 +30,16 @@ def build_feed(selected_items, daily_principle):
     # Entry 2+: The Curated Content
     for item in selected_items:
         fe = fg.add_entry()
-        category_emoji = "🔵" if item.get("category") == "positivity" else "🕳️"
         
-        fe.title(f"{category_emoji} {item['title']}")
+        # Apply clean text prefixes instead of emojis
+        if item["source_type"] == "podcast":
+            prefix = "(Audio) "
+        elif item["source_type"] in ["news", "rss"]:
+            prefix = "(Research) "
+        else:
+            prefix = "" # YouTube gets no prefix, recognizable by thumbnail
+            
+        fe.title(f"{prefix}{item['title']}")
         fe.link(href=item['url'])
         
         # Format the description cleanly
