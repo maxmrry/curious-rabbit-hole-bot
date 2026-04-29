@@ -14,7 +14,7 @@ def main():
         
         # 2. Gather, Score, & Select (Math, Rules & Triage)
         # We need this function to return exactly 9 items (e.g., 7 positive, 2 deep-dive)
-        selected_items = select_daily_items(memory)
+        selected_items = select_daily_items(memory, policy)
         
         if len(selected_items) < 9:
             print(f"⚠️ Only found {len(selected_items)} elite items. We require 9 to maintain the robust daily shield. Aborting run to preserve feed quality.")
