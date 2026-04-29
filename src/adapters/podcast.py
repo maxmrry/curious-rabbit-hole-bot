@@ -75,7 +75,8 @@ def fetch_podcast_index(query):
                 url=item["url"],
                 source_type="podcast",
                 source_name=item["author"] or "Unknown Author",
-                date_ms=item.get("newestItemPubdate", int(time.time())) * 1000
+                date_ms=item.get("newestItemPubdate", int(time.time())) * 1000,
+                image_url=item.get("artwork") or item.get("image")
             )
             results.append(normalized)
         return results
