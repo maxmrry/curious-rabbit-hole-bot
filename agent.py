@@ -12,23 +12,27 @@ def main():
         policy = load_policy()
         memory = load_memory()
         
-        # 2. Gather, Score, & Select (Cognitive Equation)
-        # We need this function to return exactly 9 high-signal items
+        # Dynamically calculate total expected items from policy.yaml
+        quotas = policy.get("media_quotas", {})
+        expected_total = sum(quotas.values()) if quotas else 11
+        
+        # 2. Gather, Score, & Select
         selected_items = select_daily_items(memory, policy)
         
-        if len(selected_items) < 9:
-            print(f"⚠️ Only found {len(selected_items)} elite items. We require 9 to maintain the robust daily shield. Aborting run to preserve feed quality.")
+        # Dynamic safety check (Allows a 2-item buffer in case APIs have a slow day)
+        if len(selected_items) < (expected_total - 2):
+            print(f"⚠️ Only found {len(selected_items)} elite items. Expected near {expected_total}. Aborting run to preserve feed quality.")
             sys.exit(0)
             
         # 3. Philosophy Engine (Reframing)
-        print("🧠 Reframing descriptions to highlight agency...")
+        print("🧠 Reframing descriptions objectively...")
         selected_items = reframe_items(selected_items)
         
         if not selected_items:
             print("🚨 Philosophy Engine failed to return items. Aborting.")
             sys.exit(1)
             
-        # 4. Build RSS (Adage and Protocol are handled automatically inside)
+        # 4. Build RSS (Adage and Protocol handled automatically inside)
         print("📝 Generating RSS Feed...")
         build_feed(selected_items)
         
