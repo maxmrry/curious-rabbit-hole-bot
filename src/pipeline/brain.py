@@ -19,13 +19,10 @@ def load_policy(filepath='policy/policy.yaml'):
 def select_daily_items(memory, policy):
     """
     Gathers data, applies hard age-limits, calls Gemini for Semantic Triage, 
-    and mathematically selects items based on policy.yaml thresholds.
+    and mathematically selects the absolute best cognitive items based on the Mental State Model.
     """
     # Extract Policy Constraints
-    pos_quota = policy.get("ratios", {}).get("positivity", 7)
-    dive_quota = policy.get("ratios", {}).get("deep_dive", 2)
     max_fear = policy.get("thresholds", {}).get("max_fear_score", 3)
-    min_constructive = policy.get("thresholds", {}).get("min_constructive_score", 5)
     
     candidates = []
     now_ms = int(time.time() * 1000)
@@ -62,49 +59,34 @@ def select_daily_items(memory, policy):
     scored_metrics = semantic_triage(candidates)
     score_map = {s["native_id"]: s for s in scored_metrics}
 
-    pool_positivity = []
-    pool_deep_dive = []
+    # --- 3. THE COGNITIVE EQUATION (Math) ---
+    valid_items = []
 
-    # --- 3. THE SORTING HAT (Math) ---
     for item in candidates:
         scores = score_map.get(item["native_id"])
         if not scores:
             continue
             
-        # Hard Brakes tied dynamically to policy.yaml
-        if scores.get("fear_score", 0) > max_fear or scores.get("ai_slop_penalty", 0) > 4 or scores.get("timelessness_score", 10) < 5:
+        # The Shield: Block severe anxiety triggers and algorithmic slop
+        if scores.get("fear_penalty", 0) > max_fear or scores.get("slop_penalty", 0) > 4:
             continue
 
-        c_score = scores.get("constructive_score", 0)
-        a_score = scores.get("anthropology_score", 0)
+        a_score = scores.get("agency_score", 0)
+        p_score = scores.get("perspective_score", 0)
+        anthro_score = scores.get("anthropology_score", 0)
 
-        if c_score >= a_score and c_score >= min_constructive:
-            item["sort_weight"] = c_score + scores.get("timelessness_score", 0)
-            item["category"] = "positivity"
-            pool_positivity.append(item)
-        elif a_score > c_score and a_score >= min_constructive:
-            item["sort_weight"] = a_score + scores.get("timelessness_score", 0)
-            item["category"] = "deep_dive"
-            pool_deep_dive.append(item)
+        # The Psych Score: Reward Agency, Perspective, and Anthropology, while heavily taxing Fear.
+        psych_score = (a_score * 1.2) + (p_score * 1.0) + (anthro_score * 1.2) - (scores.get("fear_penalty", 0) * 2.0)
 
-    pool_positivity.sort(key=lambda x: x["sort_weight"], reverse=True)
-    pool_deep_dive.sort(key=lambda x: x["sort_weight"], reverse=True)
+        # Only allow high-signal cognitive nutrition through
+        if psych_score >= 10: 
+            item["sort_weight"] = psych_score
+            valid_items.append(item)
 
-    # --- 4. ENFORCE POLICY RATIOS & SOURCE VARIETY ---
-    final_selection = []
-    used_sources = set()
+    # Sort strictly by what is best for the user's mental state today
+    valid_items.sort(key=lambda x: x["sort_weight"], reverse=True)
 
-    def add_unique_sources(pool, quota):
-        added = 0
-        for item in pool:
-            if item["source_name"] not in used_sources:
-                final_selection.append(item)
-                used_sources.add(item["source_name"])
-                added += 1
-            if added == quota:
-                break
-
-    add_unique_sources(pool_positivity, pos_quota)
-    add_unique_sources(pool_deep_dive, dive_quota)
-    
-    return final_selection
+    # --- 4. SELECT TOP 9 ITEMS ---
+    # We no longer force source diversity or strict media ratios.
+    # If one source or medium provides incredible signal today, we consume it.
+    return valid_items[:9]
