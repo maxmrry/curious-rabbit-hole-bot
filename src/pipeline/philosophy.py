@@ -40,14 +40,13 @@ def semantic_triage(candidates):
         pool_text += f"\nID: {item['native_id']} | Date: {pub_date_str} | Source: {item['source_name']}\nTitle: {item['title']}\nDesc: {item['description']}\n---"
 
     prompt = """
-    You are the 'U-Curve Brain' operating in the year 2026. 
-    Score the following content candidates from 0 to 10 based on these metrics:
+    You are the 'U-Curve Brain' cognitive engine.
+    Score the following content candidates from 0 to 10 based on their psychological impact:
     
-    1. constructive_score (0-10): Showcases progress, resilience, human cooperation, or actionable philosophy.
-    2. anthropology_score (0-10): Fascinating deep dive into human behavior, sociology, or niche subcultures.
-    3. fear_score (0-10): Engagement-bait, doom-mongering, or apocalyptic framing. (10 = maximum toxic panic).
-    4. timelessness_score (0-10): Is this universally relevant? (10 = timeless philosophy/science. 0 = outdated 2021 pandemic news or old election cycles).
-    5. ai_slop_penalty (0-10): Does this read like generic, faceless AI-generated garbage? (10 = absolute AI slop).
+    1. agency_score (0-10): Does this instill a sense of human agency, resilience, and problem-solving? (10 = highly empowering/constructive).
+    2. perspective_score (0-10): Does this provide mature, macro-level historical or anthropological wisdom? (10 = deep, timeless perspective).
+    3. fear_penalty (0-10): Does this trigger anxiety, outrage, or use apocalyptic framing? (10 = maximum toxic panic).
+    4. slop_penalty (0-10): Is this low-effort, generic AI-generated rambling? (10 = absolute slop).
 
     RETURN EXACTLY THIS JSON STRUCTURE:
     {
