@@ -133,17 +133,15 @@ def reframe_items(selected_items):
     except json.JSONDecodeError:
         return selected_items
 
-def get_daily_protocol():
-    """Returns a strict daily reminder based on 'The Power of Bad'."""
-    protocols = [
-        "Negativity Bias: Notice three neutral things today to actively break the brain's hunt for threats.",
-        "The Rule of 4: Consciously pause to register a positive interaction today; the brain needs 4 of them to offset 1 negative.",
-        "Loss Aversion: Check if a current decision is being driven by the fear of losing, rather than the logic of gaining.",
-        "Emotional Contagion: Negativity spreads passively. Protect your attention from outrage-bait and manufactured panic.",
-        "Reframing: Adversity can lead to growth. Deliberate optimism beats passive pessimism.",
-        "The Power of Bad: Bad is stronger than good, but it is usable. Exploit the bias for smarter decisions instead of being controlled by it."
-    ]
-    return random.choice(protocols)
+def get_daily_protocol(filepath='policy/principles.json'):
+    """Pulls a random psychological reminder from the Power of Bad principle bank."""
+    try:
+        with open(filepath, 'r') as f:
+            principles = json.load(f)
+            return random.choice(principles)
+    except Exception as e:
+        print(f"⚠️ Failed to load principles: {e}")
+        return "The Power of Bad: Bad is stronger than good, but it is usable. Exploit the bias for smarter decisions instead of being controlled by it."
 
 def get_daily_principle():
     """Uses Gemini to generate a timeless historical adage or proverb."""
