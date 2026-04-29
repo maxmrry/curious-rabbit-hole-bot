@@ -28,7 +28,9 @@ def fetch_listen_notes(query):
                 url=item["listennotes_url"],
                 source_type="podcast",
                 source_name=item["podcast"]["title_original"],
-                date_ms=item["pub_date_ms"]
+                date_ms=item["pub_date_ms"],
+                image_url=item.get("image") or item.get("thumbnail"),
+                audio_url=item.get("audio")=
             )
             results.append(normalized)
         return results
