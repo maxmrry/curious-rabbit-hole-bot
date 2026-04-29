@@ -59,7 +59,15 @@ def select_daily_items(memory, policy):
     scored_metrics = semantic_triage(candidates)
     score_map = {s["native_id"]: s for s in scored_metrics}
 
-    # --- 3. THE COGNITIVE EQUATION (Math) ---
+    # --- Extract Cognitive Fingerprint ---
+    fingerprint = policy.get("cognitive_fingerprint", {})
+    w_sys = fingerprint.get("systemic_curiosity", 0.14)
+    w_nuance = fingerprint.get("nuance_endurance", 0.17)
+    w_temp = fingerprint.get("temporal_horizon", 0.19)
+    w_const = fingerprint.get("constructive_realism", 0.18)
+    w_abs = fingerprint.get("theoretical_abstraction", 0.32)
+
+    # --- 3. THE COGNITIVE SORTING HAT (Weighted Math) ---
     valid_items = []
 
     for item in candidates:
@@ -68,25 +76,32 @@ def select_daily_items(memory, policy):
             continue
             
         # The Shield: Block severe anxiety triggers and algorithmic slop
-        if scores.get("fear_penalty", 0) > max_fear or scores.get("slop_penalty", 0) > 4:
+        if scores.get("fear_score", 0) > max_fear or scores.get("ai_slop_penalty", 0) > 4:
             continue
 
-        a_score = scores.get("agency_score", 0)
-        p_score = scores.get("perspective_score", 0)
-        anthro_score = scores.get("anthropology_score", 0)
+        # Extract Gemini's 1-10 assessments
+        s_sys = scores.get("systemic_score", 0)
+        s_nuance = scores.get("nuance_score", 0)
+        s_temp = scores.get("temporal_score", 0)
+        s_const = scores.get("constructive_score", 0)
+        s_abs = scores.get("abstraction_score", 0)
 
-        # The Psych Score: Reward Agency, Perspective, and Anthropology, while heavily taxing Fear.
-        psych_score = (a_score * 1.2) + (p_score * 1.0) + (anthro_score * 1.2) - (scores.get("fear_penalty", 0) * 2.0)
+        # THE ALIGNMENT EQUATION: Multiply content scores by your unique cognitive weights
+        alignment_score = (
+            (s_sys * w_sys) +
+            (s_nuance * w_nuance) +
+            (s_temp * w_temp) +
+            (s_const * w_const) +
+            (s_abs * w_abs)
+        )
+        
+        item["sort_weight"] = alignment_score
+        valid_items.append(item)
 
-        # Only allow high-signal cognitive nutrition through
-        if psych_score >= 10: 
-            item["sort_weight"] = psych_score
-            valid_items.append(item)
-
-    # Sort strictly by what is best for the user's mental state today
+    # Sort strictly by what aligns best with your cognitive fingerprint
     valid_items.sort(key=lambda x: x["sort_weight"], reverse=True)
 
     # --- 4. SELECT TOP 9 ITEMS ---
     # We no longer force source diversity or strict media ratios.
-    # If one source or medium provides incredible signal today, we consume it.
+    # The top 9 items mathematically tailored to your brain win.
     return valid_items[:9]
