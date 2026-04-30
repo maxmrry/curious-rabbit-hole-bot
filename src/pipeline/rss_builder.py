@@ -58,8 +58,10 @@ def build_feed(selected_items):
             prefix = "(Research) "
         elif item["source_type"] == "news":
             prefix = "(News) "
+        elif item["source_type"] == "youtube":
+            prefix = "(Video) "
         else:
-            prefix = "" 
+            prefix = ""
             
         fe.title(f"{prefix}{item['title']}")
         fe.link(href=item['url'])
