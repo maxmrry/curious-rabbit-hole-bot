@@ -14,15 +14,17 @@ def main():
         
         # Dynamically calculate total expected items from policy.yaml
         quotas = policy.get("media_quotas", {})
-        expected_total = sum(quotas.values()) if quotas else 11
+        expected_total = sum(quotas.values()) if quotas else 12
         
         # 2. Gather, Score, & Select
         selected_items = select_daily_items(memory, policy)
         
-        # Dynamic safety check (Allows a 2-item buffer in case APIs have a slow day)
-        if len(selected_items) < (expected_total - 2):
+        # Relaxed safety check: As long as we find 5 elite items, build the feed.
+        if len(selected_items) < 5:
             print(f"⚠️ Only found {len(selected_items)} elite items. Expected near {expected_total}. Aborting run to preserve feed quality.")
             sys.exit(0)
+        elif len(selected_items) < expected_total:
+            print(f"ℹ️ Found {len(selected_items)} items. Some media buckets fell short of their quota today, but proceeding with elite items.")
             
         # 3. Philosophy Engine (Reframing)
         print("🧠 Reframing descriptions objectively...")
