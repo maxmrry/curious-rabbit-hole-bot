@@ -19,12 +19,12 @@ def main():
         # 2. Gather, Score, & Select
         selected_items = select_daily_items(memory, policy)
         
-        # Relaxed safety check: As long as we find 5 elite items, build the feed.
-        if len(selected_items) < 5:
-            print(f"⚠️ Only found {len(selected_items)} elite items. Expected near {expected_total}. Aborting run to preserve feed quality.")
-            sys.exit(0)
+        # Relaxed safety check: Only abort if the internet is completely broken
+        if not selected_items:
+            print("🚨 Found 0 items. API failure or network issue. Aborting.")
+            sys.exit(1)
         elif len(selected_items) < expected_total:
-            print(f"ℹ️ Found {len(selected_items)} items. Some media buckets fell short of their quota today, but proceeding with elite items.")
+            print(f"ℹ️ Found {len(selected_items)} out of {expected_total} items today. Proceeding with best available.")
             
         # 3. Philosophy Engine (Reframing)
         print("🧠 Reframing descriptions objectively...")
