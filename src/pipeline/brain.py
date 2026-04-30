@@ -87,43 +87,44 @@ def select_daily_items(memory, policy):
 
     # --- 3. THE COGNITIVE SORTING HAT ---
     valid_items = []
-    fear_rejects = 0
 
     for item in candidates:
         scores = score_map.get(item["native_id"])
         if not scores:
             continue
             
-        # Track how many are being rejected for fear/slop
-        if scores.get("fear_score", 0) > max_fear or scores.get("ai_slop_penalty", 0) > 4:
-            fear_rejects += 1
-            continue
-
         s_sys = scores.get("systemic_score", 0)
         s_nuance = scores.get("nuance_score", 0)
         s_temp = scores.get("temporal_score", 0)
         s_const = scores.get("constructive_score", 0)
         s_abs = scores.get("abstraction_score", 0)
+        s_geo = scores.get("geo_affinity_score", 5)
+        
+        fear = scores.get("fear_score", 0)
+        slop = scores.get("ai_slop_penalty", 0)
+
+        # SOFT PENALTY: Instead of hard-rejecting, we mathematically sink bad items to the bottom.
+        # Your veto_terms.txt already protects you from severe doom.
+        penalty = (fear * 5.0) + (slop * 5.0)
 
         item["sort_weight"] = (
             (s_sys * w_sys) +
             (s_nuance * w_nuance) +
             (s_temp * w_temp) +
             (s_const * w_const) +
-            (s_abs * w_abs)
-        )
+            (s_abs * w_abs) +
+            (s_geo * 0.15) # Subtle bump for UK/Europe relevance
+        ) - penalty
+        
         item["deep_dive_score"] = s_sys + s_nuance + s_temp
         
         valid_items.append(item)
-
-    print(f"📊 DIAGNOSTIC: {fear_rejects} items were rejected for high fear/slop scores.")
-    print(f"📊 DIAGNOSTIC: {len(valid_items)} elite items available for bucketing.")
 
     # --- 4. DYNAMIC BUCKET SYSTEM ---
     final_selection = []
     seen_ids = set()
 
-    # Deep Dive
+    # 1. Deep Dive
     valid_items.sort(key=lambda x: x["deep_dive_score"], reverse=True)
     count = 0
     for d in valid_items:
@@ -136,51 +137,55 @@ def select_daily_items(memory, policy):
     # Re-sort remaining by pure cognitive alignment
     valid_items.sort(key=lambda x: x["sort_weight"], reverse=True)
 
-    podcasts = [i for i in valid_items if i["source_type"] == "podcast"]
-    videos = [i for i in valid_items if i["source_type"] == "youtube"]
-    research = [i for i in valid_items if i["source_type"] == "rss"]
-    news_items = [i for i in valid_items if i["source_type"] == "news"]
+    podcasts = [i for i in valid_items if i["source_type"] == "podcast" and i["native_id"] not in seen_ids]
+    videos = [i for i in valid_items if i["source_type"] == "youtube" and i["native_id"] not in seen_ids]
+    research = [i for i in valid_items if i["source_type"] == "rss" and i["native_id"] not in seen_ids]
+    news_items = [i for i in valid_items if i["source_type"] == "news" and i["native_id"] not in seen_ids]
     
-    print(f"📊 DIAGNOSTIC BUCKET INVENTORY: Podcasts: {len(podcasts)}, Videos: {len(videos)}, RSS: {len(research)}, News: {len(news_items)}")
+    # 2. Flexible Audio/Video Quota (4-6 Videos, rest Podcasts)
+    q_av_total = quotas.get("av_total", 8)
+    q_min_vid = quotas.get("min_videos", 4)
+    q_max_vid = quotas.get("max_videos", 6)
+    
+    selected_videos = []
+    selected_podcasts = []
+    
+    # Grab the minimum guaranteed videos and podcasts
+    while len(selected_videos) < q_min_vid and videos:
+        selected_videos.append(videos.pop(0))
+        
+    min_pods = q_av_total - q_max_vid
+    while len(selected_podcasts) < min_pods and podcasts:
+        selected_podcasts.append(podcasts.pop(0))
+        
+    # Let the remaining slots fight it out based on pure 'captivating' sort_weight
+    wildcards = sorted(videos + podcasts, key=lambda x: x["sort_weight"], reverse=True)
+    while (len(selected_videos) + len(selected_podcasts)) < q_av_total and wildcards:
+        best = wildcards.pop(0)
+        if best["source_type"] == "youtube" and len(selected_videos) < q_max_vid:
+            selected_videos.append(best)
+        elif best["source_type"] == "podcast":
+            selected_podcasts.append(best)
+            
+    for item in selected_videos + selected_podcasts:
+        item["category"] = "positivity"
+        final_selection.append(item)
+        seen_ids.add(item["native_id"])
 
-    # Podcasts
-    count = 0
-    for p in podcasts:
-        if count >= q_podcasts: break
-        if p["native_id"] not in seen_ids:
-            p["category"] = "positivity"
-            final_selection.append(p)
-            seen_ids.add(p["native_id"])
-            count += 1
-
-    # Videos
-    count = 0
-    for v in videos:
-        if count >= q_videos: break
-        if v["native_id"] not in seen_ids:
-            v["category"] = "positivity"
-            final_selection.append(v)
-            seen_ids.add(v["native_id"])
-            count += 1
-
-    # Research
+    # 3. Research
     count = 0
     for r in research:
         if count >= q_research: break
-        if r["native_id"] not in seen_ids:
-            r["category"] = "positivity"
-            final_selection.append(r)
-            seen_ids.add(r["native_id"])
-            count += 1
+        r["category"] = "positivity"
+        final_selection.append(r)
+        count += 1
             
-    # News
+    # 4. News
     count = 0
     for n in news_items:
         if count >= q_news: break
-        if n["native_id"] not in seen_ids:
-            n["category"] = "positivity"
-            final_selection.append(n)
-            seen_ids.add(n["native_id"])
-            count += 1
+        n["category"] = "positivity"
+        final_selection.append(n)
+        count += 1
 
     return final_selection
