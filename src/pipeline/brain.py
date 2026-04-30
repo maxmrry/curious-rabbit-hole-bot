@@ -56,6 +56,10 @@ def select_daily_items(memory, policy):
         if not passes_veto_check(item):
             continue
             
+        # Natively drop high-harm news before wasting Gemini tokens
+        if item["source_type"] == "news" and not item.get("scoring_metrics", {}).get("hopeful_rewrite_eligible", True):
+            continue
+            
         # Extended freshness to 30 days for academic feeds, kept at 7 for news
         if item["source_type"] == "rss":
             if (now_ms - item["published_date_ms"]) > (30 * 24 * 60 * 60 * 1000):
