@@ -88,31 +88,33 @@ def semantic_triage(candidates):
 
 def reframe_items(selected_items):
     """
-    Generates a clean, objective 60-word synopsis of the final chosen items.
-    Does not fabricate or inject artificial positivity.
+    Generates a clean, objective synopsis of the final chosen items.
+    Appends a grounded, real-world consequence specifically for News items.
     """
     if not selected_items:
         return []
 
     pool_text = ""
     for item in selected_items:
-        pool_text += f"\nID: {item['native_id']}\nTitle: {item['title']}\nDesc: {item['description']}\n---"
+        pool_text += f"\nID: {item['native_id']}\nType: {item['source_type']}\nTitle: {item['title']}\nDesc: {item['description']}\n---"
 
     prompt = """
-    You are a high-level cognitive filter. Your job is to rewrite the descriptions of these media items to provide a clean, objective synopsis.
+    You are a high-level cognitive filter for an employed, globally aware Gen Z male living in the UK/North West EU.
+    Your job is to rewrite the descriptions of these media items to provide a clean, objective synopsis.
     
     REWRITE RULES:
-    - Keep it under 60 words.
+    - Keep it under 60 words for standard items (News can be up to 80 words).
     - Be factually honest. DO NOT fabricate, editorialize, or inject artificial "toxic positivity."
-    - Clearly state what the content is about and what the user will learn from it.
+    - Clearly state what the content is about and what the user will learn.
     - Speak with stoic, mature clarity.
+    - IF TYPE IS 'news': You MUST append one final sentence explaining the tangible, systemic benefit of this event. Frame how it specifically provides long-term economic, environmental, or geopolitical stability for a young professional living in the UK/EU today.
     
     RETURN EXACTLY THIS JSON STRUCTURE:
     {
         "rewrites": [
             {
                 "native_id": "exact ID",
-                "rewritten_description": "your 60-word objective synopsis"
+                "rewritten_description": "your objective synopsis"
             }
         ]
     }
@@ -122,6 +124,17 @@ def reframe_items(selected_items):
 
     response = safe_generate(prompt)
     if not response:
+        return selected_items
+
+    try:
+        parsed = json.loads(response.text)
+        rewrites = {x["native_id"]: x["rewritten_description"] for x in parsed.get("rewrites", [])}
+        
+        for item in selected_items:
+            if item["native_id"] in rewrites:
+                item["description"] = rewrites[item["native_id"]]
+        return selected_items
+    except json.JSONDecodeError:
         return selected_items
 
     try:
