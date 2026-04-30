@@ -45,13 +45,14 @@ def semantic_triage(candidates):
 
     Score the following content candidates from 0 to 10 based on these highly specific metrics:
 
-    1. systemic_score (0-10): Focuses on structural mechanisms, ecologies, and how systems work (rather than personal drama).
+    1. systemic_score (0-10): Focuses on structural mechanisms, ecologies, and how systems work.
     2. nuance_score (0-10): Embraces complex, high-friction ambiguity and grey-areas.
     3. temporal_score (0-10): Deep-time perspective, macro-history, or evolutionary anthropology.
-    4. constructive_score (0-10): Grounded realism, actionable truth, and resilience (NO fake toxic positivity).
-    5. abstraction_score (0-10): High-level theoretical concepts, big philosophical ideas, and deep frameworks.
+    4. constructive_score (0-10): Grounded realism, actionable truth, and resilience.
+    5. abstraction_score (0-10): High-level theoretical concepts, big philosophical ideas.
     6. fear_score (0-10): Engagement-bait, doom-mongering, or apocalyptic framing. (10 = maximum toxic panic).
     7. ai_slop_penalty (0-10): Does this read like generic, faceless AI-generated garbage? (10 = absolute slop).
+    8. geo_affinity_score (0-10): Western relevance. UK-centric = 10, Europe = 8, US = 6. Broad global human progress = 5. Highly specific non-Western local news = 1.
 
     RETURN EXACTLY THIS JSON STRUCTURE:
     {{
@@ -64,7 +65,8 @@ def semantic_triage(candidates):
                 "constructive_score": 7,
                 "abstraction_score": 9,
                 "fear_score": 1,
-                "ai_slop_penalty": 0
+                "ai_slop_penalty": 0,
+                "geo_affinity_score": 8
             }}
         ]
     }}
