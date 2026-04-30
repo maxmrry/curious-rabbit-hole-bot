@@ -12,8 +12,9 @@ cognitive_fingerprint:
   theoretical_abstraction: 0.32
 
 media_quotas:
-  podcasts: 4
-  videos: 4
+  av_total: 8
+  min_videos: 4
+  max_videos: 6
   research: 2
   news: 1
   deep_dive: 1
