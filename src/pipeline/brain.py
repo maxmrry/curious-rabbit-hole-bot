@@ -17,10 +17,6 @@ def load_policy(filepath='policy/policy.yaml'):
         return {}
 
 def select_daily_items(memory, policy):
-    """
-    Gathers data, applies hard age-limits, calls Gemini for Semantic Triage, 
-    and dynamically buckets items based on policy.yaml quotas and cognitive footprint.
-    """
     # Extract Policy Constraints
     max_fear = policy.get("thresholds", {}).get("max_fear_score", 3)
     
@@ -42,17 +38,16 @@ def select_daily_items(memory, policy):
     
     candidates = []
     now_ms = int(time.time() * 1000)
-    fourteen_days_ms = 14 * 24 * 60 * 60 * 1000
     
     print("📡 Fetching raw data from all sources...")
     raw_items = []
     raw_items.extend(fetch_rss_whitelist())
     raw_items.extend(fetch_youtube_whitelist())
     raw_items.extend(fetch_relevant_news())
-    
-    # API QUOTA SAVER: 1 call to Listen Notes (30/month limit), 1 call to Podcast Index (Generous limit)
     raw_items.extend(fetch_listen_notes('resilience OR relationship psychology'))
     raw_items.extend(fetch_podcast_index('anthropology OR sociology OR digital subculture'))
+
+    print(f"📊 DIAGNOSTIC: Pulled {len(raw_items)} total raw items from the APIs.")
 
     # --- 1. PYTHON HARD FILTERING ---
     for item in raw_items:
@@ -61,13 +56,20 @@ def select_daily_items(memory, policy):
         if not passes_veto_check(item):
             continue
             
-        if item["source_type"] in ["news", "rss"]:
-            if (now_ms - item["published_date_ms"]) > fourteen_days_ms:
+        # Extended freshness to 30 days for academic feeds, kept at 7 for news
+        if item["source_type"] == "rss":
+            if (now_ms - item["published_date_ms"]) > (30 * 24 * 60 * 60 * 1000):
                 continue 
+        elif item["source_type"] == "news":
+            if (now_ms - item["published_date_ms"]) > (7 * 24 * 60 * 60 * 1000):
+                continue
                 
         candidates.append(item)
 
-    candidates = candidates[:60]
+    print(f"📊 DIAGNOSTIC: {len(candidates)} items survived memory/veto/age filters.")
+
+    # Widened the funnel to 90 to prevent Bucket Starvation
+    candidates = candidates[:90]
     if not candidates:
         return []
 
@@ -76,16 +78,21 @@ def select_daily_items(memory, policy):
     # --- 2. GEMINI SEMANTIC TRIAGE ---
     scored_metrics = semantic_triage(candidates)
     score_map = {s["native_id"]: s for s in scored_metrics}
+    
+    print(f"📊 DIAGNOSTIC: Gemini successfully scored {len(score_map)} items.")
 
-    # --- 3. THE COGNITIVE SORTING HAT (Weighted Math) ---
+    # --- 3. THE COGNITIVE SORTING HAT ---
     valid_items = []
+    fear_rejects = 0
 
     for item in candidates:
         scores = score_map.get(item["native_id"])
         if not scores:
             continue
             
+        # Track how many are being rejected for fear/slop
         if scores.get("fear_score", 0) > max_fear or scores.get("ai_slop_penalty", 0) > 4:
+            fear_rejects += 1
             continue
 
         s_sys = scores.get("systemic_score", 0)
@@ -94,7 +101,6 @@ def select_daily_items(memory, policy):
         s_const = scores.get("constructive_score", 0)
         s_abs = scores.get("abstraction_score", 0)
 
-        # Apply personalized alignment equation
         item["sort_weight"] = (
             (s_sys * w_sys) +
             (s_nuance * w_nuance) +
@@ -102,11 +108,12 @@ def select_daily_items(memory, policy):
             (s_const * w_const) +
             (s_abs * w_abs)
         )
-        
-        # Dedicated anthropology/systemic score to isolate the deep dive
         item["deep_dive_score"] = s_sys + s_nuance + s_temp
         
         valid_items.append(item)
+
+    print(f"📊 DIAGNOSTIC: {fear_rejects} items were rejected for high fear/slop scores.")
+    print(f"📊 DIAGNOSTIC: {len(valid_items)} elite items available for bucketing.")
 
     # --- 4. DYNAMIC BUCKET SYSTEM ---
     final_selection = []
@@ -129,6 +136,8 @@ def select_daily_items(memory, policy):
     videos = [i for i in valid_items if i["source_type"] == "youtube"]
     research = [i for i in valid_items if i["source_type"] == "rss"]
     news_items = [i for i in valid_items if i["source_type"] == "news"]
+    
+    print(f"📊 DIAGNOSTIC BUCKET INVENTORY: Podcasts: {len(podcasts)}, Videos: {len(videos)}, RSS: {len(research)}, News: {len(news_items)}")
 
     # Podcasts
     count = 0
@@ -150,7 +159,7 @@ def select_daily_items(memory, policy):
             seen_ids.add(v["native_id"])
             count += 1
 
-    # Research (RSS Whitelist)
+    # Research
     count = 0
     for r in research:
         if count >= q_research: break
@@ -160,7 +169,7 @@ def select_daily_items(memory, policy):
             seen_ids.add(r["native_id"])
             count += 1
             
-    # News (Actually Relevant API)
+    # News
     count = 0
     for n in news_items:
         if count >= q_news: break
