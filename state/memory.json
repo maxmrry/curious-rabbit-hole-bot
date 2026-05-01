@@ -154,6 +154,61 @@
       "native_id": "948f617b-5e3c-47cd-9760-6de9d5e8b134",
       "source_type": "news",
       "last_seen_ms": 1777543995925
+    },
+    "03164b325c7c7c35e72f8c48543d6ac66fe822f40a2d23da816becfb43b9cc3c": {
+      "native_id": "_wxedONEDV8",
+      "source_type": "youtube",
+      "last_seen_ms": 1777620713323
+    },
+    "64bd9e5e6af23dc6b787793ffa449526ae57752084f4bf2838a5fed6075f9077": {
+      "native_id": "yR1Nr-cYxFk",
+      "source_type": "youtube",
+      "last_seen_ms": 1777620713323
+    },
+    "cc2464895a323312a3e88eee760c8125f33e6e5d3d78569f4d0e03339378e875": {
+      "native_id": "NuoEsHIW5JA",
+      "source_type": "youtube",
+      "last_seen_ms": 1777620713323
+    },
+    "fa3bcc9687ad08beae4be1667e49d123c18396eef88a4f4cf86f3f4ab7056ac6": {
+      "native_id": "PUDvZYXxMuQ",
+      "source_type": "youtube",
+      "last_seen_ms": 1777620713323
+    },
+    "fe7c24801d27065e3183008ee1528af5a6f98702d3c80c67c716a6a894dcc39d": {
+      "native_id": "wZssAS4g3FI",
+      "source_type": "youtube",
+      "last_seen_ms": 1777620713323
+    },
+    "83c74d176aa08d5fda4823e2ea14e3bf06461174eebeb97f85da106044db39e8": {
+      "native_id": "XZGZZ-g1GGQ",
+      "source_type": "youtube",
+      "last_seen_ms": 1777620713323
+    },
+    "ae0d1cf93d1a42a96e5f3372992aa0f48a421b72a2a86ae1313b384cb5d850aa": {
+      "native_id": "GGqYuvfyKhk",
+      "source_type": "youtube",
+      "last_seen_ms": 1777620713323
+    },
+    "1659295668fe4531078f8847ec3e8dfca23a6e32d0ab219718a301252ea66130": {
+      "native_id": "069535c4f19948fba02986d3db838530",
+      "source_type": "podcast",
+      "last_seen_ms": 1777620713323
+    },
+    "9138605b1b11f616d02f3c49864ce797b26ad67d6f9838e868990acac79193b9": {
+      "native_id": "2bb3fca6310c4166b2b94aa7cd441ab5",
+      "source_type": "podcast",
+      "last_seen_ms": 1777620713323
+    },
+    "11d946beb2b890766bac739307b9726b02de49cc8059f4dad760d42c94a3c9d2": {
+      "native_id": "https://www.anthropology-news.org/articles/only-after-closed-doors-secrecy-and-transparency-in-the-making-of-educational-policy-and-anthropological-research/",
+      "source_type": "rss",
+      "last_seen_ms": 1777620713323
+    },
+    "47037cfa04dbbca5754c94d1c174440dd106463c830fdaac6dd1e5b90ebc9acd": {
+      "native_id": "https://www.quantamagazine.org/what-can-we-gain-by-losing-infinity-20260429/",
+      "source_type": "rss",
+      "last_seen_ms": 1777620713323
     }
   },
   "sources_health": {
