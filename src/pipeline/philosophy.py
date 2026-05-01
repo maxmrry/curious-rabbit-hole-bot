@@ -9,27 +9,24 @@ import google.generativeai as genai
 api_key = os.getenv("GEMINI_API_KEY")
 if api_key:
     genai.configure(api_key=api_key)
-    # Using flash as it is fast, cheap, and excellent at JSON structuring
     model = genai.GenerativeModel('gemini-2.5-flash', generation_config={"response_mime_type": "application/json"})
+    text_model = genai.GenerativeModel('gemini-2.5-flash') # Standard text model for anchors
 
-def safe_generate(prompt, retries=3):
-    """Wraps Gemini calls in a protective retry loop."""
+def safe_generate(prompt, retries=3, is_json=True):
     for attempt in range(retries):
         try:
-            return model.generate_content(prompt)
+            if is_json:
+                return model.generate_content(prompt)
+            else:
+                return text_model.generate_content(prompt)
         except Exception as e:
             if attempt < retries - 1:
-                print(f"⚠️ API busy or failed. Retrying ({attempt + 1}/{retries})...")
                 time.sleep(15)
             else:
                 print(f"🚨 Gemini completely failed: {e}")
                 return None
 
 def semantic_triage(candidates):
-    """
-    Passes the raw pool to Gemini to contextually score them on a 0-10 scale.
-    This prevents static keyword blacklists from blocking good content.
-    """
     if not candidates:
         return []
 
@@ -38,21 +35,18 @@ def semantic_triage(candidates):
         pub_date_str = datetime.datetime.fromtimestamp(item['published_date_ms'] / 1000.0).strftime('%Y-%m-%d')
         pool_text += f"\nID: {item['native_id']} | Date: {pub_date_str} | Source: {item['source_name']}\nTitle: {item['title']}\nDesc: {item['description']}\n---"
 
-    current_year = datetime.datetime.now().year
-
     prompt = f"""
-    You are the 'U-Curve Brain', an advanced cognitive containment filter.
+    You are the 'U-Curve Brain', an advanced cognitive filter for an employed Gen Z male in the UK/EU.
+    Score the following candidates from 0 to 10 based on these metrics:
 
-    Score the following content candidates from 0 to 10 based on these highly specific metrics:
-
-    1. systemic_score (0-10): Focuses on structural mechanisms, ecologies, and how systems work.
-    2. nuance_score (0-10): Embraces complex, high-friction ambiguity and grey-areas.
-    3. temporal_score (0-10): Deep-time perspective, macro-history, or evolutionary anthropology.
-    4. constructive_score (0-10): Grounded realism, actionable truth, and resilience.
-    5. abstraction_score (0-10): High-level theoretical concepts, big philosophical ideas.
-    6. fear_score (0-10): Engagement-bait, doom-mongering, or apocalyptic framing. (10 = maximum toxic panic).
-    7. ai_slop_penalty (0-10): Does this read like generic, faceless AI-generated garbage? (10 = absolute slop).
-    8. geo_affinity_score (0-10): Western relevance. UK-centric = 10, Europe = 8, US = 6. Broad global human progress = 5. Highly specific non-Western local news = 1.
+    1. systemic_score (0-10): Focuses on structural mechanisms and human cooperation.
+    2. nuance_score (0-10): Embraces complex ambiguity.
+    3. temporal_score (0-10): History or anthropology, BUT ONLY IF it teaches something positive or relatable about human drivers today.
+    4. constructive_score (0-10): Grounded realism, accessible tech, and actionable truth.
+    5. abstraction_score (0-10): Big ideas. CRITICAL RULE: Heavily penalize pure detached academia (like abstract math, ancient geography, or dense policy) that has no tangible life application.
+    6. fear_score (0-10): Engagement-bait or panic. (10 = maximum toxic panic).
+    7. ai_slop_penalty (0-10): Generic AI-generated garbage.
+    8. geo_affinity_score (0-10): Western relevance. UK-centric = 10, Europe = 8, US = 6. Highly specific non-Western macroeconomics (e.g., Egypt policies) = 2.
 
     RETURN EXACTLY THIS JSON STRUCTURE:
     {{
@@ -76,38 +70,29 @@ def semantic_triage(candidates):
     """
 
     response = safe_generate(prompt)
-    if not response:
-        return []
+    if not response: return []
 
     try:
         parsed = json.loads(response.text)
         return parsed.get("scores", [])
     except json.JSONDecodeError:
-        print("🚨 Failed to parse Gemini Semantic Triage JSON.")
         return []
 
 def reframe_items(selected_items):
-    """
-    Generates a clean, objective synopsis of the final chosen items.
-    Appends a grounded, real-world consequence specifically for News items.
-    """
-    if not selected_items:
-        return []
+    if not selected_items: return []
 
     pool_text = ""
     for item in selected_items:
         pool_text += f"\nID: {item['native_id']}\nType: {item['source_type']}\nTitle: {item['title']}\nDesc: {item['description']}\n---"
 
     prompt = """
-    You are a high-level cognitive filter for an employed, globally aware Gen Z male living in the UK/North West EU.
-    Your job is to rewrite the descriptions of these media items to provide a clean, objective synopsis.
+    You are a high-level cognitive filter for an employed, globally aware Gen Z male living in the UK/EU.
+    Rewrite descriptions to provide a clean, objective synopsis.
     
-    REWRITE RULES:
-    - Keep it under 60 words for standard items (News can be up to 80 words).
-    - Be factually honest. DO NOT fabricate, editorialize, or inject artificial "toxic positivity."
-    - Clearly state what the content is about and what the user will learn.
-    - Speak with stoic, mature clarity.
-    - IF TYPE IS 'news': You MUST append one final sentence explaining the tangible, systemic benefit of this event. Frame how it specifically provides long-term economic, environmental, or geopolitical stability for a young professional living in the UK/EU today.
+    RULES:
+    - Keep it under 60 words (News can be up to 80).
+    - Be factually honest. DO NOT inject "toxic positivity."
+    - IF TYPE IS 'news': Append one final sentence explaining the tangible, positive consequence of this event for a young professional in the UK/EU today (e.g., how it provides economic, environmental, or geopolitical stability).
     
     RETURN EXACTLY THIS JSON STRUCTURE:
     {
@@ -118,29 +103,15 @@ def reframe_items(selected_items):
             }
         ]
     }
-
     ITEMS:
     """ + pool_text
 
     response = safe_generate(prompt)
-    if not response:
-        return selected_items
+    if not response: return selected_items
 
     try:
         parsed = json.loads(response.text)
         rewrites = {x["native_id"]: x["rewritten_description"] for x in parsed.get("rewrites", [])}
-        
-        for item in selected_items:
-            if item["native_id"] in rewrites:
-                item["description"] = rewrites[item["native_id"]]
-        return selected_items
-    except json.JSONDecodeError:
-        return selected_items
-
-    try:
-        parsed = json.loads(response.text)
-        rewrites = {x["native_id"]: x["rewritten_description"] for x in parsed.get("rewrites", [])}
-        
         for item in selected_items:
             if item["native_id"] in rewrites:
                 item["description"] = rewrites[item["native_id"]]
@@ -149,25 +120,36 @@ def reframe_items(selected_items):
         return selected_items
 
 def get_daily_protocol(filepath='policy/principles.json'):
-    """Pulls a random psychological reminder from the Power of Bad principle bank."""
     try:
         with open(filepath, 'r') as f:
             principles = json.load(f)
-            return random.choice(principles)
-    except Exception as e:
-        print(f"⚠️ Failed to load principles: {e}")
-        return "The Power of Bad: Bad is stronger than good, but it is usable. Exploit the bias for smarter decisions instead of being controlled by it."
+            raw_principle = random.choice(principles)
+            
+            prompt = f"""
+            Take this clinical psychological principle: "{raw_principle}"
+            Translate it into a single, direct, relatable sentence of advice for a 20-something navigating modern life. Do not use quotes. Make it sound empowering.
+            """
+            response = safe_generate(prompt, is_json=False)
+            if response and response.text:
+                return response.text.strip().replace('"', '')
+            return raw_principle
+    except Exception:
+        return "Notice three neutral things today to actively break the brain's hunt for threats."
 
-def get_daily_principle():
-    """Uses Gemini to generate a timeless historical adage or proverb."""
-    prompt = """
-    Provide a single, timeless historical proverb, adage, or piece of Stoic/Zen wisdom 
-    that relates to resilience, perspective, or human endurance. 
-    Do not use clinical psychology terms. Keep it poetic but grounded.
-    
-    Format: "The quote." - Author/Origin
-    """
-    response = safe_generate(prompt)
-    if response and response.text:
-        return response.text.strip().replace('"', '').replace('{', '').replace('}', '')
-    return "A smooth sea never made a skilled sailor. - English Proverb"
+def get_daily_principle(filepath='policy/adages.txt'):
+    try:
+        with open(filepath, 'r') as f:
+            lines = [line.strip() for line in f if line.strip()]
+            raw_adage = random.choice(lines)
+            
+            prompt = f"""
+            I have a raw, messy adage from a list: "{raw_adage}"
+            1. Clean up any broken text, hyphens, or brackets so it reads as a perfect, classic adage. Do not use quotes.
+            2. Add a space, then add a short, grounded sentence in brackets [like this] explaining how a 20-something young professional can apply this to their life to reduce anxiety or gain perspective.
+            """
+            response = safe_generate(prompt, is_json=False)
+            if response and response.text:
+                return response.text.strip().replace('"', '')
+            return "A smooth sea never made a skilled sailor. [Embrace friction today as the exact training required for tomorrow's competence.]"
+    except Exception:
+        return "A smooth sea never made a skilled sailor. [Embrace friction today as the exact training required for tomorrow's competence.]"
