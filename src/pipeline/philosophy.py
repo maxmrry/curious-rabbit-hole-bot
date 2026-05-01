@@ -121,24 +121,36 @@ def reframe_items(selected_items):
 
 def get_daily_protocol(filepath='policy/principles.json'):
     try:
-        with open(filepath, 'r') as f:
+        with open(filepath, 'r', encoding='utf-8') as f:
             principles = json.load(f)
             raw_principle = random.choice(principles)
             
+            # 🔧 FIX: Using escaped quotes (\") so code editor colors don't break
+            clean_principle = (
+                str(raw_principle)
+                .replace("\"", "'")      # avoid breaking quotes
+                .replace("\n", " ")      # remove line breaks
+                .strip()
+            )
+            
             prompt = f"""
-            Take this clinical psychological principle: "{raw_principle}"
-            Translate it into a single, direct, relatable sentence of advice for a 20-something navigating modern life. Do not use quotes. Make it sound empowering.
+            Take this clinical psychological principle: "{clean_principle}"
+            Translate it into a single, direct, relatable sentence of advice. Do not use quotes. Make it sound empowering and stoic.
+            CONTEXT: The reader is a Gen Z English male in his 20s, employed, globally aware, and actively trying to deconstruct modern fear-culture.
+            CRITICAL RULE: Apply this principle holistically. Dynamically vary the application—relate it to romantic relationships, friendships, personal self-worth, media consumption, OR career. Do not just focus on work. Keep it to one punchy sentence.
             """
+            
             response = safe_generate(prompt, is_json=False)
             if response and response.text:
-                return response.text.strip().replace('"', '')
+                return response.text.strip().replace("\"", "")
             return raw_principle
     except Exception:
         return "Notice three neutral things today to actively break the brain's hunt for threats."
 
 def get_daily_principle(filepath='policy/adages.txt'):
     try:
-        with open(filepath, 'r') as f:
+        # 🔧 FIX: Added encoding='utf-8' to prevent UnicodeDecodeError on weird characters
+        with open(filepath, 'r', encoding='utf-8') as f:
             lines = [line.strip() for line in f if line.strip()]
             raw_adage = random.choice(lines)
             
@@ -149,9 +161,10 @@ def get_daily_principle(filepath='policy/adages.txt'):
             CONTEXT: The reader is a Gen Z English male in his 20s, employed, globally aware, and actively trying to deconstruct modern fear-culture.
             CRITICAL RULE: Do not over-analyze. Keep the bracketed text punchy, grounded, and extremely short (maximum 12 words).
             """
+            
             response = safe_generate(prompt, is_json=False)
             if response and response.text:
-                return response.text.strip().replace('"', '')
+                return response.text.strip().replace("\"", "")
             return "A smooth sea never made a skilled sailor. (Embrace today's friction as training for tomorrow.)"
     except Exception:
         return "A smooth sea never made a skilled sailor. (Embrace today's friction as training for tomorrow.)"
