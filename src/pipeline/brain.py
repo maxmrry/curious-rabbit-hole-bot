@@ -120,18 +120,26 @@ def select_daily_items(memory, policy):
         
         valid_items.append(item)
 
-    # --- 4. DYNAMIC BUCKET SYSTEM ---
+        # --- 4. DYNAMIC BUCKET SYSTEM ---
     final_selection = []
     seen_ids = set()
+    used_sources = set() # NEW: Prevents source flooding
+
+    # Helper function to add items safely
+    def add_item(item, category):
+        item["category"] = category
+        final_selection.append(item)
+        seen_ids.add(item["native_id"])
+        used_sources.add(item["source_name"])
 
     # 1. Deep Dive
     valid_items.sort(key=lambda x: x["deep_dive_score"], reverse=True)
     count = 0
     for d in valid_items:
         if count >= q_deep_dive: break
-        d["category"] = "deep_dive"
-        final_selection.append(d)
-        seen_ids.add(d["native_id"])
+        # Skip if we already used this source
+        if d["source_name"] in used_sources: continue
+        add_item(d, "deep_dive")
         count += 1
 
     # Re-sort remaining by pure cognitive alignment
@@ -150,42 +158,51 @@ def select_daily_items(memory, policy):
     selected_videos = []
     selected_podcasts = []
     
-    # Grab the minimum guaranteed videos and podcasts
-    while len(selected_videos) < q_min_vid and videos:
-        selected_videos.append(videos.pop(0))
-        
+    # Minimum Videos
+    for v in videos:
+        if len(selected_videos) >= q_min_vid: break
+        if v["source_name"] not in used_sources:
+            selected_videos.append(v)
+            used_sources.add(v["source_name"])
+            
+    # Minimum Podcasts
     min_pods = q_av_total - q_max_vid
-    while len(selected_podcasts) < min_pods and podcasts:
-        selected_podcasts.append(podcasts.pop(0))
-        
-    # Let the remaining slots fight it out based on pure 'captivating' sort_weight
+    for p in podcasts:
+        if len(selected_podcasts) >= min_pods: break
+        if p["source_name"] not in used_sources:
+            selected_podcasts.append(p)
+            used_sources.add(p["source_name"])
+            
+    # Fill remaining AV slots based on captivating sort_weight
     wildcards = sorted(videos + podcasts, key=lambda x: x["sort_weight"], reverse=True)
-    while (len(selected_videos) + len(selected_podcasts)) < q_av_total and wildcards:
-        best = wildcards.pop(0)
+    for best in wildcards:
+        if (len(selected_videos) + len(selected_podcasts)) >= q_av_total: break
+        if best["source_name"] in used_sources: continue # Diversity lock
+        
         if best["source_type"] == "youtube" and len(selected_videos) < q_max_vid:
             selected_videos.append(best)
+            used_sources.add(best["source_name"])
         elif best["source_type"] == "podcast":
             selected_podcasts.append(best)
+            used_sources.add(best["source_name"])
             
     for item in selected_videos + selected_podcasts:
-        item["category"] = "positivity"
-        final_selection.append(item)
-        seen_ids.add(item["native_id"])
+        add_item(item, "positivity")
 
     # 3. Research
     count = 0
     for r in research:
         if count >= q_research: break
-        r["category"] = "positivity"
-        final_selection.append(r)
+        if r["source_name"] in used_sources: continue
+        add_item(r, "positivity")
         count += 1
             
     # 4. News
+    # Note: We relax the source diversity lock slightly for news in case the only API we use is the single source.
     count = 0
     for n in news_items:
         if count >= q_news: break
-        n["category"] = "positivity"
-        final_selection.append(n)
+        add_item(n, "positivity")
         count += 1
 
     return final_selection
