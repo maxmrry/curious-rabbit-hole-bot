@@ -15,7 +15,8 @@ def fetch_listen_notes(query):
     headers = {"X-ListenAPI-Key": api_key}
     
     try:
-        response = requests.get(url, headers=headers)
+        # ✅ Added timeout=30 here
+        response = requests.get(url, headers=headers, timeout=30)
         response.raise_for_status()
         data = response.json()
         
@@ -62,7 +63,8 @@ def fetch_podcast_index(query):
     url = f"https://api.podcastindex.org/api/1.0/search/byterm?q={query}"
     
     try:
-        response = requests.get(url, headers=headers)
+        # ✅ Added timeout=30 here
+        response = requests.get(url, headers=headers, timeout=30)
         response.raise_for_status()
         data = response.json()
         
