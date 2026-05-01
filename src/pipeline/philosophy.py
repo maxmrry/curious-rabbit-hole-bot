@@ -145,11 +145,13 @@ def get_daily_principle(filepath='policy/adages.txt'):
             prompt = f"""
             I have a raw, messy adage from a list: "{raw_adage}"
             1. Clean up any broken text, hyphens, or brackets so it reads as a perfect, classic adage. Do not use quotes.
-            2. Add a space, then add a short, grounded sentence in brackets [like this] explaining how a 20-something young professional can apply this to their life to reduce anxiety or gain perspective.
+            2. Add a space, then add a very brief, simple sentence in rounded brackets (like this) explaining how the reader can apply this to their life to reduce anxiety or gain perspective.
+            CONTEXT: The reader is a Gen Z English male in his 20s, employed, globally aware, and actively trying to deconstruct modern fear-culture.
+            CRITICAL RULE: Do not over-analyze. Keep the bracketed text punchy, grounded, and extremely short (maximum 12 words).
             """
             response = safe_generate(prompt, is_json=False)
             if response and response.text:
                 return response.text.strip().replace('"', '')
-            return "A smooth sea never made a skilled sailor. [Embrace friction today as the exact training required for tomorrow's competence.]"
+            return "A smooth sea never made a skilled sailor. (Embrace today's friction as training for tomorrow.)"
     except Exception:
-        return "A smooth sea never made a skilled sailor. [Embrace friction today as the exact training required for tomorrow's competence.]"
+        return "A smooth sea never made a skilled sailor. (Embrace today's friction as training for tomorrow.)"
