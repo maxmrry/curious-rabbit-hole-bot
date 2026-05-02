@@ -45,7 +45,7 @@ def semantic_triage(candidates):
     4. constructive_score (0-10): Grounded realism, accessible tech, and actionable truth.
     5. abstraction_score (0-10): Big ideas with tangible life applications.
     6. fear_score (0-10): Engagement-bait or doom. (10 = maximum toxic panic).
-    7. ai_slop_penalty (0-10): Generic AI-generated garbage or toxic "feel-good fluff".
+    7. ai_slop_penalty (0-10): Generic AI-generated garbage, toxic "feel-good fluff", OR saccharine oversimplification. Score 8+ for anything that makes a complex problem sound solved, uses phrases like "this will change everything", or feels emotionally manipulative in a positive direction. Grounded optimism scores 0. Unearned optimism scores high.
     8. geo_affinity_score (0-10): Western relevance. UK-centric = 10, Europe = 8, US = 6.
     9. niche_boredom_penalty (0-10): CRITICAL. Score 10 for dry institutional housekeeping, campus lectures, or highly specific niche subcultures. 
     10. state_shift_score (0-10): CORE DRIVER. Does this actually improve mental state, offer agency, and provide "felt momentum"? (10 = highly empowering/energizing, 0 = emotionally flat/draining).
@@ -96,7 +96,7 @@ def reframe_items(selected_items):
     
     RULES:
     1. "hook_title": Rewrite the title so it creates a healthy curiosity gap (e.g., instead of "Global Health Data", use "Why preventable disease is plummeting globally"). Do not use clickbait.
-    2. "rewritten_description": Keep it under 60 words. Be objective. If it is News, append one sentence explaining the tangible benefit to a young UK/EU professional.
+    2. "rewritten_description": Keep it under 60 words. Be objective. If it is News, always end with one sentence grounding the content in tangible personal relevance — how might this affect the daily life, mental models, relationships, or career of a young employed person in the UK? Make it specific, not generic.
     3. "doom_inoculation": If the original text contains panic words (crisis, unprecedented, breaking, escalation), write a 1-sentence stoic counter-frame (e.g., "This language triggers false urgency; global systems adapt slowly."). Otherwise, leave it blank.
     
     RETURN EXACTLY THIS JSON:
