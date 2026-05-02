@@ -21,6 +21,9 @@ media_quotas:
 
 thresholds:
   max_fear_score: 3
+  min_state_shift_score: 4 
+  min_constructive_score: 3
+  topic_diversity_max_per_cluster: 1
   
 memory_limits:
   ttl_days: 180
