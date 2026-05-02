@@ -45,12 +45,11 @@ def select_daily_items(memory, policy):
     raw_items.extend(fetch_youtube_whitelist())
     raw_items.extend(fetch_relevant_news())
     
-    # 🧠 DYNAMIC WILDCARD QUERIES: Actively crawl novel domains each day
+    # 🧠 DYNAMIC WILDCARD QUERIES: Actively crawl high-energy, high-agency domains
     explore_themes = [
-        '"human progress"', 'futurism', '"deep time" OR "big history"',
-        '"systems thinking"', '"technology philosophy"', '"human resilience"', 
-        '"cultural shift"', '"behavioral economics"', '"macro history"', 
-        '"urban design"', '"cognitive psychology"', '"societal infrastructure"'
+        '"human progress"', '"behavioral science"', '"future optimism"',
+        '"mental models"', '"resilience psychology"', '"systems thinking"', 
+        '"technology philosophy"', '"cultural shift"'
     ]
     
     import random
@@ -115,12 +114,13 @@ def select_daily_items(memory, policy):
         s_const = scores.get("constructive_score", 0)
         s_abs = scores.get("abstraction_score", 0)
         s_geo = scores.get("geo_affinity_score", 5)
+        s_state = scores.get("state_shift_score", 0) # <--- GRAB NEW SCORE
         
         fear = scores.get("fear_score", 0)
         slop = scores.get("ai_slop_penalty", 0)
-        boredom = scores.get("niche_boredom_penalty", 0) # <--- GRAB BOREDOM SCORE
+        boredom = scores.get("niche_boredom_penalty", 0)
 
-        # SOFT PENALTY: Aggressively sink fearful, sloppy, AND boring/niche content
+        # SOFT PENALTY: Aggressively sink fearful, sloppy, AND boring content
         penalty = (fear * 5.0) + (slop * 5.0) + (boredom * 4.0)
 
         item["sort_weight"] = (
@@ -129,7 +129,8 @@ def select_daily_items(memory, policy):
             (s_temp * w_temp) +
             (s_const * w_const) +
             (s_abs * w_abs) +
-            (s_geo * 0.15)
+            (s_geo * 0.15) +
+            (s_state * 0.50) # <--- HEAVILY WEIGHTED HUMAN SIGNAL
         ) - penalty
         
         item["deep_dive_score"] = s_sys + s_nuance + s_temp
