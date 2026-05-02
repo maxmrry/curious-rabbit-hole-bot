@@ -1,14 +1,5 @@
 {
   "source_adjustments": {},
   "source_type_adjustments": {},
-  "recent_signals": [
-    {
-      "item_id": "test123",
-      "signal": 2,
-      "signal_label": "fascinating",
-      "source_name": "",
-      "source_type": "",
-      "timestamp_ms": 1777759909065
-    }
-  ]
+  "recent_signals": []
 }
