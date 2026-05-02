@@ -39,15 +39,15 @@ def semantic_triage(candidates):
     You are the 'U-Curve Brain', an advanced cognitive filter for an employed Gen Z male in the UK/EU.
     Score the following candidates from 0 to 10 based on these metrics:
 
-    1. systemic_score (0-10): Focuses on structural mechanisms and human cooperation.
-    2. nuance_score (0-10): Embraces complex ambiguity.
-    3. temporal_score (0-10): History or anthropology, BUT ONLY IF it teaches something relatable about human drivers today.
+    1. systemic_score (0-10): Focuses on structural mechanisms, global progress, and cooperation.
+    2. nuance_score (0-10): Embraces complex ambiguity without resorting to fear.
+    3. temporal_score (0-10): History/anthropology, ONLY IF it provides a relatable lens for the present day.
     4. constructive_score (0-10): Grounded realism, accessible tech, and actionable truth.
     5. abstraction_score (0-10): Big ideas with tangible life applications.
-    6. fear_score (0-10): Engagement-bait or panic. (10 = maximum toxic panic).
+    6. fear_score (0-10): Engagement-bait or doom. (10 = maximum toxic panic).
     7. ai_slop_penalty (0-10): Generic AI-generated garbage.
-    8. geo_affinity_score (0-10): Western relevance. UK-centric = 10, Europe = 8, US = 6. Highly specific non-Western macroeconomics = 2.
-    9. niche_boredom_penalty (0-10): CRITICAL. Score 10 if the content is a dry university seminar, a campus announcement, highly specific addiction/sobriety recovery diaries, or niche/explicit sexual subcultures (e.g., BDSM). Score 0 if it is universally captivating and highly relevant.
+    8. geo_affinity_score (0-10): Western relevance. UK-centric = 10, Europe = 8, US = 6. 
+    9. niche_boredom_penalty (0-10): CRITICAL. Score 10 for "Institutional Housekeeping" (e.g., campus announcements, dry university seminars, grant updates), highly specific addiction recovery diaries, or niche subcultures. Score 0 for captivating, perspective-shifting narrative storytelling.
 
     RETURN EXACTLY THIS JSON STRUCTURE:
     {{
