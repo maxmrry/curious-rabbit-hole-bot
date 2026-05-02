@@ -32,7 +32,6 @@ def receive_signal():
     if not item_id:
         return "Missing item", 400
 
-    # Fire repository_dispatch to GitHub
     payload = {
         "event_type": "feedback_signal",
         "client_payload": {
@@ -54,14 +53,37 @@ def receive_signal():
         timeout=10
     )
 
+    dest = request.args.get(
+        "dest",
+        "https://maxmrry.github.io/curious-rabbit-hole-bot/"
+    )
+
     if resp.status_code == 204:
-        # Redirect to the actual content URL after signalling
-        dest = request.args.get("dest", "https://maxmrry.github.io/curious-rabbit-hole-bot/")
-        return redirect(dest, code=302)
+        return f"""
+        <html>
+            <body style="background-color: #4CAF50; color: white; text-align: center; padding-top: 50px;">
+                <h1>✅ Signal sent successfully</h1>
+                <p>Item: {item_id}</p>
+                <p>Redirecting...</p>
+                <script>
+                    setTimeout(() => window.location.href = "{dest}", 5000);
+                </script>
+            </body>
+        </html>
+        """
     else:
-        # Still redirect — never let a failed signal block content access
-        dest = request.args.get("dest", "https://maxmrry.github.io/curious-rabbit-hole-bot/")
-        return redirect(dest, code=302)
+        return f"""
+        <html>
+            <body style="background-color: #f44336; color: white; text-align: center; padding-top: 50px;">
+                <h1>❌ Signal failed</h1>
+                <p>Status: {resp.status_code}</p>
+                <p>Still redirecting...</p>
+                <script>
+                    setTimeout(() => window.location.href = "{dest}", 2000);
+                </script>
+            </body>
+        </html>
+        """
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=int(os.getenv("PORT", 5000)))
