@@ -2,7 +2,8 @@ import hashlib
 import json
 import time
 import os
-from datetime import datetime
+import datetime
+from datetime import datetime as dt
 
 
 def generate_canonical_hash(url_or_id):
@@ -51,7 +52,7 @@ def create_standard_item(
         "url": url,
         "source_type": source_type,  # 'podcast', 'youtube', 'news', 'rss'
         "source_name": source_name,
-        "published_date_ms": date_ms or int(datetime.now().timestamp() * 1000),
+        "published_date_ms": date_ms or int(dt.now().timestamp() * 1000),
         "image_url": image_url,
         "audio_url": audio_url
     }
@@ -168,9 +169,14 @@ def purge_memory(memory, ttl_days=180):
     return memory
 
 
+def record_run_success(memory):
+    """Marks today's run as successful for streak tracking."""
+    today = datetime.datetime.utcnow().strftime('%Y-%m-%d')
+    memory.setdefault("runs", {})[today] = {"success": True}
+    return memory
+
 def save_memory(memory, filepath='state/memory.json'):
     """Saves state back to disk."""
     os.makedirs(os.path.dirname(filepath), exist_ok=True)
-
     with open(filepath, 'w') as f:
         json.dump(memory, f, indent=2)
