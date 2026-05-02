@@ -6,14 +6,62 @@ import datetime
 import google.generativeai as genai
 
 # Seasonal psychological context for UK latitude
+# Multiple angles per season so the Max Entry doesn't repeat the same frame
+SEASONAL_ANGLES = {
+    "winter": [
+        "It is the middle of winter in the UK. Daylight is short and the brain's threat-detection runs hotter in low light. This is documented biology, not weakness. Frame with warmth and forward momentum.",
+        "January in England is statistically the lowest-mood month in the year. That is a population average, not a sentence. Frame today around the specific and the concrete — small progress over abstract optimism.",
+        "Winter in the UK means the brain is running on less light than it evolved for. Acknowledge this honestly but briefly. The antidote is not cheerfulness but engagement — content that pulls attention outward.",
+        "The first weeks of the year carry cultural weight that is largely manufactured. Frame today around what is genuinely new rather than what is symbolically new.",
+    ],
+    "early_spring": [
+        "Early spring in the UK. The turn is beginning — days are lengthening, which has a measurable effect on baseline mood. Frame around renewal and motion.",
+        "March light in England shifts something in the nervous system before the conscious mind registers it. Frame today around emerging momentum — things that are beginning, not just things that are.",
+    ],
+    "late_spring": [
+        "Late spring in the UK. One of the highest baseline wellbeing periods of the year. Frame to capitalise on this cognitive lift — big ideas land better now.",
+        "May in England. Long evenings are returning. Frame around expansion — ideas that open outward, connections that cross borders, futures worth imagining.",
+    ],
+    "summer": [
+        "Summer in the UK. Long days, higher social energy, lower ruminative thinking. Frame toward action, exploration, and expansion.",
+        "British summer is brief and cherished. Frame around what is alive and working in the world — not despite difficulty but alongside it.",
+    ],
+    "early_autumn": [
+        "Early autumn in the UK. A transition month — psychologically associated with new beginnings despite the darkening. Frame around structure and momentum.",
+        "September carries the cultural memory of new starts. Frame today around deliberate direction — the satisfaction of choosing what to pay attention to.",
+    ],
+    "late_autumn": [
+        "Late autumn in the UK. Light is dropping, the brain begins its winter threat-heightening cycle. Prioritise grounding, perspective, and resilience framing.",
+        "November in England. The instinct is to contract. The content today pushes back against that — not with false brightness but with evidence that the world is larger than any given month.",
+    ],
+}
+
+def _get_season_key(month):
+    if month in (12, 1, 2): return "winter"
+    elif month == 3: return "early_spring"
+    elif month in (4, 5): return "late_spring"
+    elif month in (6, 7, 8): return "summer"
+    elif month == 9: return "early_autumn"
+    elif month in (10, 11): return "late_autumn"
+    return "winter"
+
 def _get_seasonal_context(dt):
-    month = dt.month
-    if month in (12, 1, 2):
-        return (
-            "It is the middle of winter in the UK. Daylight is short, the default mood is lower, "
-            "and the brain's threat-detection runs hotter in low light. This is documented biology, not weakness. "
-            "Frame today's content with particular warmth and forward momentum."
-        )
+    from src.pipeline.memory_mgr import load_memory, save_memory
+    memory = load_memory()
+    season_key = _get_season_key(dt.month)
+    angles = SEASONAL_ANGLES.get(season_key, SEASONAL_ANGLES["winter"])
+
+    used_key = f"used_seasonal_angles_{season_key}"
+    used_indices = memory.get(used_key, [])
+    fresh = [i for i in range(len(angles)) if i not in used_indices[-len(angles)+1:]]
+    candidate_indices = fresh if fresh else list(range(len(angles)))
+
+    chosen = random.choice(candidate_indices)
+    memory.setdefault(used_key, []).append(chosen)
+    memory[used_key] = memory[used_key][-20:]
+    save_memory(memory)
+
+    return angles[chosen]
     elif month == 3:
         return (
             "Early spring in the UK. The turn is beginning — days are lengthening, "
