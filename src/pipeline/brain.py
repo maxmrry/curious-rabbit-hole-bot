@@ -51,25 +51,26 @@ def select_daily_items(memory, policy):
     print(f"📊 DIAGNOSTIC: Pulled {len(raw_items)} total raw items from the APIs.")
 
     # --- 1. PYTHON HARD FILTERING ---
-    for item in raw_items:
-        if not is_unseen(item["canonical_hash"], memory):
-            continue
-        if not passes_veto_check(item):
-            continue
-            
-        # Natively drop high-harm news before wasting Gemini tokens
-        if item["source_type"] == "news" and not item.get("scoring_metrics", {}).get("hopeful_rewrite_eligible", True):
-            continue
-            
-        # Extended freshness to 30 days for academic feeds, kept at 7 for news
-        if item["source_type"] == "rss":
-            if (now_ms - item["published_date_ms"]) > (30 * 24 * 60 * 60 * 1000):
-                continue 
-        elif item["source_type"] == "news":
-            if (now_ms - item["published_date_ms"]) > (7 * 24 * 60 * 60 * 1000):
+        for item in raw_items:
+            if not is_unseen(item["canonical_hash"], memory):
+                continue
+            if not passes_veto_check(item):
                 continue
                 
-        candidates.append(item)
+            # Drop high-harm news natively
+            if item["source_type"] == "news" and not item.get("scoring_metrics", {}).get("hopeful_rewrite_eligible", True):
+                continue
+                
+            # 🕒 EXPANDED TIMEFRAMES: Hunt for masterpieces, not just recent uploads
+            # Give YouTube, Podcasts, and RSS a 90-day window to surface incredible content
+            if item["source_type"] in ["rss", "youtube", "podcast"]:
+                if (now_ms - item["published_date_ms"]) > (90 * 24 * 60 * 60 * 1000):
+                    continue 
+            elif item["source_type"] == "news":
+                if (now_ms - item["published_date_ms"]) > (7 * 24 * 60 * 60 * 1000):
+                    continue
+                
+            candidates.append(item)
 
     print(f"📊 DIAGNOSTIC: {len(candidates)} items survived memory/veto/age filters.")
 
