@@ -75,19 +75,28 @@ def passes_veto_check(item, veto_filepath='policy/veto_terms.txt'):
 
 
 def update_memory(selected_items, memory):
-    """Commits newly selected items to memory so they are never seen again."""
+    """Commits newly selected items and their sources to memory."""
     now_ms = int(time.time() * 1000)
+    
+    # Ensure the source_history dictionary exists
+    memory.setdefault("source_history", {})
 
     for item in selected_items:
         item_hash = item.get("canonical_hash")
         if not item_hash:
-            continue  # skip malformed items instead of crashing
+            continue
 
+        # 1. Track the specific item
         memory.setdefault("seen_hashes", {})[item_hash] = {
             "native_id": item.get("native_id"),
             "source_type": item.get("source_type"),
             "last_seen_ms": now_ms
         }
+        
+        # 2. Track the source to prevent Source Fatigue
+        source_name = item.get("source_name")
+        if source_name:
+            memory["source_history"][source_name] = now_ms
 
     return memory
 
