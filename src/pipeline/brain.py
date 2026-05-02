@@ -141,6 +141,14 @@ def select_daily_items(memory, policy):
             else:
                 fatigue_penalty = 0.0   # Clean slate after a week
 
+        # Hard floor: reject items that fail minimum quality thresholds
+        min_state_shift = policy.get("thresholds", {}).get("min_state_shift_score", 0)
+        min_constructive = policy.get("thresholds", {}).get("min_constructive_score", 0)
+        if scores.get("state_shift_score", 0) < min_state_shift:
+            continue
+        if scores.get("constructive_score", 0) < min_constructive:
+            continue
+
         # SOFT PENALTY: Aggressively sink fearful, sloppy, boring, AND fatigued content
         penalty = (fear * 5.0) + (slop * 5.0) + (boredom * 4.0) + fatigue_penalty
 
@@ -271,5 +279,16 @@ def select_daily_items(memory, policy):
         if count >= q_news: break
         add_item(n, "positivity")
         count += 1
+
+    # 4-to-1 Audit: ensure state_shift_score >= 6 items dominate the feed
+    # This enforces the Power of Bad principle structurally, not just philosophically
+    high_agency = [i for i in final_selection if score_map.get(i["native_id"], {}).get("state_shift_score", 0) >= 6]
+    low_agency = [i for i in final_selection if score_map.get(i["native_id"], {}).get("state_shift_score", 0) < 6]
+
+    ratio = len(high_agency) / max(len(final_selection), 1)
+    if ratio < 0.75:
+        print(f"⚠️ 4-to-1 Warning: Only {len(high_agency)}/{len(final_selection)} items are high-agency. Feed may feel flat.")
+    else:
+        print(f"✅ 4-to-1 Check passed: {len(high_agency)}/{len(final_selection)} items are high-agency.")
 
     return final_selection
