@@ -1,11 +1,37 @@
+# HARD VETOS — always block, no antidote redemption
 bloodbath
 ww3
 wwiii
-slaughter
 annihilation
-unstoppable
-doomed
 apocalypse
+genocide
+massacre
+slaughter
+execution
+beheading
+atrocity
+suicide bombing
+child abuse
+torture
+
+# SOFT VETOS — blocked unless antidote words present (handled in memory_mgr.py)
+doomed
+unstoppable
 collapse
-crisis
 outrage
+crisis
+escalation
+catastrophe
+inevitable
+recession
+crash
+existential threat
+end of days
+tipping point
+breaking point
+irreversible
+no way back
+death toll
+body count
+civilian casualties
+nuclear
