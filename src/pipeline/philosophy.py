@@ -5,6 +5,42 @@ import random
 import datetime
 import google.generativeai as genai
 
+# Seasonal psychological context for UK latitude
+def _get_seasonal_context(dt):
+    month = dt.month
+    if month in (12, 1, 2):
+        return (
+            "It is the middle of winter in the UK. Daylight is short, the default mood is lower, "
+            "and the brain's threat-detection runs hotter in low light. This is documented biology, not weakness. "
+            "Frame today's content with particular warmth and forward momentum."
+        )
+    elif month == 3:
+        return (
+            "Early spring in the UK. The turn is beginning — days are lengthening, "
+            "which has a measurable effect on baseline mood. Frame content around renewal and motion."
+        )
+    elif month in (4, 5):
+        return (
+            "Late spring in the UK. One of the highest baseline wellbeing periods of the year. "
+            "Frame content to capitalise on this cognitive lift — big ideas land better now."
+        )
+    elif month in (6, 7, 8):
+        return (
+            "Summer in the UK. Long days, higher social energy, lower ruminative thinking. "
+            "Frame content toward action, exploration, and expansion."
+        )
+    elif month == 9:
+        return (
+            "Early autumn in the UK. A transition month — psychologically associated with "
+            "new beginnings despite the darkening. Frame content around structure and momentum."
+        )
+    elif month in (10, 11):
+        return (
+            "Late autumn in the UK. Light is dropping, the brain begins its winter "
+            "threat-heightening cycle. Prioritise grounding, perspective, and resilience framing."
+        )
+    return ""
+
 # Configure Gemini
 api_key = os.getenv("GEMINI_API_KEY")
 if api_key:
@@ -84,6 +120,72 @@ def semantic_triage(candidates):
     except json.JSONDecodeError:
         return []
 
+# Emotional register taxonomy for variety checking
+REGISTER_TAXONOMY = {
+    "optimism_tech": ["technology", "innovation", "breakthrough", "ai", "research", "discovery"],
+    "optimism_society": ["cooperation", "community", "peace", "democracy", "rights", "progress"],
+    "optimism_health": ["health", "medicine", "longevity", "wellbeing", "mental", "therapy"],
+    "introspective": ["psychology", "behaviour", "cognitive", "mind", "self", "identity"],
+    "historical": ["history", "ancient", "century", "civilisation", "era", "past"],
+    "economic": ["economy", "trade", "growth", "work", "labour", "market", "fiscal"],
+    "environmental": ["climate", "nature", "ecology", "planet", "species", "biodiversity"],
+    "philosophical": ["meaning", "ethics", "philosophy", "consciousness", "truth", "wisdom"],
+}
+
+def _get_register(item):
+    text = (item.get("title", "") + " " + item.get("description", "")).lower()
+    for register, keywords in REGISTER_TAXONOMY.items():
+        if any(k in text for k in keywords):
+            return register
+    return "general"
+
+def apply_variety_engine(selected_items, valid_items, score_map):
+    """
+    Checks for emotional register clustering in the final selection.
+    If any register appears 3+ times, swaps the weakest instance for the
+    highest-scoring item in the most underrepresented register.
+    """
+    from collections import Counter
+
+    register_counts = Counter(_get_register(i) for i in selected_items)
+    overrepresented = [r for r, count in register_counts.items() if count >= 3]
+
+    if not overrepresented:
+        return selected_items
+
+    all_registers = set(REGISTER_TAXONOMY.keys())
+    present_registers = set(register_counts.keys())
+    absent_registers = all_registers - present_registers
+
+    if not absent_registers:
+        return selected_items  # Everything represented, no swap needed
+
+    selected_ids = {i["native_id"] for i in selected_items}
+    target_register = random.choice(list(absent_registers))
+
+    # Find the best unselected item in the target register
+    candidate = next(
+        (i for i in valid_items
+         if i["native_id"] not in selected_ids
+         and _get_register(i) == target_register),
+        None
+    )
+
+    if not candidate:
+        return selected_items
+
+    # Find the weakest item in the most overrepresented register
+    worst_register = max(overrepresented, key=lambda r: register_counts[r])
+    weakest = min(
+        [i for i in selected_items if _get_register(i) == worst_register],
+        key=lambda i: i.get("sort_weight", 0)
+    )
+
+    print(f"Variety Engine: swapping '{weakest['title'][:50]}' ({worst_register}) for '{candidate['title'][:50]}' ({target_register})")
+
+    selected_items = [candidate if i["native_id"] == weakest["native_id"] else i for i in selected_items]
+    return selected_items
+
 def reframe_items(selected_items):
     """Rewrites descriptions, optimizes titles for curiosity, and adds Doom Immunity."""
     if not selected_items: return []
@@ -161,6 +263,78 @@ def generate_daily_narrative(selected_items):
         return json.loads(response.text)
     except json.JSONDecodeError:
         return {"headline": "Today's Pattern: Quiet Resilience", "explanation": "Systems are holding steady."}
+
+def get_ratchet_memory_note(memory):
+    """
+    Every 7 days, surfaces a streak note for Max.
+    Returns a string if it's a milestone day, otherwise empty string.
+    """
+    runs = memory.get("runs", {})
+    streak = len([k for k, v in runs.items() if v.get("success", False)])
+    if streak > 0 and streak % 7 == 0:
+        return (
+            f"This system has now run successfully for {streak} days. "
+            f"That is {streak} mornings where the first thing you read was chosen by "
+            f"an algorithm designed exclusively to work for you. "
+            f"Most people's feeds are optimised by systems working against them. Yours is not."
+        )
+    return ""
+
+def generate_max_entry(selected_items, now):
+    """
+    Generates a personalised cold open entry addressed directly to Max.
+    Sets the psychological frame for the entire day's feed.
+    """
+    from src.pipeline.memory_mgr import load_memory
+    memory = load_memory()
+
+    seasonal_context = _get_seasonal_context(now)
+    ratchet_note = get_ratchet_memory_note(memory)
+
+    titles = "\n".join([f"- {item['title']}" for item in selected_items[:10]])
+
+    ratchet_section = f"\nADDITIONALLY, if appropriate, weave in this milestone note naturally: {ratchet_note}" if ratchet_note else ""
+
+    prompt = f"""
+You are writing the opening entry of a daily RSS feed for a person named Max.
+Max is a Gen Z male in his 20s, employed, living in north-west England. He is globally aware, 
+intellectually curious, and is actively working to deconstruct the fear-culture and doom-framing 
+that dominates media for his generation. He is not naive — he knows the world has problems. 
+He has chosen to build a system that counterbalances his brain's natural negativity bias.
+
+SEASONAL CONTEXT (use this to calibrate tone, do not quote it directly):
+{seasonal_context}
+
+TODAY'S FEED CONTAINS THESE ITEMS:
+{titles}
+
+YOUR TASK:
+Write a single opening paragraph of exactly 3-5 sentences addressed directly to Max (use "you", not "one" or "people").
+This is not a summary. It is a psychological frame-setter — the cognitive equivalent of a trusted friend 
+saying "here is what today is actually about" before handing him the newspaper.
+
+RULES:
+- Do not use motivational poster language. No "seize the day", no "you've got this."
+- Do not summarise the items. Synthesise the underlying human truth they collectively point to.
+- Be direct, warm, and grounded. Stoic in register, not cold.
+- One sentence should acknowledge something genuinely difficult or uncertain in the world without dwelling on it.
+- End on forward motion — not false hope, but genuine agency.
+- No emojis. No exclamation marks. Write like a thoughtful person, not an algorithm.
+- Address him as Max once, naturally. Not at the start.
+{ratchet_section}
+
+Return only the paragraph. No title, no preamble.
+"""
+
+    response = safe_generate(prompt, is_json=False)
+    if response and response.text:
+        return response.text.strip().replace('"', '')
+    return (
+        "The world generates more noise than signal on any given day. "
+        "Today's feed has been filtered with that in mind, Max. "
+        "What follows is chosen because it builds something — perspective, understanding, or quiet momentum. "
+        "That is enough."
+    )
 
 def get_daily_protocol(filepath='policy/principles.json'):
     try:
