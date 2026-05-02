@@ -5,7 +5,7 @@ from src.adapters.news import fetch_relevant_news
 from src.adapters.youtube import fetch_youtube_whitelist
 from src.adapters.rss import fetch_rss_whitelist
 from src.pipeline.memory_mgr import is_unseen, passes_veto_check
-from src.pipeline.philosophy import semantic_triage
+from src.pipeline.philosophy import semantic_triage, apply_variety_engine
 
 def load_policy(filepath='policy/policy.yaml'):
     """Loads the hardcoded ratios and rules for the agent."""
@@ -322,5 +322,16 @@ def select_daily_items(memory, policy):
         print(f"⚠️ 4-to-1 Warning: Only {len(high_agency)}/{len(final_selection)} items are high-agency. Feed may feel flat.")
     else:
         print(f"✅ 4-to-1 Check passed: {len(high_agency)}/{len(final_selection)} items are high-agency.")
+
+    # Variety Engine: prevent emotional register clustering
+    final_selection = apply_variety_engine(final_selection, valid_items, score_map)
+
+    # 4-to-1 Audit
+    high_agency = [i for i in final_selection if score_map.get(i["native_id"], {}).get("state_shift_score", 0) >= 6]
+    ratio = len(high_agency) / max(len(final_selection), 1)
+    if ratio < 0.75:
+        print(f"4-to-1 Warning: Only {len(high_agency)}/{len(final_selection)} items are high-agency.")
+    else:
+        print(f"4-to-1 Check passed: {len(high_agency)}/{len(final_selection)} items are high-agency.")
 
     return final_selection
