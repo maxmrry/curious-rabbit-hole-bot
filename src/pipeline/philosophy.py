@@ -190,12 +190,42 @@ def get_daily_protocol(filepath='policy/principles.json'):
     except Exception:
         return "Notice three neutral things today to actively break the brain's hunt for threats."
 
+# Emotional theme clusters for adage deduplication
+ADAGE_CLUSTERS = {
+    "impermanence": ["turns up", "passes", "tide", "time", "moment", "end", "last", "change"],
+    "agency": ["make", "do", "act", "begin", "start", "choice", "hand", "key"],
+    "perspective": ["look", "see", "eye", "view", "side", "fool", "wise", "judge"],
+    "resilience": ["strong", "chain", "sailor", "storm", "bend", "fall", "rise"],
+    "connection": ["friend", "dog", "man", "home", "house", "love", "trust"],
+    "caution": ["straw", "penny", "rots", "head", "weak", "bite", "bark"],
+}
+
+def _get_adage_cluster(text):
+    text_lower = text.lower()
+    for cluster, keywords in ADAGE_CLUSTERS.items():
+        if any(k in text_lower for k in keywords):
+            return cluster
+    return "general"
+
 def get_daily_principle(filepath='policy/adages.txt'):
     try:
-        # 🔧 FIX: Added encoding='utf-8' to prevent UnicodeDecodeError on weird characters
+        from src.pipeline.memory_mgr import load_memory, save_memory
+        memory = load_memory()
+        recent_clusters = memory.get("adage_cluster_history", [])[-5:]  # last 5 days
+
         with open(filepath, 'r', encoding='utf-8') as f:
             lines = [line.strip() for line in f if line.strip()]
-            raw_adage = random.choice(lines)
+
+        # Prefer adages from clusters not seen recently
+        fresh_lines = [l for l in lines if _get_adage_cluster(l) not in recent_clusters]
+        candidate_pool = fresh_lines if fresh_lines else lines
+        raw_adage = random.choice(candidate_pool)
+
+        # Record the cluster used today
+        used_cluster = _get_adage_cluster(raw_adage)
+        memory.setdefault("adage_cluster_history", []).append(used_cluster)
+        memory["adage_cluster_history"] = memory["adage_cluster_history"][-30:]  # keep 30 days
+        save_memory(memory)
             
             prompt = f"""
             I have a raw, messy adage from a list: "{raw_adage}"
