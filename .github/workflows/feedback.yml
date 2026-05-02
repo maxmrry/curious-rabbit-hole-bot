@@ -1,0 +1,36 @@
+name: Ingest Feedback Signal
+
+on:
+  repository_dispatch:
+    types: [feedback_signal]
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt --break-system-packages
+
+      - name: Run feedback ingest
+        env:
+          ITEM_ID: ${{ github.event.client_payload.item_id }}
+          SIGNAL: ${{ github.event.client_payload.signal }}
+          SIGNAL_LABEL: ${{ github.event.client_payload.signal_label }}
+          SOURCE_NAME: ${{ github.event.client_payload.source_name }}
+          SOURCE_TYPE: ${{ github.event.client_payload.source_type }}
+        run: python scripts/feedback_ingest.py
+
+      - name: Commit feedback state
+        run: |
+          git config user.name "u-curve-brain[bot]"
+          git config user.email "bot@ucurvebrain.local"
+          git add state/feedback.json
+          git diff --staged --quiet || git commit -m "feedback: ${{ github.event.client_payload.signal_label }} signal received"
+          git push
