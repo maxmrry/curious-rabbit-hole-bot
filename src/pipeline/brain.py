@@ -44,9 +44,23 @@ def select_daily_items(memory, policy):
     raw_items.extend(fetch_rss_whitelist())
     raw_items.extend(fetch_youtube_whitelist())
     raw_items.extend(fetch_relevant_news())
-    # 🧠 SMARTER QUERIES: Shift away from personal recovery toward systemic humanity
-    raw_items.extend(fetch_listen_notes('"behavioral economics" OR "social psychology" OR "human progress"'))
-    raw_items.extend(fetch_podcast_index('anthropology OR "cultural commentary" OR "technology sociology"'))
+    
+    # 🧠 DYNAMIC WILDCARD QUERIES: Actively crawl novel domains each day
+    explore_themes = [
+        '"human progress"', 'futurism', '"deep time" OR "big history"',
+        '"systems thinking"', '"technology philosophy"', '"human resilience"', 
+        '"cultural shift"', '"behavioral economics"', '"macro history"', 
+        '"urban design"', '"cognitive psychology"', '"societal infrastructure"'
+    ]
+    
+    import random
+    query_1 = random.choice(explore_themes)
+    query_2 = random.choice([t for t in explore_themes if t != query_1])
+
+    print(f"🔍 Today's exploration vectors: [{query_1}] and [{query_2}]")
+    
+    raw_items.extend(fetch_listen_notes(query_1))
+    raw_items.extend(fetch_podcast_index(query_2))
 
     print(f"📊 DIAGNOSTIC: Pulled {len(raw_items)} total raw items from the APIs.")
 
