@@ -154,14 +154,33 @@ def select_daily_items(memory, policy):
             (s_state * 0.50)
         ) - penalty
         
-        item["deep_dive_score"] = s_sys + s_nuance + s_temp
+        # Weighted deep-dive: systemic and nuance matter more than temporal
+        item["deep_dive_score"] = (s_sys * 0.45) + (s_nuance * 0.40) + (s_temp * 0.15)
         
         valid_items.append(item)
 
         # --- 4. DYNAMIC BUCKET SYSTEM ---
     final_selection = []
     seen_ids = set()
-    used_sources = set() # NEW: Prevents source flooding
+    used_sources = set()
+    used_topic_clusters = set()  # NEW: Prevents topic flooding
+
+    # Simple topic fingerprint from title keywords
+    def get_topic_cluster(item):
+        TOPIC_KEYWORDS = {
+            "ai": ["ai", "artificial intelligence", "machine learning", "llm", "gpt"],
+            "climate": ["climate", "carbon", "emissions", "fossil", "renewable"],
+            "economics": ["gdp", "inflation", "recession", "trade", "fiscal", "monetary"],
+            "psychology": ["psychology", "cognitive", "behaviour", "mental", "emotion"],
+            "geopolitics": ["war", "nato", "ukraine", "china", "sanctions", "nuclear"],
+            "health": ["health", "disease", "vaccine", "longevity", "medicine"],
+            "history": ["history", "ancient", "civilization", "empire", "century"],
+        }
+        text = (item.get("title", "") + " " + item.get("description", "")).lower()
+        for cluster, keywords in TOPIC_KEYWORDS.items():
+            if any(k in text for k in keywords):
+                return cluster
+        return None  # No cluster = always allowed
 
     # Helper function to add items safely
     def add_item(item, category):
@@ -169,6 +188,14 @@ def select_daily_items(memory, policy):
         final_selection.append(item)
         seen_ids.add(item["native_id"])
         used_sources.add(item["source_name"])
+        cluster = get_topic_cluster(item)
+        if cluster:
+            used_topic_clusters.add(cluster)
+
+    def topic_is_fresh(item):
+        """Returns True if this item's topic cluster hasn't been used yet."""
+        cluster = get_topic_cluster(item)
+        return cluster is None or cluster not in used_topic_clusters
 
     # 1. Deep Dive
     valid_items.sort(key=lambda x: x["deep_dive_score"], reverse=True)
@@ -199,9 +226,11 @@ def select_daily_items(memory, policy):
     # Minimum Videos
     for v in videos:
         if len(selected_videos) >= q_min_vid: break
-        if v["source_name"] not in used_sources:
+        if v["source_name"] not in used_sources and topic_is_fresh(v):
             selected_videos.append(v)
             used_sources.add(v["source_name"])
+            cluster = get_topic_cluster(v)
+            if cluster: used_topic_clusters.add(cluster)
             
     # Minimum Podcasts
     min_pods = q_av_total - q_max_vid
