@@ -41,12 +41,13 @@ def semantic_triage(candidates):
 
     1. systemic_score (0-10): Focuses on structural mechanisms and human cooperation.
     2. nuance_score (0-10): Embraces complex ambiguity.
-    3. temporal_score (0-10): History or anthropology, BUT ONLY IF it teaches something positive or relatable about human drivers today.
+    3. temporal_score (0-10): History or anthropology, BUT ONLY IF it teaches something relatable about human drivers today.
     4. constructive_score (0-10): Grounded realism, accessible tech, and actionable truth.
-    5. abstraction_score (0-10): Big ideas. CRITICAL RULE: Heavily penalize pure detached academia (like abstract math, ancient geography, or dense policy) that has no tangible life application.
+    5. abstraction_score (0-10): Big ideas with tangible life applications.
     6. fear_score (0-10): Engagement-bait or panic. (10 = maximum toxic panic).
     7. ai_slop_penalty (0-10): Generic AI-generated garbage.
-    8. geo_affinity_score (0-10): Western relevance. UK-centric = 10, Europe = 8, US = 6. Highly specific non-Western macroeconomics (e.g., Egypt policies) = 2.
+    8. geo_affinity_score (0-10): Western relevance. UK-centric = 10, Europe = 8, US = 6. Highly specific non-Western macroeconomics = 2.
+    9. niche_boredom_penalty (0-10): CRITICAL. Score 10 if the content is a dry university seminar, a campus announcement, highly specific addiction/sobriety recovery diaries, or niche/explicit sexual subcultures (e.g., BDSM). Score 0 if it is universally captivating and highly relevant.
 
     RETURN EXACTLY THIS JSON STRUCTURE:
     {{
@@ -60,7 +61,8 @@ def semantic_triage(candidates):
                 "abstraction_score": 9,
                 "fear_score": 1,
                 "ai_slop_penalty": 0,
-                "geo_affinity_score": 8
+                "geo_affinity_score": 8,
+                "niche_boredom_penalty": 0
             }}
         ]
     }}
