@@ -31,7 +31,6 @@ def build_feed(selected_items):
     fe_rem = fg.add_entry()
     fe_rem.title(f"(Reminder) {daily_protocol}")
     fe_rem.link(href=f"https://maxmrry.github.io/curious-rabbit-hole-bot/#protocol-{now.strftime('%Y%m%d')}")
-    fe_rem.description("Daily cognitive baseline.")
     fe_rem.pubDate(now)
     fe_rem.id(f"protocol-{now.strftime('%Y%m%d')}")
 
@@ -41,7 +40,6 @@ def build_feed(selected_items):
     fe_intro = fg.add_entry()
     fe_intro.title(f"(Adage) {daily_principle}")
     fe_intro.link(href=f"https://maxmrry.github.io/curious-rabbit-hole-bot/#anchor-{now.strftime('%Y%m%d')}")
-    fe_intro.description("A timeless principle for cognitive resilience.")
     fe_intro.pubDate(now - timedelta(seconds=1))
     fe_intro.id(f"anchor-{now.strftime('%Y%m%d')}")
 
