@@ -236,31 +236,62 @@ def reframe_items(selected_items):
     except json.JSONDecodeError:
         return selected_items
 
+# Narrative theme families — prevents the same emotional arc repeating
+NARRATIVE_THEME_FAMILIES = [
+    "resilience", "progress", "cooperation", "ingenuity", "perspective",
+    "stability", "adaptation", "agency", "understanding", "renewal"
+]
+
+def _classify_narrative_theme(headline):
+    headline_lower = headline.lower()
+    for theme in NARRATIVE_THEME_FAMILIES:
+        if theme in headline_lower:
+            return theme
+    return "general"
+
 def generate_daily_narrative(selected_items):
-    """Stitches the daily items into a single overarching theme."""
-    if not selected_items: return {"headline": "Today's Pattern: Quiet Resilience", "explanation": "Systems are holding steady."}
+    """Stitches the daily items into a single overarching theme, avoiding recent themes."""
+    if not selected_items:
+        return {"headline": "Today's Pattern: Quiet Resilience", "explanation": "Systems are holding steady."}
+
+    from src.pipeline.memory_mgr import load_memory, save_memory
+    memory = load_memory()
+    recent_themes = memory.get("used_narrative_themes", [])[-7:]
 
     pool_text = ""
     for item in selected_items:
         pool_text += f"\nTitle: {item['title']}\n---"
 
-    prompt = """
-    Look at the titles of these media items curated for today. 
+    avoid_clause = ""
+    if recent_themes:
+        avoid_clause = f"\nAVOID these theme families used recently: {', '.join(recent_themes)}. Find a genuinely different angle."
+
+    prompt = f"""
+    Look at the titles of these media items curated for today.
     Find the hidden connective tissue. What is the overarching macro-theme of human progress, resilience, or systemic understanding today?
+    {avoid_clause}
     
     RETURN EXACTLY THIS JSON:
-    {
+    {{
         "headline": "Today's Pattern: [Your punchy 5-7 word theme]",
         "explanation": "A single, grounded 20-word sentence explaining how these items connect to show progress, resilience, or stabilization."
-    }
+    }}
     ITEMS:
-    """ + pool_text
+    {pool_text}
+    """
 
     response = safe_generate(prompt)
-    if not response: return {"headline": "Today's Pattern: Quiet Resilience", "explanation": "Systems are holding steady."}
+    if not response:
+        return {"headline": "Today's Pattern: Quiet Resilience", "explanation": "Systems are holding steady."}
 
     try:
-        return json.loads(response.text)
+        result = json.loads(response.text)
+        # Record the theme family used
+        used_family = _classify_narrative_theme(result.get("headline", ""))
+        memory.setdefault("used_narrative_themes", []).append(used_family)
+        memory["used_narrative_themes"] = memory["used_narrative_themes"][-30:]
+        save_memory(memory)
+        return result
     except json.JSONDecodeError:
         return {"headline": "Today's Pattern: Quiet Resilience", "explanation": "Systems are holding steady."}
 
@@ -338,9 +369,27 @@ Return only the paragraph. No title, no preamble.
 
 def get_daily_protocol(filepath='policy/principles.json'):
     try:
+        from src.pipeline.memory_mgr import load_memory, save_memory
+        memory = load_memory()
+        used_indices = memory.get("used_principle_indices", [])
+
         with open(filepath, 'r', encoding='utf-8') as f:
             principles = json.load(f)
-            raw_principle = random.choice(principles)
+
+        total = len(principles)
+        # Build pool of unrecently-used indices (avoid last 30% used)
+        recent_cutoff = max(10, int(total * 0.3))
+        recent_used = set(used_indices[-recent_cutoff:])
+        fresh_indices = [i for i in range(total) if i not in recent_used]
+        candidate_indices = fresh_indices if fresh_indices else list(range(total))
+
+        chosen_index = random.choice(candidate_indices)
+        raw_principle = principles[chosen_index]
+
+        # Update memory
+        memory.setdefault("used_principle_indices", []).append(chosen_index)
+        memory["used_principle_indices"] = memory["used_principle_indices"][-60:]
+        save_memory(memory)
             
             # 🔧 FIX: Using escaped quotes (\") so code editor colors don't break
             clean_principle = (
