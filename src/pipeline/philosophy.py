@@ -83,6 +83,7 @@ def semantic_triage(candidates):
         return []
 
 def reframe_items(selected_items):
+    """Rewrites descriptions, optimizes titles for curiosity, and adds Doom Immunity."""
     if not selected_items: return []
 
     pool_text = ""
@@ -90,20 +91,22 @@ def reframe_items(selected_items):
         pool_text += f"\nID: {item['native_id']}\nType: {item['source_type']}\nTitle: {item['title']}\nDesc: {item['description']}\n---"
 
     prompt = """
-    You are a high-level cognitive filter for an employed, globally aware Gen Z male living in the UK/EU.
-    Rewrite descriptions to provide a clean, objective synopsis.
+    You are a high-level cognitive filter for an employed Gen Z male in the UK/EU.
+    Your job is to rewrite the metadata of these media items.
     
     RULES:
-    - Keep it under 60 words (News can be up to 80).
-    - Be factually honest. DO NOT inject "toxic positivity."
-    - IF TYPE IS 'news': Append one final sentence explaining the tangible, positive consequence of this event for a young professional in the UK/EU today (e.g., how it provides economic, environmental, or geopolitical stability).
+    1. "hook_title": Rewrite the title so it creates a healthy curiosity gap (e.g., instead of "Global Health Data", use "Why preventable disease is plummeting globally"). Do not use clickbait.
+    2. "rewritten_description": Keep it under 60 words. Be objective. If it is News, append one sentence explaining the tangible benefit to a young UK/EU professional.
+    3. "doom_inoculation": If the original text contains panic words (crisis, unprecedented, breaking, escalation), write a 1-sentence stoic counter-frame (e.g., "This language triggers false urgency; global systems adapt slowly."). Otherwise, leave it blank.
     
-    RETURN EXACTLY THIS JSON STRUCTURE:
+    RETURN EXACTLY THIS JSON:
     {
         "rewrites": [
             {
                 "native_id": "exact ID",
-                "rewritten_description": "your objective synopsis"
+                "hook_title": "Optimized Title",
+                "rewritten_description": "Objective synopsis",
+                "doom_inoculation": "Stoic counter-frame or empty string"
             }
         ]
     }
@@ -115,13 +118,47 @@ def reframe_items(selected_items):
 
     try:
         parsed = json.loads(response.text)
-        rewrites = {x["native_id"]: x["rewritten_description"] for x in parsed.get("rewrites", [])}
+        rewrites = {x["native_id"]: x for x in parsed.get("rewrites", [])}
         for item in selected_items:
-            if item["native_id"] in rewrites:
-                item["description"] = rewrites[item["native_id"]]
+            update = rewrites.get(item["native_id"])
+            if update:
+                item["title"] = update.get("hook_title", item["title"])
+                desc = update.get("rewritten_description", item["description"])
+                inoculation = update.get("doom_inoculation", "")
+                if inoculation:
+                    desc += f"<br><br><i>🛡️ <b>System Note:</b> {inoculation}</i>"
+                item["description"] = desc
         return selected_items
     except json.JSONDecodeError:
         return selected_items
+
+def generate_daily_narrative(selected_items):
+    """Stitches the daily items into a single overarching theme."""
+    if not selected_items: return {"headline": "Today's Pattern: Quiet Resilience", "explanation": "Systems are holding steady."}
+
+    pool_text = ""
+    for item in selected_items:
+        pool_text += f"\nTitle: {item['title']}\n---"
+
+    prompt = """
+    Look at the titles of these media items curated for today. 
+    Find the hidden connective tissue. What is the overarching macro-theme of human progress, resilience, or systemic understanding today?
+    
+    RETURN EXACTLY THIS JSON:
+    {
+        "headline": "Today's Pattern: [Your punchy 5-7 word theme]",
+        "explanation": "A single, grounded 20-word sentence explaining how these items connect to show progress, resilience, or stabilization."
+    }
+    ITEMS:
+    """ + pool_text
+
+    response = safe_generate(prompt)
+    if not response: return {"headline": "Today's Pattern: Quiet Resilience", "explanation": "Systems are holding steady."}
+
+    try:
+        return json.loads(response.text)
+    except json.JSONDecodeError:
+        return {"headline": "Today's Pattern: Quiet Resilience", "explanation": "Systems are holding steady."}
 
 def get_daily_protocol(filepath='policy/principles.json'):
     try:
