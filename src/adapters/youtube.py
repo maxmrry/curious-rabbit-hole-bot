@@ -57,7 +57,12 @@ def fetch_youtube_whitelist(whitelist_filepath='policy/source_whitelist.yaml'):
                 video_id = item.get('id', {}).get('videoId')
 
                 if not video_id:
-                    continue  # skip malformed entries safely
+                    continue
+                    
+                # 🛑 NATIVE SHORTS FILTER: Reject anything tagged as a Short
+                title_desc = (snippet.get('title', '') + " " + snippet.get('description', '')).lower()
+                if '#shorts' in title_desc or 'youtube.com/shorts' in title_desc:
+                    continue
 
                 pub_date = snippet.get('publishedAt')
                 try:
