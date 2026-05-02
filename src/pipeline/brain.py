@@ -259,6 +259,18 @@ def select_daily_items(memory, policy):
     videos = [i for i in valid_items if i["source_type"] == "youtube" and i["native_id"] not in seen_ids]
     research = [i for i in valid_items if i["source_type"] == "rss" and i["native_id"] not in seen_ids]
     news_items = [i for i in valid_items if i["source_type"] == "news" and i["native_id"] not in seen_ids]
+
+    # Graceful degradation: if a bucket is starved, log it and note overflow pool
+    overflow_pool = sorted(valid_items, key=lambda x: x["sort_weight"], reverse=True)
+    if len(podcasts) < 2:
+        print(f"Bucket warning: only {len(podcasts)} podcasts available. RSS items will fill gap.")
+    if len(videos) < 2:
+        print(f"Bucket warning: only {len(videos)} videos available. Podcasts will fill gap.")
+    if len(research) < 1:
+        print(f"Bucket warning: RSS research bucket empty. Filling from overflow pool.")
+        research = [i for i in overflow_pool
+                    if i["native_id"] not in seen_ids
+                    and i["source_type"] != "news"][:q_research]
     
     # 2. Flexible Audio/Video Quota (4-6 Videos, rest Podcasts)
     q_av_total = base_av
@@ -304,13 +316,24 @@ def select_daily_items(memory, policy):
     for item in selected_videos + selected_podcasts:
         add_item(item, "positivity")
 
-    # 3. Research
+    # 3. Research — with overflow fallback
     count = 0
     for r in research:
         if count >= q_research: break
         if r["source_name"] in used_sources: continue
         add_item(r, "positivity")
         count += 1
+
+    # If research bucket didn't fill, pull from overflow (any type except news)
+    if count < q_research:
+        for fallback in overflow_pool:
+            if count >= q_research: break
+            if fallback["native_id"] in seen_ids: continue
+            if fallback["source_type"] == "news": continue
+            if fallback["source_name"] in used_sources: continue
+            add_item(fallback, "positivity")
+            count += 1
+            print(f"Graceful fill: added '{fallback['title'][:50]}' from overflow pool")
             
     # 4. News
     # Note: We relax the source diversity lock slightly for news in case the only API we use is the single source.
