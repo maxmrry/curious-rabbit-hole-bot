@@ -148,7 +148,8 @@ def select_daily_items(memory, policy):
         s_const = scores.get("constructive_score", 0)
         s_abs = scores.get("abstraction_score", 0)
         s_geo = scores.get("geo_affinity_score", 5)
-        s_state = scores.get("state_shift_score", 0) 
+        s_state = scores.get("state_shift_score", 0)
+        s_humanity = scores.get("humanity_signal_score", 0) 
         
         fear = scores.get("fear_score", 0)
         slop = scores.get("ai_slop_penalty", 0)
@@ -189,7 +190,8 @@ def select_daily_items(memory, policy):
             (s_const * w_const) +
             (s_abs * w_abs) +
             (s_geo * 0.15) +
-            (s_state * 0.50)
+            (s_state * 0.45) +
+            (s_humanity * 0.20)
         ) - penalty
         
         # Weighted deep-dive: systemic and nuance matter more than temporal
