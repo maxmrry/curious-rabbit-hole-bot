@@ -19,6 +19,16 @@ def load_policy(filepath='policy/policy.yaml'):
 def select_daily_items(memory, policy):
     # Extract Policy Constraints
     max_fear = policy.get("thresholds", {}).get("max_fear_score", 3)
+
+    # Load RLHF feedback adjustments
+    try:
+        with open("state/feedback.json", "r") as f:
+            feedback_data = json.load(f)
+    except FileNotFoundError:
+        feedback_data = {"source_adjustments": {}, "source_type_adjustments": {}}
+
+    feedback_source_adj = feedback_data.get("source_adjustments", {})
+    feedback_type_adj = feedback_data.get("source_type_adjustments", {})
     
     # Extract Dynamic Media Quotas — then adapt based on historical type performance
     quotas = policy.get("media_quotas", {})
@@ -183,6 +193,19 @@ def select_daily_items(memory, policy):
         # SOFT PENALTY: Aggressively sink fearful, sloppy, boring, AND fatigued content
         penalty = (fear * 5.0) + (slop * 5.0) + (boredom * 4.0) + fatigue_penalty
 
+        # RLHF nudge: blend in Max's direct feedback signals
+        source_feedback = feedback_source_adj.get(source_name, {})
+        type_feedback = feedback_type_adj.get(item.get("source_type", ""), {})
+
+        # Normalise cumulative score to a bounded nudge (-2.0 to +2.0)
+        def bounded_nudge(adj, cap=2.0):
+            if not adj or adj.get("n", 0) == 0:
+                return 0.0
+            raw = adj["cumulative"] / max(adj["n"], 1)
+            return max(-cap, min(cap, raw))
+
+        rlhf_nudge = (bounded_nudge(source_feedback) * 0.6) + (bounded_nudge(type_feedback) * 0.4)
+
         item["sort_weight"] = (
             (s_sys * w_sys) +
             (s_nuance * w_nuance) +
@@ -191,7 +214,8 @@ def select_daily_items(memory, policy):
             (s_abs * w_abs) +
             (s_geo * 0.15) +
             (s_state * 0.45) +
-            (s_humanity * 0.20)
+            (s_humanity * 0.20) +
+            rlhf_nudge
         ) - penalty
         
         # Weighted deep-dive: systemic and nuance matter more than temporal
