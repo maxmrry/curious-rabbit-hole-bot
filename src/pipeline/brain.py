@@ -44,8 +44,9 @@ def select_daily_items(memory, policy):
     raw_items.extend(fetch_rss_whitelist())
     raw_items.extend(fetch_youtube_whitelist())
     raw_items.extend(fetch_relevant_news())
-    raw_items.extend(fetch_listen_notes('resilience OR relationship psychology'))
-    raw_items.extend(fetch_podcast_index('anthropology OR sociology OR digital subculture'))
+    # 🧠 SMARTER QUERIES: Shift away from personal recovery toward systemic humanity
+    raw_items.extend(fetch_listen_notes('"behavioral economics" OR "social psychology" OR "human progress"'))
+    raw_items.extend(fetch_podcast_index('anthropology OR "cultural commentary" OR "technology sociology"'))
 
     print(f"📊 DIAGNOSTIC: Pulled {len(raw_items)} total raw items from the APIs.")
 
@@ -102,10 +103,10 @@ def select_daily_items(memory, policy):
         
         fear = scores.get("fear_score", 0)
         slop = scores.get("ai_slop_penalty", 0)
+        boredom = scores.get("niche_boredom_penalty", 0) # <--- GRAB BOREDOM SCORE
 
-        # SOFT PENALTY: Instead of hard-rejecting, we mathematically sink bad items to the bottom.
-        # Your veto_terms.txt already protects you from severe doom.
-        penalty = (fear * 5.0) + (slop * 5.0)
+        # SOFT PENALTY: Aggressively sink fearful, sloppy, AND boring/niche content
+        penalty = (fear * 5.0) + (slop * 5.0) + (boredom * 4.0)
 
         item["sort_weight"] = (
             (s_sys * w_sys) +
@@ -113,7 +114,7 @@ def select_daily_items(memory, policy):
             (s_temp * w_temp) +
             (s_const * w_const) +
             (s_abs * w_abs) +
-            (s_geo * 0.15) # Subtle bump for UK/Europe relevance
+            (s_geo * 0.15)
         ) - penalty
         
         item["deep_dive_score"] = s_sys + s_nuance + s_temp
