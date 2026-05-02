@@ -39,15 +39,16 @@ def semantic_triage(candidates):
     You are the 'U-Curve Brain', an advanced cognitive filter for an employed Gen Z male in the UK/EU.
     Score the following candidates from 0 to 10 based on these metrics:
 
-    1. systemic_score (0-10): Focuses on structural mechanisms, global progress, and cooperation.
+    1. systemic_score (0-10): Focuses on structural mechanisms and global progress.
     2. nuance_score (0-10): Embraces complex ambiguity without resorting to fear.
-    3. temporal_score (0-10): History/anthropology, ONLY IF it provides a relatable lens for the present day.
+    3. temporal_score (0-10): History/anthropology, ONLY IF it provides a relatable lens for the present.
     4. constructive_score (0-10): Grounded realism, accessible tech, and actionable truth.
     5. abstraction_score (0-10): Big ideas with tangible life applications.
     6. fear_score (0-10): Engagement-bait or doom. (10 = maximum toxic panic).
-    7. ai_slop_penalty (0-10): Generic AI-generated garbage.
-    8. geo_affinity_score (0-10): Western relevance. UK-centric = 10, Europe = 8, US = 6. 
-    9. niche_boredom_penalty (0-10): CRITICAL. Score 10 for "Institutional Housekeeping" (e.g., campus announcements, dry university seminars, grant updates), highly specific addiction recovery diaries, or niche subcultures. Score 0 for captivating, perspective-shifting narrative storytelling.
+    7. ai_slop_penalty (0-10): Generic AI-generated garbage or toxic "feel-good fluff".
+    8. geo_affinity_score (0-10): Western relevance. UK-centric = 10, Europe = 8, US = 6.
+    9. niche_boredom_penalty (0-10): CRITICAL. Score 10 for dry institutional housekeeping, campus lectures, or highly specific niche subcultures. 
+    10. state_shift_score (0-10): CORE DRIVER. Does this actually improve mental state, offer agency, and provide "felt momentum"? (10 = highly empowering/energizing, 0 = emotionally flat/draining).
 
     RETURN EXACTLY THIS JSON STRUCTURE:
     {{
@@ -62,7 +63,8 @@ def semantic_triage(candidates):
                 "fear_score": 1,
                 "ai_slop_penalty": 0,
                 "geo_affinity_score": 8,
-                "niche_boredom_penalty": 0
+                "niche_boredom_penalty": 0,
+                "state_shift_score": 9
             }}
         ]
     }}
