@@ -128,24 +128,37 @@ def update_memory(selected_items, memory):
 
 def purge_memory(memory, ttl_days=180):
     """
-    Prevents the JSON file from infinitely growing by deleting hashes older than TTL.
+    Prevents the JSON file from infinitely growing.
+    Cleans seen_hashes by TTL, and caps source/type tracking tables by entry count.
     """
     now_ms = int(time.time() * 1000)
     ttl_ms = ttl_days * 24 * 60 * 60 * 1000
     cutoff_time = now_ms - ttl_ms
 
+    # Purge old seen hashes
     seen_hashes = memory.get("seen_hashes", {})
     initial_count = len(seen_hashes)
-
-    # Keep only items newer than the cutoff time
     memory["seen_hashes"] = {
         k: v for k, v in seen_hashes.items()
         if v.get("last_seen_ms", 0) > cutoff_time
     }
-
     purged_count = initial_count - len(memory["seen_hashes"])
     if purged_count > 0:
-        print(f"🧹 Memory Purge: Removed {purged_count} expired items.")
+        print(f"🧹 Memory Purge: Removed {purged_count} expired hashes.")
+
+    # Cap source_scores to 200 entries (keep highest-n sources = most data)
+    source_scores = memory.get("source_scores", {})
+    if len(source_scores) > 200:
+        sorted_sources = sorted(source_scores.items(), key=lambda x: x[1].get("n", 0), reverse=True)
+        memory["source_scores"] = dict(sorted_sources[:200])
+        print(f"🧹 Source scores capped at 200 entries.")
+
+    # Cap source_history to 500 entries (keep most recently used)
+    source_history = memory.get("source_history", {})
+    if len(source_history) > 500:
+        sorted_history = sorted(source_history.items(), key=lambda x: x[1], reverse=True)
+        memory["source_history"] = dict(sorted_history[:500])
+        print(f"🧹 Source history capped at 500 entries.")
 
     return memory
 
