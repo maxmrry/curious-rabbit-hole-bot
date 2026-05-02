@@ -16,7 +16,12 @@ def load_memory(filepath='state/memory.json'):
         with open(filepath, 'r') as f:
             return json.load(f)
     except FileNotFoundError:
-        return {"version": 1, "seen_hashes": {}, "runs": {}}
+        return {
+            "version": 1,
+            "seen_hashes": {},
+            "runs": {},
+            "adage_cluster_history": []  # NEW: tracks recently used emotional themes
+        }
 
 
 def is_unseen(item_hash, memory):
