@@ -49,6 +49,7 @@ def semantic_triage(candidates):
     8. geo_affinity_score (0-10): Western relevance. UK-centric = 10, Europe = 8, US = 6.
     9. niche_boredom_penalty (0-10): CRITICAL. Score 10 for dry institutional housekeeping, campus lectures, or highly specific niche subcultures. 
     10. state_shift_score (0-10): CORE DRIVER. Does this actually improve mental state, offer agency, and provide "felt momentum"? (10 = highly empowering/energizing, 0 = emotionally flat/draining).
+    11. humanity_signal_score (0-10): Does this showcase human cooperation, ingenuity, scientific progress, or civilisational resilience at scale? (10 = profound demonstration of what humans can achieve together, 0 = purely individual or institutionally dry).
 
     RETURN EXACTLY THIS JSON STRUCTURE:
     {{
@@ -64,7 +65,8 @@ def semantic_triage(candidates):
                 "ai_slop_penalty": 0,
                 "geo_affinity_score": 8,
                 "niche_boredom_penalty": 0,
-                "state_shift_score": 9
+                "state_shift_score": 9,
+                "humanity_signal_score": 7
             }}
         ]
     }}
