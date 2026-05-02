@@ -52,25 +52,36 @@ def create_standard_item(
     }
 
 
+# Words that neutralise a veto term — if present alongside a veto word, allow through
+VETO_ANTIDOTES = [
+    "resilience", "solution", "recovery", "overcome", "reform",
+    "progress", "rebuild", "stabilize", "manage", "address",
+    "reduce", "prevent", "history of", "understanding", "analysis of"
+]
+
 def passes_veto_check(item, veto_filepath='policy/veto_terms.txt'):
     """
-    Checks if the item contains any hard-banned words.
-    Returns True if safe, False if vetoed.
+    Context-aware veto: blocks hard-ban words UNLESS neutralising antidote
+    words are present, suggesting constructive framing.
     """
     try:
         with open(veto_filepath, 'r') as f:
             veto_words = [line.strip().lower() for line in f if line.strip()]
     except FileNotFoundError:
-        # Fail open: if no policy file exists, allow everything
         return True
 
-    text_to_check = f"{item.get('title', '')} {item.get('description', '')}".lower()
+    title = item.get('title', '').lower()
+    description = item.get('description', '').lower()
+    text_to_check = f"{title} {description}"
 
     for word in veto_words:
         if word in text_to_check:
-            print(f"🛡️ Vetoed: '{item.get('title', 'Untitled')}' (Trigger word: {word})")
+            # Check if an antidote word redeems it
+            if any(antidote in text_to_check for antidote in VETO_ANTIDOTES):
+                print(f"🟡 Soft-pass: '{item.get('title', 'Untitled')}' has '{word}' but antidote present.")
+                continue
+            print(f"🛡️ Vetoed: '{item.get('title', 'Untitled')}' (Trigger: '{word}')")
             return False
-
     return True
 
 
@@ -78,25 +89,39 @@ def update_memory(selected_items, memory):
     """Commits newly selected items and their sources to memory."""
     now_ms = int(time.time() * 1000)
     
-    # Ensure the source_history dictionary exists
     memory.setdefault("source_history", {})
+    memory.setdefault("source_scores", {})  # NEW: tracks avg sort_weight per source
+    memory.setdefault("type_performance", {})  # NEW: tracks avg score per source_type
 
     for item in selected_items:
         item_hash = item.get("canonical_hash")
         if not item_hash:
             continue
 
-        # 1. Track the specific item
         memory.setdefault("seen_hashes", {})[item_hash] = {
             "native_id": item.get("native_id"),
             "source_type": item.get("source_type"),
             "last_seen_ms": now_ms
         }
         
-        # 2. Track the source to prevent Source Fatigue
         source_name = item.get("source_name")
         if source_name:
             memory["source_history"][source_name] = now_ms
+
+            # Track rolling average sort_weight per source (lightweight signal)
+            weight = item.get("sort_weight", 5.0)
+            prev = memory["source_scores"].get(source_name, {"avg": weight, "n": 0})
+            n = prev["n"] + 1
+            new_avg = ((prev["avg"] * prev["n"]) + weight) / n
+            memory["source_scores"][source_name] = {"avg": round(new_avg, 3), "n": min(n, 50)}
+
+        # Track avg score per content type
+        stype = item.get("source_type", "unknown")
+        weight = item.get("sort_weight", 5.0)
+        prev = memory["type_performance"].get(stype, {"avg": weight, "n": 0})
+        n = prev["n"] + 1
+        new_avg = ((prev["avg"] * prev["n"]) + weight) / n
+        memory["type_performance"][stype] = {"avg": round(new_avg, 3), "n": min(n, 100)}
 
     return memory
 
