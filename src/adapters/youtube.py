@@ -29,10 +29,29 @@ def fetch_youtube_whitelist(whitelist_filepath='policy/source_whitelist.yaml'):
                 return []
 
             # Randomly sample up to 10 channels per run (quota protection)
-            daily_channels = random.sample(
-                trusted_channels,
-                min(10, len(trusted_channels))
-            )
+            # Prioritise channels not recently seen using memory-informed sampling
+            # Falls back to pure random if memory unavailable
+            try:
+                from src.pipeline.memory_mgr import load_memory
+                mem = load_memory()
+                source_history = mem.get("source_history", {})
+                now_ms = int(time.time() * 1000)
+                week_ms = 7 * 24 * 60 * 60 * 1000
+
+                # Split channels: unseen/stale vs recently used
+                cold_channels = [c for c in trusted_channels
+                                  if source_history.get(c, 0) < (now_ms - week_ms)]
+                warm_channels = [c for c in trusted_channels if c not in cold_channels]
+
+                # Prefer cold channels; fill remainder with warm if needed
+                sample_size = min(15, len(trusted_channels))  # bumped from 10 → 15
+                cold_sample = random.sample(cold_channels, min(sample_size, len(cold_channels)))
+                remaining = sample_size - len(cold_sample)
+                warm_sample = random.sample(warm_channels, min(remaining, len(warm_channels)))
+                daily_channels = cold_sample + warm_sample
+
+            except Exception:
+                daily_channels = random.sample(trusted_channels, min(15, len(trusted_channels)))
 
     except Exception as e:
         print(f"🚨 Failed to load whitelist: {e}")
