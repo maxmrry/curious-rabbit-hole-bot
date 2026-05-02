@@ -1,6 +1,6 @@
 import sys
 from src.pipeline.brain import load_policy, select_daily_items
-from src.pipeline.memory_mgr import load_memory, update_memory, purge_memory, save_memory
+from src.pipeline.memory_mgr import load_memory, update_memory, purge_memory, save_memory, record_run_success
 from src.pipeline.philosophy import reframe_items
 from src.pipeline.rss_builder import build_feed
 
@@ -40,6 +40,7 @@ def main():
         
         # 5. Update & Purge Memory
         memory = update_memory(selected_items, memory)
+        memory = record_run_success(memory)
         ttl_days = policy.get("memory_limits", {}).get("ttl_days", 180)
         memory = purge_memory(memory, ttl_days)
         save_memory(memory)
