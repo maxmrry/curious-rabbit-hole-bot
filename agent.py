@@ -1,6 +1,9 @@
 import sys
 from src.pipeline.brain import load_policy, select_daily_items
-from src.pipeline.memory_mgr import load_memory, update_memory, purge_memory, save_memory, record_run_success
+from src.pipeline.memory_mgr import (
+    load_memory, update_memory, purge_memory, save_memory,
+    record_run_success, get_monthly_domain_counts
+)
 from src.pipeline.philosophy import reframe_items
 from src.pipeline.rss_builder import build_feed
 
