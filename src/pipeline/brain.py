@@ -222,7 +222,8 @@ def select_daily_items(memory, policy):
                 return cluster
         return None  # No cluster = always allowed
 
-    # Helper function to add items safely
+    MONTHLY_SOURCE_CAP = 4  # Max times a source can appear in a calendar month
+
     def add_item(item, category):
         item["category"] = category
         final_selection.append(item)
@@ -233,9 +234,13 @@ def select_daily_items(memory, policy):
             used_topic_clusters.add(cluster)
 
     def topic_is_fresh(item):
-        """Returns True if this item's topic cluster hasn't been used yet."""
         cluster = get_topic_cluster(item)
         return cluster is None or cluster not in used_topic_clusters
+
+    def source_under_monthly_cap(item, memory):
+        from src.pipeline.memory_mgr import get_monthly_source_count
+        count = get_monthly_source_count(memory, item.get("source_name", ""))
+        return count < MONTHLY_SOURCE_CAP
 
     # 1. Deep Dive
     valid_items.sort(key=lambda x: x["deep_dive_score"], reverse=True)
@@ -266,7 +271,9 @@ def select_daily_items(memory, policy):
     # Minimum Videos
     for v in videos:
         if len(selected_videos) >= q_min_vid: break
-        if v["source_name"] not in used_sources and topic_is_fresh(v):
+        if (v["source_name"] not in used_sources
+                and topic_is_fresh(v)
+                and source_under_monthly_cap(v, memory)):
             selected_videos.append(v)
             used_sources.add(v["source_name"])
             cluster = get_topic_cluster(v)
@@ -276,7 +283,8 @@ def select_daily_items(memory, policy):
     min_pods = q_av_total - q_max_vid
     for p in podcasts:
         if len(selected_podcasts) >= min_pods: break
-        if p["source_name"] not in used_sources:
+        if (p["source_name"] not in used_sources
+                and source_under_monthly_cap(p, memory)):
             selected_podcasts.append(p)
             used_sources.add(p["source_name"])
             
@@ -323,7 +331,39 @@ def select_daily_items(memory, policy):
     else:
         print(f"✅ 4-to-1 Check passed: {len(high_agency)}/{len(final_selection)} items are high-agency.")
 
-    # Variety Engine: prevent emotional register clustering
+    # Curriculum Arc: check monthly domain coverage and boost underrepresented domains
+    from src.pipeline.memory_mgr import get_monthly_domain_counts
+    from src.pipeline.philosophy import _get_register, REGISTER_TAXONOMY
+
+    monthly_domains = get_monthly_domain_counts(memory)
+    all_domains = set(REGISTER_TAXONOMY.keys())
+    present_domains = set(monthly_domains.keys())
+    absent_this_month = all_domains - present_domains
+
+    if absent_this_month:
+        # Find items in absent domains not yet selected
+        selected_ids_now = {i["native_id"] for i in final_selection}
+        for domain in absent_this_month:
+            curriculum_candidate = next(
+                (i for i in valid_items
+                 if i["native_id"] not in selected_ids_now
+                 and _get_register(i) == domain),
+                None
+            )
+            if curriculum_candidate:
+                # Swap out the lowest sort_weight item that isn't deep_dive
+                swappable = [i for i in final_selection if i.get("category") != "deep_dive"]
+                if swappable:
+                    weakest = min(swappable, key=lambda i: i.get("sort_weight", 0))
+                    final_selection = [
+                        curriculum_candidate if i["native_id"] == weakest["native_id"] else i
+                        for i in final_selection
+                    ]
+                    selected_ids_now.add(curriculum_candidate["native_id"])
+                    print(f"Curriculum Arc: introduced '{domain}' domain (absent this month)")
+                    break  # One curriculum swap per day is enough
+
+    # Variety Engine: prevent emotional register clustering within today's feed
     final_selection = apply_variety_engine(final_selection, valid_items, score_map)
 
     # 4-to-1 Audit
