@@ -64,6 +64,9 @@ youtube:
   - "UCUYK0BJZF3yNb2fw1EdAXUQ" # The Rest Is History
   - "UCThg2IH7bNbIQF0hmXA9ECw" # The Rest Is Science
   - "UCenxjWEkb0Sv67vejOgZ3Tg" # Open to Debate
+  - "UCC552Sd-3nyi_tk2BudLUzA" # AsapSCIENCE
+  - "UC9RM-iSvTu1uPJb8X5yp3EQ" # Wendover Productions
+  - "UC4QZ_LsYcvcq7qOsOhpAX4A" # ColdFusion
 
 rss:
   - "https://ourworldindata.org/atom.xml"
@@ -93,3 +96,9 @@ rss:
   - "https://worksinprogress.co/rss.xml"
   - "https://www.yesmagazine.org/feed/"
   - "https://www.economicsobservatory.com/feed/"
+  - "https://fixthenews.com/feed/"
+  - "https://nesslabs.com/feed"
+  - "https://fs.blog/feed/"
+  - "https://www.experimental-history.com/feed"
+  - "https://marginalrevolution.com/feed"
+  - "https://www.notboring.co/feed"
