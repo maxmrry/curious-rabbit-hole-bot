@@ -4,6 +4,10 @@ from flask import Flask, request, redirect
 
 app = Flask(__name__)
 
+@app.route("/health")
+def health():
+    return "ok", 200
+
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
 GITHUB_REPO = os.getenv("GITHUB_REPO")  # e.g. "maxmrry/curious-rabbit-hole-bot"
 REDIRECT_SECRET = os.getenv("REDIRECT_SECRET")  # simple shared secret
