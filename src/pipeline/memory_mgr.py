@@ -21,7 +21,12 @@ def load_memory(filepath='state/memory.json'):
             "version": 1,
             "seen_hashes": {},
             "runs": {},
-            "adage_cluster_history": []  # NEW: tracks recently used emotional themes
+            "adage_cluster_history": [],
+            "used_narrative_themes": [],
+            "used_principle_indices": [],
+            "used_adage_indices": [],
+            "monthly_source_counts": {},
+            "monthly_domain_counts": {}
         }
 
 
@@ -67,27 +72,49 @@ VETO_ANTIDOTES = [
 
 def passes_veto_check(item, veto_filepath='policy/veto_terms.txt'):
     """
-    Context-aware veto: blocks hard-ban words UNLESS neutralising antidote
-    words are present, suggesting constructive framing.
+    Two-tier veto system:
+    - Hard vetos (uncommented lines before soft section): always block.
+    - Soft vetos (after # SOFT VETOS comment): block unless antidote present.
     """
     try:
         with open(veto_filepath, 'r') as f:
-            veto_words = [line.strip().lower() for line in f if line.strip()]
+            lines = [line.strip() for line in f if line.strip()]
     except FileNotFoundError:
         return True
+
+    hard_vetos = []
+    soft_vetos = []
+    current_tier = "hard"
+
+    for line in lines:
+        if line.startswith('#'):
+            if 'SOFT' in line.upper():
+                current_tier = "soft"
+            continue
+        if current_tier == "hard":
+            hard_vetos.append(line.lower())
+        else:
+            soft_vetos.append(line.lower())
 
     title = item.get('title', '').lower()
     description = item.get('description', '').lower()
     text_to_check = f"{title} {description}"
 
-    for word in veto_words:
+    # Hard vetos: no redemption
+    for word in hard_vetos:
         if word in text_to_check:
-            # Check if an antidote word redeems it
-            if any(antidote in text_to_check for antidote in VETO_ANTIDOTES):
-                print(f"🟡 Soft-pass: '{item.get('title', 'Untitled')}' has '{word}' but antidote present.")
-                continue
-            print(f"🛡️ Vetoed: '{item.get('title', 'Untitled')}' (Trigger: '{word}')")
+            print(f"Hard veto: '{item.get('title', 'Untitled')}' (Trigger: '{word}')")
             return False
+
+    # Soft vetos: antidote can redeem
+    for word in soft_vetos:
+        if word in text_to_check:
+            if any(antidote in text_to_check for antidote in VETO_ANTIDOTES):
+                print(f"Soft-pass: '{item.get('title', 'Untitled')}' has '{word}' but antidote present.")
+                continue
+            print(f"Soft veto: '{item.get('title', 'Untitled')}' (Trigger: '{word}')")
+            return False
+
     return True
 
 
@@ -113,8 +140,8 @@ def update_memory(selected_items, memory):
         source_name = item.get("source_name")
         if source_name:
             memory["source_history"][source_name] = now_ms
+            memory = increment_monthly_source(memory, source_name)
 
-            # Track rolling average sort_weight per source (lightweight signal)
             weight = item.get("sort_weight", 5.0)
             prev = memory["source_scores"].get(source_name, {"avg": weight, "n": 0})
             n = prev["n"] + 1
@@ -129,6 +156,12 @@ def update_memory(selected_items, memory):
         new_avg = ((prev["avg"] * prev["n"]) + weight) / n
         memory["type_performance"][stype] = {"avg": round(new_avg, 3), "n": min(n, 100)}
 
+        # Track domain coverage for curriculum arc
+        from src.pipeline.philosophy import _get_register
+        domain = _get_register(item)
+        memory = increment_monthly_domain(memory, domain)
+
+    memory = purge_old_monthly_data(memory)
     return memory
 
 
@@ -168,6 +201,55 @@ def purge_memory(memory, ttl_days=180):
 
     return memory
 
+
+def get_month_key():
+    return dt.utcnow().strftime('%Y-%m')
+
+def increment_monthly_source(memory, source_name):
+    """Tracks how many times each source has appeared this calendar month."""
+    month = get_month_key()
+    memory.setdefault("monthly_source_counts", {}).setdefault(month, {})
+    memory["monthly_source_counts"][month][source_name] = (
+        memory["monthly_source_counts"][month].get(source_name, 0) + 1
+    )
+    return memory
+
+def get_monthly_source_count(memory, source_name):
+    month = get_month_key()
+    return memory.get("monthly_source_counts", {}).get(month, {}).get(source_name, 0)
+
+def increment_monthly_domain(memory, domain):
+    """Tracks how many times each content domain has appeared this calendar month."""
+    month = get_month_key()
+    memory.setdefault("monthly_domain_counts", {}).setdefault(month, {})
+    memory["monthly_domain_counts"][month][domain] = (
+        memory["monthly_domain_counts"][month].get(domain, 0) + 1
+    )
+    return memory
+
+def get_monthly_domain_counts(memory):
+    month = get_month_key()
+    return memory.get("monthly_domain_counts", {}).get(month, {})
+
+def purge_old_monthly_data(memory):
+    """Removes monthly tracking data older than 2 months to prevent bloat."""
+    current_month = get_month_key()
+    current_dt = dt.utcnow()
+
+    for key in ["monthly_source_counts", "monthly_domain_counts"]:
+        if key not in memory:
+            continue
+        to_delete = []
+        for month_key in memory[key]:
+            try:
+                month_dt = dt.strptime(month_key, '%Y-%m')
+                if (current_dt - month_dt).days > 60:
+                    to_delete.append(month_key)
+            except ValueError:
+                to_delete.append(month_key)
+        for k in to_delete:
+            del memory[key][k]
+    return memory
 
 def record_run_success(memory):
     """Marks today's run as successful for streak tracking."""
