@@ -102,6 +102,10 @@ def select_daily_items(memory, policy):
 
     # --- 3. THE COGNITIVE SORTING HAT ---
     valid_items = []
+    
+    source_history = memory.get("source_history", {})
+    now_ms = int(time.time() * 1000)
+    one_day_ms = 24 * 60 * 60 * 1000
 
     for item in candidates:
         scores = score_map.get(item["native_id"])
@@ -114,14 +118,31 @@ def select_daily_items(memory, policy):
         s_const = scores.get("constructive_score", 0)
         s_abs = scores.get("abstraction_score", 0)
         s_geo = scores.get("geo_affinity_score", 5)
-        s_state = scores.get("state_shift_score", 0) # <--- GRAB NEW SCORE
+        s_state = scores.get("state_shift_score", 0) 
         
         fear = scores.get("fear_score", 0)
         slop = scores.get("ai_slop_penalty", 0)
         boredom = scores.get("niche_boredom_penalty", 0)
 
-        # SOFT PENALTY: Aggressively sink fearful, sloppy, AND boring content
-        penalty = (fear * 5.0) + (slop * 5.0) + (boredom * 4.0)
+        # ⏳ ANTI-FATIGUE ALGORITHM: Penalize sources we've seen too recently
+        source_name = item.get("source_name", "")
+        last_used_ms = source_history.get(source_name, 0)
+        
+        if last_used_ms == 0:
+            fatigue_penalty = 0.0 # Never seen, or brand new!
+        else:
+            days_since_used = (now_ms - last_used_ms) / one_day_ms
+            if days_since_used < 1.5:
+                fatigue_penalty = 12.0  # Huge penalty if used yesterday
+            elif days_since_used < 3.5:
+                fatigue_penalty = 5.0   # Medium penalty if used earlier this week
+            elif days_since_used < 7.0:
+                fatigue_penalty = 2.0   # Slight penalty if used last week
+            else:
+                fatigue_penalty = 0.0   # Clean slate after a week
+
+        # SOFT PENALTY: Aggressively sink fearful, sloppy, boring, AND fatigued content
+        penalty = (fear * 5.0) + (slop * 5.0) + (boredom * 4.0) + fatigue_penalty
 
         item["sort_weight"] = (
             (s_sys * w_sys) +
@@ -130,7 +151,7 @@ def select_daily_items(memory, policy):
             (s_const * w_const) +
             (s_abs * w_abs) +
             (s_geo * 0.15) +
-            (s_state * 0.50) # <--- HEAVILY WEIGHTED HUMAN SIGNAL
+            (s_state * 0.50)
         ) - penalty
         
         item["deep_dive_score"] = s_sys + s_nuance + s_temp
