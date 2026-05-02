@@ -20,13 +20,43 @@ def select_daily_items(memory, policy):
     # Extract Policy Constraints
     max_fear = policy.get("thresholds", {}).get("max_fear_score", 3)
     
-    # Extract Dynamic Media Quotas
+    # Extract Dynamic Media Quotas — then adapt based on historical type performance
     quotas = policy.get("media_quotas", {})
-    q_podcasts = quotas.get("podcasts", 4)
-    q_videos = quotas.get("videos", 4)
     q_research = quotas.get("research", 2)
     q_news = quotas.get("news", 1)
     q_deep_dive = quotas.get("deep_dive", 1)
+
+    # Read type performance from memory to dynamically nudge AV split
+    type_perf = memory.get("type_performance", {})
+    youtube_avg = type_perf.get("youtube", {}).get("avg", 5.0)
+    podcast_avg = type_perf.get("podcast", {}).get("avg", 5.0)
+    rss_avg = type_perf.get("rss", {}).get("avg", 5.0)
+
+    base_av = quotas.get("av_total", 8)
+    base_min_vid = quotas.get("min_videos", 4)
+    base_max_vid = quotas.get("max_videos", 6)
+
+    # Nudge video ceiling up or down by up to 2 based on relative performance
+    # Bounded so it never collapses a content type entirely
+    perf_delta = youtube_avg - podcast_avg
+    if perf_delta > 1.5:
+        adapted_max_vid = min(base_max_vid + 2, base_av - 1)
+        adapted_min_vid = min(base_min_vid + 1, adapted_max_vid - 1)
+    elif perf_delta < -1.5:
+        adapted_max_vid = max(base_max_vid - 2, 2)
+        adapted_min_vid = max(base_min_vid - 1, 1)
+    else:
+        adapted_max_vid = base_max_vid
+        adapted_min_vid = base_min_vid
+
+    # Similarly nudge research quota based on rss performance vs overall
+    overall_avg = (youtube_avg + podcast_avg + rss_avg) / 3
+    if rss_avg > overall_avg + 1.0:
+        q_research = min(q_research + 1, 4)
+    elif rss_avg < overall_avg - 1.0:
+        q_research = max(q_research - 1, 1)
+
+    print(f"📊 Adaptive Quotas: max_videos={adapted_max_vid}, min_videos={adapted_min_vid}, research={q_research}")
 
     # Extract Cognitive Fingerprint
     fingerprint = policy.get("cognitive_fingerprint", {})
@@ -224,9 +254,9 @@ def select_daily_items(memory, policy):
     news_items = [i for i in valid_items if i["source_type"] == "news" and i["native_id"] not in seen_ids]
     
     # 2. Flexible Audio/Video Quota (4-6 Videos, rest Podcasts)
-    q_av_total = quotas.get("av_total", 8)
-    q_min_vid = quotas.get("min_videos", 4)
-    q_max_vid = quotas.get("max_videos", 6)
+    q_av_total = base_av
+    q_min_vid = adapted_min_vid
+    q_max_vid = adapted_max_vid
     
     selected_videos = []
     selected_podcasts = []
