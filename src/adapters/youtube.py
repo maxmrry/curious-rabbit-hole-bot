@@ -28,7 +28,6 @@ def fetch_youtube_whitelist(whitelist_filepath='policy/source_whitelist.yaml'):
                 print("🚨 Invalid whitelist format: 'youtube' should be a list.")
                 return []
 
-            # Randomly sample up to 10 channels per run (quota protection)
             # Prioritise channels not recently seen using memory-informed sampling
             # Falls back to pure random if memory unavailable
             try:
