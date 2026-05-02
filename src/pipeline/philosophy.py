@@ -73,6 +73,34 @@ def semantic_triage(candidates):
 
     prompt = f"""
     You are the 'U-Curve Brain', an advanced cognitive filter for an employed Gen Z male in the UK/EU.
+    Score the following candidates from 0 to 10 based on these metrics.
+    
+    CALIBRATION EXAMPLES (use these to anchor your scoring):
+    
+    Example A — High quality:
+    Title: "How microfinance quietly lifted 100 million people out of poverty"
+    Source: Our World in Data
+    Scores: systemic=9, nuance=7, temporal=3, constructive=9, abstraction=6,
+            fear=0, ai_slop=0, geo_affinity=7, niche_boredom=0, state_shift=9, humanity_signal=10
+    
+    Example B — Low quality (doom engagement bait):
+    Title: "Why the global economy is about to collapse and nobody is talking about it"
+    Source: Unknown Blog
+    Scores: systemic=3, nuance=1, temporal=2, constructive=1, abstraction=2,
+            fear=9, ai_slop=7, geo_affinity=5, niche_boredom=2, state_shift=1, humanity_signal=0
+    
+    Example C — Medium quality (interesting but dry):
+    Title: "Proceedings of the 2024 International Symposium on Monetary Policy Frameworks"
+    Source: IMF
+    Scores: systemic=6, nuance=5, temporal=2, constructive=4, abstraction=5,
+            fear=0, ai_slop=0, geo_affinity=5, niche_boredom=8, state_shift=2, humanity_signal=1
+    
+    Example D — High quality (psychological/personal relevance):
+    Title: "The surprising science of why humans are terrible at predicting their own unhappiness"
+    Source: Yale Courses
+    Scores: systemic=5, nuance=8, temporal=3, constructive=8, abstraction=7,
+            fear=0, ai_slop=0, geo_affinity=7, niche_boredom=0, state_shift=9, humanity_signal=5
+    
     Score the following candidates from 0 to 10 based on these metrics:
 
     1. systemic_score (0-10): Focuses on structural mechanisms and global progress.
