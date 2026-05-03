@@ -246,12 +246,24 @@ def reframe_items(selected_items):
 
     prompt = """
     You are a high-level cognitive filter for an employed Gen Z male in the UK/EU.
-    Your job is to rewrite the metadata of these media items.
-    
+    Your job is to rewrite the metadata of these media items so they feel worth clicking.
+
     RULES:
-    1. "hook_title": Rewrite the title so it creates a healthy curiosity gap (e.g., instead of "Global Health Data", use "Why preventable disease is plummeting globally"). Do not use clickbait.
-    2. "rewritten_description": Keep it under 60 words. Be objective. If it is News, always end with one sentence grounding the content in tangible personal relevance — how might this affect the daily life, mental models, relationships, or career of a young employed person in the UK? Make it specific, not generic.
-    3. "doom_inoculation": If the original text contains panic words (crisis, unprecedented, breaking, escalation), write a 1-sentence stoic counter-frame (e.g., "This language triggers false urgency; global systems adapt slowly."). Otherwise, leave it blank.
+    1. "hook_title": Rewrite the title to create a genuine curiosity gap. Lead with the most surprising or counterintuitive finding. Never use clickbait or vague superlatives. The title should make someone who knows nothing about the topic want to understand it.
+
+    2. "rewritten_description": 3 sentences maximum. 
+       - Sentence 1: What is the core surprising finding, argument, or mechanism this content reveals? Be specific — name the actual phenomenon, study, or insight, not just the topic area.
+       - Sentence 2: What is the most interesting detail, example, or implication that makes this worth 20 minutes of someone's time? This should make the reader think "I didn't know that."
+       - Sentence 3 (only for News): One concrete, specific consequence for someone employed in the UK — not generic career advice, but an actual thing that may change or matter.
+       For Video and Research: stop at sentence 2. Do not add life-advice or application sentences.
+
+    3. "doom_inoculation": If the original text contains panic words (crisis, unprecedented, breaking, escalation), write a 1-sentence stoic counter-frame. Otherwise leave blank.
+
+    WHAT TO AVOID:
+    - Do not end descriptions with "this can help you X for Y" or "applying these insights will improve your Z"
+    - Do not add generic self-improvement framing the content did not earn
+    - Do not summarise the topic — summarise the actual finding or argument
+    - Do not use the phrase "this article explores" or "this video examines"
     
     RETURN EXACTLY THIS JSON:
     {
@@ -318,14 +330,18 @@ def generate_daily_narrative(selected_items):
 
     prompt = f"""
     Look at the titles of these media items curated for today.
-    Find the hidden connective tissue. What is the overarching macro-theme of human progress, resilience, or systemic understanding today?
+    Find the hidden connective tissue — the single most honest observation about what these items collectively reveal about the human condition, progress, or resilience.
     {avoid_clause}
-    
+
     RETURN EXACTLY THIS JSON:
     {{
-        "headline": "Today's Pattern: [Your punchy 5-7 word theme]",
-        "explanation": "A single, grounded 20-word sentence explaining how these items connect to show progress, resilience, or stabilization."
+        "headline": "Today's Pattern: [A specific, non-generic 5-7 word observation — not a platitude]",
+        "explanation": "One sentence, maximum 25 words. Name the specific mechanism or insight that connects these items. Not 'humanity is resilient' — but why, or how, or in what surprising way."
     }}
+
+    BAD examples: "Deepening Understanding, Adapting to Constant Change", "Quiet Resilience", "Human Progress Continues"
+    GOOD examples: "How Systems Absorb Shocks Nobody Predicted", "The Gap Between What We Fear and What Arrives", "Small Decisions That Compound Into Civilisations"
+
     ITEMS:
     {pool_text}
     """
