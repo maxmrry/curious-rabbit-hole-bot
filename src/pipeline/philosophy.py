@@ -292,7 +292,8 @@ def reframe_items(selected_items):
                 desc = update.get("rewritten_description", item["description"])
                 inoculation = update.get("doom_inoculation", "")
                 if inoculation:
-                    desc += f"<br><br><i>🛡️ <b>System Note:</b> {inoculation}</i>"
+                    desc += f'<br><br><i><b>System Note:</b> {inoculation}</i>'
+                    item["has_inoculation"] = True
                 item["description"] = desc
         return selected_items
     except json.JSONDecodeError:
