@@ -264,6 +264,51 @@
       "native_id": "https://www.positive.news/lifestyle/arts/rhymes-on-the-rails/",
       "source_type": "rss",
       "last_seen_ms": 1777705571412
+    },
+    "0907957d02c5ebcb1d7ea9be70646123f0473cbbb31fb48db29f4caf7e2e5f35": {
+      "native_id": "cADm5uufrfk",
+      "source_type": "youtube",
+      "last_seen_ms": 1777801688500
+    },
+    "267755a76b8334eb4b73e0a6a52e48c4ef9968e5d55121f8992b41e33a59da13": {
+      "native_id": "EH8kZDc7OLk",
+      "source_type": "youtube",
+      "last_seen_ms": 1777801688500
+    },
+    "8a746791904ef664fe4fcd2924f5d9b8708079631aa7521b12431a892cff8cbd": {
+      "native_id": "Wio34SG_0OM",
+      "source_type": "youtube",
+      "last_seen_ms": 1777801688500
+    },
+    "8115013b3cfd151a387196906f0c1663ccaa73d6afd68168310af1fcb836cfa7": {
+      "native_id": "V3IRkw90cS4",
+      "source_type": "youtube",
+      "last_seen_ms": 1777801688500
+    },
+    "89fdfdc2d8eb126142d09787e65dfb0498adcedecbb266c854475933b527464d": {
+      "native_id": "https://knowablemagazine.org/content/article/food-environment/2026/why-we-crave-comfort-food",
+      "source_type": "rss",
+      "last_seen_ms": 1777801688500
+    },
+    "b02c5f74312debea3ccf72a43c7bdbd2b0bebad08de97fc91449bf96f792ee57": {
+      "native_id": "Qb4HyZaebGM",
+      "source_type": "youtube",
+      "last_seen_ms": 1777801688500
+    },
+    "a80cda50f17e4b5c91989e3c58690ec5c66e49eb670518e63a49edcc7dead361": {
+      "native_id": "https://nesslabs.com/illusion-of-clarity",
+      "source_type": "rss",
+      "last_seen_ms": 1777801688500
+    },
+    "f5ea5e5b8931005ab1f512da4ac14185d7c091fd75aa0ccf97af72f2184fffb1": {
+      "native_id": "https://www.experimental-history.com/p/nothing-ever-dies-it-merely-becomes",
+      "source_type": "rss",
+      "last_seen_ms": 1777801688500
+    },
+    "7e7a8fd455c02be52a1ba29baa091a2373adab792eebc858801b1f13506c3b7a": {
+      "native_id": "https://www.noemamag.com/what-separates-the-great-from-the-petty-in-history",
+      "source_type": "rss",
+      "last_seen_ms": 1777801688500
     }
   },
   "sources_health": {
@@ -272,5 +317,88 @@
     "podcast_index": {},
     "listen_notes": {}
   },
-  "runs": {}
+  "runs": {
+    "2026-05-03": {
+      "success": true
+    }
+  },
+  "source_history": {
+    "Oxford Martin School": 1777801688500,
+    "nature video": 1777801688500,
+    "The Royal Society": 1777801688500,
+    "SciFri": 1777801688500,
+    "Knowable Magazine": 1777801688500,
+    "Natural History Museum": 1777801688500,
+    "Ness Labs": 1777801688500,
+    "Experimental History": 1777801688500,
+    "NOEMA": 1777801688500
+  },
+  "source_scores": {
+    "Oxford Martin School": {
+      "avg": 1.1,
+      "n": 1
+    },
+    "nature video": {
+      "avg": 8.46,
+      "n": 1
+    },
+    "The Royal Society": {
+      "avg": 6.07,
+      "n": 1
+    },
+    "SciFri": {
+      "avg": 2.71,
+      "n": 1
+    },
+    "Knowable Magazine": {
+      "avg": 6.54,
+      "n": 1
+    },
+    "Natural History Museum": {
+      "avg": 3.75,
+      "n": 1
+    },
+    "Ness Labs": {
+      "avg": 8.32,
+      "n": 1
+    },
+    "Experimental History": {
+      "avg": 10.7,
+      "n": 1
+    },
+    "NOEMA": {
+      "avg": 10.25,
+      "n": 1
+    }
+  },
+  "type_performance": {
+    "youtube": {
+      "avg": 4.418,
+      "n": 5
+    },
+    "rss": {
+      "avg": 8.953,
+      "n": 4
+    }
+  },
+  "monthly_source_counts": {
+    "2026-05": {
+      "Oxford Martin School": 1,
+      "nature video": 1,
+      "The Royal Society": 1,
+      "SciFri": 1,
+      "Knowable Magazine": 1,
+      "Natural History Museum": 1,
+      "Ness Labs": 1,
+      "Experimental History": 1,
+      "NOEMA": 1
+    }
+  },
+  "monthly_domain_counts": {
+    "2026-05": {
+      "historical": 4,
+      "optimism_tech": 3,
+      "optimism_health": 2
+    }
+  }
 }
