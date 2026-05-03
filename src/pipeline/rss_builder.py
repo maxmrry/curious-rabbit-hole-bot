@@ -48,7 +48,9 @@ def build_feed(selected_items):
     # --- ENTRY 0: The Max Entry — Personalised Cold Open ---
     max_entry_text = strip_emojis(generate_max_entry(selected_items, now))
     fe_max = fg.add_entry()
-    fe_max.title(f"(Today) {max_entry_text[:80].split('.')[0].strip()}")
+    # Extract first full sentence cleanly as the title
+    first_sentence = max_entry_text.split('.')[0].strip()
+    fe_max.title(f"(Today) {first_sentence}.")
     fe_max.link(href=f"https://maxmrry.github.io/curious-rabbit-hole-bot/#max-{now.strftime('%Y%m%d')}")
     fe_max.description(max_entry_text)
     fe_max.pubDate(now + timedelta(seconds=1))
