@@ -29,6 +29,8 @@ jobs:
         LISTEN_NOTES_API_KEY: ${{ secrets.LISTEN_NOTES_API_KEY }}
         PODCAST_INDEX_API_KEY: ${{ secrets.PODCAST_INDEX_API_KEY }}
         PODCAST_INDEX_API_SECRET: ${{ secrets.PODCAST_INDEX_API_SECRET }}
+        REDIRECT_BASE_URL: ${{ secrets.REDIRECT_BASE_URL }}
+        REDIRECT_SECRET: ${{ secrets.REDIRECT_SECRET }}
       run: python agent.py
       
     - name: Commit and push changes
