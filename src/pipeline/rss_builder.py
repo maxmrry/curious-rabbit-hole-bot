@@ -3,7 +3,7 @@ import re
 from datetime import datetime, timedelta
 import pytz
 from feedgen.feed import FeedGenerator
-from src.pipeline.philosophy import get_daily_principle, get_daily_protocol, generate_daily_narrative
+from src.pipeline.philosophy import get_daily_principle, get_daily_protocol, generate_daily_narrative, generate_max_entry
 
 TIMEZONE = pytz.timezone('Europe/London')
 
