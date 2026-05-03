@@ -25,6 +25,7 @@ jobs:
           SIGNAL_LABEL: ${{ github.event.client_payload.signal_label }}
           SOURCE_NAME: ${{ github.event.client_payload.source_name }}
           SOURCE_TYPE: ${{ github.event.client_payload.source_type }}
+          CONTEXT: ${{ github.event.client_payload.context }}
         run: python scripts/feedback_ingest.py
 
       - name: Commit feedback state
