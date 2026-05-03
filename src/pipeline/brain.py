@@ -287,6 +287,15 @@ def select_daily_items(memory, policy):
     overflow_pool = sorted(valid_items, key=lambda x: x["sort_weight"], reverse=True)
     if len(podcasts) < 2:
         print(f"Bucket warning: only {len(podcasts)} podcasts available. RSS items will fill gap.")
+        # Diagnostic: show why podcasts dropped out
+        all_podcasts_raw = [i for i in valid_items if i["source_type"] == "podcast"]
+        print(f"Podcast diagnostic: {len(all_podcasts_raw)} podcasts survived scoring but {len([i for i in all_podcasts_raw if i['native_id'] in seen_ids])} already used today")
+        if all_podcasts_raw:
+            top = sorted(all_podcasts_raw, key=lambda x: x.get("sort_weight", 0), reverse=True)[:3]
+            for p in top:
+                print(f"  Top podcast candidate: '{p['title'][:60]}' weight={p.get('sort_weight', 0):.2f}")
+        else:
+            print("  No podcasts made it through Gemini scoring at all — check API responses")
     if len(videos) < 2:
         print(f"Bucket warning: only {len(videos)} videos available. Podcasts will fill gap.")
     if len(research) < 1:
