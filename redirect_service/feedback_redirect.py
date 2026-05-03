@@ -32,6 +32,8 @@ def receive_signal():
     if not item_id:
         return "Missing item", 400
 
+    context = request.args.get("context", "")
+
     payload = {
         "event_type": "feedback_signal",
         "client_payload": {
@@ -39,7 +41,8 @@ def receive_signal():
             "signal": int(signal),
             "signal_label": SIGNAL_LABELS.get(signal, "useful"),
             "source_name": source,
-            "source_type": source_type
+            "source_type": source_type,
+            "context": context
         }
     }
 
