@@ -1,6 +1,17 @@
 {
-  "source_adjustments": {},
-  "source_type_adjustments": {},
+  "source_adjustments": {
+    "daily_experience": {
+      "cumulative": -2.0,
+      "n": 1,
+      "last_signal_ms": 1777883996731
+    }
+  },
+  "source_type_adjustments": {
+    "experience": {
+      "cumulative": -2.0,
+      "n": 1
+    }
+  },
   "recent_signals": [
     {
       "item_id": "test123",
@@ -10,6 +21,15 @@
       "source_type": "",
       "context": "",
       "timestamp_ms": 1777836108716
+    },
+    {
+      "item_id": "daily-20260504",
+      "signal": 0,
+      "signal_label": "skip",
+      "source_name": "daily_experience",
+      "source_type": "experience",
+      "context": "sources_weak",
+      "timestamp_ms": 1777883996731
     }
   ]
 }
