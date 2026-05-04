@@ -309,6 +309,56 @@
       "native_id": "https://www.noemamag.com/what-separates-the-great-from-the-petty-in-history",
       "source_type": "rss",
       "last_seen_ms": 1777801688500
+    },
+    "0dfc16819c02c457cd71a6ea9f0b97f5aa5575f5506ef437791464f39e8789f0": {
+      "native_id": "FfIvk4ytMic",
+      "source_type": "youtube",
+      "last_seen_ms": 1777881244701
+    },
+    "54564bc4e11fc25bd1358c13b536f4d9aa386d41f18616cc8d3f38e63abae064": {
+      "native_id": "47U6uxEUDr8",
+      "source_type": "youtube",
+      "last_seen_ms": 1777881244701
+    },
+    "0f9688fbfadf8e183334214fcb5eb5449cd8ed23641bf80c3402b872a228dd68": {
+      "native_id": "Y7ImxZ_YhJk",
+      "source_type": "youtube",
+      "last_seen_ms": 1777881244701
+    },
+    "68b0d7d43337963518b0fb342a6a259a161791f3927358a3438e06c3f81233f4": {
+      "native_id": "qKM4JzToM-A",
+      "source_type": "youtube",
+      "last_seen_ms": 1777881244701
+    },
+    "56c62714af4cb3ef4ca9c61430d56f649b41a84a9bea75c61b763660005418a7": {
+      "native_id": "https://worksinprogress.co/issue/modern-hindu-temples/",
+      "source_type": "rss",
+      "last_seen_ms": 1777881244701
+    },
+    "880781788bb1db3a4a1f540f3ad0bbb7c28882bccda85ba3672c26765588a21d": {
+      "native_id": "f-1NnH8swz0",
+      "source_type": "youtube",
+      "last_seen_ms": 1777881244701
+    },
+    "98c3f8854d7826819ea9f5cfeb9dbc652878feb8d13acc0f3287a47b5b08deb1": {
+      "native_id": "https://leakeyfoundation.org/janes-archive/",
+      "source_type": "rss",
+      "last_seen_ms": 1777881244701
+    },
+    "287dd9647a866130dc8e1f1d178cad27f8d0d8861f9a89598c0edefb85083ffd": {
+      "native_id": "https://www.quantamagazine.org/a-treasure-trove-of-cambrian-fossils-rewrites-the-story-of-early-life-20260501/",
+      "source_type": "rss",
+      "last_seen_ms": 1777881244701
+    },
+    "788ecce1e76fade4808509fceb28ca9592706bcbb7607d3330a264169c84c6db": {
+      "native_id": "https://fs.blog/knowledge-project-podcast/joe-liemandt/",
+      "source_type": "rss",
+      "last_seen_ms": 1777881244701
+    },
+    "c8c2f514bcdc16bcc318f17d04b2d81fde8ce2816f20767c86ae77be73c63bcd": {
+      "native_id": "https://reasonstobecheerful.world/the-spark-how-death-teaches-us-to-connect/",
+      "source_type": "rss",
+      "last_seen_ms": 1777881244701
     }
   },
   "sources_health": {
@@ -319,6 +369,9 @@
   },
   "runs": {
     "2026-05-03": {
+      "success": true
+    },
+    "2026-05-04": {
       "success": true
     }
   },
@@ -331,7 +384,17 @@
     "Natural History Museum": 1777801688500,
     "Ness Labs": 1777801688500,
     "Experimental History": 1777801688500,
-    "NOEMA": 1777801688500
+    "NOEMA": 1777801688500,
+    "LSE": 1777881244701,
+    "Dr Ben Miles": 1777881244701,
+    "3Blue1Brown": 1777881244701,
+    "TED-Ed": 1777881244701,
+    "Works in Progress RSS Feed": 1777881244701,
+    "Closer To Truth": 1777881244701,
+    "The Leakey Foundation": 1777881244701,
+    "Quanta Magazine": 1777881244701,
+    "Farnam Street": 1777881244701,
+    "Reasons to be Cheerful": 1777881244701
   },
   "source_scores": {
     "Oxford Martin School": {
@@ -369,16 +432,56 @@
     "NOEMA": {
       "avg": 10.25,
       "n": 1
+    },
+    "LSE": {
+      "avg": 7.43,
+      "n": 1
+    },
+    "Dr Ben Miles": {
+      "avg": 11.47,
+      "n": 1
+    },
+    "3Blue1Brown": {
+      "avg": 10.57,
+      "n": 1
+    },
+    "TED-Ed": {
+      "avg": 8.19,
+      "n": 1
+    },
+    "Works in Progress RSS Feed": {
+      "avg": 0.88,
+      "n": 1
+    },
+    "Closer To Truth": {
+      "avg": 3.79,
+      "n": 1
+    },
+    "The Leakey Foundation": {
+      "avg": 9.04,
+      "n": 1
+    },
+    "Quanta Magazine": {
+      "avg": 11.41,
+      "n": 1
+    },
+    "Farnam Street": {
+      "avg": 10.92,
+      "n": 1
+    },
+    "Reasons to be Cheerful": {
+      "avg": 10.27,
+      "n": 1
     }
   },
   "type_performance": {
     "youtube": {
-      "avg": 4.418,
-      "n": 5
+      "avg": 6.354,
+      "n": 10
     },
     "rss": {
-      "avg": 8.953,
-      "n": 4
+      "avg": 8.704,
+      "n": 9
     }
   },
   "monthly_source_counts": {
@@ -391,14 +494,27 @@
       "Natural History Museum": 1,
       "Ness Labs": 1,
       "Experimental History": 1,
-      "NOEMA": 1
+      "NOEMA": 1,
+      "LSE": 1,
+      "Dr Ben Miles": 1,
+      "3Blue1Brown": 1,
+      "TED-Ed": 1,
+      "Works in Progress RSS Feed": 1,
+      "Closer To Truth": 1,
+      "The Leakey Foundation": 1,
+      "Quanta Magazine": 1,
+      "Farnam Street": 1,
+      "Reasons to be Cheerful": 1
     }
   },
   "monthly_domain_counts": {
     "2026-05": {
       "historical": 4,
-      "optimism_tech": 3,
-      "optimism_health": 2
+      "optimism_tech": 8,
+      "optimism_health": 2,
+      "introspective": 3,
+      "general": 1,
+      "optimism_society": 1
     }
   }
 }
