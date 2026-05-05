@@ -166,77 +166,56 @@ def build_feed(selected_items):
     fg.logo(image_url)
     fg.image(url=image_url, title='U-Curve Brain', link='https://maxmrry.github.io/curious-rabbit-hole-bot/feed.xml')
 
-    # --- ENTRY 0: The Max Entry — Personalised Cold Open with dynamic feedback ---
+    # --- PREPARE BRIEFING COMPONENTS ---
     max_entry_text = strip_emojis(generate_max_entry(selected_items, now))
-    fe_max = fg.add_entry()
-    first_sentence = max_entry_text.split('.')[0].strip()
-    fe_max.title(f"(Today) {first_sentence}.")
-    fe_max.link(href=f"https://maxmrry.github.io/curious-rabbit-hole-bot/#max-{now.strftime('%Y%m%d')}")
+    daily_protocol = strip_emojis(clean_quote(get_daily_protocol()))
+    daily_principle = strip_emojis(clean_quote(get_daily_principle()))
+    narrative = generate_daily_narrative(selected_items)
+    
+    inoculated_items = [i for i in selected_items if i.get("has_inoculation")]
+    doom_count = len(inoculated_items)
 
+    # Build Feedback Buttons
     redirect_base = os.getenv("REDIRECT_BASE_URL", "")
     redirect_secret = os.getenv("REDIRECT_SECRET", "")
-
-    max_desc = max_entry_text
+    feedback_html = ""
     if redirect_base and redirect_secret:
-        max_desc += _build_feedback_buttons(
+        feedback_html = _build_feedback_buttons(
             redirect_base=redirect_base,
             redirect_secret=redirect_secret,
             date_str=now.strftime('%Y%m%d')
         )
 
-    fe_max.description(max_desc)
-    fe_max.pubDate(now + timedelta(seconds=1))
-    fe_max.id(f"max-entry-{now.strftime('%Y%m%d')}")
+    # --- ENTRY 1: THE MORNING BRIEFING (Merged) ---
+    fe_briefing = fg.add_entry()
+    # Uses the Narrative Headline as the punchy title for the whole briefing
+    fe_briefing.title(f"🧵 {strip_emojis(narrative['headline'])}")
+    fe_briefing.link(href=f"https://maxmrry.github.io/curious-rabbit-hole-bot/#briefing-{now.strftime('%Y%m%d')}")
+    
+    # Build the combined HTML description
+    briefing_html = f"<b>(Today)</b> {max_entry_text}<br><br>"
+    briefing_html += f"<b>(Pattern)</b> {strip_emojis(narrative['explanation'])}<br><br>"
+    briefing_html += f"<b>(Reminder)</b> {daily_protocol}<br><br>"
+    
+    if doom_count >= 2:
+        briefing_html += f"<b>(System)</b> {doom_count} items today contained threat language. They have been reframed. The nervous system cannot distinguish between a push notification and a physical threat. Choosing how you receive information is a cognitive skill.<br><br>"
+        
+    briefing_html += f"<i>— U-Curve Brain, running psychological triage since boot.</i>"
+    briefing_html += feedback_html
+    
+    fe_briefing.description(briefing_html)
+    fe_briefing.pubDate(now)
+    fe_briefing.id(f"briefing-{now.strftime('%Y%m%d')}")
 
-    # --- ENTRY 1: The Daily Protocol ---
-    daily_protocol = strip_emojis(clean_quote(get_daily_protocol()))
-    fe_rem = fg.add_entry()
-    fe_rem.title(f"(Reminder) {daily_protocol}")
-    fe_rem.link(href=f"https://maxmrry.github.io/curious-rabbit-hole-bot/#protocol-{now.strftime('%Y%m%d')}")
-    fe_rem.pubDate(now)
-    fe_rem.id(f"protocol-{now.strftime('%Y%m%d')}")
-
-    # --- ENTRY 2: The Daily Adage ---
-    daily_principle = strip_emojis(clean_quote(get_daily_principle()))
+    # --- ENTRY 2: THE ADAGE ---
     fe_intro = fg.add_entry()
     fe_intro.title(f"(Adage) {daily_principle}")
     fe_intro.link(href=f"https://maxmrry.github.io/curious-rabbit-hole-bot/#anchor-{now.strftime('%Y%m%d')}")
     fe_intro.pubDate(now - timedelta(seconds=1))
     fe_intro.id(f"anchor-{now.strftime('%Y%m%d')}")
 
-    # --- ENTRY 3: The Narrative Stitch ---
-    narrative = generate_daily_narrative(selected_items)
-    fe_narrative = fg.add_entry()
-    fe_narrative.title(f"{narrative['headline']}")
-    fe_narrative.link(href=f"https://maxmrry.github.io/curious-rabbit-hole-bot/#theme-{now.strftime('%Y%m%d')}")
-    fe_narrative.description(narrative['explanation'])
-    fe_narrative.pubDate(now - timedelta(seconds=2))
-    fe_narrative.id(f"theme-{now.strftime('%Y%m%d')}")
-
-    seconds_offset = 3
-
-    # --- DOOM INOCULATION CIRCUIT BREAKER ---
-    # Uses flag set by reframe_items rather than emoji detection
-    inoculated_items = [i for i in selected_items if i.get("has_inoculation")]
-    if len(inoculated_items) >= 2:
-        fe_inoculation = fg.add_entry()
-        fe_inoculation.title(
-            f"(System) {len(inoculated_items)} items today contained threat language — "
-            "here is why the framing matters"
-        )
-        fe_inoculation.link(
-            href=f"https://maxmrry.github.io/curious-rabbit-hole-bot/#inoculation-{now.strftime('%Y%m%d')}"
-        )
-        fe_inoculation.description(
-            f"{len(inoculated_items)} items today contained language associated with threat or urgency. "
-            "Each has been reframed with a stoic counter-perspective. This is not denial — it is calibration. "
-            "The nervous system cannot distinguish between a push notification and a physical threat. "
-            "Choosing how you receive information is a cognitive skill, not avoidance."
-            "<br><br><i>— U-Curve Brain, running psychological triage since boot.</i>"
-        )
-        fe_inoculation.pubDate(now - timedelta(seconds=seconds_offset))
-        fe_inoculation.id(f"inoculation-{now.strftime('%Y%m%d')}")
-        seconds_offset += 1
+    # Update the seconds_offset for the rest of the items to start at 2
+    seconds_offset = 2
 
     # --- CURATED CONTENT ---
     for item in selected_items:
