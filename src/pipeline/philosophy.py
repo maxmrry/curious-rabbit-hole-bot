@@ -129,12 +129,12 @@ def semantic_triage(candidates):
     2. nuance_score (0-10): Embraces complex ambiguity without resorting to fear.
     3. temporal_score (0-10): History/anthropology, ONLY IF it provides a relatable lens for the present.
     4. constructive_score (0-10): Grounded realism, accessible tech, and actionable truth.
-    5. abstraction_score (0-10): Big ideas with tangible life applications.
+    abstraction_score (0-10): PENALIZE abstract theory. Score 0 for highly theoretical physics (e.g., black holes, space theory) or dry corporate history. Score 10 for tangible, real-world human applications.
     6. fear_score (0-10): Engagement-bait or doom. (10 = maximum toxic panic).
     7. ai_slop_penalty (0-10): Generic AI-generated garbage, toxic "feel-good fluff", OR saccharine oversimplification. Score 8+ for anything that makes a complex problem sound solved, uses phrases like "this will change everything", or feels emotionally manipulative in a positive direction. Grounded optimism scores 0. Unearned optimism scores high.
     8. geo_affinity_score (0-10): Western relevance. UK-centric = 10, Europe = 8, US = 6.
-    9. niche_boredom_penalty (0-10): CRITICAL. Score 10 for dry institutional housekeeping, campus lectures, or highly specific niche subcultures. 
-    10. state_shift_score (0-10): CORE DRIVER. Does this actually improve mental state, offer agency, and provide "felt momentum"? (10 = highly empowering/energizing, 0 = emotionally flat/draining).
+    9. niche_boredom_penalty (0-10): CRITICAL. Score 10 for dry institutional housekeeping, abstract physics, or corporate strategy breakdowns. Score 0 for captivating, perspective-shifting narrative storytelling.
+    10. state_shift_score (0-10): CORE DRIVER. Does this provide a sense of agency? Score 10 for stories of rogue, grassroots human problem-solving, local ingenuity, and tangible community wins (e.g., ordinary people doing extraordinary things). Score 0 for emotionally flat or detached systems analysis.
     11. humanity_signal_score (0-10): Does this showcase human cooperation, ingenuity, scientific progress, or civilisational resilience at scale? (10 = profound demonstration of what humans can achieve together, 0 = purely individual or institutionally dry).
 
     RETURN EXACTLY THIS JSON STRUCTURE:
