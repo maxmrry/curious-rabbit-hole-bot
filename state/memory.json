@@ -359,6 +359,56 @@
       "native_id": "https://reasonstobecheerful.world/the-spark-how-death-teaches-us-to-connect/",
       "source_type": "rss",
       "last_seen_ms": 1777881244701
+    },
+    "8165ef812b8216ed7afeca6ed5e2b03f50fc32761b586ed6c4b194a8f097aa96": {
+      "native_id": "https://behavioralscientist.org/climate-change-is-getting-worse-why-dont-we-see-more-action/",
+      "source_type": "rss",
+      "last_seen_ms": 1777965914867
+    },
+    "07fa1ce27b9d4047bc371aba6cef42b83b4f077cf27623546e310eaa03c1817f": {
+      "native_id": "yOcBcL5EBf4",
+      "source_type": "youtube",
+      "last_seen_ms": 1777965914867
+    },
+    "1923d58879aebf2404fe42afd418a064e588369e9c17e29f98366db9a8a57240": {
+      "native_id": "LLMbLfpC1nc",
+      "source_type": "youtube",
+      "last_seen_ms": 1777965914867
+    },
+    "f7c7903362166ac2ee0ba7ce03bb02af6a3488ad32198b2419807ff527c9ddec": {
+      "native_id": "BtL1hpd3Yks",
+      "source_type": "youtube",
+      "last_seen_ms": 1777965914867
+    },
+    "8499daa1a9e9c7f2c6aad6525b8cfc0d16a703e337a3bc8ea61e1c6fa775c03a": {
+      "native_id": "mi_jCx0LznU",
+      "source_type": "youtube",
+      "last_seen_ms": 1777965914867
+    },
+    "c857b03c65012bab634627fa40b04f762ce2f4d537724955175676390c5291e5": {
+      "native_id": "WGhy62UZnbg",
+      "source_type": "youtube",
+      "last_seen_ms": 1777965914867
+    },
+    "02d60d91d3be61bff110e213ea733677f4621c8c7818439f056d22929db6248f": {
+      "native_id": "https://undark.org/2026/05/01/book-review-return-of-the-oystercatcher/",
+      "source_type": "rss",
+      "last_seen_ms": 1777965914867
+    },
+    "e4189db11f332fb2b625c34683e3364128e9ebdbc6693e7fbfb59aeea3d71d86": {
+      "native_id": "https://greatergood.berkeley.edu/article/item/what_evolution_can_teach_us_about_stronger_relationships",
+      "source_type": "rss",
+      "last_seen_ms": 1777965914867
+    },
+    "469719477facfdebf54e5a2488fc439e798e8d26d568f3547d529ee949b38b42": {
+      "native_id": "https://nautil.us/for-every-patient-their-own-drug-1280433/",
+      "source_type": "rss",
+      "last_seen_ms": 1777965914867
+    },
+    "742c1ba6a8c157f66a04272679ad9de44a9a28e89694f38942919d5b4325298f": {
+      "native_id": "https://share.transistor.fm/s/d144e06f",
+      "source_type": "rss",
+      "last_seen_ms": 1777965914867
     }
   },
   "sources_health": {
@@ -372,6 +422,9 @@
       "success": true
     },
     "2026-05-04": {
+      "success": true
+    },
+    "2026-05-05": {
       "success": true
     }
   },
@@ -394,7 +447,17 @@
     "The Leakey Foundation": 1777881244701,
     "Quanta Magazine": 1777881244701,
     "Farnam Street": 1777881244701,
-    "Reasons to be Cheerful": 1777881244701
+    "Reasons to be Cheerful": 1777881244701,
+    "Behavioral Scientist": 1777965914867,
+    "Intelligence Squared": 1777965914867,
+    "Wellcome Collection": 1777965914867,
+    "Smithsonian": 1777965914867,
+    "The Rest Is Science": 1777965914867,
+    "Wendover Productions": 1777965914867,
+    "Undark Magazine": 1777965914867,
+    "Greater Good": 1777965914867,
+    "Nautilus": 1777965914867,
+    "Fix The News": 1777965914867
   },
   "source_scores": {
     "Oxford Martin School": {
@@ -472,16 +535,56 @@
     "Reasons to be Cheerful": {
       "avg": 10.27,
       "n": 1
+    },
+    "Behavioral Scientist": {
+      "avg": 4.66,
+      "n": 1
+    },
+    "Intelligence Squared": {
+      "avg": 14.65,
+      "n": 1
+    },
+    "Wellcome Collection": {
+      "avg": 14.42,
+      "n": 1
+    },
+    "Smithsonian": {
+      "avg": 10.86,
+      "n": 1
+    },
+    "The Rest Is Science": {
+      "avg": 10.62,
+      "n": 1
+    },
+    "Wendover Productions": {
+      "avg": 12.21,
+      "n": 1
+    },
+    "Undark Magazine": {
+      "avg": 9.63,
+      "n": 1
+    },
+    "Greater Good": {
+      "avg": 14.94,
+      "n": 1
+    },
+    "Nautilus": {
+      "avg": 14.85,
+      "n": 1
+    },
+    "Fix The News": {
+      "avg": 14.38,
+      "n": 1
     }
   },
   "type_performance": {
     "youtube": {
-      "avg": 6.354,
-      "n": 10
+      "avg": 8.42,
+      "n": 15
     },
     "rss": {
-      "avg": 8.704,
-      "n": 9
+      "avg": 9.771,
+      "n": 14
     }
   },
   "monthly_source_counts": {
@@ -504,17 +607,28 @@
       "The Leakey Foundation": 1,
       "Quanta Magazine": 1,
       "Farnam Street": 1,
-      "Reasons to be Cheerful": 1
+      "Reasons to be Cheerful": 1,
+      "Behavioral Scientist": 1,
+      "Intelligence Squared": 1,
+      "Wellcome Collection": 1,
+      "Smithsonian": 1,
+      "The Rest Is Science": 1,
+      "Wendover Productions": 1,
+      "Undark Magazine": 1,
+      "Greater Good": 1,
+      "Nautilus": 1,
+      "Fix The News": 1
     }
   },
   "monthly_domain_counts": {
     "2026-05": {
-      "historical": 4,
-      "optimism_tech": 8,
-      "optimism_health": 2,
-      "introspective": 3,
+      "historical": 5,
+      "optimism_tech": 13,
+      "optimism_health": 4,
+      "introspective": 4,
       "general": 1,
-      "optimism_society": 1
+      "optimism_society": 1,
+      "environmental": 1
     }
   }
 }
