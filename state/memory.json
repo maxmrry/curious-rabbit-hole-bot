@@ -409,6 +409,61 @@
       "native_id": "https://share.transistor.fm/s/d144e06f",
       "source_type": "rss",
       "last_seen_ms": 1777965914867
+    },
+    "d44c16ec49de8689f3d4bb76cea1ec455095fc8c928a6c1a0a7ea37e51146dc3": {
+      "native_id": "https://aeon.co/videos/is-democracy-without-elections-possible-could-a-lottery-be-better",
+      "source_type": "rss",
+      "last_seen_ms": 1778053394084
+    },
+    "eb393e3f879e5dd43a89af699a4f1beac6e1ddeaf66b75ffabae9ce08e916567": {
+      "native_id": "fo4ZR8hpQ3s",
+      "source_type": "youtube",
+      "last_seen_ms": 1778053394084
+    },
+    "1ca3b141a206ea8034e2e5099b17a44c7479f8cfd84f316c1f51d25cc2f524b5": {
+      "native_id": "vdzeczbEqkU",
+      "source_type": "youtube",
+      "last_seen_ms": 1778053394084
+    },
+    "31c24b4e974975644f220253b2797b1932f538af5b6d682e33617ec63ddcb98e": {
+      "native_id": "FeLtwfHlEU0",
+      "source_type": "youtube",
+      "last_seen_ms": 1778053394084
+    },
+    "5ca15fdcce736ddb0d5a65c36aee2853a98328c5b56e40e6ab3b5ba4f5246dec": {
+      "native_id": "https://blog.castac.org/2026/05/animals-in-war-multispecies-agency-and-the-memory-of-the-colombian-armed-conflict/",
+      "source_type": "rss",
+      "last_seen_ms": 1778053394084
+    },
+    "105ebe6a30c6a881fcaaa42e6c54f3e2c926f390f29e253ece8c9e2311be8086": {
+      "native_id": "gkd25eXDT_4",
+      "source_type": "youtube",
+      "last_seen_ms": 1778053394084
+    },
+    "f8dad341b2cf3b047abcbcf49d1086afed278329fa1a5315a1f8c30f8fcdc538": {
+      "native_id": "m0vI6Y5V-o8",
+      "source_type": "youtube",
+      "last_seen_ms": 1778053394084
+    },
+    "40e8d9fb38ddcf5ef9d616c213ad49360bee71cb05626e5536464c649b3dc872": {
+      "native_id": "https://somatosphere.net/the-politics-of-essential-work-asha-workers-and-the-essentialization-of-labor-in-india/",
+      "source_type": "rss",
+      "last_seen_ms": 1778053394084
+    },
+    "358c99792a96cafd1de9d35ef165222428a25fbf23ea928b43c1e70fffe9f40c": {
+      "native_id": "https://www.positive.news/environment/second-act-the-pioneers-giving-green-tech-a-new-spin/",
+      "source_type": "rss",
+      "last_seen_ms": 1778053394084
+    },
+    "05e8c9f94fc0566d509ee65ba1c5d12f9df62f4ebf9b2a39e8d8d38d3cc10bea": {
+      "native_id": "https://marginalrevolution.com/marginalrevolution/2026/05/korean-banana-markets-in-everything.html",
+      "source_type": "rss",
+      "last_seen_ms": 1778053394084
+    },
+    "c0b72589c6b7a1b729d2aabe216205f7b801a3e0b47d51814ad08a0f8ba945c6": {
+      "native_id": "https://psyche.co/guides/how-to-bring-up-pet-peeves-in-your-relationship",
+      "source_type": "rss",
+      "last_seen_ms": 1778053394084
     }
   },
   "sources_health": {
@@ -425,6 +480,9 @@
       "success": true
     },
     "2026-05-05": {
+      "success": true
+    },
+    "2026-05-06": {
       "success": true
     }
   },
@@ -457,7 +515,18 @@
     "Undark Magazine": 1777965914867,
     "Greater Good": 1777965914867,
     "Nautilus": 1777965914867,
-    "Fix The News": 1777965914867
+    "Fix The News": 1777965914867,
+    "Aeon | a world of ideas": 1778053394084,
+    "The Rest Is History": 1778053394084,
+    "Nobel Prize": 1778053394084,
+    "BBC Ideas": 1778053394084,
+    "Platypus": 1778053394084,
+    "Becker Friedman Institute University of Chicago": 1778053394084,
+    "American Museum of Natural History": 1778053394084,
+    "Somatosphere": 1778053394084,
+    "Positive News": 1778053394084,
+    "Marginal REVOLUTION": 1778053394084,
+    "Psyche | Know Your Self": 1778053394084
   },
   "source_scores": {
     "Oxford Martin School": {
@@ -575,16 +644,60 @@
     "Fix The News": {
       "avg": 14.38,
       "n": 1
+    },
+    "Aeon | a world of ideas": {
+      "avg": 13.07,
+      "n": 1
+    },
+    "The Rest Is History": {
+      "avg": 13.33,
+      "n": 1
+    },
+    "Nobel Prize": {
+      "avg": 8.54,
+      "n": 1
+    },
+    "BBC Ideas": {
+      "avg": 2.8,
+      "n": 1
+    },
+    "Platypus": {
+      "avg": -8.2,
+      "n": 1
+    },
+    "Becker Friedman Institute University of Chicago": {
+      "avg": -6.26,
+      "n": 1
+    },
+    "American Museum of Natural History": {
+      "avg": 0.72,
+      "n": 1
+    },
+    "Somatosphere": {
+      "avg": -1.1,
+      "n": 1
+    },
+    "Positive News": {
+      "avg": 13.77,
+      "n": 1
+    },
+    "Marginal REVOLUTION": {
+      "avg": 12.47,
+      "n": 1
+    },
+    "Psyche | Know Your Self": {
+      "avg": 11.38,
+      "n": 1
     }
   },
   "type_performance": {
     "youtube": {
-      "avg": 8.42,
-      "n": 15
+      "avg": 7.271,
+      "n": 20
     },
     "rss": {
-      "avg": 9.771,
-      "n": 14
+      "avg": 8.909,
+      "n": 20
     }
   },
   "monthly_source_counts": {
@@ -617,18 +730,29 @@
       "Undark Magazine": 1,
       "Greater Good": 1,
       "Nautilus": 1,
-      "Fix The News": 1
+      "Fix The News": 1,
+      "Aeon | a world of ideas": 1,
+      "The Rest Is History": 1,
+      "Nobel Prize": 1,
+      "BBC Ideas": 1,
+      "Platypus": 1,
+      "Becker Friedman Institute University of Chicago": 1,
+      "American Museum of Natural History": 1,
+      "Somatosphere": 1,
+      "Positive News": 1,
+      "Marginal REVOLUTION": 1,
+      "Psyche | Know Your Self": 1
     }
   },
   "monthly_domain_counts": {
     "2026-05": {
-      "historical": 5,
-      "optimism_tech": 13,
+      "historical": 7,
+      "optimism_tech": 19,
       "optimism_health": 4,
       "introspective": 4,
       "general": 1,
-      "optimism_society": 1,
-      "environmental": 1
+      "optimism_society": 3,
+      "environmental": 2
     }
   }
 }
