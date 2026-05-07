@@ -175,7 +175,8 @@ def select_daily_items(memory, policy):
         s_geo = scores.get("geo_affinity_score", 5)
         s_state = scores.get("state_shift_score", 0)
         s_wonder = scores.get("wonder_score", 0)
-        s_humanity = scores.get("humanity_signal_score", 0) 
+        s_humanity = scores.get("humanity_signal_score", 0)
+        s_reality = scores.get("reality_contact_score", 0)
         
         fear = scores.get("fear_score", 0)
         slop = scores.get("ai_slop_penalty", 0)
@@ -231,7 +232,8 @@ def select_daily_items(memory, policy):
             (s_geo * 0.15) +
             (s_state * 0.35) +
             (s_wonder * 0.25) +
-            (s_humanity * 0.20) +
+            (s_humanity * 0.18) +
+            (s_reality * 0.22) +
             rlhf_nudge
         ) - penalty
         
