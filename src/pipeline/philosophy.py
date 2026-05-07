@@ -246,31 +246,19 @@ def reframe_items(selected_items):
 
     prompt = """
     You are a high-level cognitive filter for an employed Gen Z male in the UK/EU.
-    Your job is to rewrite the metadata of these media items so they feel worth clicking.
-
+    Your job is to rewrite the metadata of these media items.
+    
     RULES:
-    1. "hook_title": Rewrite the title to create a genuine curiosity gap. Lead with the most surprising or counterintuitive finding. Never use clickbait or vague superlatives. The title should make someone who knows nothing about the topic want to understand it.
-
-    2. "rewritten_description": 3 sentences maximum. 
-       - Sentence 1: What is the core surprising finding, argument, or mechanism this content reveals? Be specific — name the actual phenomenon, study, or insight, not just the topic area.
-       - Sentence 2: What is the most interesting detail, example, or implication that makes this worth 20 minutes of someone's time? This should make the reader think "I didn't know that."
-       - Sentence 3 (only for News): One concrete, specific consequence for someone employed in the UK — not generic career advice, but an actual thing that may change or matter.
-       For Video and Research: stop at sentence 2. Do not add life-advice or application sentences.
-
-    3. "doom_inoculation": If the original text contains panic words (crisis, unprecedented, breaking, escalation), write a 1-sentence stoic counter-frame. Otherwise leave blank.
-
-    WHAT TO AVOID:
-    - Do not end descriptions with "this can help you X for Y" or "applying these insights will improve your Z"
-    - Do not add generic self-improvement framing the content did not earn
-    - Do not summarise the topic — summarise the actual finding or argument
-    - Do not use the phrase "this article explores" or "this video examines"
+    1. "hook_title": Write a punchy, high-end journalistic title. CRITICAL: You are strictly FORBIDDEN from using cheap clickbait words like "surprising", "hidden", "counter-intuitive", "secret", or "the real reason". Frame it like a premium magazine feature (e.g., "How Iceland turned fish waste into a medical empire").
+    2. "rewritten_description": Keep it under 60 words. Be objective. If it is News, append one sentence explaining the tangible benefit to a young UK/EU professional.
+    3. "doom_inoculation": If the original text contains panic words (crisis, unprecedented, breaking, escalation), write a 1-sentence stoic counter-frame. Otherwise, leave it blank.
     
     RETURN EXACTLY THIS JSON:
     {
         "rewrites": [
             {
                 "native_id": "exact ID",
-                "hook_title": "Optimized Title",
+                "hook_title": "Premium Title",
                 "rewritten_description": "Objective synopsis",
                 "doom_inoculation": "Stoic counter-frame or empty string"
             }
