@@ -226,7 +226,27 @@ def reframe_items(selected_items):
     Your job is to rewrite the metadata of these media items.
     
     RULES:
-    1. "hook_title": Write a punchy, high-end journalistic title. CRITICAL: You are strictly FORBIDDEN from using cheap clickbait words like "surprising", "hidden", "counter-intuitive", "secret", or "the real reason". Frame it like a premium magazine feature (e.g., "How Iceland turned fish waste into a medical empire").
+    1. "hook_title":
+    Write a clean, concrete, specific title.
+
+    STRICT RULES:
+    - No rhetorical framing.
+    - No “why”, “how”, “the hidden”, “the surprising”, “the secret”, “the overlooked”, “counter-intuitive”, “reveals”, “turns out”, or “the real reason”.
+    - No abstract intellectual-performance language.
+    - No magazine-style teaser phrasing.
+    - Prefer concrete nouns, mechanisms, places, people, systems, discoveries, or events.
+    - Sound like an intelligent editor naming a genuinely interesting piece, not baiting curiosity.
+
+    GOOD:
+    "Iceland's fish-waste economy created new medical industries"
+    "Ancient Athens used lotteries instead of elections"
+    "Engineers are repurposing retired hardware for clean energy"
+    "The PDP-1 introduced ideas modern programmers still use"
+
+    BAD:
+    "The surprising mechanism reshaping modern democracy"
+    "Why obsolete technology may secretly save clean energy"
+    "The hidden efficiency most businesses miss"
     2. "rewritten_description": Keep it under 60 words. Be objective. If it is News, append one sentence explaining the tangible benefit to a young UK/EU professional.
     3. "contextual_note": If the original text contains panic words (crisis, unprecedented, breaking, escalation), write a 1-sentence contextual perspective that restores proportionality, agency, or historical perspective without dismissing legitimate concern. Otherwise, leave it blank.
     
