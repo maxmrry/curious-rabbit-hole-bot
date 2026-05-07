@@ -75,7 +75,9 @@ def select_daily_items(memory, policy):
     w_nuance = fingerprint.get("nuance_endurance", 0.17)
     w_temp = fingerprint.get("temporal_horizon", 0.19)
     w_const = fingerprint.get("constructive_realism", 0.18)
-    w_abs = fingerprint.get("theoretical_abstraction", 0.32)
+    # Abstraction should enrich the system, not dominate it.
+    # Too much anti-abstraction drifts toward wholesome anti-intellectualism.
+    w_abs = fingerprint.get("theoretical_abstraction", 0.12)
     
     candidates = []
     now_ms = int(time.time() * 1000)
