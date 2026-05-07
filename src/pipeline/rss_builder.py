@@ -189,7 +189,7 @@ def build_feed(selected_items):
     # --- ENTRY 1: THE MORNING BRIEFING (Merged) ---
     fe_briefing = fg.add_entry()
     # Uses the Narrative Headline as the punchy title for the whole briefing
-    fe_briefing.title(f"🧵 {strip_emojis(narrative['headline'])}")
+    fe_briefing.title(f"{strip_emojis(narrative['headline'])}")
     fe_briefing.link(href=f"https://maxmrry.github.io/curious-rabbit-hole-bot/#briefing-{now.strftime('%Y%m%d')}")
     
     # Build the combined HTML description
@@ -200,7 +200,6 @@ def build_feed(selected_items):
     if doom_count >= 2:
         briefing_html += f"<b>(System)</b> {doom_count} items today contained threat language. They have been reframed. The nervous system cannot distinguish between a push notification and a physical threat. Choosing how you receive information is a cognitive skill.<br><br>"
         
-    briefing_html += f"<i>— U-Curve Brain, running psychological triage since boot.</i>"
     briefing_html += feedback_html
     
     fe_briefing.description(briefing_html)
