@@ -177,6 +177,7 @@ def select_daily_items(memory, policy):
         s_wonder = scores.get("wonder_score", 0)
         s_humanity = scores.get("humanity_signal_score", 0)
         s_reality = scores.get("reality_contact_score", 0)
+        s_delight = scores.get("delight_score", 0)
         
         fear = scores.get("fear_score", 0)
         slop = scores.get("ai_slop_penalty", 0)
@@ -234,6 +235,7 @@ def select_daily_items(memory, policy):
             (s_wonder * 0.25) +
             (s_humanity * 0.18) +
             (s_reality * 0.22) +
+            (s_delight * 0.18) +
             rlhf_nudge
         ) - penalty
         
