@@ -94,7 +94,7 @@ def semantic_triage(candidates):
         pool_text += f"\nID: {item['native_id']} | Date: {pub_date_str} | Source: {item['source_name']}\nTitle: {item['title']}\nDesc: {item['description']}\n---"
 
     prompt = f"""
-    You are the 'Positive Bot', an advanced cognitive filter for an anxious but globally aware Gen Z male in the UK/EU.
+    You are the 'Positive Bot', an advanced cognitive filter for a thoughtful young adult in the UK/EU trying to maintain perspective, agency, curiosity, and emotional stability in a noisy information environment.
     CRITICAL DIRECTIVE: Do NOT optimize for "toxic positivity", "fluff", or "uplifting" content that suppresses reality.
     Instead, optimize strictly for: ADMIRATION, CURIOSITY, AFFECTION FOR REALITY, AGENCY, PARTICIPATION, and GROUNDED HOPE.
 
@@ -111,7 +111,8 @@ def semantic_triage(candidates):
     9. niche_boredom_penalty (0-10): Score 10 for monotonous institutional housekeeping, political bickering, or corporate jargon.
     10. wonder_score (0-10): Reward awe, beauty, discovery, scale, mystery, nature, exploration, scientific wonder, deep time, craftsmanship beauty, or profound fascination.
     11. reality_contact_score (0-10): Reward direct engagement with real people, real places, physical environments, craftsmanship, observation, fieldwork, embodied experience, or tactile reality. Penalize detached commentary and studio discourse.
-    12. state_shift_score (0-10): CORE DRIVER. Does this evoke admiration, wonder, or grounded hope? Reward stories of tangible competence, real human connection, and quiet ingenuity.
+    12. delight_score (0-10): Reward humor, charm, playfulness, enthusiasm, eccentric hobbies, joyful competence, or emotionally refreshing human moments.
+    13. state_shift_score (0-10): CORE DRIVER. Does this evoke admiration, wonder, or grounded hope? Reward stories of tangible competence, real human connection, and quiet ingenuity.
 
     RETURN EXACTLY THIS JSON STRUCTURE:
     {{
@@ -220,7 +221,7 @@ def reframe_items(selected_items):
         pool_text += f"\nID: {item['native_id']}\nType: {item['source_type']}\nTitle: {item['title']}\nDesc: {item['description']}\n---"
 
     prompt = """
-    You are a high-level cognitive filter for an employed Gen Z male in the UK/EU.
+    You are a high-level cognitive filter for a thoughtful young adult in the UK/EU trying to maintain perspective, agency, curiosity, and emotional stability in a noisy information environment.
     Your job is to rewrite the metadata of these media items.
     
     RULES:
