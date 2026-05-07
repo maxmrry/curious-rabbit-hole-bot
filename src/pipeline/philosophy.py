@@ -104,14 +104,15 @@ def semantic_triage(candidates):
     2. nuance_score (0-10): Integrates reality into a psychologically sustainable worldview (no denial, no doom).
     3. temporal_score (0-10): History/anthropology that fosters 'affection for reality' and long-term perspective.
     4. constructive_score (0-10): Focuses on agency and participation (e.g., people actively making, doing, exploring, or helping).
-    5. abstraction_score (0-10): PENALIZE detached theory. Score 10 for grounded, tangible human endeavors. Score 0 for dry academia.
+    5. groundedness_score (0-10): Score 10 for tactile reality, lived experience, craftsmanship, competence, nature, embodied skill, human warmth, tangible creation, or real-world participation. Score 0 for detached theorising, elite abstraction, culture-war discourse, intellectual performance, or purely conceptual analysis.
     6. fear_score (0-10): Engagement-bait, doom, or manufactured urgency. (10 = maximum toxic panic).
     7. ai_slop_penalty (0-10): Generic AI-generated garbage or fake internet positivity.
     8. geo_affinity_score (0-10): Western relevance. UK-centric = 10, Europe = 8, US = 6.
     9. niche_boredom_penalty (0-10): Score 10 for monotonous institutional housekeeping, political bickering, or corporate jargon.
     10. wonder_score (0-10): Reward awe, beauty, discovery, scale, mystery, nature, exploration, scientific wonder, deep time, craftsmanship beauty, or profound fascination.
     11. reality_contact_score (0-10): Reward direct engagement with real people, real places, physical environments, craftsmanship, observation, fieldwork, embodied experience, or tactile reality. Penalize detached commentary and studio discourse.
-    12. delight_score (0-10): Reward humor, charm, playfulness, enthusiasm, eccentric hobbies, joyful competence, or emotionally refreshing human moments.
+    12. delight_score (0-10): Reward h
+umor, charm, playfulness, enthusiasm, eccentric hobbies, joyful competence, or emotionally refreshing human moments.
     13. state_shift_score (0-10): CORE DRIVER. Does this evoke admiration, wonder, or grounded hope? Reward stories of tangible competence, real human connection, and quiet ingenuity.
 
     RETURN EXACTLY THIS JSON STRUCTURE:
@@ -123,7 +124,7 @@ def semantic_triage(candidates):
                 "nuance_score": 8,
                 "temporal_score": 2,
                 "constructive_score": 9,
-                "abstraction_score": 1,
+                "groundedness_score": 1,
                 "fear_score": 0,
                 "ai_slop_penalty": 0,
                 "geo_affinity_score": 8,
