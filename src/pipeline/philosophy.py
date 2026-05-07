@@ -94,48 +94,22 @@ def semantic_triage(candidates):
         pool_text += f"\nID: {item['native_id']} | Date: {pub_date_str} | Source: {item['source_name']}\nTitle: {item['title']}\nDesc: {item['description']}\n---"
 
     prompt = f"""
-    You are the 'U-Curve Brain', an advanced cognitive filter for an employed Gen Z male in the UK/EU.
-    Score the following candidates from 0 to 10 based on these metrics.
-    
-    CALIBRATION EXAMPLES (use these to anchor your scoring):
-    
-    Example A - High quality:
-    Title: "How microfinance quietly lifted 100 million people out of poverty"
-    Source: Our World in Data
-    Scores: systemic=9, nuance=7, temporal=3, constructive=9, abstraction=6,
-            fear=0, ai_slop=0, geo_affinity=7, niche_boredom=0, state_shift=9, humanity_signal=10
-    
-    Example B - Low quality (doom engagement bait):
-    Title: "Why the global economy is about to collapse and nobody is talking about it"
-    Source: Unknown Blog
-    Scores: systemic=3, nuance=1, temporal=2, constructive=1, abstraction=2,
-            fear=9, ai_slop=7, geo_affinity=5, niche_boredom=2, state_shift=1, humanity_signal=0
-    
-    Example C - Medium quality (interesting but dry):
-    Title: "Proceedings of the 2024 International Symposium on Monetary Policy Frameworks"
-    Source: IMF
-    Scores: systemic=6, nuance=5, temporal=2, constructive=4, abstraction=5,
-            fear=0, ai_slop=0, geo_affinity=5, niche_boredom=8, state_shift=2, humanity_signal=1
-    
-    Example D - High quality (psychological/personal relevance):
-    Title: "The surprising science of why humans are terrible at predicting their own unhappiness"
-    Source: Yale Courses
-    Scores: systemic=5, nuance=8, temporal=3, constructive=8, abstraction=7,
-            fear=0, ai_slop=0, geo_affinity=7, niche_boredom=0, state_shift=9, humanity_signal=5
-    
-    Score the following candidates from 0 to 10 based on these metrics:
+    You are the 'Positive Bot', an advanced cognitive filter for an anxious but globally aware Gen Z male in the UK/EU.
+    CRITICAL DIRECTIVE: Do NOT optimize for "toxic positivity", "fluff", or "uplifting" content that suppresses reality.
+    Instead, optimize strictly for: ADMIRATION, CURIOSITY, AFFECTION FOR REALITY, AGENCY, PARTICIPATION, and GROUNDED HOPE.
 
-    1. systemic_score (0-10): Focuses on structural mechanisms and global progress.
-    2. nuance_score (0-10): Embraces complex ambiguity without resorting to fear.
-    3. temporal_score (0-10): History/anthropology, ONLY IF it provides a relatable lens for the present.
-    4. constructive_score (0-10): Grounded realism, accessible tech, and actionable truth.
-    abstraction_score (0-10): PENALIZE abstract theory. Score 0 for highly theoretical physics (e.g., black holes, space theory) or dry corporate history. Score 10 for tangible, real-world human applications.
-    6. fear_score (0-10): Engagement-bait or doom. (10 = maximum toxic panic).
-    7. ai_slop_penalty (0-10): Generic AI-generated garbage, toxic "feel-good fluff", OR saccharine oversimplification. Score 8+ for anything that makes a complex problem sound solved, uses phrases like "this will change everything", or feels emotionally manipulative in a positive direction. Grounded optimism scores 0. Unearned optimism scores high.
+    Score the candidates from 0 to 10 based on these metrics:
+
+    1. systemic_score (0-10): Focuses on human competence, cooperation, and how we quietly build or fix systems.
+    2. nuance_score (0-10): Integrates reality into a psychologically sustainable worldview (no denial, no doom).
+    3. temporal_score (0-10): History/anthropology that fosters 'affection for reality' and long-term perspective.
+    4. constructive_score (0-10): Focuses on agency and participation (e.g., people actively making, doing, exploring, or helping).
+    5. abstraction_score (0-10): PENALIZE detached theory. Score 10 for grounded, tangible human endeavors. Score 0 for dry academia.
+    6. fear_score (0-10): Engagement-bait, doom, or manufactured urgency. (10 = maximum toxic panic).
+    7. ai_slop_penalty (0-10): Generic AI-generated garbage or fake internet positivity.
     8. geo_affinity_score (0-10): Western relevance. UK-centric = 10, Europe = 8, US = 6.
-    9. niche_boredom_penalty (0-10): CRITICAL. Score 10 for dry institutional housekeeping, abstract physics, or corporate strategy breakdowns. Score 0 for captivating, perspective-shifting narrative storytelling.
-    10. state_shift_score (0-10): CORE DRIVER. Does this provide a sense of agency? Score 10 for stories of rogue, grassroots human problem-solving, local ingenuity, and tangible community wins (e.g., ordinary people doing extraordinary things). Score 0 for emotionally flat or detached systems analysis.
-    11. humanity_signal_score (0-10): Does this showcase human cooperation, ingenuity, scientific progress, or civilisational resilience at scale? (10 = profound demonstration of what humans can achieve together, 0 = purely individual or institutionally dry).
+    9. niche_boredom_penalty (0-10): Score 10 for monotonous institutional housekeeping, political bickering, or corporate jargon.
+    10. state_shift_score (0-10): CORE DRIVER. Does this evoke admiration, wonder, or grounded hope? Reward stories of tangible competence, real human connection, and quiet ingenuity.
 
     RETURN EXACTLY THIS JSON STRUCTURE:
     {{
@@ -145,14 +119,13 @@ def semantic_triage(candidates):
                 "systemic_score": 5,
                 "nuance_score": 8,
                 "temporal_score": 2,
-                "constructive_score": 7,
-                "abstraction_score": 9,
-                "fear_score": 1,
+                "constructive_score": 9,
+                "abstraction_score": 1,
+                "fear_score": 0,
                 "ai_slop_penalty": 0,
                 "geo_affinity_score": 8,
                 "niche_boredom_penalty": 0,
-                "state_shift_score": 9,
-                "humanity_signal_score": 7
+                "state_shift_score": 10
             }}
         ]
     }}
@@ -375,7 +348,7 @@ def generate_max_entry(selected_items, now):
         pool_text += f"\nTitle: {item['title']}\n---"
 
     prompt = f"""
-    You are the 'U-Curve Brain', speaking directly to Max, an employed Gen Z male in the UK.
+    You are the 'Positive Bot', speaking directly to Max, an employed Gen Z male in the UK.
     Write the opening thought for today's curated feed based on the underlying themes of the items below.
     
     CRITICAL RULES:
