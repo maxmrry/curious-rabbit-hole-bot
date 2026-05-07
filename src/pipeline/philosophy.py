@@ -9,7 +9,7 @@ import google.generativeai as genai
 # Multiple angles per season so the Max Entry doesn't repeat the same frame
 SEASONAL_ANGLES = {
     "winter": [
-        "It is the middle of winter in the UK. Daylight is short and the brain's threat-detection runs hotter in low light. This is documented biology, not weakness. Frame with warmth and forward momentum.",
+        "It is the middle of winter in the UK. Daylight is short and the brain's threat-detection runs hotter in low light. Winter in the UK compresses attention inward. Prioritise grounded, outward-facing material today.",
         "January in England is statistically the lowest-mood month in the year. That is a population average, not a sentence. Frame today around the specific and the concrete - small progress over abstract optimism.",
         "Winter in the UK means the brain is running on less light than it evolved for. Acknowledge this honestly but briefly. The antidote is not cheerfulness but engagement - content that pulls attention outward.",
         "The first weeks of the year carry cultural weight that is largely manufactured. Frame today around what is genuinely new rather than what is symbolically new.",
