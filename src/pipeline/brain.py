@@ -86,18 +86,32 @@ def select_daily_items(memory, policy):
     raw_items.extend(fetch_youtube_whitelist())
     raw_items.extend(fetch_relevant_news())
     
-    # 🧠 DYNAMIC WILDCARD QUERIES: Actively crawl high-energy, high-agency domains
-    explore_themes = [
-        '"human progress"', '"behavioral science"', '"future optimism"',
-        '"mental models"', '"resilience psychology"', '"systems thinking"', 
-        '"technology philosophy"', '"cultural shift"'
+    # 🎯 MULTI-DIMENSIONAL HUNTING ARCHITECTURE
+    # Actively hunts across psychological pillars to prevent emotional monotony and intellectual monoculture.
+    psychological_pillars = [
+        {"theme": "humanity", "weight": 0.25, "queries": ['"human connection"', '"community"', '"mutual aid"']},
+        {"theme": "competence", "weight": 0.25, "queries": ['"makers"', '"engineering"', '"craftsmanship"', '"problem solving"']},
+        {"theme": "wonder", "weight": 0.20, "queries": ['"discovery"', '"deep time"', '"natural world"']},
+        {"theme": "beauty", "weight": 0.10, "queries": ['"art"', '"design"', '"aesthetics"']},
+        {"theme": "joy", "weight": 0.10, "queries": ['"play"', '"hobby"', '"enthusiasm"']},
+        {"theme": "wisdom", "weight": 0.10, "queries": ['"mental models"', '"stoicism"', '"perspective"']}
     ]
-    
-    import random
-    query_1 = random.choice(explore_themes)
-    query_2 = random.choice([t for t in explore_themes if t != query_1])
 
-    print(f"🔍 Today's exploration vectors: [{query_1}] and [{query_2}]")
+    import random
+    
+    # Weighted random selection for our two API hunting queries
+    weights = [p["weight"] for p in psychological_pillars]
+    chosen_pillar_1 = random.choices(psychological_pillars, weights=weights, k=1)[0]
+    
+    # Remove the first choice to ensure we hunt two different domains today
+    remaining_pillars = [p for p in psychological_pillars if p["theme"] != chosen_pillar_1["theme"]]
+    remaining_weights = [p["weight"] for p in remaining_pillars]
+    chosen_pillar_2 = random.choices(remaining_pillars, weights=remaining_weights, k=1)[0]
+
+    query_1 = random.choice(chosen_pillar_1["queries"])
+    query_2 = random.choice(chosen_pillar_2["queries"])
+
+    print(f"🎯 Today's Active Hunt: [{chosen_pillar_1['theme'].upper()}] & [{chosen_pillar_2['theme'].upper()}]")
     
     raw_items.extend(fetch_listen_notes(query_1))
     raw_items.extend(fetch_podcast_index(query_2))
