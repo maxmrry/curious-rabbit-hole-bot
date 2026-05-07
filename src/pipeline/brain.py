@@ -77,7 +77,7 @@ def select_daily_items(memory, policy):
     w_const = fingerprint.get("constructive_realism", 0.18)
     # Abstraction should enrich the system, not dominate it.
     # Too much anti-abstraction drifts toward wholesome anti-intellectualism.
-    w_abs = fingerprint.get("theoretical_abstraction", 0.12)
+    w_grounded = fingerprint.get("grounded_tangibility", 0.12)
     
     candidates = []
     now_ms = int(time.time() * 1000)
@@ -229,7 +229,7 @@ def select_daily_items(memory, policy):
             (s_nuance * w_nuance) +
             (s_temp * w_temp) +
             (s_const * w_const) +
-            (s_abs * w_abs) +
+            (s_abs * w_grounded) +
             (s_geo * 0.15) +
             (s_state * 0.35) +
             (s_wonder * 0.25) +
