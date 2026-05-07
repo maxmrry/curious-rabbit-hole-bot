@@ -10,29 +10,29 @@ import google.generativeai as genai
 SEASONAL_ANGLES = {
     "winter": [
         "It is the middle of winter in the UK. Daylight is short and the brain's threat-detection runs hotter in low light. This is documented biology, not weakness. Frame with warmth and forward momentum.",
-        "January in England is statistically the lowest-mood month in the year. That is a population average, not a sentence. Frame today around the specific and the concrete — small progress over abstract optimism.",
-        "Winter in the UK means the brain is running on less light than it evolved for. Acknowledge this honestly but briefly. The antidote is not cheerfulness but engagement — content that pulls attention outward.",
+        "January in England is statistically the lowest-mood month in the year. That is a population average, not a sentence. Frame today around the specific and the concrete - small progress over abstract optimism.",
+        "Winter in the UK means the brain is running on less light than it evolved for. Acknowledge this honestly but briefly. The antidote is not cheerfulness but engagement - content that pulls attention outward.",
         "The first weeks of the year carry cultural weight that is largely manufactured. Frame today around what is genuinely new rather than what is symbolically new.",
     ],
     "early_spring": [
-        "Early spring in the UK. The turn is beginning — days are lengthening, which has a measurable effect on baseline mood. Frame around renewal and motion.",
-        "March light in England shifts something in the nervous system before the conscious mind registers it. Frame today around emerging momentum — things that are beginning, not just things that are.",
+        "Early spring in the UK. The turn is beginning - days are lengthening, which has a measurable effect on baseline mood. Frame around renewal and motion.",
+        "March light in England shifts something in the nervous system before the conscious mind registers it. Frame today around emerging momentum - things that are beginning, not just things that are.",
     ],
     "late_spring": [
-        "Late spring in the UK. One of the highest baseline wellbeing periods of the year. Frame to capitalise on this cognitive lift — big ideas land better now.",
-        "May in England. Long evenings are returning. Frame around expansion — ideas that open outward, connections that cross borders, futures worth imagining.",
+        "Late spring in the UK. One of the highest baseline wellbeing periods of the year. Frame to capitalise on this cognitive lift - big ideas land better now.",
+        "May in England. Long evenings are returning. Frame around expansion - ideas that open outward, connections that cross borders, futures worth imagining.",
     ],
     "summer": [
         "Summer in the UK. Long days, higher social energy, lower ruminative thinking. Frame toward action, exploration, and expansion.",
-        "British summer is brief and cherished. Frame around what is alive and working in the world — not despite difficulty but alongside it.",
+        "British summer is brief and cherished. Frame around what is alive and working in the world - not despite difficulty but alongside it.",
     ],
     "early_autumn": [
-        "Early autumn in the UK. A transition month — psychologically associated with new beginnings despite the darkening. Frame around structure and momentum.",
-        "September carries the cultural memory of new starts. Frame today around deliberate direction — the satisfaction of choosing what to pay attention to.",
+        "Early autumn in the UK. A transition month - psychologically associated with new beginnings despite the darkening. Frame around structure and momentum.",
+        "September carries the cultural memory of new starts. Frame today around deliberate direction - the satisfaction of choosing what to pay attention to.",
     ],
     "late_autumn": [
         "Late autumn in the UK. Light is dropping, the brain begins its winter threat-heightening cycle. Prioritise grounding, perspective, and resilience framing.",
-        "November in England. The instinct is to contract. The content today pushes back against that — not with false brightness but with evidence that the world is larger than any given month.",
+        "November in England. The instinct is to contract. The content today pushes back against that - not with false brightness but with evidence that the world is larger than any given month.",
     ],
 }
 
@@ -99,25 +99,25 @@ def semantic_triage(candidates):
     
     CALIBRATION EXAMPLES (use these to anchor your scoring):
     
-    Example A — High quality:
+    Example A - High quality:
     Title: "How microfinance quietly lifted 100 million people out of poverty"
     Source: Our World in Data
     Scores: systemic=9, nuance=7, temporal=3, constructive=9, abstraction=6,
             fear=0, ai_slop=0, geo_affinity=7, niche_boredom=0, state_shift=9, humanity_signal=10
     
-    Example B — Low quality (doom engagement bait):
+    Example B - Low quality (doom engagement bait):
     Title: "Why the global economy is about to collapse and nobody is talking about it"
     Source: Unknown Blog
     Scores: systemic=3, nuance=1, temporal=2, constructive=1, abstraction=2,
             fear=9, ai_slop=7, geo_affinity=5, niche_boredom=2, state_shift=1, humanity_signal=0
     
-    Example C — Medium quality (interesting but dry):
+    Example C - Medium quality (interesting but dry):
     Title: "Proceedings of the 2024 International Symposium on Monetary Policy Frameworks"
     Source: IMF
     Scores: systemic=6, nuance=5, temporal=2, constructive=4, abstraction=5,
             fear=0, ai_slop=0, geo_affinity=5, niche_boredom=8, state_shift=2, humanity_signal=1
     
-    Example D — High quality (psychological/personal relevance):
+    Example D - High quality (psychological/personal relevance):
     Title: "The surprising science of why humans are terrible at predicting their own unhappiness"
     Source: Yale Courses
     Scores: systemic=5, nuance=8, temporal=3, constructive=8, abstraction=7,
@@ -287,7 +287,7 @@ def reframe_items(selected_items):
     except json.JSONDecodeError:
         return selected_items
 
-# Narrative theme families — prevents the same emotional arc repeating
+# Narrative theme families - prevents the same emotional arc repeating
 NARRATIVE_THEME_FAMILIES = [
     "resilience", "progress", "cooperation", "ingenuity", "perspective",
     "stability", "adaptation", "agency", "understanding", "renewal"
@@ -319,13 +319,13 @@ def generate_daily_narrative(selected_items):
 
     prompt = f"""
     Look at the titles of these media items curated for today.
-    Find the hidden connective tissue — the single most honest observation about what these items collectively reveal about the human condition, progress, or resilience.
+    Find the hidden connective tissue - the single most honest observation about what these items collectively reveal about the human condition, progress, or resilience.
     {avoid_clause}
 
     RETURN EXACTLY THIS JSON:
     {{
-        "headline": "Today's Pattern: [A specific, non-generic 5-7 word observation — not a platitude]",
-        "explanation": "One sentence, maximum 25 words. Name the specific mechanism or insight that connects these items. Not 'humanity is resilient' — but why, or how, or in what surprising way."
+        "headline": "Today's Pattern: [A specific, non-generic 5-7 word observation - not a platitude]",
+        "explanation": "One sentence, maximum 25 words. Name the specific mechanism or insight that connects these items. Not 'humanity is resilient' - but why, or how, or in what surprising way."
     }}
 
     BAD examples: "Deepening Understanding, Adapting to Constant Change", "Quiet Resilience", "Human Progress Continues"
@@ -367,58 +367,37 @@ def get_ratchet_memory_note(memory):
     return ""
 
 def generate_max_entry(selected_items, now):
-    """
-    Generates a personalised cold open entry addressed directly to Max.
-    Sets the psychological frame for the entire day's feed.
-    """
-    from src.pipeline.memory_mgr import load_memory
-    memory = load_memory()
+    """Generates a highly concise, punchy opening thought for the daily feed."""
+    if not selected_items: return "Systems are holding steady today, Max."
 
-    seasonal_context = _get_seasonal_context(now)
-    ratchet_note = get_ratchet_memory_note(memory)
-
-    titles = "\n".join([f"- {item['title']}" for item in selected_items[:10]])
-
-    ratchet_section = f"\nADDITIONALLY, if appropriate, weave in this milestone note naturally: {ratchet_note}" if ratchet_note else ""
+    pool_text = ""
+    for item in selected_items:
+        pool_text += f"\nTitle: {item['title']}\n---"
 
     prompt = f"""
-You are writing the opening entry of a daily RSS feed for a person named Max.
-Max is a Gen Z male in his 20s, employed, living in north-west England. He is globally aware, 
-intellectually curious, and is actively working to deconstruct the fear-culture and doom-framing 
-that dominates media for his generation. He is not naive — he knows the world has problems. 
-He has chosen to build a system that counterbalances his brain's natural negativity bias.
-
-SEASONAL CONTEXT (use this to calibrate tone, do not quote it directly):
-{seasonal_context}
-
-TODAY'S FEED CONTAINS THESE ITEMS:
-{titles}
-
-YOUR TASK:
-Write a single opening paragraph of exactly 3-5 sentences addressed directly to Max (use "you", not "one" or "people").
-This is not a summary. It is a psychological frame-setter — the cognitive equivalent of a trusted friend 
-saying "here is what today is actually about" before handing him the newspaper.
-
-RULES:
-- Do not use motivational poster language. No "seize the day", no "you've got this."
-- Do not summarise the items. Synthesise the underlying human truth they collectively point to.
-- Be direct, warm, and grounded. Stoic in register, not cold.
-- One sentence should acknowledge something genuinely difficult or uncertain in the world without dwelling on it.
-- End on forward motion — not false hope, but genuine agency.
-- No emojis. No exclamation marks. Write like a thoughtful person, not an algorithm.
-- Address him as Max once, naturally. Not at the start.
-{ratchet_section}
-
-Return only the paragraph. No title, no preamble.
-"""
+    You are the 'U-Curve Brain', speaking directly to Max, an employed Gen Z male in the UK.
+    Write the opening thought for today's curated feed based on the underlying themes of the items below.
+    
+    CRITICAL RULES:
+    1. KEEP IT EXTREMELY BRIEF: Maximum 2 sentences. Absolute hard limit of 35 words total.
+    2. NO SMALL TALK OR FILLER: You are strictly FORBIDDEN from mentioning the weather, the season, the time of day, or using phrases like "As the evenings stretch out."
+    3. TONE: Punchy, grounding, and direct. Do not summarize the articles; just state the overarching philosophical takeaway for the day.
+    
+    RETURN JUST THE RAW TEXT. NO QUOTES. NO JSON.
+    
+    ITEMS:
+    {pool_text}
+    """
 
     response = safe_generate(prompt, is_json=False)
-    if response and response.text:
-        return response.text.strip().replace('"', '')
+    if not response or not response.text:
+        return "Systems are holding steady today, Max. Proceed with agency."
+
+    return response.text.strip().replace('"', '')
     return (
         "The world generates more noise than signal on any given day. "
         "Today's feed has been filtered with that in mind, Max. "
-        "What follows is chosen because it builds something — perspective, understanding, or quiet momentum. "
+        "What follows is chosen because it builds something, perspective, understanding, or quiet momentum. "
         "That is enough."
     )
 
@@ -455,7 +434,7 @@ def get_daily_protocol(filepath='policy/principles.json'):
         Take this clinical psychological principle: "{clean_principle}"
         Translate it into a single, direct, relatable sentence of advice. Do not use quotes. Make it sound empowering and stoic.
         CONTEXT: The reader is a Gen Z English male in his 20s, employed, globally aware, and actively trying to deconstruct modern fear-culture.
-        CRITICAL RULE: Apply this principle holistically. Dynamically vary the application—relate it to romantic relationships, friendships, personal self-worth, media consumption, OR career. Do not just focus on work. Keep it to one punchy sentence.
+        CRITICAL RULE: Apply this principle holistically. Dynamically vary the application - relate it to romantic relationships, friendships, personal self-worth, media consumption, OR career. Do not just focus on work. Keep it to one punchy sentence.
         """
 
         response = safe_generate(prompt, is_json=False)
