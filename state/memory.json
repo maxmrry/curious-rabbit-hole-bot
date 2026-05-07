@@ -464,6 +464,61 @@
       "native_id": "https://psyche.co/guides/how-to-bring-up-pet-peeves-in-your-relationship",
       "source_type": "rss",
       "last_seen_ms": 1778053394084
+    },
+    "1419171569e86fe369a72e2fa3a4139afe72545033d7bd628ccf856a150361fd": {
+      "native_id": "odciHpm4qnQ",
+      "source_type": "youtube",
+      "last_seen_ms": 1778140198142
+    },
+    "40c8d9552303802911ec68010c472de15549c643085bdcd910f03674e27738ff": {
+      "native_id": "ToGZ8ZkUaxY",
+      "source_type": "youtube",
+      "last_seen_ms": 1778140198142
+    },
+    "b52bf163655b28a9fdbaaaf1f37006fe84578e9685da7f6987698ba62734975d": {
+      "native_id": "-URgAbSKrH4",
+      "source_type": "youtube",
+      "last_seen_ms": 1778140198142
+    },
+    "4d0b9fe05f7fb9bb2fabcc5fd31623ed2f8705677ce7ec883a886e5784e2db7f": {
+      "native_id": "ovCfa07LDYk",
+      "source_type": "youtube",
+      "last_seen_ms": 1778140198142
+    },
+    "466b607d4d5eb18d7d565df79847ee6c99d77d6fd49bb8bb7c5ad70cdc6a5f93": {
+      "native_id": "rwsowgBE_P8",
+      "source_type": "youtube",
+      "last_seen_ms": 1778140198142
+    },
+    "5f60cf1490ca715baa1317a0318cdc930e92b72dec30b4cf2704f30b40de4f0b": {
+      "native_id": "7WEewUVQabU",
+      "source_type": "youtube",
+      "last_seen_ms": 1778140198142
+    },
+    "234a7c38e328c07213c7d1e333fb980026cdafdc5bf912f12b95d51aaf4db448": {
+      "native_id": "-0JKHuzJ67A",
+      "source_type": "youtube",
+      "last_seen_ms": 1778140198142
+    },
+    "a7e74d7d61577022d99380df5b0507841c9d349145f1dbad969310deaef42089": {
+      "native_id": "ZqYdvN2ZxHQ",
+      "source_type": "youtube",
+      "last_seen_ms": 1778140198142
+    },
+    "a107f125d37edf622cd735782d1f84be56988ee97d740faae771443aa3ee963e": {
+      "native_id": "https://worksinprogress.co/issue/the-invention-of-buses/",
+      "source_type": "rss",
+      "last_seen_ms": 1778140198142
+    },
+    "420f50ed15f3840f2959ef7a78d8ed36305abce203c424a91363892857044a56": {
+      "native_id": "https://reasonstobecheerful.world/great-lakes-fish-interview/",
+      "source_type": "rss",
+      "last_seen_ms": 1778140198142
+    },
+    "1c95a7de863aa3be26ca5486283779982a1bb4d434602b62b5132122609161e2": {
+      "native_id": "https://leakeyfoundation.org/david-attenborough-turns-100/",
+      "source_type": "rss",
+      "last_seen_ms": 1778140198142
     }
   },
   "sources_health": {
@@ -484,6 +539,9 @@
     },
     "2026-05-06": {
       "success": true
+    },
+    "2026-05-07": {
+      "success": true
     }
   },
   "source_history": {
@@ -492,7 +550,7 @@
     "The Royal Society": 1777801688500,
     "SciFri": 1777801688500,
     "Knowable Magazine": 1777801688500,
-    "Natural History Museum": 1777801688500,
+    "Natural History Museum": 1778140198142,
     "Ness Labs": 1777801688500,
     "Experimental History": 1777801688500,
     "NOEMA": 1777801688500,
@@ -500,14 +558,14 @@
     "Dr Ben Miles": 1777881244701,
     "3Blue1Brown": 1777881244701,
     "TED-Ed": 1777881244701,
-    "Works in Progress RSS Feed": 1777881244701,
+    "Works in Progress RSS Feed": 1778140198142,
     "Closer To Truth": 1777881244701,
-    "The Leakey Foundation": 1777881244701,
+    "The Leakey Foundation": 1778140198142,
     "Quanta Magazine": 1777881244701,
     "Farnam Street": 1777881244701,
-    "Reasons to be Cheerful": 1777881244701,
+    "Reasons to be Cheerful": 1778140198142,
     "Behavioral Scientist": 1777965914867,
-    "Intelligence Squared": 1777965914867,
+    "Intelligence Squared": 1778140198142,
     "Wellcome Collection": 1777965914867,
     "Smithsonian": 1777965914867,
     "The Rest Is Science": 1777965914867,
@@ -526,7 +584,12 @@
     "Somatosphere": 1778053394084,
     "Positive News": 1778053394084,
     "Marginal REVOLUTION": 1778053394084,
-    "Psyche | Know Your Self": 1778053394084
+    "Psyche | Know Your Self": 1778053394084,
+    "Sean Carroll": 1778140198142,
+    "Resolution Foundation": 1778140198142,
+    "Angela Collier ": 1778140198142,
+    "Computerphile": 1778140198142,
+    "SmarterEveryDay": 1778140198142
   },
   "source_scores": {
     "Oxford Martin School": {
@@ -550,8 +613,8 @@
       "n": 1
     },
     "Natural History Museum": {
-      "avg": 3.75,
-      "n": 1
+      "avg": 8.26,
+      "n": 2
     },
     "Ness Labs": {
       "avg": 8.32,
@@ -582,16 +645,16 @@
       "n": 1
     },
     "Works in Progress RSS Feed": {
-      "avg": 0.88,
-      "n": 1
+      "avg": 5.985,
+      "n": 2
     },
     "Closer To Truth": {
       "avg": 3.79,
       "n": 1
     },
     "The Leakey Foundation": {
-      "avg": 9.04,
-      "n": 1
+      "avg": 9.405,
+      "n": 2
     },
     "Quanta Magazine": {
       "avg": 11.41,
@@ -602,16 +665,16 @@
       "n": 1
     },
     "Reasons to be Cheerful": {
-      "avg": 10.27,
-      "n": 1
+      "avg": 10.195,
+      "n": 2
     },
     "Behavioral Scientist": {
       "avg": 4.66,
       "n": 1
     },
     "Intelligence Squared": {
-      "avg": 14.65,
-      "n": 1
+      "avg": 0.065,
+      "n": 2
     },
     "Wellcome Collection": {
       "avg": 14.42,
@@ -688,16 +751,36 @@
     "Psyche | Know Your Self": {
       "avg": 11.38,
       "n": 1
+    },
+    "Sean Carroll": {
+      "avg": 6.49,
+      "n": 1
+    },
+    "Resolution Foundation": {
+      "avg": -4.335,
+      "n": 2
+    },
+    "Angela Collier ": {
+      "avg": 1.31,
+      "n": 1
+    },
+    "Computerphile": {
+      "avg": -2.37,
+      "n": 1
+    },
+    "SmarterEveryDay": {
+      "avg": -9.88,
+      "n": 1
     }
   },
   "type_performance": {
     "youtube": {
-      "avg": 7.271,
-      "n": 20
+      "avg": 4.662,
+      "n": 28
     },
     "rss": {
-      "avg": 8.909,
-      "n": 20
+      "avg": 9.094,
+      "n": 23
     }
   },
   "monthly_source_counts": {
@@ -707,7 +790,7 @@
       "The Royal Society": 1,
       "SciFri": 1,
       "Knowable Magazine": 1,
-      "Natural History Museum": 1,
+      "Natural History Museum": 2,
       "Ness Labs": 1,
       "Experimental History": 1,
       "NOEMA": 1,
@@ -715,14 +798,14 @@
       "Dr Ben Miles": 1,
       "3Blue1Brown": 1,
       "TED-Ed": 1,
-      "Works in Progress RSS Feed": 1,
+      "Works in Progress RSS Feed": 2,
       "Closer To Truth": 1,
-      "The Leakey Foundation": 1,
+      "The Leakey Foundation": 2,
       "Quanta Magazine": 1,
       "Farnam Street": 1,
-      "Reasons to be Cheerful": 1,
+      "Reasons to be Cheerful": 2,
       "Behavioral Scientist": 1,
-      "Intelligence Squared": 1,
+      "Intelligence Squared": 2,
       "Wellcome Collection": 1,
       "Smithsonian": 1,
       "The Rest Is Science": 1,
@@ -741,16 +824,21 @@
       "Somatosphere": 1,
       "Positive News": 1,
       "Marginal REVOLUTION": 1,
-      "Psyche | Know Your Self": 1
+      "Psyche | Know Your Self": 1,
+      "Sean Carroll": 1,
+      "Resolution Foundation": 2,
+      "Angela Collier ": 1,
+      "Computerphile": 1,
+      "SmarterEveryDay": 1
     }
   },
   "monthly_domain_counts": {
     "2026-05": {
       "historical": 7,
-      "optimism_tech": 19,
+      "optimism_tech": 29,
       "optimism_health": 4,
       "introspective": 4,
-      "general": 1,
+      "general": 2,
       "optimism_society": 3,
       "environmental": 2
     }
