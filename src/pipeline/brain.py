@@ -222,10 +222,10 @@ def select_daily_items(memory, policy):
         
         valid_items.append(item)
 
-        # --- 4. DYNAMIC BUCKET SYSTEM ---
+    # --- 4. DYNAMIC BUCKET SYSTEM ---
     final_selection = []
     seen_ids = set()
-    used_sources = set()
+    used_sources_today = set()   # NEW: Strict Intra-Day Lock
     used_topic_clusters = set()  # NEW: Prevents topic flooding
 
     # Simple topic fingerprint from title keywords
@@ -248,10 +248,11 @@ def select_daily_items(memory, policy):
     MONTHLY_SOURCE_CAP = 4  # Max times a source can appear in a calendar month
 
     def add_item(item, category):
+        """Helper to instantly update all our tracking sets when an item is selected."""
         item["category"] = category
         final_selection.append(item)
         seen_ids.add(item["native_id"])
-        used_sources.add(item["source_name"])
+        used_sources_today.add(item["source_name"])
         cluster = get_topic_cluster(item)
         if cluster:
             used_topic_clusters.add(cluster)
@@ -265,13 +266,24 @@ def select_daily_items(memory, policy):
         count = get_monthly_source_count(memory, item.get("source_name", ""))
         return count < MONTHLY_SOURCE_CAP
 
+    def is_eligible(item, memory, is_news=False):
+        """Master check for intra-day locks, topic floods, and monthly limits."""
+        if item["source_name"] in used_sources_today: return False
+        
+        # Relax strict topic/monthly caps slightly for News
+        if not is_news:
+            if not topic_is_fresh(item): return False
+            if not source_under_monthly_cap(item, memory): return False
+            
+        return True
+
     # 1. Deep Dive
     valid_items.sort(key=lambda x: x["deep_dive_score"], reverse=True)
     count = 0
     for d in valid_items:
         if count >= q_deep_dive: break
-        # Skip if we already used this source
-        if d["source_name"] in used_sources: continue
+        if not is_eligible(d, memory): continue
+        
         add_item(d, "deep_dive")
         count += 1
 
@@ -287,23 +299,11 @@ def select_daily_items(memory, policy):
     overflow_pool = sorted(valid_items, key=lambda x: x["sort_weight"], reverse=True)
     if len(podcasts) < 2:
         print(f"Bucket warning: only {len(podcasts)} podcasts available. RSS items will fill gap.")
-        # Diagnostic: show why podcasts dropped out
         all_podcasts_raw = [i for i in valid_items if i["source_type"] == "podcast"]
         print(f"Podcast diagnostic: {len(all_podcasts_raw)} podcasts survived scoring but {len([i for i in all_podcasts_raw if i['native_id'] in seen_ids])} already used today")
-        if all_podcasts_raw:
-            top = sorted(all_podcasts_raw, key=lambda x: x.get("sort_weight", 0), reverse=True)[:3]
-            for p in top:
-                print(f"  Top podcast candidate: '{p['title'][:60]}' weight={p.get('sort_weight', 0):.2f}")
-        else:
-            print("  No podcasts made it through Gemini scoring at all — check API responses")
     if len(videos) < 2:
         print(f"Bucket warning: only {len(videos)} videos available. Podcasts will fill gap.")
-    if len(research) < 1:
-        print(f"Bucket warning: RSS research bucket empty. Filling from overflow pool.")
-        research = [i for i in overflow_pool
-                    if i["native_id"] not in seen_ids
-                    and i["source_type"] != "news"][:q_research]
-    
+
     # 2. Flexible Audio/Video Quota (4-6 Videos, rest Podcasts)
     q_av_total = base_av
     q_min_vid = adapted_min_vid
@@ -315,44 +315,37 @@ def select_daily_items(memory, policy):
     # Minimum Videos
     for v in videos:
         if len(selected_videos) >= q_min_vid: break
-        if (v["source_name"] not in used_sources
-                and topic_is_fresh(v)
-                and source_under_monthly_cap(v, memory)):
+        if is_eligible(v, memory):
             selected_videos.append(v)
-            used_sources.add(v["source_name"])
-            cluster = get_topic_cluster(v)
-            if cluster: used_topic_clusters.add(cluster)
+            add_item(v, "positivity")
             
     # Minimum Podcasts
     min_pods = q_av_total - q_max_vid
     for p in podcasts:
         if len(selected_podcasts) >= min_pods: break
-        if (p["source_name"] not in used_sources
-                and source_under_monthly_cap(p, memory)):
+        if is_eligible(p, memory):
             selected_podcasts.append(p)
-            used_sources.add(p["source_name"])
+            add_item(p, "positivity")
             
     # Fill remaining AV slots based on captivating sort_weight
     wildcards = sorted(videos + podcasts, key=lambda x: x["sort_weight"], reverse=True)
     for best in wildcards:
         if (len(selected_videos) + len(selected_podcasts)) >= q_av_total: break
-        if best["source_name"] in used_sources: continue # Diversity lock
+        if best["native_id"] in seen_ids: continue # skip if already picked
+        if not is_eligible(best, memory): continue
         
         if best["source_type"] == "youtube" and len(selected_videos) < q_max_vid:
             selected_videos.append(best)
-            used_sources.add(best["source_name"])
+            add_item(best, "positivity")
         elif best["source_type"] == "podcast":
             selected_podcasts.append(best)
-            used_sources.add(best["source_name"])
-            
-    for item in selected_videos + selected_podcasts:
-        add_item(item, "positivity")
+            add_item(best, "positivity")
 
     # 3. Research — with overflow fallback
     count = 0
     for r in research:
         if count >= q_research: break
-        if r["source_name"] in used_sources: continue
+        if not is_eligible(r, memory): continue
         add_item(r, "positivity")
         count += 1
 
@@ -362,16 +355,18 @@ def select_daily_items(memory, policy):
             if count >= q_research: break
             if fallback["native_id"] in seen_ids: continue
             if fallback["source_type"] == "news": continue
-            if fallback["source_name"] in used_sources: continue
+            if not is_eligible(fallback, memory): continue
+            
             add_item(fallback, "positivity")
             count += 1
             print(f"Graceful fill: added '{fallback['title'][:50]}' from overflow pool")
             
     # 4. News
-    # Note: We relax the source diversity lock slightly for news in case the only API we use is the single source.
     count = 0
     for n in news_items:
         if count >= q_news: break
+        if not is_eligible(n, memory, is_news=True): continue
+        
         add_item(n, "positivity")
         count += 1
 
