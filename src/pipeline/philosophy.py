@@ -225,7 +225,7 @@ def reframe_items(selected_items):
     RULES:
     1. "hook_title": Write a punchy, high-end journalistic title. CRITICAL: You are strictly FORBIDDEN from using cheap clickbait words like "surprising", "hidden", "counter-intuitive", "secret", or "the real reason". Frame it like a premium magazine feature (e.g., "How Iceland turned fish waste into a medical empire").
     2. "rewritten_description": Keep it under 60 words. Be objective. If it is News, append one sentence explaining the tangible benefit to a young UK/EU professional.
-    3. "doom_inoculation": If the original text contains panic words (crisis, unprecedented, breaking, escalation), write a 1-sentence stoic counter-frame. Otherwise, leave it blank.
+    3. "contextual_note": If the original text contains panic words (crisis, unprecedented, breaking, escalation), write a 1-sentence contextual perspective that restores proportionality, agency, or historical perspective without dismissing legitimate concern. Otherwise, leave it blank.
     
     RETURN EXACTLY THIS JSON:
     {
@@ -234,7 +234,7 @@ def reframe_items(selected_items):
                 "native_id": "exact ID",
                 "hook_title": "Premium Title",
                 "rewritten_description": "Objective synopsis",
-                "doom_inoculation": "Stoic counter-frame or empty string"
+                "contextual_note": "Stoic counter-frame or empty string"
             }
         ]
     }
@@ -252,7 +252,7 @@ def reframe_items(selected_items):
             if update:
                 item["title"] = update.get("hook_title", item["title"])
                 desc = update.get("rewritten_description", item["description"])
-                inoculation = update.get("doom_inoculation", "")
+                inoculation = update.get("contextual_note", "")
                 if inoculation:
                     desc += f'<br><br><i><b>System Note:</b> {inoculation}</i>'
                     item["has_inoculation"] = True
