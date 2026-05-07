@@ -109,7 +109,8 @@ def semantic_triage(candidates):
     7. ai_slop_penalty (0-10): Generic AI-generated garbage or fake internet positivity.
     8. geo_affinity_score (0-10): Western relevance. UK-centric = 10, Europe = 8, US = 6.
     9. niche_boredom_penalty (0-10): Score 10 for monotonous institutional housekeeping, political bickering, or corporate jargon.
-    10. state_shift_score (0-10): CORE DRIVER. Does this evoke admiration, wonder, or grounded hope? Reward stories of tangible competence, real human connection, and quiet ingenuity.
+    10. wonder_score (0-10): Reward awe, beauty, discovery, scale, mystery, nature, exploration, scientific wonder, deep time, craftsmanship beauty, or profound fascination.
+    11. state_shift_score (0-10): CORE DRIVER. Does this evoke admiration, wonder, or grounded hope? Reward stories of tangible competence, real human connection, and quiet ingenuity.
 
     RETURN EXACTLY THIS JSON STRUCTURE:
     {{
