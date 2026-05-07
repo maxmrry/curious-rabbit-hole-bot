@@ -242,6 +242,7 @@ def select_daily_items(memory, policy):
 
     # --- 4. DYNAMIC BUCKET SYSTEM ---
     final_selection = []
+    SERENDIPITY_SLOT_COUNT = 1
     seen_ids = set()
     used_sources_today = set()   # NEW: Strict Intra-Day Lock
     used_topic_clusters = set()  # NEW: Prevents topic flooding
@@ -431,6 +432,27 @@ def select_daily_items(memory, policy):
                     print(f"Curriculum Arc: introduced '{domain}' domain (absent this month)")
                     break  # One curriculum swap per day is enough
 
+    # --- SERENDIPITY SLOT ---
+    # Prevents philosophical monoculture and over-curation.
+    # Inject one high-quality but weakly-scored surprising item daily.
+
+    unselected = [
+        i for i in overflow_pool
+        if i["native_id"] not in seen_ids
+    ]
+
+    serendipity_candidates = [
+        i for i in unselected
+        if score_map.get(i["native_id"], {}).get("fear_score", 0) <= 3
+        and score_map.get(i["native_id"], {}).get("ai_slop_penalty", 0) <= 2
+    ]
+
+    if serendipity_candidates:
+        surprise_pick = random.choice(serendipity_candidates[:15])
+        surprise_pick["category"] = "serendipity"
+        final_selection.append(surprise_pick)
+        print(f"🎲 Serendipity Slot: {surprise_pick['title'][:60]}")
+    
     # Variety Engine: prevent emotional register clustering within today's feed
     final_selection = apply_variety_engine(final_selection, valid_items, score_map)
 
