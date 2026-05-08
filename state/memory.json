@@ -519,6 +519,61 @@
       "native_id": "https://leakeyfoundation.org/david-attenborough-turns-100/",
       "source_type": "rss",
       "last_seen_ms": 1778140198142
+    },
+    "a6aac4c66e616df2ca898f64b4d9c5b3296d7e88da4f077d7f4e653bbf2ae4e5": {
+      "native_id": "https://marginalrevolution.com/marginalrevolution/2026/05/how-poverty-fell-2.html",
+      "source_type": "rss",
+      "last_seen_ms": 1778223634799
+    },
+    "3cde1a140b43af08d41fafe6a18c955b00dc75638ee82731197c507661d6cb0e": {
+      "native_id": "URw-IJr8Kes",
+      "source_type": "youtube",
+      "last_seen_ms": 1778223634799
+    },
+    "79af52d65db610dd9e4f6dd8f3449c712ce20094edbd15cab01e7c9c808ed385": {
+      "native_id": "mBTxNlG46xY",
+      "source_type": "youtube",
+      "last_seen_ms": 1778223634799
+    },
+    "37c9dabe6e2d7db2d3ed834b2fb771191b502330339b1f95160f5fb9ce71f509": {
+      "native_id": "SAtFZPtbMpI",
+      "source_type": "youtube",
+      "last_seen_ms": 1778223634799
+    },
+    "416ae6b5b7d2c6ac0cafc07924d20d0310e2f9f1085e72f59dc13dbede271a10": {
+      "native_id": "QNPrHtcn6nM",
+      "source_type": "youtube",
+      "last_seen_ms": 1778223634799
+    },
+    "14569784a042df28f6e04e467ff9a4d0d898fb4b1c6dd2e0d48681a1b97979c7": {
+      "native_id": "zBMEHPjRNeg",
+      "source_type": "youtube",
+      "last_seen_ms": 1778223634799
+    },
+    "7d221ead6c4cfccddae9a9aa435bd286b55ff8441cc096714444c6c9ab7c396d": {
+      "native_id": "https://www.noemamag.com/there-is-no-hard-problem-of-consciousness",
+      "source_type": "rss",
+      "last_seen_ms": 1778223634799
+    },
+    "72c9036c57a534cb5bac9c23643ac335e5edf7dff02c12f46d316971cad4d9d1": {
+      "native_id": "https://www.notboring.co/p/weekly-dose-of-optimism-190",
+      "source_type": "rss",
+      "last_seen_ms": 1778223634799
+    },
+    "0a6958af47b83844ba2dc2ad24f4a320b10c69bbdbcb0784d667dcc0cfe35dc0": {
+      "native_id": "https://nesslabs.com/gut-decision-matrix",
+      "source_type": "rss",
+      "last_seen_ms": 1778223634799
+    },
+    "bc6cd5f9219daa5d74980c851f49db199237d07034e8153a90f92d6994efc36e": {
+      "native_id": "https://knowablemagazine.org/content/article/living-world/2026/evolution-of-snakes",
+      "source_type": "rss",
+      "last_seen_ms": 1778223634799
+    },
+    "a3742fda611feeddee6d30893b0d9fc90550f43a6203bbea1b897ccd9107083c": {
+      "native_id": "https://nautil.us/a-century-of-david-attenborough-1280583/",
+      "source_type": "rss",
+      "last_seen_ms": 1778223634799
     }
   },
   "sources_health": {
@@ -542,6 +597,9 @@
     },
     "2026-05-07": {
       "success": true
+    },
+    "2026-05-08": {
+      "success": true
     }
   },
   "source_history": {
@@ -549,11 +607,11 @@
     "nature video": 1777801688500,
     "The Royal Society": 1777801688500,
     "SciFri": 1777801688500,
-    "Knowable Magazine": 1777801688500,
+    "Knowable Magazine": 1778223634799,
     "Natural History Museum": 1778140198142,
-    "Ness Labs": 1777801688500,
+    "Ness Labs": 1778223634799,
     "Experimental History": 1777801688500,
-    "NOEMA": 1777801688500,
+    "NOEMA": 1778223634799,
     "LSE": 1777881244701,
     "Dr Ben Miles": 1777881244701,
     "3Blue1Brown": 1777881244701,
@@ -572,7 +630,7 @@
     "Wendover Productions": 1777965914867,
     "Undark Magazine": 1777965914867,
     "Greater Good": 1777965914867,
-    "Nautilus": 1777965914867,
+    "Nautilus": 1778223634799,
     "Fix The News": 1777965914867,
     "Aeon | a world of ideas": 1778053394084,
     "The Rest Is History": 1778053394084,
@@ -583,13 +641,19 @@
     "American Museum of Natural History": 1778053394084,
     "Somatosphere": 1778053394084,
     "Positive News": 1778053394084,
-    "Marginal REVOLUTION": 1778053394084,
+    "Marginal REVOLUTION": 1778223634799,
     "Psyche | Know Your Self": 1778053394084,
     "Sean Carroll": 1778140198142,
     "Resolution Foundation": 1778140198142,
     "Angela Collier ": 1778140198142,
     "Computerphile": 1778140198142,
-    "SmarterEveryDay": 1778140198142
+    "SmarterEveryDay": 1778140198142,
+    "Conversations with Tyler": 1778223634799,
+    "The Royal Institution": 1778223634799,
+    "Numberphile": 1778223634799,
+    "NileRed": 1778223634799,
+    "TED": 1778223634799,
+    "Not Boring by Packy McCormick": 1778223634799
   },
   "source_scores": {
     "Oxford Martin School": {
@@ -609,24 +673,24 @@
       "n": 1
     },
     "Knowable Magazine": {
-      "avg": 6.54,
-      "n": 1
+      "avg": 4.955,
+      "n": 2
     },
     "Natural History Museum": {
       "avg": 8.26,
       "n": 2
     },
     "Ness Labs": {
-      "avg": 8.32,
-      "n": 1
+      "avg": 5.865,
+      "n": 2
     },
     "Experimental History": {
       "avg": 10.7,
       "n": 1
     },
     "NOEMA": {
-      "avg": 10.25,
-      "n": 1
+      "avg": 1.45,
+      "n": 2
     },
     "LSE": {
       "avg": 7.43,
@@ -701,8 +765,8 @@
       "n": 1
     },
     "Nautilus": {
-      "avg": 14.85,
-      "n": 1
+      "avg": 8.045,
+      "n": 2
     },
     "Fix The News": {
       "avg": 14.38,
@@ -745,8 +809,8 @@
       "n": 1
     },
     "Marginal REVOLUTION": {
-      "avg": 12.47,
-      "n": 1
+      "avg": 7.14,
+      "n": 2
     },
     "Psyche | Know Your Self": {
       "avg": 11.38,
@@ -771,16 +835,40 @@
     "SmarterEveryDay": {
       "avg": -9.88,
       "n": 1
+    },
+    "Conversations with Tyler": {
+      "avg": 6.69,
+      "n": 1
+    },
+    "The Royal Institution": {
+      "avg": 5.99,
+      "n": 1
+    },
+    "Numberphile": {
+      "avg": 5.16,
+      "n": 1
+    },
+    "NileRed": {
+      "avg": 4.56,
+      "n": 1
+    },
+    "TED": {
+      "avg": 4.22,
+      "n": 1
+    },
+    "Not Boring by Packy McCormick": {
+      "avg": 5.04,
+      "n": 1
     }
   },
   "type_performance": {
     "youtube": {
-      "avg": 4.662,
-      "n": 28
+      "avg": 4.762,
+      "n": 33
     },
     "rss": {
-      "avg": 9.094,
-      "n": 23
+      "avg": 7.471,
+      "n": 29
     }
   },
   "monthly_source_counts": {
@@ -789,11 +877,11 @@
       "nature video": 1,
       "The Royal Society": 1,
       "SciFri": 1,
-      "Knowable Magazine": 1,
+      "Knowable Magazine": 2,
       "Natural History Museum": 2,
-      "Ness Labs": 1,
+      "Ness Labs": 2,
       "Experimental History": 1,
-      "NOEMA": 1,
+      "NOEMA": 2,
       "LSE": 1,
       "Dr Ben Miles": 1,
       "3Blue1Brown": 1,
@@ -812,7 +900,7 @@
       "Wendover Productions": 1,
       "Undark Magazine": 1,
       "Greater Good": 1,
-      "Nautilus": 1,
+      "Nautilus": 2,
       "Fix The News": 1,
       "Aeon | a world of ideas": 1,
       "The Rest Is History": 1,
@@ -823,22 +911,28 @@
       "American Museum of Natural History": 1,
       "Somatosphere": 1,
       "Positive News": 1,
-      "Marginal REVOLUTION": 1,
+      "Marginal REVOLUTION": 2,
       "Psyche | Know Your Self": 1,
       "Sean Carroll": 1,
       "Resolution Foundation": 2,
       "Angela Collier ": 1,
       "Computerphile": 1,
-      "SmarterEveryDay": 1
+      "SmarterEveryDay": 1,
+      "Conversations with Tyler": 1,
+      "The Royal Institution": 1,
+      "Numberphile": 1,
+      "NileRed": 1,
+      "TED": 1,
+      "Not Boring by Packy McCormick": 1
     }
   },
   "monthly_domain_counts": {
     "2026-05": {
-      "historical": 7,
-      "optimism_tech": 29,
-      "optimism_health": 4,
+      "historical": 8,
+      "optimism_tech": 34,
+      "optimism_health": 5,
       "introspective": 4,
-      "general": 2,
+      "general": 6,
       "optimism_society": 3,
       "environmental": 2
     }
