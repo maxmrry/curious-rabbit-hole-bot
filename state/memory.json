@@ -574,6 +574,61 @@
       "native_id": "https://nautil.us/a-century-of-david-attenborough-1280583/",
       "source_type": "rss",
       "last_seen_ms": 1778223634799
+    },
+    "283773c78a9c098fb4e27e6f319474c3253b632d0e92f756fb401b0c7358985a": {
+      "native_id": "https://behavioralscientist.org/helping-scientists-take-their-research-global-7-lessons/",
+      "source_type": "rss",
+      "last_seen_ms": 1778310966853
+    },
+    "918179c237630ec52cb1b24f6f09d672a236521e68c414f71c66109322fd6908": {
+      "native_id": "FMdrD_jcYgE",
+      "source_type": "youtube",
+      "last_seen_ms": 1778310966853
+    },
+    "f22a0bc499ddca852184795035bcdc04c5b1cf75faf37a553649749e3aef3a21": {
+      "native_id": "ETdmBUHM830",
+      "source_type": "youtube",
+      "last_seen_ms": 1778310966853
+    },
+    "89f21193b5458003dc111854b8543ac4ee86ba2ef987125ae271d1c27130cec8": {
+      "native_id": "hDjhqWRlTUM",
+      "source_type": "youtube",
+      "last_seen_ms": 1778310966853
+    },
+    "c7e5380a1056b677d4621f7270e7cc6a1e8f18875abb1fb2cac3405da738b4ef": {
+      "native_id": "6zrgxIwVPLE",
+      "source_type": "youtube",
+      "last_seen_ms": 1778310966853
+    },
+    "f74d884424b46ba70daa8dc3fd8bbe8fbbf9a03d30aea1af5e81e00a1f721638": {
+      "native_id": "Oo0srv-odX8",
+      "source_type": "youtube",
+      "last_seen_ms": 1778310966853
+    },
+    "918207d3b549bcb7dfb9a8860a2fce70cb9d19996f1da0b4a0b2f94d4c9e4933": {
+      "native_id": "kdnnbJxqihU",
+      "source_type": "youtube",
+      "last_seen_ms": 1778310966853
+    },
+    "8f2fa7e62257e737a9707efa0a5fb1a752178e5b91639ca0ca0965d0b6ec1567": {
+      "native_id": "https://www.nature.com/articles/d41586-026-01447-2",
+      "source_type": "rss",
+      "last_seen_ms": 1778310966853
+    },
+    "41eb150a8bbffd8c842af5017709eff6928d2601ad9aaba77a7f6daf83e1917a": {
+      "native_id": "https://fixthenews.com/p/336-awe-malaria-vaccines-oxyrhynchus",
+      "source_type": "rss",
+      "last_seen_ms": 1778310966853
+    },
+    "0ebe071bbc3253c214ac0d478255c07e532e7d844fe4783a59087fadc7f2cb71": {
+      "native_id": "https://undark.org/2026/05/07/opinion-race-neutral-health-calculators/",
+      "source_type": "rss",
+      "last_seen_ms": 1778310966853
+    },
+    "3dc75cd4f5fc54e78818210e54ff094f65987ea941743ec1ea7841e9b8b64919": {
+      "native_id": "ySt0pv1GmZA",
+      "source_type": "youtube",
+      "last_seen_ms": 1778310966853
     }
   },
   "sources_health": {
@@ -600,12 +655,15 @@
     },
     "2026-05-08": {
       "success": true
+    },
+    "2026-05-09": {
+      "success": true
     }
   },
   "source_history": {
     "Oxford Martin School": 1777801688500,
     "nature video": 1777801688500,
-    "The Royal Society": 1777801688500,
+    "The Royal Society": 1778310966853,
     "SciFri": 1777801688500,
     "Knowable Magazine": 1778223634799,
     "Natural History Museum": 1778140198142,
@@ -622,16 +680,16 @@
     "Quanta Magazine": 1777881244701,
     "Farnam Street": 1777881244701,
     "Reasons to be Cheerful": 1778140198142,
-    "Behavioral Scientist": 1777965914867,
+    "Behavioral Scientist": 1778310966853,
     "Intelligence Squared": 1778140198142,
-    "Wellcome Collection": 1777965914867,
-    "Smithsonian": 1777965914867,
+    "Wellcome Collection": 1778310966853,
+    "Smithsonian": 1778310966853,
     "The Rest Is Science": 1777965914867,
     "Wendover Productions": 1777965914867,
-    "Undark Magazine": 1777965914867,
+    "Undark Magazine": 1778310966853,
     "Greater Good": 1777965914867,
     "Nautilus": 1778223634799,
-    "Fix The News": 1777965914867,
+    "Fix The News": 1778310966853,
     "Aeon | a world of ideas": 1778053394084,
     "The Rest Is History": 1778053394084,
     "Nobel Prize": 1778053394084,
@@ -653,7 +711,12 @@
     "Numberphile": 1778223634799,
     "NileRed": 1778223634799,
     "TED": 1778223634799,
-    "Not Boring by Packy McCormick": 1778223634799
+    "Not Boring by Packy McCormick": 1778223634799,
+    "PBS Space Time": 1778310966853,
+    "PBS Terra": 1778310966853,
+    "The Institute of Art and Ideas": 1778310966853,
+    "Adam Savage\u2019s Tested": 1778310966853,
+    "Nature": 1778310966853
   },
   "source_scores": {
     "Oxford Martin School": {
@@ -665,8 +728,8 @@
       "n": 1
     },
     "The Royal Society": {
-      "avg": 6.07,
-      "n": 1
+      "avg": 7.19,
+      "n": 2
     },
     "SciFri": {
       "avg": 2.71,
@@ -733,20 +796,20 @@
       "n": 2
     },
     "Behavioral Scientist": {
-      "avg": 4.66,
-      "n": 1
+      "avg": 4.12,
+      "n": 2
     },
     "Intelligence Squared": {
       "avg": 0.065,
       "n": 2
     },
     "Wellcome Collection": {
-      "avg": 14.42,
-      "n": 1
+      "avg": 11.195,
+      "n": 2
     },
     "Smithsonian": {
-      "avg": 10.86,
-      "n": 1
+      "avg": 9.72,
+      "n": 2
     },
     "The Rest Is Science": {
       "avg": 10.62,
@@ -757,8 +820,8 @@
       "n": 1
     },
     "Undark Magazine": {
-      "avg": 9.63,
-      "n": 1
+      "avg": 8.17,
+      "n": 2
     },
     "Greater Good": {
       "avg": 14.94,
@@ -769,8 +832,8 @@
       "n": 2
     },
     "Fix The News": {
-      "avg": 14.38,
-      "n": 1
+      "avg": 10.93,
+      "n": 2
     },
     "Aeon | a world of ideas": {
       "avg": 13.07,
@@ -859,23 +922,43 @@
     "Not Boring by Packy McCormick": {
       "avg": 5.04,
       "n": 1
+    },
+    "PBS Space Time": {
+      "avg": 10.21,
+      "n": 1
+    },
+    "PBS Terra": {
+      "avg": 9.77,
+      "n": 1
+    },
+    "The Institute of Art and Ideas": {
+      "avg": 9.13,
+      "n": 1
+    },
+    "Adam Savage\u2019s Tested": {
+      "avg": 9.09,
+      "n": 1
+    },
+    "Nature": {
+      "avg": 9.69,
+      "n": 1
     }
   },
   "type_performance": {
     "youtube": {
-      "avg": 4.762,
-      "n": 33
+      "avg": 5.505,
+      "n": 40
     },
     "rss": {
-      "avg": 7.471,
-      "n": 29
+      "avg": 7.398,
+      "n": 33
     }
   },
   "monthly_source_counts": {
     "2026-05": {
       "Oxford Martin School": 1,
       "nature video": 1,
-      "The Royal Society": 1,
+      "The Royal Society": 2,
       "SciFri": 1,
       "Knowable Magazine": 2,
       "Natural History Museum": 2,
@@ -892,16 +975,16 @@
       "Quanta Magazine": 1,
       "Farnam Street": 1,
       "Reasons to be Cheerful": 2,
-      "Behavioral Scientist": 1,
+      "Behavioral Scientist": 2,
       "Intelligence Squared": 2,
-      "Wellcome Collection": 1,
-      "Smithsonian": 1,
+      "Wellcome Collection": 2,
+      "Smithsonian": 2,
       "The Rest Is Science": 1,
       "Wendover Productions": 1,
-      "Undark Magazine": 1,
+      "Undark Magazine": 2,
       "Greater Good": 1,
       "Nautilus": 2,
-      "Fix The News": 1,
+      "Fix The News": 2,
       "Aeon | a world of ideas": 1,
       "The Rest Is History": 1,
       "Nobel Prize": 1,
@@ -923,16 +1006,21 @@
       "Numberphile": 1,
       "NileRed": 1,
       "TED": 1,
-      "Not Boring by Packy McCormick": 1
+      "Not Boring by Packy McCormick": 1,
+      "PBS Space Time": 1,
+      "PBS Terra": 1,
+      "The Institute of Art and Ideas": 1,
+      "Adam Savage\u2019s Tested": 1,
+      "Nature": 1
     }
   },
   "monthly_domain_counts": {
     "2026-05": {
-      "historical": 8,
-      "optimism_tech": 34,
-      "optimism_health": 5,
+      "historical": 10,
+      "optimism_tech": 41,
+      "optimism_health": 6,
       "introspective": 4,
-      "general": 6,
+      "general": 7,
       "optimism_society": 3,
       "environmental": 2
     }
