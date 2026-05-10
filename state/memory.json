@@ -629,6 +629,61 @@
       "native_id": "ySt0pv1GmZA",
       "source_type": "youtube",
       "last_seen_ms": 1778310966853
+    },
+    "6cdcda2f4080928f6d88b47852f7142e131535e50f6df46dc6b9ac01844b937f": {
+      "native_id": "https://worksinprogress.co/issue/engineering-the-disposable-diaper/",
+      "source_type": "rss",
+      "last_seen_ms": 1778398363664
+    },
+    "0a0c5942970d23719632d383d2bcafd7afe6facd78a7f945ba5fef50822ff7fb": {
+      "native_id": "JWOErbTL9N4",
+      "source_type": "youtube",
+      "last_seen_ms": 1778398363664
+    },
+    "34bc89a38d7997b1717987da953bf2945fb9eaf07887518bc7d83033153ec536": {
+      "native_id": "kH_bSvf7EVA",
+      "source_type": "youtube",
+      "last_seen_ms": 1778398363664
+    },
+    "12fca81849036de66c1bf9ed2bb2cec0269eced49e30791e0d63a2324d70d3d3": {
+      "native_id": "sbukW6uv8go",
+      "source_type": "youtube",
+      "last_seen_ms": 1778398363664
+    },
+    "3413f9cabfc449f01a4319dbe14ad367b1f3b3ad635834574531449933a034e3": {
+      "native_id": "pALcjgpCFas",
+      "source_type": "youtube",
+      "last_seen_ms": 1778398363664
+    },
+    "ed827d9ebfd87151c4679f6cdc895104cea9b1ffbefa1d2f482f9aa5133eeea1": {
+      "native_id": "gxM2v2CPwJ4",
+      "source_type": "youtube",
+      "last_seen_ms": 1778398363664
+    },
+    "68248600a3dfd2e3835e90e7e1509323d52942177924fa1ba23dd8080b62ddaf": {
+      "native_id": "W6b56HcFUew",
+      "source_type": "youtube",
+      "last_seen_ms": 1778398363664
+    },
+    "98e1f5e3acbc53af94652647d27952f5bcae2f0f990a9770a549941d253506fe": {
+      "native_id": "https://www.positive.news/environment/young-inventor-plans-to-stop-90-of-floating-sea-plastic-by-2040/",
+      "source_type": "rss",
+      "last_seen_ms": 1778398363664
+    },
+    "c8ee3cfdf259cc0bfeac2d980ebbd32f3e390b33ea87c4495271b61ea95b3be1": {
+      "native_id": "https://nautil.us/new-long-necked-dinosaur-unearthed-in-brazil-has-european-roots-1280619/",
+      "source_type": "rss",
+      "last_seen_ms": 1778398363664
+    },
+    "8a56596a54ae03c7fde5acc069a1347f257f8d5ad0bacb39618b0cae24760675": {
+      "native_id": "https://leakeyfoundation.org/grantee-spotlight-juan-olvido-perea-garcia/",
+      "source_type": "rss",
+      "last_seen_ms": 1778398363664
+    },
+    "fd8f010d890ba55578d97e2d2341530fad368c7d9273ad168c7db8873fd72b6b": {
+      "native_id": "DFwppvrL_pE",
+      "source_type": "youtube",
+      "last_seen_ms": 1778398363664
     }
   },
   "sources_health": {
@@ -658,6 +713,9 @@
     },
     "2026-05-09": {
       "success": true
+    },
+    "2026-05-10": {
+      "success": true
     }
   },
   "source_history": {
@@ -674,10 +732,10 @@
     "Dr Ben Miles": 1777881244701,
     "3Blue1Brown": 1777881244701,
     "TED-Ed": 1777881244701,
-    "Works in Progress RSS Feed": 1778140198142,
+    "Works in Progress RSS Feed": 1778398363664,
     "Closer To Truth": 1777881244701,
-    "The Leakey Foundation": 1778140198142,
-    "Quanta Magazine": 1777881244701,
+    "The Leakey Foundation": 1778398363664,
+    "Quanta Magazine": 1778398363664,
     "Farnam Street": 1777881244701,
     "Reasons to be Cheerful": 1778140198142,
     "Behavioral Scientist": 1778310966853,
@@ -688,17 +746,17 @@
     "Wendover Productions": 1777965914867,
     "Undark Magazine": 1778310966853,
     "Greater Good": 1777965914867,
-    "Nautilus": 1778223634799,
+    "Nautilus": 1778398363664,
     "Fix The News": 1778310966853,
     "Aeon | a world of ideas": 1778053394084,
-    "The Rest Is History": 1778053394084,
+    "The Rest Is History": 1778398363664,
     "Nobel Prize": 1778053394084,
     "BBC Ideas": 1778053394084,
     "Platypus": 1778053394084,
     "Becker Friedman Institute University of Chicago": 1778053394084,
     "American Museum of Natural History": 1778053394084,
     "Somatosphere": 1778053394084,
-    "Positive News": 1778053394084,
+    "Positive News": 1778398363664,
     "Marginal REVOLUTION": 1778223634799,
     "Psyche | Know Your Self": 1778053394084,
     "Sean Carroll": 1778140198142,
@@ -716,7 +774,11 @@
     "PBS Terra": 1778310966853,
     "The Institute of Art and Ideas": 1778310966853,
     "Adam Savage\u2019s Tested": 1778310966853,
-    "Nature": 1778310966853
+    "Nature": 1778310966853,
+    "PBS Eons": 1778398363664,
+    "Stand-up Maths": 1778398363664,
+    "Sprouht": 1778398363664,
+    "Special Books by Special Kids": 1778398363664
   },
   "source_scores": {
     "Oxford Martin School": {
@@ -772,20 +834,20 @@
       "n": 1
     },
     "Works in Progress RSS Feed": {
-      "avg": 5.985,
-      "n": 2
+      "avg": 5.71,
+      "n": 3
     },
     "Closer To Truth": {
       "avg": 3.79,
       "n": 1
     },
     "The Leakey Foundation": {
-      "avg": 9.405,
-      "n": 2
+      "avg": 7.6,
+      "n": 3
     },
     "Quanta Magazine": {
-      "avg": 11.41,
-      "n": 1
+      "avg": 8.577,
+      "n": 3
     },
     "Farnam Street": {
       "avg": 10.92,
@@ -828,8 +890,8 @@
       "n": 1
     },
     "Nautilus": {
-      "avg": 8.045,
-      "n": 2
+      "avg": 7.067,
+      "n": 3
     },
     "Fix The News": {
       "avg": 10.93,
@@ -840,8 +902,8 @@
       "n": 1
     },
     "The Rest Is History": {
-      "avg": 13.33,
-      "n": 1
+      "avg": 10.695,
+      "n": 2
     },
     "Nobel Prize": {
       "avg": 8.54,
@@ -868,8 +930,8 @@
       "n": 1
     },
     "Positive News": {
-      "avg": 13.77,
-      "n": 1
+      "avg": 10.92,
+      "n": 2
     },
     "Marginal REVOLUTION": {
       "avg": 7.14,
@@ -942,16 +1004,32 @@
     "Nature": {
       "avg": 9.69,
       "n": 1
+    },
+    "PBS Eons": {
+      "avg": 10.58,
+      "n": 1
+    },
+    "Stand-up Maths": {
+      "avg": 9.41,
+      "n": 1
+    },
+    "Sprouht": {
+      "avg": 8.59,
+      "n": 1
+    },
+    "Special Books by Special Kids": {
+      "avg": 8.58,
+      "n": 1
     }
   },
   "type_performance": {
     "youtube": {
-      "avg": 5.505,
-      "n": 40
+      "avg": 5.951,
+      "n": 47
     },
     "rss": {
-      "avg": 7.398,
-      "n": 33
+      "avg": 7.202,
+      "n": 37
     }
   },
   "monthly_source_counts": {
@@ -969,10 +1047,10 @@
       "Dr Ben Miles": 1,
       "3Blue1Brown": 1,
       "TED-Ed": 1,
-      "Works in Progress RSS Feed": 2,
+      "Works in Progress RSS Feed": 3,
       "Closer To Truth": 1,
-      "The Leakey Foundation": 2,
-      "Quanta Magazine": 1,
+      "The Leakey Foundation": 3,
+      "Quanta Magazine": 3,
       "Farnam Street": 1,
       "Reasons to be Cheerful": 2,
       "Behavioral Scientist": 2,
@@ -983,17 +1061,17 @@
       "Wendover Productions": 1,
       "Undark Magazine": 2,
       "Greater Good": 1,
-      "Nautilus": 2,
+      "Nautilus": 3,
       "Fix The News": 2,
       "Aeon | a world of ideas": 1,
-      "The Rest Is History": 1,
+      "The Rest Is History": 2,
       "Nobel Prize": 1,
       "BBC Ideas": 1,
       "Platypus": 1,
       "Becker Friedman Institute University of Chicago": 1,
       "American Museum of Natural History": 1,
       "Somatosphere": 1,
-      "Positive News": 1,
+      "Positive News": 2,
       "Marginal REVOLUTION": 2,
       "Psyche | Know Your Self": 1,
       "Sean Carroll": 1,
@@ -1011,16 +1089,20 @@
       "PBS Terra": 1,
       "The Institute of Art and Ideas": 1,
       "Adam Savage\u2019s Tested": 1,
-      "Nature": 1
+      "Nature": 1,
+      "PBS Eons": 1,
+      "Stand-up Maths": 1,
+      "Sprouht": 1,
+      "Special Books by Special Kids": 1
     }
   },
   "monthly_domain_counts": {
     "2026-05": {
-      "historical": 10,
-      "optimism_tech": 41,
+      "historical": 13,
+      "optimism_tech": 47,
       "optimism_health": 6,
       "introspective": 4,
-      "general": 7,
+      "general": 9,
       "optimism_society": 3,
       "environmental": 2
     }
