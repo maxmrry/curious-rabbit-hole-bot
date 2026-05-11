@@ -684,6 +684,61 @@
       "native_id": "DFwppvrL_pE",
       "source_type": "youtube",
       "last_seen_ms": 1778398363664
+    },
+    "d2459c975dfbfb4f96f9699ef73851f044365af5852807195421a76e38c84d76": {
+      "native_id": "https://ourworldindata.org/childhood-stunting-fell-dramatically-over-the-20th-century",
+      "source_type": "rss",
+      "last_seen_ms": 1778488364002
+    },
+    "fec23639886bbd2fbd81f3b1f581d666a23f94ffcb993a947e894710b0ef2e29": {
+      "native_id": "BBQgzP2cLW0",
+      "source_type": "youtube",
+      "last_seen_ms": 1778488364002
+    },
+    "dcb40f3039141f5d1a19c8d1d5d7299ca05ba2ef502afbfec6580fe3ffea34f8": {
+      "native_id": "EmDUMRBXi1E",
+      "source_type": "youtube",
+      "last_seen_ms": 1778488364002
+    },
+    "9fe362466ea18778d61c7e773102f0128e6a33b74663100e016b8f4170ba9fee": {
+      "native_id": "8H--GLt3h8I",
+      "source_type": "youtube",
+      "last_seen_ms": 1778488364002
+    },
+    "7ed538112a0bf48345c2b7513fcdcbea3d5ca669a1e28318aea12013cee77b16": {
+      "native_id": "WFSMep26foQ",
+      "source_type": "youtube",
+      "last_seen_ms": 1778488364002
+    },
+    "3a1841ae5ec6129d065900db2cd236de487aea81774349244ccce63cbb497283": {
+      "native_id": "fKuIJ_z2Y6A",
+      "source_type": "youtube",
+      "last_seen_ms": 1778488364002
+    },
+    "00a8c5d31e9d00c201f257ddb6951fa95dd634092ebe10e6022436bab562b8be": {
+      "native_id": "wmLSrpC2ujg",
+      "source_type": "youtube",
+      "last_seen_ms": 1778488364002
+    },
+    "19438cd942c42945f545525c438d530ea18aabc5c5e506a9e509b7d71a651358": {
+      "native_id": "https://reasonstobecheerful.world/prison-conservation-butterflies/",
+      "source_type": "rss",
+      "last_seen_ms": 1778488364002
+    },
+    "3bf9a6156ba4d6d695b1b5810cf485eb08b37713dbf2f8bc543ebe1694b646b1": {
+      "native_id": "https://reasonstobecheerful.world/do-sanctuary-cities-work/",
+      "source_type": "rss",
+      "last_seen_ms": 1778488364002
+    },
+    "15cb2063f4f063126f5cd1af2aa1627f1f5068c6b1174547d7f758ec41168a35": {
+      "native_id": "mwvTxjW81UY",
+      "source_type": "youtube",
+      "last_seen_ms": 1778488364002
+    },
+    "10174d49d28c24688ea804447f93554650c154ed7ed0a1f29fe0e149417217ee": {
+      "native_id": "0ZYhyewNQMo",
+      "source_type": "youtube",
+      "last_seen_ms": 1778488364002
     }
   },
   "sources_health": {
@@ -716,6 +771,9 @@
     },
     "2026-05-10": {
       "success": true
+    },
+    "2026-05-11": {
+      "success": true
     }
   },
   "source_history": {
@@ -729,15 +787,15 @@
     "Experimental History": 1777801688500,
     "NOEMA": 1778223634799,
     "LSE": 1777881244701,
-    "Dr Ben Miles": 1777881244701,
+    "Dr Ben Miles": 1778488364002,
     "3Blue1Brown": 1777881244701,
-    "TED-Ed": 1777881244701,
+    "TED-Ed": 1778488364002,
     "Works in Progress RSS Feed": 1778398363664,
     "Closer To Truth": 1777881244701,
     "The Leakey Foundation": 1778398363664,
     "Quanta Magazine": 1778398363664,
     "Farnam Street": 1777881244701,
-    "Reasons to be Cheerful": 1778140198142,
+    "Reasons to be Cheerful": 1778488364002,
     "Behavioral Scientist": 1778310966853,
     "Intelligence Squared": 1778140198142,
     "Wellcome Collection": 1778310966853,
@@ -778,7 +836,13 @@
     "PBS Eons": 1778398363664,
     "Stand-up Maths": 1778398363664,
     "Sprouht": 1778398363664,
-    "Special Books by Special Kids": 1778398363664
+    "Special Books by Special Kids": 1778398363664,
+    "Our World in Data": 1778488364002,
+    "The British Academy": 1778488364002,
+    "Howtown": 1778488364002,
+    "Practical Engineering": 1778488364002,
+    "Santa Fe Institute": 1778488364002,
+    "The Dissenter": 1778488364002
   },
   "source_scores": {
     "Oxford Martin School": {
@@ -822,16 +886,16 @@
       "n": 1
     },
     "Dr Ben Miles": {
-      "avg": 11.47,
-      "n": 1
+      "avg": 13.31,
+      "n": 2
     },
     "3Blue1Brown": {
       "avg": 10.57,
       "n": 1
     },
     "TED-Ed": {
-      "avg": 8.19,
-      "n": 1
+      "avg": 11.31,
+      "n": 2
     },
     "Works in Progress RSS Feed": {
       "avg": 5.71,
@@ -854,8 +918,8 @@
       "n": 1
     },
     "Reasons to be Cheerful": {
-      "avg": 10.195,
-      "n": 2
+      "avg": 10.592,
+      "n": 4
     },
     "Behavioral Scientist": {
       "avg": 4.12,
@@ -1020,16 +1084,40 @@
     "Special Books by Special Kids": {
       "avg": 8.58,
       "n": 1
+    },
+    "Our World in Data": {
+      "avg": 12.51,
+      "n": 1
+    },
+    "The British Academy": {
+      "avg": 14.52,
+      "n": 1
+    },
+    "Howtown": {
+      "avg": 13.81,
+      "n": 2
+    },
+    "Practical Engineering": {
+      "avg": 14.18,
+      "n": 1
+    },
+    "Santa Fe Institute": {
+      "avg": 13.46,
+      "n": 1
+    },
+    "The Dissenter": {
+      "avg": -1.55,
+      "n": 1
     }
   },
   "type_performance": {
     "youtube": {
-      "avg": 5.951,
-      "n": 47
+      "avg": 6.863,
+      "n": 55
     },
     "rss": {
-      "avg": 7.202,
-      "n": 37
+      "avg": 7.524,
+      "n": 40
     }
   },
   "monthly_source_counts": {
@@ -1044,15 +1132,15 @@
       "Experimental History": 1,
       "NOEMA": 2,
       "LSE": 1,
-      "Dr Ben Miles": 1,
+      "Dr Ben Miles": 2,
       "3Blue1Brown": 1,
-      "TED-Ed": 1,
+      "TED-Ed": 2,
       "Works in Progress RSS Feed": 3,
       "Closer To Truth": 1,
       "The Leakey Foundation": 3,
       "Quanta Magazine": 3,
       "Farnam Street": 1,
-      "Reasons to be Cheerful": 2,
+      "Reasons to be Cheerful": 4,
       "Behavioral Scientist": 2,
       "Intelligence Squared": 2,
       "Wellcome Collection": 2,
@@ -1093,18 +1181,25 @@
       "PBS Eons": 1,
       "Stand-up Maths": 1,
       "Sprouht": 1,
-      "Special Books by Special Kids": 1
+      "Special Books by Special Kids": 1,
+      "Our World in Data": 1,
+      "The British Academy": 1,
+      "Howtown": 2,
+      "Practical Engineering": 1,
+      "Santa Fe Institute": 1,
+      "The Dissenter": 1
     }
   },
   "monthly_domain_counts": {
     "2026-05": {
-      "historical": 13,
-      "optimism_tech": 47,
-      "optimism_health": 6,
+      "historical": 14,
+      "optimism_tech": 52,
+      "optimism_health": 7,
       "introspective": 4,
-      "general": 9,
-      "optimism_society": 3,
-      "environmental": 2
+      "general": 11,
+      "optimism_society": 4,
+      "environmental": 2,
+      "philosophical": 1
     }
   }
 }
