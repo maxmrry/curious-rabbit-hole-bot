@@ -739,6 +739,71 @@
       "native_id": "0ZYhyewNQMo",
       "source_type": "youtube",
       "last_seen_ms": 1778488364002
+    },
+    "bf114f9d32cdfb68139bb95938534e387cb7542a1db702146a9f54770ebf12bc": {
+      "native_id": "https://aeon.co/videos/the-historian-who-brings-lessons-on-us-prisons-inside-their-walls",
+      "source_type": "rss",
+      "last_seen_ms": 1778572382146
+    },
+    "1ef0557fb805d6fe3daa6006df731e4f3a3f86ef13595b9c5a9eb1d65756b542": {
+      "native_id": "HwoZg3BCigU",
+      "source_type": "youtube",
+      "last_seen_ms": 1778572382146
+    },
+    "64dde79e37f2c9b6507cc2fb735d9cbe5b5d7141ff1d3287cfca57b5fb3d6936": {
+      "native_id": "ffUkQr3yCBQ",
+      "source_type": "youtube",
+      "last_seen_ms": 1778572382146
+    },
+    "13804ca426c23b60ce8da6602b81714a437e44be74eb95d71ab08e489d8d1a0c": {
+      "native_id": "qKMVnR4U33U",
+      "source_type": "youtube",
+      "last_seen_ms": 1778572382146
+    },
+    "f31fca3b529b86b41c3daedd46b3458f9bcd09fd7bda971fb10ad25976b2eb87": {
+      "native_id": "jajWn21VGac",
+      "source_type": "youtube",
+      "last_seen_ms": 1778572382146
+    },
+    "71786cabb35761096a4cde7661d7957ed53d1d6b2201886c10c116ed523cc22e": {
+      "native_id": "h8beNqCpgrk",
+      "source_type": "youtube",
+      "last_seen_ms": 1778572382146
+    },
+    "18073b19c1f312e12a0628bcd6f4fd5d8876acfa45e7e2dff4b252481d30f60e": {
+      "native_id": "PkQ8ORLcweA",
+      "source_type": "youtube",
+      "last_seen_ms": 1778572382146
+    },
+    "2708560fab42b12b05cb37ab376c06160c7b48adabe663685248a724163032ba": {
+      "native_id": "https://behavioralscientist.org/what-its-like-to-be-a-funeral-director/",
+      "source_type": "rss",
+      "last_seen_ms": 1778572382146
+    },
+    "546581f4514ca17e3e6c32215cb16f2cc878f26ff12dde7c08eca7bae1df8b39": {
+      "native_id": "https://greatergood.berkeley.edu/podcasts/item/the_art_of_slowing_down",
+      "source_type": "rss",
+      "last_seen_ms": 1778572382146
+    },
+    "c8807d204615deac591657e677c90b26ad630159812c6b24f38629132b16eaac": {
+      "native_id": "https://fs.blog/knowledge-project-podcast/mario-harik/",
+      "source_type": "rss",
+      "last_seen_ms": 1778572382146
+    },
+    "c28393fe45889cf281dbf5dcdd1b06c9ca4afd7dab7d7e37fbc97eebc4214271": {
+      "native_id": "https://fixthenews.com/p/337-rongorongo-say-it-out-loud-colombia",
+      "source_type": "rss",
+      "last_seen_ms": 1778572382146
+    },
+    "4cd0954f09972e65f38a5b8fb28798b9da1dcf3e6257dd8ffa349eaf5dffe401": {
+      "native_id": "https://www.nature.com/articles/d41586-026-01478-9",
+      "source_type": "rss",
+      "last_seen_ms": 1778572382146
+    },
+    "56ed26a81592e053c07f48ef6d1a3521fd8920bf52e77f1e37bf4248e570c302": {
+      "native_id": "https://www.anthropology-news.org/articles/financial-infrastructure-of-incompleteness-in-south-sudan/",
+      "source_type": "rss",
+      "last_seen_ms": 1778572382146
     }
   },
   "sources_health": {
@@ -774,13 +839,16 @@
     },
     "2026-05-11": {
       "success": true
+    },
+    "2026-05-12": {
+      "success": true
     }
   },
   "source_history": {
     "Oxford Martin School": 1777801688500,
     "nature video": 1777801688500,
     "The Royal Society": 1778310966853,
-    "SciFri": 1777801688500,
+    "SciFri": 1778572382146,
     "Knowable Magazine": 1778223634799,
     "Natural History Museum": 1778140198142,
     "Ness Labs": 1778223634799,
@@ -794,19 +862,19 @@
     "Closer To Truth": 1777881244701,
     "The Leakey Foundation": 1778398363664,
     "Quanta Magazine": 1778398363664,
-    "Farnam Street": 1777881244701,
+    "Farnam Street": 1778572382146,
     "Reasons to be Cheerful": 1778488364002,
-    "Behavioral Scientist": 1778310966853,
+    "Behavioral Scientist": 1778572382146,
     "Intelligence Squared": 1778140198142,
     "Wellcome Collection": 1778310966853,
     "Smithsonian": 1778310966853,
     "The Rest Is Science": 1777965914867,
     "Wendover Productions": 1777965914867,
     "Undark Magazine": 1778310966853,
-    "Greater Good": 1777965914867,
+    "Greater Good": 1778572382146,
     "Nautilus": 1778398363664,
-    "Fix The News": 1778310966853,
-    "Aeon | a world of ideas": 1778053394084,
+    "Fix The News": 1778572382146,
+    "Aeon | a world of ideas": 1778572382146,
     "The Rest Is History": 1778398363664,
     "Nobel Prize": 1778053394084,
     "BBC Ideas": 1778053394084,
@@ -829,20 +897,24 @@
     "TED": 1778223634799,
     "Not Boring by Packy McCormick": 1778223634799,
     "PBS Space Time": 1778310966853,
-    "PBS Terra": 1778310966853,
+    "PBS Terra": 1778572382146,
     "The Institute of Art and Ideas": 1778310966853,
     "Adam Savage\u2019s Tested": 1778310966853,
-    "Nature": 1778310966853,
+    "Nature": 1778572382146,
     "PBS Eons": 1778398363664,
     "Stand-up Maths": 1778398363664,
     "Sprouht": 1778398363664,
-    "Special Books by Special Kids": 1778398363664,
+    "Special Books by Special Kids": 1778572382146,
     "Our World in Data": 1778488364002,
     "The British Academy": 1778488364002,
     "Howtown": 1778488364002,
     "Practical Engineering": 1778488364002,
     "Santa Fe Institute": 1778488364002,
-    "The Dissenter": 1778488364002
+    "The Dissenter": 1778488364002,
+    "Chris Doel": 1778572382146,
+    "minutephysics": 1778572382146,
+    "World Science Festival": 1778572382146,
+    "Anthropology News": 1778572382146
   },
   "source_scores": {
     "Oxford Martin School": {
@@ -858,8 +930,8 @@
       "n": 2
     },
     "SciFri": {
-      "avg": 2.71,
-      "n": 1
+      "avg": 8.415,
+      "n": 2
     },
     "Knowable Magazine": {
       "avg": 4.955,
@@ -914,16 +986,16 @@
       "n": 3
     },
     "Farnam Street": {
-      "avg": 10.92,
-      "n": 1
+      "avg": 10.215,
+      "n": 2
     },
     "Reasons to be Cheerful": {
       "avg": 10.592,
       "n": 4
     },
     "Behavioral Scientist": {
-      "avg": 4.12,
-      "n": 2
+      "avg": 5.41,
+      "n": 3
     },
     "Intelligence Squared": {
       "avg": 0.065,
@@ -950,20 +1022,20 @@
       "n": 2
     },
     "Greater Good": {
-      "avg": 14.94,
-      "n": 1
+      "avg": 13.435,
+      "n": 2
     },
     "Nautilus": {
       "avg": 7.067,
       "n": 3
     },
     "Fix The News": {
-      "avg": 10.93,
-      "n": 2
+      "avg": 10.063,
+      "n": 3
     },
     "Aeon | a world of ideas": {
-      "avg": 13.07,
-      "n": 1
+      "avg": 13.395,
+      "n": 2
     },
     "The Rest Is History": {
       "avg": 10.695,
@@ -1054,8 +1126,8 @@
       "n": 1
     },
     "PBS Terra": {
-      "avg": 9.77,
-      "n": 1
+      "avg": 8.955,
+      "n": 2
     },
     "The Institute of Art and Ideas": {
       "avg": 9.13,
@@ -1066,8 +1138,8 @@
       "n": 1
     },
     "Nature": {
-      "avg": 9.69,
-      "n": 1
+      "avg": 8.95,
+      "n": 2
     },
     "PBS Eons": {
       "avg": 10.58,
@@ -1082,8 +1154,8 @@
       "n": 1
     },
     "Special Books by Special Kids": {
-      "avg": 8.58,
-      "n": 1
+      "avg": 8.55,
+      "n": 2
     },
     "Our World in Data": {
       "avg": 12.51,
@@ -1108,16 +1180,32 @@
     "The Dissenter": {
       "avg": -1.55,
       "n": 1
+    },
+    "Chris Doel": {
+      "avg": 14.62,
+      "n": 1
+    },
+    "minutephysics": {
+      "avg": 11.97,
+      "n": 1
+    },
+    "World Science Festival": {
+      "avg": 10.84,
+      "n": 1
+    },
+    "Anthropology News": {
+      "avg": 9.21,
+      "n": 1
     }
   },
   "type_performance": {
     "youtube": {
-      "avg": 6.863,
-      "n": 55
+      "avg": 7.307,
+      "n": 61
     },
     "rss": {
-      "avg": 7.524,
-      "n": 40
+      "avg": 7.869,
+      "n": 47
     }
   },
   "monthly_source_counts": {
@@ -1125,7 +1213,7 @@
       "Oxford Martin School": 1,
       "nature video": 1,
       "The Royal Society": 2,
-      "SciFri": 1,
+      "SciFri": 2,
       "Knowable Magazine": 2,
       "Natural History Museum": 2,
       "Ness Labs": 2,
@@ -1139,19 +1227,19 @@
       "Closer To Truth": 1,
       "The Leakey Foundation": 3,
       "Quanta Magazine": 3,
-      "Farnam Street": 1,
+      "Farnam Street": 2,
       "Reasons to be Cheerful": 4,
-      "Behavioral Scientist": 2,
+      "Behavioral Scientist": 3,
       "Intelligence Squared": 2,
       "Wellcome Collection": 2,
       "Smithsonian": 2,
       "The Rest Is Science": 1,
       "Wendover Productions": 1,
       "Undark Magazine": 2,
-      "Greater Good": 1,
+      "Greater Good": 2,
       "Nautilus": 3,
-      "Fix The News": 2,
-      "Aeon | a world of ideas": 1,
+      "Fix The News": 3,
+      "Aeon | a world of ideas": 2,
       "The Rest Is History": 2,
       "Nobel Prize": 1,
       "BBC Ideas": 1,
@@ -1174,32 +1262,37 @@
       "TED": 1,
       "Not Boring by Packy McCormick": 1,
       "PBS Space Time": 1,
-      "PBS Terra": 1,
+      "PBS Terra": 2,
       "The Institute of Art and Ideas": 1,
       "Adam Savage\u2019s Tested": 1,
-      "Nature": 1,
+      "Nature": 2,
       "PBS Eons": 1,
       "Stand-up Maths": 1,
       "Sprouht": 1,
-      "Special Books by Special Kids": 1,
+      "Special Books by Special Kids": 2,
       "Our World in Data": 1,
       "The British Academy": 1,
       "Howtown": 2,
       "Practical Engineering": 1,
       "Santa Fe Institute": 1,
-      "The Dissenter": 1
+      "The Dissenter": 1,
+      "Chris Doel": 1,
+      "minutephysics": 1,
+      "World Science Festival": 1,
+      "Anthropology News": 1
     }
   },
   "monthly_domain_counts": {
     "2026-05": {
-      "historical": 14,
-      "optimism_tech": 52,
+      "historical": 15,
+      "optimism_tech": 58,
       "optimism_health": 7,
-      "introspective": 4,
-      "general": 11,
+      "introspective": 5,
+      "general": 14,
       "optimism_society": 4,
       "environmental": 2,
-      "philosophical": 1
+      "philosophical": 2,
+      "economic": 1
     }
   }
 }
