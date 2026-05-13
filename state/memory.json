@@ -804,6 +804,76 @@
       "native_id": "https://www.anthropology-news.org/articles/financial-infrastructure-of-incompleteness-in-south-sudan/",
       "source_type": "rss",
       "last_seen_ms": 1778572382146
+    },
+    "14173e108556fd0bd42060a184cdb589f3740421fcbfd0141484c6d64564e416": {
+      "native_id": "pZMuKkH92fo",
+      "source_type": "youtube",
+      "last_seen_ms": 1778659174006
+    },
+    "6888a254ade2e90dcc496bcc435663fa620ae50ca981b6b901f09b5dbcbd7513": {
+      "native_id": "8uYwyxPcrpA",
+      "source_type": "youtube",
+      "last_seen_ms": 1778659174006
+    },
+    "6f610d92d27e0dbe4b8fee786a16622ed9d959b71adc4b083f4a692d7cd0b989": {
+      "native_id": "CMhlOWOarkY",
+      "source_type": "youtube",
+      "last_seen_ms": 1778659174006
+    },
+    "70096713220461415a322fa708c3cae225eb476c2544897aed860a7155c6b294": {
+      "native_id": "mb4qfjuX0Lo",
+      "source_type": "youtube",
+      "last_seen_ms": 1778659174006
+    },
+    "3b25bbf53215ce55479edcb3a05d39763451b7715c7897bb3cc8d2c48cf19c3c": {
+      "native_id": "ir25TYgdm0o",
+      "source_type": "youtube",
+      "last_seen_ms": 1778659174006
+    },
+    "7d5dd5944493ad0e17fc895843963431f1ea4aac614f5c6908b49a3ad9e98285": {
+      "native_id": "mRxgrjTcdX0",
+      "source_type": "youtube",
+      "last_seen_ms": 1778659174006
+    },
+    "5f8b7cacb8e1be54a65d9b96852805b2bdab7ba50d51c582fb48f2917f6a2b56": {
+      "native_id": "5972905",
+      "source_type": "podcast",
+      "last_seen_ms": 1778659174006
+    },
+    "4c12ec94bdfbbcdb4d447f06bc16d7da33f2297fab4819a49938b77a1c4c21ad": {
+      "native_id": "6968415",
+      "source_type": "podcast",
+      "last_seen_ms": 1778659174006
+    },
+    "50978ce7b48fdb7c40a4fe8da55b5021fafd2f6e2a1cc1f15a66fff1d70ede00": {
+      "native_id": "1b272abacb494e7e8b521a910ead0d70",
+      "source_type": "podcast",
+      "last_seen_ms": 1778659174006
+    },
+    "ed5c0b559ad8f2fe174a7c06318f13954d2c623c32ff3b79448fe0ca1db07ae6": {
+      "native_id": "https://psyche.co/turning-points/gazing-through-a-lens-i-invent-as-much-as-i-reveal",
+      "source_type": "rss",
+      "last_seen_ms": 1778659174006
+    },
+    "990e5644741c0c2da87791321e84837c2b9e989da21b9bebec9c364b7623cf7d": {
+      "native_id": "https://www.noemamag.com/we-may-be-entering-a-second-axial-age",
+      "source_type": "rss",
+      "last_seen_ms": 1778659174006
+    },
+    "5c92a09c88790126c512ed4743c724442b1e0459466d7f0683fc77eee649fbe2": {
+      "native_id": "https://blog.castac.org/2026/05/microbes-and-the-permeable-body-rethinking-health-through-the-holobiont/",
+      "source_type": "rss",
+      "last_seen_ms": 1778659174006
+    },
+    "7fb1f57e9d821da0960cf99679147498a697464626b1ad0e111a3863c5e28992": {
+      "native_id": "ae8ab46d-a6ac-42f8-a6b0-2472813be88f",
+      "source_type": "news",
+      "last_seen_ms": 1778659174006
+    },
+    "b2f98154fe35a19bc8920f15c04af5ae9815fb9c4d353a11f8a9cb877c0eba04": {
+      "native_id": "2A9j-8VyD_8",
+      "source_type": "youtube",
+      "last_seen_ms": 1778659174006
     }
   },
   "sources_health": {
@@ -842,6 +912,9 @@
     },
     "2026-05-12": {
       "success": true
+    },
+    "2026-05-13": {
+      "success": true
     }
   },
   "source_history": {
@@ -853,7 +926,7 @@
     "Natural History Museum": 1778140198142,
     "Ness Labs": 1778223634799,
     "Experimental History": 1777801688500,
-    "NOEMA": 1778223634799,
+    "NOEMA": 1778659174006,
     "LSE": 1777881244701,
     "Dr Ben Miles": 1778488364002,
     "3Blue1Brown": 1777881244701,
@@ -878,19 +951,19 @@
     "The Rest Is History": 1778398363664,
     "Nobel Prize": 1778053394084,
     "BBC Ideas": 1778053394084,
-    "Platypus": 1778053394084,
+    "Platypus": 1778659174006,
     "Becker Friedman Institute University of Chicago": 1778053394084,
     "American Museum of Natural History": 1778053394084,
     "Somatosphere": 1778053394084,
     "Positive News": 1778398363664,
     "Marginal REVOLUTION": 1778223634799,
-    "Psyche | Know Your Self": 1778053394084,
+    "Psyche | Know Your Self": 1778659174006,
     "Sean Carroll": 1778140198142,
     "Resolution Foundation": 1778140198142,
     "Angela Collier ": 1778140198142,
     "Computerphile": 1778140198142,
     "SmarterEveryDay": 1778140198142,
-    "Conversations with Tyler": 1778223634799,
+    "Conversations with Tyler": 1778659174006,
     "The Royal Institution": 1778223634799,
     "Numberphile": 1778223634799,
     "NileRed": 1778223634799,
@@ -914,7 +987,17 @@
     "Chris Doel": 1778572382146,
     "minutephysics": 1778572382146,
     "World Science Festival": 1778572382146,
-    "Anthropology News": 1778572382146
+    "Anthropology News": 1778572382146,
+    "Invisible People": 1778659174006,
+    "YaleCourses": 1778659174006,
+    "AsapSCIENCE": 1778659174006,
+    "Periodic Videos": 1778659174006,
+    "Yale Center for Emotional Intelligence": 1778659174006,
+    "Brian Colburn": 1778659174006,
+    "Time We Discuss": 1778659174006,
+    "Backstage at the Vinyl Cafe": 1778659174006,
+    "Supreme Court asks if there was a 'proper debate' in Parliament before enacting CEC/EC appointments law": 1778659174006,
+    "Beau Miles": 1778659174006
   },
   "source_scores": {
     "Oxford Martin School": {
@@ -950,8 +1033,8 @@
       "n": 1
     },
     "NOEMA": {
-      "avg": 1.45,
-      "n": 2
+      "avg": 3.473,
+      "n": 3
     },
     "LSE": {
       "avg": 7.43,
@@ -1050,8 +1133,8 @@
       "n": 1
     },
     "Platypus": {
-      "avg": -8.2,
-      "n": 1
+      "avg": -1.48,
+      "n": 2
     },
     "Becker Friedman Institute University of Chicago": {
       "avg": -6.26,
@@ -1074,8 +1157,8 @@
       "n": 2
     },
     "Psyche | Know Your Self": {
-      "avg": 11.38,
-      "n": 1
+      "avg": 9.89,
+      "n": 2
     },
     "Sean Carroll": {
       "avg": 6.49,
@@ -1098,8 +1181,8 @@
       "n": 1
     },
     "Conversations with Tyler": {
-      "avg": 6.69,
-      "n": 1
+      "avg": 7.59,
+      "n": 2
     },
     "The Royal Institution": {
       "avg": 5.99,
@@ -1196,16 +1279,64 @@
     "Anthropology News": {
       "avg": 9.21,
       "n": 1
+    },
+    "Invisible People": {
+      "avg": 9.68,
+      "n": 1
+    },
+    "YaleCourses": {
+      "avg": 9.61,
+      "n": 1
+    },
+    "AsapSCIENCE": {
+      "avg": 9.52,
+      "n": 1
+    },
+    "Periodic Videos": {
+      "avg": 9.4,
+      "n": 1
+    },
+    "Yale Center for Emotional Intelligence": {
+      "avg": 9.23,
+      "n": 1
+    },
+    "Brian Colburn": {
+      "avg": 9.72,
+      "n": 1
+    },
+    "Time We Discuss": {
+      "avg": 9.38,
+      "n": 1
+    },
+    "Backstage at the Vinyl Cafe": {
+      "avg": 9.26,
+      "n": 1
+    },
+    "Supreme Court asks if there was a 'proper debate' in Parliament before enacting CEC/EC appointments law": {
+      "avg": -25.52,
+      "n": 1
+    },
+    "Beau Miles": {
+      "avg": 8.33,
+      "n": 1
     }
   },
   "type_performance": {
     "youtube": {
-      "avg": 7.307,
-      "n": 61
+      "avg": 7.499,
+      "n": 68
     },
     "rss": {
-      "avg": 7.869,
-      "n": 47
+      "avg": 7.82,
+      "n": 50
+    },
+    "podcast": {
+      "avg": 9.453,
+      "n": 3
+    },
+    "news": {
+      "avg": -25.52,
+      "n": 1
     }
   },
   "monthly_source_counts": {
@@ -1218,7 +1349,7 @@
       "Natural History Museum": 2,
       "Ness Labs": 2,
       "Experimental History": 1,
-      "NOEMA": 2,
+      "NOEMA": 3,
       "LSE": 1,
       "Dr Ben Miles": 2,
       "3Blue1Brown": 1,
@@ -1243,19 +1374,19 @@
       "The Rest Is History": 2,
       "Nobel Prize": 1,
       "BBC Ideas": 1,
-      "Platypus": 1,
+      "Platypus": 2,
       "Becker Friedman Institute University of Chicago": 1,
       "American Museum of Natural History": 1,
       "Somatosphere": 1,
       "Positive News": 2,
       "Marginal REVOLUTION": 2,
-      "Psyche | Know Your Self": 1,
+      "Psyche | Know Your Self": 2,
       "Sean Carroll": 1,
       "Resolution Foundation": 2,
       "Angela Collier ": 1,
       "Computerphile": 1,
       "SmarterEveryDay": 1,
-      "Conversations with Tyler": 1,
+      "Conversations with Tyler": 2,
       "The Royal Institution": 1,
       "Numberphile": 1,
       "NileRed": 1,
@@ -1279,17 +1410,27 @@
       "Chris Doel": 1,
       "minutephysics": 1,
       "World Science Festival": 1,
-      "Anthropology News": 1
+      "Anthropology News": 1,
+      "Invisible People": 1,
+      "YaleCourses": 1,
+      "AsapSCIENCE": 1,
+      "Periodic Videos": 1,
+      "Yale Center for Emotional Intelligence": 1,
+      "Brian Colburn": 1,
+      "Time We Discuss": 1,
+      "Backstage at the Vinyl Cafe": 1,
+      "Supreme Court asks if there was a 'proper debate' in Parliament before enacting CEC/EC appointments law": 1,
+      "Beau Miles": 1
     }
   },
   "monthly_domain_counts": {
     "2026-05": {
-      "historical": 15,
-      "optimism_tech": 58,
+      "historical": 18,
+      "optimism_tech": 65,
       "optimism_health": 7,
       "introspective": 5,
-      "general": 14,
-      "optimism_society": 4,
+      "general": 16,
+      "optimism_society": 6,
       "environmental": 2,
       "philosophical": 2,
       "economic": 1
