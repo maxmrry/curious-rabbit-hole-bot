@@ -75,9 +75,20 @@ def select_daily_items(memory, policy):
     w_nuance = fingerprint.get("nuance_endurance", 0.17)
     w_temp = fingerprint.get("temporal_horizon", 0.19)
     w_const = fingerprint.get("constructive_realism", 0.18)
-    # Abstraction should enrich the system, not dominate it.
-    # Too much anti-abstraction drifts toward wholesome anti-intellectualism.
     w_grounded = fingerprint.get("grounded_tangibility", 0.12)
+    w_wonder = 0.25 # Default fallback
+    
+    # 🧠 AI META-BRAIN OVERRIDES:
+    # If Gemini analyzed your emotional signals recently, it will overwrite the math here.
+    overrides = feedback_data.get("ai_weight_overrides", {})
+    if overrides:
+        w_sys = overrides.get("w_sys", w_sys)
+        w_nuance = overrides.get("w_nuance", w_nuance)
+        w_temp = overrides.get("w_temp", w_temp)
+        w_const = overrides.get("w_const", w_const)
+        w_grounded = overrides.get("w_grounded", w_grounded)
+        w_wonder = overrides.get("w_wonder", w_wonder)
+        print("🧬 Dynamic AI Overrides Applied to Sorting Weights!")
     
     candidates = []
     now_ms = int(time.time() * 1000)
