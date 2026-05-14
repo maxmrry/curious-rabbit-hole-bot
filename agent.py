@@ -6,11 +6,15 @@ from src.pipeline.memory_mgr import (
 )
 from src.pipeline.philosophy import reframe_items
 from src.pipeline.rss_builder import build_feed
+from src.pipeline.reflection import run_weekly_reflection
 
 def main():
-    print("🚀 Booting U-Curve Brain...")
+    print("🚀 Booting Positivity Bot...")
     
     try:
+        # 0. Meta-Brain Reflection Phase
+        run_weekly_reflection()
+        
         # 1. Load State & Policy
         policy = load_policy()
         memory = load_memory()
