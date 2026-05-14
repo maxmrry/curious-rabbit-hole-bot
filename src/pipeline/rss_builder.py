@@ -41,8 +41,8 @@ def strip_emojis(text):
 
 def _build_micro_feedback(redirect_base, redirect_secret, item):
     """
-    Builds item-specific feedback buttons to train the RLHF algorithm.
-    Passes exact source names and IDs to dynamically shift future weighting.
+    Builds item-specific psychological feedback buttons.
+    Allows Max to signal exactly *why* an item worked or failed.
     """
     import urllib.parse
     token = urllib.parse.quote(redirect_secret)
@@ -51,23 +51,28 @@ def _build_micro_feedback(redirect_base, redirect_secret, item):
     source = urllib.parse.quote(item.get("source_name", "unknown"))
     source_type = urllib.parse.quote(item.get("source_type", "unknown"))
 
-    def make_url(signal):
+    def make_url(signal, context):
         return (
             f"{redirect_base}/signal"
             f"?item={item_id}"
             f"&signal={signal}"
             f"&source={source}"
             f"&type={source_type}"
+            f"&context={urllib.parse.quote(context)}"
             f"&dest={urllib.parse.quote('https://maxmrry.github.io/curious-rabbit-hole-bot/')}"
             f"&token={token}"
         )
 
     return (
         f"<br><br><hr>"
-        f"<small>"
-        f"<a href='{make_url(2)}' style='text-decoration:none;'>⬆ More like this</a>"
+        f"<small><b>How did this land?</b><br>"
+        f"<a href='{make_url(3, 'amazingly_hopeful')}' style='text-decoration:none;'>🥇✅ Wow, I Feel Positive, Inspired, Impressed</a>"
         f" &nbsp;|&nbsp; "
-        f"<a href='{make_url(0)}' style='text-decoration:none;'>⬇ Less of this</a>"
+        f"<a href='{make_url(2, 'pretty_positive')}' style='text-decoration:none;'>💪 Pretty Positive. Kinda Cool.</a>"
+        f" &nbsp;|&nbsp; "
+        f"<a href='{make_url(0, 'not_interested')}' style='text-decoration:none;'>🥱 Don't Care... Not Interested</a>"
+        f" &nbsp;|&nbsp; "
+        f"<a href='{make_url(-1, 'too_gloomy')}' style='text-decoration:none;'>⛔ Too Gloomy / Negative</a>"
         f"</small>"
     )
 
