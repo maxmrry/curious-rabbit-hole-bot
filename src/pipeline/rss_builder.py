@@ -39,89 +39,36 @@ def strip_emojis(text):
     return emoji_pattern.sub('', text).strip()
 
 
-def _get_feedback_stage():
+def _build_micro_feedback(redirect_base, redirect_secret, item):
     """
-    Determines what the algorithm most needs to learn right now.
-    Returns a stage name based on how much feedback data exists.
-    """
-    try:
-        with open("state/feedback.json", "r") as f:
-            feedback = json.load(f)
-        total_signals = len(feedback.get("recent_signals", []))
-        if total_signals < 10:
-            return "source_calibration"
-        elif total_signals < 30:
-            return "domain_calibration"
-        elif total_signals < 60:
-            return "experience_calibration"
-        else:
-            return "drift_check"
-    except FileNotFoundError:
-        return "source_calibration"
-
-
-def _build_feedback_buttons(redirect_base, redirect_secret, date_str):
-    """
-    Builds contextually appropriate feedback buttons based on calibration stage.
-    Questions evolve as the system learns more about Max's preferences.
+    Builds item-specific feedback buttons to train the RLHF algorithm.
+    Passes exact source names and IDs to dynamically shift future weighting.
     """
     import urllib.parse
     token = urllib.parse.quote(redirect_secret)
-    stage = _get_feedback_stage()
 
-    def make_url(signal, context=""):
+    item_id = urllib.parse.quote(item.get("native_id", "unknown"))
+    source = urllib.parse.quote(item.get("source_name", "unknown"))
+    source_type = urllib.parse.quote(item.get("source_type", "unknown"))
+
+    def make_url(signal):
         return (
             f"{redirect_base}/signal"
-            f"?item=daily-{date_str}"
+            f"?item={item_id}"
             f"&signal={signal}"
-            f"&source=daily_experience"
-            f"&type=experience"
-            f"&context={urllib.parse.quote(context)}"
+            f"&source={source}"
+            f"&type={source_type}"
             f"&dest={urllib.parse.quote('https://maxmrry.github.io/curious-rabbit-hole-bot/')}"
             f"&token={token}"
         )
 
-    if stage == "source_calibration":
-        question = "How did today's sources land?"
-        buttons = (
-            f'<a href="{make_url(2, "sources_excellent")}">Excellent sources</a>'
-            f' &nbsp;|&nbsp; '
-            f'<a href="{make_url(1, "sources_mixed")}">Mixed</a>'
-            f' &nbsp;|&nbsp; '
-            f'<a href="{make_url(0, "sources_weak")}">Weak sources today</a>'
-        )
-    elif stage == "domain_calibration":
-        question = "What was today's feed missing?"
-        buttons = (
-            f'<a href="{make_url(2, "want_more_science")}">More science</a>'
-            f' &nbsp;|&nbsp; '
-            f'<a href="{make_url(1, "want_more_psychology")}">More psychology</a>'
-            f' &nbsp;|&nbsp; '
-            f'<a href="{make_url(0, "want_more_history")}">More history</a>'
-        )
-    elif stage == "experience_calibration":
-        question = "Did today's feed shift your perspective?"
-        buttons = (
-            f'<a href="{make_url(2, "perspective_shifted")}">Genuinely shifted something</a>'
-            f' &nbsp;|&nbsp; '
-            f'<a href="{make_url(1, "felt_informed")}">Informed but familiar</a>'
-            f' &nbsp;|&nbsp; '
-            f'<a href="{make_url(0, "too_abstract")}">Too abstract today</a>'
-        )
-    else:
-        question = "Is the feed staying grounded?"
-        buttons = (
-            f'<a href="{make_url(2, "well_balanced")}">Well balanced</a>'
-            f' &nbsp;|&nbsp; '
-            f'<a href="{make_url(1, "slightly_too_positive")}">Slightly too rosy</a>'
-            f' &nbsp;|&nbsp; '
-            f'<a href="{make_url(0, "lost_credibility")}">Lost its edge</a>'
-        )
-
     return (
-        f'<br><br><hr>'
-        f'<small><i>{question}</i><br>'
-        f'{buttons}</small>'
+        f"<br><br><hr>"
+        f"<small>"
+        f"<a href='{make_url(2)}' style='text-decoration:none;'>⬆ More like this</a>"
+        f" &nbsp;|&nbsp; "
+        f"<a href='{make_url(0)}' style='text-decoration:none;'>⬇ Less of this</a>"
+        f"</small>"
     )
 
 
@@ -166,55 +113,18 @@ def build_feed(selected_items):
     fg.logo(image_url)
     fg.image(url=image_url, title='U-Curve Brain', link='https://maxmrry.github.io/curious-rabbit-hole-bot/feed.xml')
 
-    # --- PREPARE BRIEFING COMPONENTS ---
-    max_entry_text = strip_emojis(generate_max_entry(selected_items, now))
-    daily_protocol = strip_emojis(clean_quote(get_daily_protocol()))
+    # --- ENTRY 1: THE ADAGE ---
+    # We bypass the narrative, protocol, and daily intro for maximum minimalism
     daily_principle = strip_emojis(clean_quote(get_daily_principle()))
-    narrative = generate_daily_narrative(selected_items)
     
-    inoculated_items = [i for i in selected_items if i.get("has_inoculation")]
-    doom_count = len(inoculated_items)
-
-    # Build Feedback Buttons
-    redirect_base = os.getenv("REDIRECT_BASE_URL", "")
-    redirect_secret = os.getenv("REDIRECT_SECRET", "")
-    feedback_html = ""
-    if redirect_base and redirect_secret:
-        feedback_html = _build_feedback_buttons(
-            redirect_base=redirect_base,
-            redirect_secret=redirect_secret,
-            date_str=now.strftime('%Y%m%d')
-        )
-
-    # --- ENTRY 1: THE MORNING BRIEFING (Merged) ---
-    fe_briefing = fg.add_entry()
-    # Uses the Narrative Headline as the punchy title for the whole briefing
-    fe_briefing.title(f"{strip_emojis(narrative['headline'])}")
-    fe_briefing.link(href=f"https://maxmrry.github.io/curious-rabbit-hole-bot/#briefing-{now.strftime('%Y%m%d')}")
-    
-    # Build the combined HTML description
-    briefing_html = f"<b>(Today)</b> {max_entry_text}<br><br>"
-    briefing_html += f"<b>(Pattern)</b> {strip_emojis(narrative['explanation'])}<br><br>"
-    briefing_html += f"<b>(Reminder)</b> {daily_protocol}<br><br>"
-    
-    if doom_count >= 2:
-        briefing_html += f"<b>(System)</b> {doom_count} items today contained threat language. They have been reframed. The nervous system cannot distinguish between a push notification and a physical threat. Choosing how you receive information is a cognitive skill.<br><br>"
-        
-    briefing_html += feedback_html
-    
-    fe_briefing.description(briefing_html)
-    fe_briefing.pubDate(now)
-    fe_briefing.id(f"briefing-{now.strftime('%Y%m%d')}")
-
-    # --- ENTRY 2: THE ADAGE ---
     fe_intro = fg.add_entry()
     fe_intro.title(f"(Adage) {daily_principle}")
     fe_intro.link(href=f"https://maxmrry.github.io/curious-rabbit-hole-bot/#anchor-{now.strftime('%Y%m%d')}")
-    fe_intro.pubDate(now - timedelta(seconds=1))
+    fe_intro.pubDate(now)
     fe_intro.id(f"anchor-{now.strftime('%Y%m%d')}")
 
-    # Update the seconds_offset for the rest of the items to start at 2
-    seconds_offset = 2
+    # Update the seconds_offset for the rest of the curated items to start at 1
+    seconds_offset = 1
 
     # --- CURATED CONTENT ---
     for item in selected_items:
@@ -240,6 +150,13 @@ def build_feed(selected_items):
             final_desc += f"<img src='{item['image_url']}' alt='thumbnail' style='max-width:100%; border-radius:8px;'/><br><br>"
 
         final_desc += strip_emojis(item['description'])
+
+        # Inject Micro-Feedback RLHF Buttons
+        redirect_base = os.getenv("REDIRECT_BASE_URL", "")
+        redirect_secret = os.getenv("REDIRECT_SECRET", "")
+        if redirect_base and redirect_secret:
+            final_desc += _build_micro_feedback(redirect_base, redirect_secret, item)
+
         fe.description(final_desc)
 
         if item.get('audio_url'):
