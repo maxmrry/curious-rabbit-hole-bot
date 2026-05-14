@@ -874,6 +874,61 @@
       "native_id": "2A9j-8VyD_8",
       "source_type": "youtube",
       "last_seen_ms": 1778659174006
+    },
+    "0fb4b09c39925f0cef286a62270207acc7ed0dd18ba5047db918284b3b0aff05": {
+      "native_id": "https://undark.org/2026/05/08/book-review-homesick-for-world-unknown/",
+      "source_type": "rss",
+      "last_seen_ms": 1778745081628
+    },
+    "dd5bb2c798839d0f2188ed4f8714be28627cca2480bb18ba6ebc461d94813499": {
+      "native_id": "qxuMRaUbWow",
+      "source_type": "youtube",
+      "last_seen_ms": 1778745081628
+    },
+    "ec3b6f475a127d96acff0707f024616bcff6646243248dc46886e354a13707eb": {
+      "native_id": "-YwzCOVeLEE",
+      "source_type": "youtube",
+      "last_seen_ms": 1778745081628
+    },
+    "5f216c9384edeec74c0509201c6e57fdd936566df2548c8ecd6ecf05666e572a": {
+      "native_id": "ufTyOoixeFc",
+      "source_type": "youtube",
+      "last_seen_ms": 1778745081628
+    },
+    "5f2dd77e6aab7a6364f1a761eb92fc793c035049b5cef36563208031f9d3be0b": {
+      "native_id": "7582803",
+      "source_type": "podcast",
+      "last_seen_ms": 1778745081628
+    },
+    "7097d4323ed326f4d0f76811e8a8e70bb7d77760961f148d11f7b4e8a304b749": {
+      "native_id": "7673671",
+      "source_type": "podcast",
+      "last_seen_ms": 1778745081628
+    },
+    "f6d98903bd00ac5c6a72cd87eedb06378b40c90f5a79241502952f0adfa6f742": {
+      "native_id": "7781915",
+      "source_type": "podcast",
+      "last_seen_ms": 1778745081628
+    },
+    "039cfa3b8ad3e1f4384b299721011645b71590820bb616cc222b929697483055": {
+      "native_id": "PTO0s8YQ49o",
+      "source_type": "youtube",
+      "last_seen_ms": 1778745081628
+    },
+    "cd2f82a548d6e382847280e56f3581b3e207613bf719cf84550194ec9be8d78e": {
+      "native_id": "https://www.positive.news/society/life-after-confronting-a-killer/",
+      "source_type": "rss",
+      "last_seen_ms": 1778745081628
+    },
+    "6bc63df1cf66baafb33c2c3948533da4e3e024934adfee4f34788564cd6fb02a": {
+      "native_id": "https://worksinprogress.co/issue/the-slippery-protein-problem/",
+      "source_type": "rss",
+      "last_seen_ms": 1778745081628
+    },
+    "6393510aef7fe4fa8339c9d6c4d9ac99693fdd82764c2b5b5ea16d201a86bd69": {
+      "native_id": "a0338963885d496ead32d170e598ae44",
+      "source_type": "podcast",
+      "last_seen_ms": 1778745081628
     }
   },
   "sources_health": {
@@ -915,6 +970,9 @@
     },
     "2026-05-13": {
       "success": true
+    },
+    "2026-05-14": {
+      "success": true
     }
   },
   "source_history": {
@@ -931,7 +989,7 @@
     "Dr Ben Miles": 1778488364002,
     "3Blue1Brown": 1777881244701,
     "TED-Ed": 1778488364002,
-    "Works in Progress RSS Feed": 1778398363664,
+    "Works in Progress RSS Feed": 1778745081628,
     "Closer To Truth": 1777881244701,
     "The Leakey Foundation": 1778398363664,
     "Quanta Magazine": 1778398363664,
@@ -943,7 +1001,7 @@
     "Smithsonian": 1778310966853,
     "The Rest Is Science": 1777965914867,
     "Wendover Productions": 1777965914867,
-    "Undark Magazine": 1778310966853,
+    "Undark Magazine": 1778745081628,
     "Greater Good": 1778572382146,
     "Nautilus": 1778398363664,
     "Fix The News": 1778572382146,
@@ -955,7 +1013,7 @@
     "Becker Friedman Institute University of Chicago": 1778053394084,
     "American Museum of Natural History": 1778053394084,
     "Somatosphere": 1778053394084,
-    "Positive News": 1778398363664,
+    "Positive News": 1778745081628,
     "Marginal REVOLUTION": 1778223634799,
     "Psyche | Know Your Self": 1778659174006,
     "Sean Carroll": 1778140198142,
@@ -967,7 +1025,7 @@
     "The Royal Institution": 1778223634799,
     "Numberphile": 1778223634799,
     "NileRed": 1778223634799,
-    "TED": 1778223634799,
+    "TED": 1778745081628,
     "Not Boring by Packy McCormick": 1778223634799,
     "PBS Space Time": 1778310966853,
     "PBS Terra": 1778572382146,
@@ -985,7 +1043,7 @@
     "Santa Fe Institute": 1778488364002,
     "The Dissenter": 1778488364002,
     "Chris Doel": 1778572382146,
-    "minutephysics": 1778572382146,
+    "minutephysics": 1778745081628,
     "World Science Festival": 1778572382146,
     "Anthropology News": 1778572382146,
     "Invisible People": 1778659174006,
@@ -997,7 +1055,13 @@
     "Time We Discuss": 1778659174006,
     "Backstage at the Vinyl Cafe": 1778659174006,
     "Supreme Court asks if there was a 'proper debate' in Parliament before enacting CEC/EC appointments law": 1778659174006,
-    "Beau Miles": 1778659174006
+    "Beau Miles": 1778659174006,
+    "Sixty Symbols": 1778745081628,
+    "The New York Academy of Sciences": 1778745081628,
+    "Mary Garcia / SmartSeeds": 1778745081628,
+    "Lenore Elizabeth Mulets": 1778745081628,
+    "Antica Productions, WWF-Canada": 1778745081628,
+    "Thought For Today": 1778745081628
   },
   "source_scores": {
     "Oxford Martin School": {
@@ -1053,8 +1117,8 @@
       "n": 2
     },
     "Works in Progress RSS Feed": {
-      "avg": 5.71,
-      "n": 3
+      "avg": 6.402,
+      "n": 4
     },
     "Closer To Truth": {
       "avg": 3.79,
@@ -1101,8 +1165,8 @@
       "n": 1
     },
     "Undark Magazine": {
-      "avg": 8.17,
-      "n": 2
+      "avg": 8.447,
+      "n": 3
     },
     "Greater Good": {
       "avg": 13.435,
@@ -1149,8 +1213,8 @@
       "n": 1
     },
     "Positive News": {
-      "avg": 10.92,
-      "n": 2
+      "avg": 10.15,
+      "n": 3
     },
     "Marginal REVOLUTION": {
       "avg": 7.14,
@@ -1197,8 +1261,8 @@
       "n": 1
     },
     "TED": {
-      "avg": 4.22,
-      "n": 1
+      "avg": 6.265,
+      "n": 2
     },
     "Not Boring by Packy McCormick": {
       "avg": 5.04,
@@ -1269,8 +1333,8 @@
       "n": 1
     },
     "minutephysics": {
-      "avg": 11.97,
-      "n": 1
+      "avg": 8.87,
+      "n": 2
     },
     "World Science Festival": {
       "avg": 10.84,
@@ -1319,20 +1383,44 @@
     "Beau Miles": {
       "avg": 8.33,
       "n": 1
+    },
+    "Sixty Symbols": {
+      "avg": 10.49,
+      "n": 1
+    },
+    "The New York Academy of Sciences": {
+      "avg": 5.0,
+      "n": 1
+    },
+    "Mary Garcia / SmartSeeds": {
+      "avg": 9.38,
+      "n": 1
+    },
+    "Lenore Elizabeth Mulets": {
+      "avg": 7.97,
+      "n": 1
+    },
+    "Antica Productions, WWF-Canada": {
+      "avg": 5.47,
+      "n": 1
+    },
+    "Thought For Today": {
+      "avg": 10.33,
+      "n": 1
     }
   },
   "type_performance": {
     "youtube": {
-      "avg": 7.499,
-      "n": 68
+      "avg": 7.493,
+      "n": 72
     },
     "rss": {
-      "avg": 7.82,
-      "n": 50
+      "avg": 7.87,
+      "n": 53
     },
     "podcast": {
-      "avg": 9.453,
-      "n": 3
+      "avg": 8.787,
+      "n": 7
     },
     "news": {
       "avg": -25.52,
@@ -1354,7 +1442,7 @@
       "Dr Ben Miles": 2,
       "3Blue1Brown": 1,
       "TED-Ed": 2,
-      "Works in Progress RSS Feed": 3,
+      "Works in Progress RSS Feed": 4,
       "Closer To Truth": 1,
       "The Leakey Foundation": 3,
       "Quanta Magazine": 3,
@@ -1366,7 +1454,7 @@
       "Smithsonian": 2,
       "The Rest Is Science": 1,
       "Wendover Productions": 1,
-      "Undark Magazine": 2,
+      "Undark Magazine": 3,
       "Greater Good": 2,
       "Nautilus": 3,
       "Fix The News": 3,
@@ -1378,7 +1466,7 @@
       "Becker Friedman Institute University of Chicago": 1,
       "American Museum of Natural History": 1,
       "Somatosphere": 1,
-      "Positive News": 2,
+      "Positive News": 3,
       "Marginal REVOLUTION": 2,
       "Psyche | Know Your Self": 2,
       "Sean Carroll": 1,
@@ -1390,7 +1478,7 @@
       "The Royal Institution": 1,
       "Numberphile": 1,
       "NileRed": 1,
-      "TED": 1,
+      "TED": 2,
       "Not Boring by Packy McCormick": 1,
       "PBS Space Time": 1,
       "PBS Terra": 2,
@@ -1408,7 +1496,7 @@
       "Santa Fe Institute": 1,
       "The Dissenter": 1,
       "Chris Doel": 1,
-      "minutephysics": 1,
+      "minutephysics": 2,
       "World Science Festival": 1,
       "Anthropology News": 1,
       "Invisible People": 1,
@@ -1420,20 +1508,26 @@
       "Time We Discuss": 1,
       "Backstage at the Vinyl Cafe": 1,
       "Supreme Court asks if there was a 'proper debate' in Parliament before enacting CEC/EC appointments law": 1,
-      "Beau Miles": 1
+      "Beau Miles": 1,
+      "Sixty Symbols": 1,
+      "The New York Academy of Sciences": 1,
+      "Mary Garcia / SmartSeeds": 1,
+      "Lenore Elizabeth Mulets": 1,
+      "Antica Productions, WWF-Canada": 1,
+      "Thought For Today": 1
     }
   },
   "monthly_domain_counts": {
     "2026-05": {
-      "historical": 18,
-      "optimism_tech": 65,
+      "historical": 19,
+      "optimism_tech": 68,
       "optimism_health": 7,
       "introspective": 5,
-      "general": 16,
-      "optimism_society": 6,
-      "environmental": 2,
+      "general": 19,
+      "optimism_society": 8,
+      "environmental": 3,
       "philosophical": 2,
-      "economic": 1
+      "economic": 2
     }
   }
 }
