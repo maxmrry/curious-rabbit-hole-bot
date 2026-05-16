@@ -929,6 +929,61 @@
       "native_id": "a0338963885d496ead32d170e598ae44",
       "source_type": "podcast",
       "last_seen_ms": 1778745081628
+    },
+    "8da170712b075597f8738372cb980585258011fc0adcb6a9e443a26c5ddd5fa4": {
+      "native_id": "https://fs.blog/knowledge-project-podcast/outliers-chung-ju-yung/",
+      "source_type": "rss",
+      "last_seen_ms": 1778916260372
+    },
+    "cad2370f4698e7259797177156448b4b0bdb85bfc90d239580713477e480f742": {
+      "native_id": "8icLWgdgUZY",
+      "source_type": "youtube",
+      "last_seen_ms": 1778916260372
+    },
+    "7dad10b9efebf2173acf7a411cfc176ce89c519e8275950ee5055f044c5a317d": {
+      "native_id": "yQHbjAIeQPw",
+      "source_type": "youtube",
+      "last_seen_ms": 1778916260372
+    },
+    "31f7f29974e5b095561bac590e1b174c30394c59bd4da5662eb7a015abbb0b00": {
+      "native_id": "jQTRbV046-c",
+      "source_type": "youtube",
+      "last_seen_ms": 1778916260372
+    },
+    "ddd0aa2b4152a7362ccc6b4fd1c5ea7eff5c626e8ff1fdd151214f16f6389840": {
+      "native_id": "QLu_ZsRc_G0",
+      "source_type": "youtube",
+      "last_seen_ms": 1778916260372
+    },
+    "be7a9f452bb9b414eb7b07f8e04bb3ab5b59c5f53133582e0f7503d9321dc9b0": {
+      "native_id": "5609488",
+      "source_type": "podcast",
+      "last_seen_ms": 1778916260372
+    },
+    "a5ad8d86261d616a20df9fad95588c7c23bc75bc7a607a32611af3d75f707bee": {
+      "native_id": "Qev7iWI-2Nk",
+      "source_type": "youtube",
+      "last_seen_ms": 1778916260372
+    },
+    "dd2a010ddfe49d4f66699d4acdcda864a372069551c7820bc24ad662ff666420": {
+      "native_id": "https://www.nature.com/articles/d41586-026-01504-w",
+      "source_type": "rss",
+      "last_seen_ms": 1778916260372
+    },
+    "6d18e27ead685b967b330ee09a31983f08b807167b2dfb3e67d65a832689d19b": {
+      "native_id": "https://aeon.co/videos/the-swiss-tradition-thats-a-mystery-even-to-those-who-celebrate-it",
+      "source_type": "rss",
+      "last_seen_ms": 1778916260372
+    },
+    "26d5710ac1333b988931bdb3cc4441f58090d2cde9a276e002a0b1388f2dd2e8": {
+      "native_id": "https://www.quantamagazine.org/how-unknowable-math-can-help-hide-secrets-20260511/",
+      "source_type": "rss",
+      "last_seen_ms": 1778916260372
+    },
+    "9b85ad9350a815bfd4520cc3a4438f3df098f27e2a137e34553a86ecaf3d5753": {
+      "native_id": "XxBDGzBtFZo",
+      "source_type": "youtube",
+      "last_seen_ms": 1778916260372
     }
   },
   "sources_health": {
@@ -973,6 +1028,9 @@
     },
     "2026-05-14": {
       "success": true
+    },
+    "2026-05-16": {
+      "success": true
     }
   },
   "source_history": {
@@ -981,32 +1039,32 @@
     "The Royal Society": 1778310966853,
     "SciFri": 1778572382146,
     "Knowable Magazine": 1778223634799,
-    "Natural History Museum": 1778140198142,
+    "Natural History Museum": 1778916260372,
     "Ness Labs": 1778223634799,
     "Experimental History": 1777801688500,
     "NOEMA": 1778659174006,
     "LSE": 1777881244701,
     "Dr Ben Miles": 1778488364002,
-    "3Blue1Brown": 1777881244701,
+    "3Blue1Brown": 1778916260372,
     "TED-Ed": 1778488364002,
     "Works in Progress RSS Feed": 1778745081628,
     "Closer To Truth": 1777881244701,
     "The Leakey Foundation": 1778398363664,
-    "Quanta Magazine": 1778398363664,
-    "Farnam Street": 1778572382146,
+    "Quanta Magazine": 1778916260372,
+    "Farnam Street": 1778916260372,
     "Reasons to be Cheerful": 1778488364002,
     "Behavioral Scientist": 1778572382146,
     "Intelligence Squared": 1778140198142,
     "Wellcome Collection": 1778310966853,
-    "Smithsonian": 1778310966853,
-    "The Rest Is Science": 1777965914867,
+    "Smithsonian": 1778916260372,
+    "The Rest Is Science": 1778916260372,
     "Wendover Productions": 1777965914867,
     "Undark Magazine": 1778745081628,
     "Greater Good": 1778572382146,
     "Nautilus": 1778398363664,
     "Fix The News": 1778572382146,
-    "Aeon | a world of ideas": 1778572382146,
-    "The Rest Is History": 1778398363664,
+    "Aeon | a world of ideas": 1778916260372,
+    "The Rest Is History": 1778916260372,
     "Nobel Prize": 1778053394084,
     "BBC Ideas": 1778053394084,
     "Platypus": 1778659174006,
@@ -1031,7 +1089,7 @@
     "PBS Terra": 1778572382146,
     "The Institute of Art and Ideas": 1778310966853,
     "Adam Savage\u2019s Tested": 1778310966853,
-    "Nature": 1778572382146,
+    "Nature": 1778916260372,
     "PBS Eons": 1778398363664,
     "Stand-up Maths": 1778398363664,
     "Sprouht": 1778398363664,
@@ -1061,7 +1119,8 @@
     "Mary Garcia / SmartSeeds": 1778745081628,
     "Lenore Elizabeth Mulets": 1778745081628,
     "Antica Productions, WWF-Canada": 1778745081628,
-    "Thought For Today": 1778745081628
+    "Thought For Today": 1778745081628,
+    "World Wildlife Fund": 1778916260372
   },
   "source_scores": {
     "Oxford Martin School": {
@@ -1085,8 +1144,8 @@
       "n": 2
     },
     "Natural History Museum": {
-      "avg": 8.26,
-      "n": 2
+      "avg": 8.39,
+      "n": 3
     },
     "Ness Labs": {
       "avg": 5.865,
@@ -1109,8 +1168,8 @@
       "n": 2
     },
     "3Blue1Brown": {
-      "avg": 10.57,
-      "n": 1
+      "avg": 6.965,
+      "n": 2
     },
     "TED-Ed": {
       "avg": 11.31,
@@ -1129,12 +1188,12 @@
       "n": 3
     },
     "Quanta Magazine": {
-      "avg": 8.577,
-      "n": 3
+      "avg": 8.098,
+      "n": 4
     },
     "Farnam Street": {
-      "avg": 10.215,
-      "n": 2
+      "avg": 9.573,
+      "n": 3
     },
     "Reasons to be Cheerful": {
       "avg": 10.592,
@@ -1153,12 +1212,12 @@
       "n": 2
     },
     "Smithsonian": {
-      "avg": 9.72,
-      "n": 2
+      "avg": 8.693,
+      "n": 4
     },
     "The Rest Is Science": {
-      "avg": 10.62,
-      "n": 1
+      "avg": 9.825,
+      "n": 2
     },
     "Wendover Productions": {
       "avg": 12.21,
@@ -1181,12 +1240,12 @@
       "n": 3
     },
     "Aeon | a world of ideas": {
-      "avg": 13.395,
-      "n": 2
+      "avg": 11.213,
+      "n": 3
     },
     "The Rest Is History": {
-      "avg": 10.695,
-      "n": 2
+      "avg": 8.167,
+      "n": 3
     },
     "Nobel Prize": {
       "avg": 8.54,
@@ -1285,8 +1344,8 @@
       "n": 1
     },
     "Nature": {
-      "avg": 8.95,
-      "n": 2
+      "avg": 1.243,
+      "n": 3
     },
     "PBS Eons": {
       "avg": 10.58,
@@ -1407,20 +1466,24 @@
     "Thought For Today": {
       "avg": 10.33,
       "n": 1
+    },
+    "World Wildlife Fund": {
+      "avg": -15.65,
+      "n": 1
     }
   },
   "type_performance": {
     "youtube": {
-      "avg": 7.493,
-      "n": 72
+      "avg": 7.422,
+      "n": 78
     },
     "rss": {
-      "avg": 7.87,
-      "n": 53
+      "avg": 7.452,
+      "n": 57
     },
     "podcast": {
-      "avg": 8.787,
-      "n": 7
+      "avg": 5.732,
+      "n": 8
     },
     "news": {
       "avg": -25.52,
@@ -1434,32 +1497,32 @@
       "The Royal Society": 2,
       "SciFri": 2,
       "Knowable Magazine": 2,
-      "Natural History Museum": 2,
+      "Natural History Museum": 3,
       "Ness Labs": 2,
       "Experimental History": 1,
       "NOEMA": 3,
       "LSE": 1,
       "Dr Ben Miles": 2,
-      "3Blue1Brown": 1,
+      "3Blue1Brown": 2,
       "TED-Ed": 2,
       "Works in Progress RSS Feed": 4,
       "Closer To Truth": 1,
       "The Leakey Foundation": 3,
-      "Quanta Magazine": 3,
-      "Farnam Street": 2,
+      "Quanta Magazine": 4,
+      "Farnam Street": 3,
       "Reasons to be Cheerful": 4,
       "Behavioral Scientist": 3,
       "Intelligence Squared": 2,
       "Wellcome Collection": 2,
-      "Smithsonian": 2,
-      "The Rest Is Science": 1,
+      "Smithsonian": 4,
+      "The Rest Is Science": 2,
       "Wendover Productions": 1,
       "Undark Magazine": 3,
       "Greater Good": 2,
       "Nautilus": 3,
       "Fix The News": 3,
-      "Aeon | a world of ideas": 2,
-      "The Rest Is History": 2,
+      "Aeon | a world of ideas": 3,
+      "The Rest Is History": 3,
       "Nobel Prize": 1,
       "BBC Ideas": 1,
       "Platypus": 2,
@@ -1484,7 +1547,7 @@
       "PBS Terra": 2,
       "The Institute of Art and Ideas": 1,
       "Adam Savage\u2019s Tested": 1,
-      "Nature": 2,
+      "Nature": 3,
       "PBS Eons": 1,
       "Stand-up Maths": 1,
       "Sprouht": 1,
@@ -1514,16 +1577,17 @@
       "Mary Garcia / SmartSeeds": 1,
       "Lenore Elizabeth Mulets": 1,
       "Antica Productions, WWF-Canada": 1,
-      "Thought For Today": 1
+      "Thought For Today": 1,
+      "World Wildlife Fund": 1
     }
   },
   "monthly_domain_counts": {
     "2026-05": {
-      "historical": 19,
-      "optimism_tech": 68,
+      "historical": 20,
+      "optimism_tech": 76,
       "optimism_health": 7,
       "introspective": 5,
-      "general": 19,
+      "general": 21,
       "optimism_society": 8,
       "environmental": 3,
       "philosophical": 2,
