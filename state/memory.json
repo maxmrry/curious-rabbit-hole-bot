@@ -984,6 +984,66 @@
       "native_id": "XxBDGzBtFZo",
       "source_type": "youtube",
       "last_seen_ms": 1778916260372
+    },
+    "47a87c5b5072b2b7f971a9ac652f0e28909ddd3789c9d013e195314de23bc603": {
+      "native_id": "https://undark.org/2026/05/14/opinion-scientific-moral-arguments/",
+      "source_type": "rss",
+      "last_seen_ms": 1779003575150
+    },
+    "58f34d0a049b55b2e54e27f767823f5a19b318daad20b3462750e41e04330128": {
+      "native_id": "CS1wMKIkGRI",
+      "source_type": "youtube",
+      "last_seen_ms": 1779003575150
+    },
+    "cad1445a5273c54713ad3ad95cfab090296b478706db30d0230cb6d836fd7eb2": {
+      "native_id": "NdQ8RAfItX0",
+      "source_type": "youtube",
+      "last_seen_ms": 1779003575150
+    },
+    "e995543631a5fe565130a7e8ec35d53929d40b28acdce155f59cf8b4f3d03b9c": {
+      "native_id": "rk1ifq7u0ug",
+      "source_type": "youtube",
+      "last_seen_ms": 1779003575150
+    },
+    "73600b6560ac4a7b01c71e94a45e98afa9993ebf1e3f2aa5d1eabb4ac5102891": {
+      "native_id": "iZM27rUh7TY",
+      "source_type": "youtube",
+      "last_seen_ms": 1779003575150
+    },
+    "69bfb3eee513e81c9e292f35c39edca3191d209d75d8228b08171af968464f3f": {
+      "native_id": "UF63eFJmbrQ",
+      "source_type": "youtube",
+      "last_seen_ms": 1779003575150
+    },
+    "6d46333537a28f9b6e5d4f99bd7b8d6b0984a92eb37fe92187e4ec490934978a": {
+      "native_id": "e6098962f5cd47dc8fc332a735be8c8a",
+      "source_type": "podcast",
+      "last_seen_ms": 1779003575150
+    },
+    "cb4dddce66bea934b67867f0afd5b8c8c4967a16918f23e81d72cbe004191c4d": {
+      "native_id": "YzcuM5Q7a50",
+      "source_type": "youtube",
+      "last_seen_ms": 1779003575150
+    },
+    "2bbfde5410e0419452873d34a5102f2a5fc90250acf0f759f66b341ae73db3de": {
+      "native_id": "eHZwQKwbVfM",
+      "source_type": "youtube",
+      "last_seen_ms": 1779003575150
+    },
+    "84c2d3eee84933396b35e16402ba48a303c3cca145af08c1c15d60980dae0a34": {
+      "native_id": "https://nautil.us/ancient-teeth-hint-at-homo-erectus-denisovan-interbreeding-1280849/",
+      "source_type": "rss",
+      "last_seen_ms": 1779003575150
+    },
+    "1172990df3644de282e420a4c32a7c9fa4270e490fe2a7ab6364d4df159ee4ef": {
+      "native_id": "https://www.notboring.co/p/weekly-dose-of-optimism-193",
+      "source_type": "rss",
+      "last_seen_ms": 1779003575150
+    },
+    "02783b9311b1143f4d50bdb507f0bbe38d2fc0f605b3841b3934aac1fbb23c4b": {
+      "native_id": "https://nautil.us/new-nasa-graphic-captures-human-activity-at-night-1280853/",
+      "source_type": "rss",
+      "last_seen_ms": 1779003575150
     }
   },
   "sources_health": {
@@ -1031,13 +1091,16 @@
     },
     "2026-05-16": {
       "success": true
+    },
+    "2026-05-17": {
+      "success": true
     }
   },
   "source_history": {
     "Oxford Martin School": 1777801688500,
     "nature video": 1777801688500,
     "The Royal Society": 1778310966853,
-    "SciFri": 1778572382146,
+    "SciFri": 1779003575150,
     "Knowable Magazine": 1778223634799,
     "Natural History Museum": 1778916260372,
     "Ness Labs": 1778223634799,
@@ -1059,17 +1122,17 @@
     "Smithsonian": 1778916260372,
     "The Rest Is Science": 1778916260372,
     "Wendover Productions": 1777965914867,
-    "Undark Magazine": 1778745081628,
+    "Undark Magazine": 1779003575150,
     "Greater Good": 1778572382146,
-    "Nautilus": 1778398363664,
+    "Nautilus": 1779003575150,
     "Fix The News": 1778572382146,
     "Aeon | a world of ideas": 1778916260372,
     "The Rest Is History": 1778916260372,
     "Nobel Prize": 1778053394084,
-    "BBC Ideas": 1778053394084,
+    "BBC Ideas": 1779003575150,
     "Platypus": 1778659174006,
     "Becker Friedman Institute University of Chicago": 1778053394084,
-    "American Museum of Natural History": 1778053394084,
+    "American Museum of Natural History": 1779003575150,
     "Somatosphere": 1778053394084,
     "Positive News": 1778745081628,
     "Marginal REVOLUTION": 1778223634799,
@@ -1079,12 +1142,12 @@
     "Angela Collier ": 1778140198142,
     "Computerphile": 1778140198142,
     "SmarterEveryDay": 1778140198142,
-    "Conversations with Tyler": 1778659174006,
+    "Conversations with Tyler": 1779003575150,
     "The Royal Institution": 1778223634799,
     "Numberphile": 1778223634799,
     "NileRed": 1778223634799,
     "TED": 1778745081628,
-    "Not Boring by Packy McCormick": 1778223634799,
+    "Not Boring by Packy McCormick": 1779003575150,
     "PBS Space Time": 1778310966853,
     "PBS Terra": 1778572382146,
     "The Institute of Art and Ideas": 1778310966853,
@@ -1092,12 +1155,12 @@
     "Nature": 1778916260372,
     "PBS Eons": 1778398363664,
     "Stand-up Maths": 1778398363664,
-    "Sprouht": 1778398363664,
+    "Sprouht": 1779003575150,
     "Special Books by Special Kids": 1778572382146,
     "Our World in Data": 1778488364002,
-    "The British Academy": 1778488364002,
+    "The British Academy": 1779003575150,
     "Howtown": 1778488364002,
-    "Practical Engineering": 1778488364002,
+    "Practical Engineering": 1779003575150,
     "Santa Fe Institute": 1778488364002,
     "The Dissenter": 1778488364002,
     "Chris Doel": 1778572382146,
@@ -1120,7 +1183,8 @@
     "Lenore Elizabeth Mulets": 1778745081628,
     "Antica Productions, WWF-Canada": 1778745081628,
     "Thought For Today": 1778745081628,
-    "World Wildlife Fund": 1778916260372
+    "World Wildlife Fund": 1778916260372,
+    "The Youth Sports Parenting Tribe": 1779003575150
   },
   "source_scores": {
     "Oxford Martin School": {
@@ -1136,8 +1200,8 @@
       "n": 2
     },
     "SciFri": {
-      "avg": 8.415,
-      "n": 2
+      "avg": 8.103,
+      "n": 3
     },
     "Knowable Magazine": {
       "avg": 4.955,
@@ -1224,16 +1288,16 @@
       "n": 1
     },
     "Undark Magazine": {
-      "avg": 8.447,
-      "n": 3
+      "avg": 2.793,
+      "n": 4
     },
     "Greater Good": {
       "avg": 13.435,
       "n": 2
     },
     "Nautilus": {
-      "avg": 7.067,
-      "n": 3
+      "avg": 7.74,
+      "n": 5
     },
     "Fix The News": {
       "avg": 10.063,
@@ -1252,8 +1316,8 @@
       "n": 1
     },
     "BBC Ideas": {
-      "avg": 2.8,
-      "n": 1
+      "avg": 5.635,
+      "n": 2
     },
     "Platypus": {
       "avg": -1.48,
@@ -1264,8 +1328,8 @@
       "n": 1
     },
     "American Museum of Natural History": {
-      "avg": 0.72,
-      "n": 1
+      "avg": 5.195,
+      "n": 2
     },
     "Somatosphere": {
       "avg": -1.1,
@@ -1304,8 +1368,8 @@
       "n": 1
     },
     "Conversations with Tyler": {
-      "avg": 7.59,
-      "n": 2
+      "avg": 7.46,
+      "n": 3
     },
     "The Royal Institution": {
       "avg": 5.99,
@@ -1324,8 +1388,8 @@
       "n": 2
     },
     "Not Boring by Packy McCormick": {
-      "avg": 5.04,
-      "n": 1
+      "avg": 6.94,
+      "n": 2
     },
     "PBS Space Time": {
       "avg": 10.21,
@@ -1356,8 +1420,8 @@
       "n": 1
     },
     "Sprouht": {
-      "avg": 8.59,
-      "n": 1
+      "avg": 8.5,
+      "n": 2
     },
     "Special Books by Special Kids": {
       "avg": 8.55,
@@ -1368,16 +1432,16 @@
       "n": 1
     },
     "The British Academy": {
-      "avg": 14.52,
-      "n": 1
+      "avg": 9.005,
+      "n": 2
     },
     "Howtown": {
       "avg": 13.81,
       "n": 2
     },
     "Practical Engineering": {
-      "avg": 14.18,
-      "n": 1
+      "avg": 10.69,
+      "n": 2
     },
     "Santa Fe Institute": {
       "avg": 13.46,
@@ -1470,20 +1534,24 @@
     "World Wildlife Fund": {
       "avg": -15.65,
       "n": 1
+    },
+    "The Youth Sports Parenting Tribe": {
+      "avg": -10.75,
+      "n": 1
     }
   },
   "type_performance": {
     "youtube": {
       "avg": 7.422,
-      "n": 78
+      "n": 85
     },
     "rss": {
-      "avg": 7.452,
-      "n": 57
+      "avg": 7.163,
+      "n": 61
     },
     "podcast": {
-      "avg": 5.732,
-      "n": 8
+      "avg": 3.901,
+      "n": 9
     },
     "news": {
       "avg": -25.52,
@@ -1495,7 +1563,7 @@
       "Oxford Martin School": 1,
       "nature video": 1,
       "The Royal Society": 2,
-      "SciFri": 2,
+      "SciFri": 3,
       "Knowable Magazine": 2,
       "Natural History Museum": 3,
       "Ness Labs": 2,
@@ -1517,17 +1585,17 @@
       "Smithsonian": 4,
       "The Rest Is Science": 2,
       "Wendover Productions": 1,
-      "Undark Magazine": 3,
+      "Undark Magazine": 4,
       "Greater Good": 2,
-      "Nautilus": 3,
+      "Nautilus": 5,
       "Fix The News": 3,
       "Aeon | a world of ideas": 3,
       "The Rest Is History": 3,
       "Nobel Prize": 1,
-      "BBC Ideas": 1,
+      "BBC Ideas": 2,
       "Platypus": 2,
       "Becker Friedman Institute University of Chicago": 1,
-      "American Museum of Natural History": 1,
+      "American Museum of Natural History": 2,
       "Somatosphere": 1,
       "Positive News": 3,
       "Marginal REVOLUTION": 2,
@@ -1537,12 +1605,12 @@
       "Angela Collier ": 1,
       "Computerphile": 1,
       "SmarterEveryDay": 1,
-      "Conversations with Tyler": 2,
+      "Conversations with Tyler": 3,
       "The Royal Institution": 1,
       "Numberphile": 1,
       "NileRed": 1,
       "TED": 2,
-      "Not Boring by Packy McCormick": 1,
+      "Not Boring by Packy McCormick": 2,
       "PBS Space Time": 1,
       "PBS Terra": 2,
       "The Institute of Art and Ideas": 1,
@@ -1550,12 +1618,12 @@
       "Nature": 3,
       "PBS Eons": 1,
       "Stand-up Maths": 1,
-      "Sprouht": 1,
+      "Sprouht": 2,
       "Special Books by Special Kids": 2,
       "Our World in Data": 1,
-      "The British Academy": 1,
+      "The British Academy": 2,
       "Howtown": 2,
-      "Practical Engineering": 1,
+      "Practical Engineering": 2,
       "Santa Fe Institute": 1,
       "The Dissenter": 1,
       "Chris Doel": 1,
@@ -1578,16 +1646,17 @@
       "Lenore Elizabeth Mulets": 1,
       "Antica Productions, WWF-Canada": 1,
       "Thought For Today": 1,
-      "World Wildlife Fund": 1
+      "World Wildlife Fund": 1,
+      "The Youth Sports Parenting Tribe": 1
     }
   },
   "monthly_domain_counts": {
     "2026-05": {
       "historical": 20,
-      "optimism_tech": 76,
-      "optimism_health": 7,
+      "optimism_tech": 84,
+      "optimism_health": 9,
       "introspective": 5,
-      "general": 21,
+      "general": 23,
       "optimism_society": 8,
       "environmental": 3,
       "philosophical": 2,
