@@ -29,6 +29,11 @@
       "cumulative": 3.0,
       "n": 1,
       "last_signal_ms": 1779020672236
+    },
+    "The Youth Sports Parenting Tribe": {
+      "cumulative": -2.0,
+      "n": 1,
+      "last_signal_ms": 1779060349961
     }
   },
   "source_type_adjustments": {
@@ -43,6 +48,10 @@
     "youtube": {
       "cumulative": 7.0,
       "n": 4
+    },
+    "podcast": {
+      "cumulative": -2.0,
+      "n": 1
     }
   },
   "recent_signals": [
@@ -144,6 +153,15 @@
       "source_type": "youtube",
       "context": "pretty_positive",
       "timestamp_ms": 1779020672236
+    },
+    {
+      "item_id": "e6098962f5cd47dc8fc332a735be8c8a",
+      "signal": 0,
+      "signal_label": "skip",
+      "source_name": "The Youth Sports Parenting Tribe",
+      "source_type": "podcast",
+      "context": "not_interested",
+      "timestamp_ms": 1779060349961
     }
   ]
 }
