@@ -9,6 +9,11 @@
       "cumulative": -2.0,
       "n": 1,
       "last_signal_ms": 1779018404914
+    },
+    "American Museum of Natural History": {
+      "cumulative": -2.0,
+      "n": 1,
+      "last_signal_ms": 1779018430246
     }
   },
   "source_type_adjustments": {
@@ -17,6 +22,10 @@
       "n": 5
     },
     "rss": {
+      "cumulative": -2.0,
+      "n": 1
+    },
+    "youtube": {
       "cumulative": -2.0,
       "n": 1
     }
@@ -84,6 +93,15 @@
       "source_type": "rss",
       "context": "not_interested",
       "timestamp_ms": 1779018404914
+    },
+    {
+      "item_id": "CS1wMKIkGRI",
+      "signal": 0,
+      "signal_label": "skip",
+      "source_name": "American Museum of Natural History",
+      "source_type": "youtube",
+      "context": "not_interested",
+      "timestamp_ms": 1779018430246
     }
   ]
 }
