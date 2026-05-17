@@ -14,6 +14,11 @@
       "cumulative": -2.0,
       "n": 1,
       "last_signal_ms": 1779018430246
+    },
+    "BBC Ideas": {
+      "cumulative": 3.0,
+      "n": 1,
+      "last_signal_ms": 1779019159774
     }
   },
   "source_type_adjustments": {
@@ -26,8 +31,8 @@
       "n": 1
     },
     "youtube": {
-      "cumulative": -2.0,
-      "n": 1
+      "cumulative": 1.0,
+      "n": 2
     }
   },
   "recent_signals": [
@@ -102,6 +107,15 @@
       "source_type": "youtube",
       "context": "not_interested",
       "timestamp_ms": 1779018430246
+    },
+    {
+      "item_id": "NdQ8RAfItX0",
+      "signal": 2,
+      "signal_label": "fascinating",
+      "source_name": "BBC Ideas",
+      "source_type": "youtube",
+      "context": "pretty_positive",
+      "timestamp_ms": 1779019159774
     }
   ]
 }
