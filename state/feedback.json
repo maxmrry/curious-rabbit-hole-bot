@@ -24,6 +24,11 @@
       "cumulative": 3.0,
       "n": 1,
       "last_signal_ms": 1779019289183
+    },
+    "Sprouht": {
+      "cumulative": 3.0,
+      "n": 1,
+      "last_signal_ms": 1779020672236
     }
   },
   "source_type_adjustments": {
@@ -36,8 +41,8 @@
       "n": 1
     },
     "youtube": {
-      "cumulative": 4.0,
-      "n": 3
+      "cumulative": 7.0,
+      "n": 4
     }
   },
   "recent_signals": [
@@ -130,6 +135,15 @@
       "source_type": "youtube",
       "context": "pretty_positive",
       "timestamp_ms": 1779019289183
+    },
+    {
+      "item_id": "rk1ifq7u0ug",
+      "signal": 2,
+      "signal_label": "fascinating",
+      "source_name": "Sprouht",
+      "source_type": "youtube",
+      "context": "pretty_positive",
+      "timestamp_ms": 1779020672236
     }
   ]
 }
