@@ -4,12 +4,21 @@
       "cumulative": -7.0,
       "n": 5,
       "last_signal_ms": 1778279284355
+    },
+    "Undark Magazine": {
+      "cumulative": -2.0,
+      "n": 1,
+      "last_signal_ms": 1779018404914
     }
   },
   "source_type_adjustments": {
     "experience": {
       "cumulative": -7.0,
       "n": 5
+    },
+    "rss": {
+      "cumulative": -2.0,
+      "n": 1
     }
   },
   "recent_signals": [
@@ -66,6 +75,15 @@
       "source_type": "experience",
       "context": "sources_weak",
       "timestamp_ms": 1778279284355
+    },
+    {
+      "item_id": "https://undark.org/2026/05/14/opinion-scientific-moral-arguments/",
+      "signal": 0,
+      "signal_label": "skip",
+      "source_name": "Undark Magazine",
+      "source_type": "rss",
+      "context": "not_interested",
+      "timestamp_ms": 1779018404914
     }
   ]
 }
