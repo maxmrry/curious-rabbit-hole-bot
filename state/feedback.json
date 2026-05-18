@@ -39,6 +39,11 @@
       "cumulative": 1.0,
       "n": 1,
       "last_signal_ms": 1779113672328
+    },
+    "Angela Collier ": {
+      "cumulative": -2.0,
+      "n": 1,
+      "last_signal_ms": 1779113772024
     }
   },
   "source_type_adjustments": {
@@ -51,8 +56,8 @@
       "n": 2
     },
     "youtube": {
-      "cumulative": 7.0,
-      "n": 4
+      "cumulative": 5.0,
+      "n": 5
     },
     "podcast": {
       "cumulative": -2.0,
@@ -176,6 +181,15 @@
       "source_type": "rss",
       "context": "too_gloomy",
       "timestamp_ms": 1779113672328
+    },
+    {
+      "item_id": "p6Ejmhwb8Sc",
+      "signal": 0,
+      "signal_label": "skip",
+      "source_name": "Angela Collier ",
+      "source_type": "youtube",
+      "context": "not_interested",
+      "timestamp_ms": 1779113772024
     }
   ]
 }
