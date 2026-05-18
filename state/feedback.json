@@ -34,6 +34,11 @@
       "cumulative": -2.0,
       "n": 1,
       "last_signal_ms": 1779060349961
+    },
+    "Somatosphere": {
+      "cumulative": 1.0,
+      "n": 1,
+      "last_signal_ms": 1779113672328
     }
   },
   "source_type_adjustments": {
@@ -42,8 +47,8 @@
       "n": 5
     },
     "rss": {
-      "cumulative": -2.0,
-      "n": 1
+      "cumulative": -1.0,
+      "n": 2
     },
     "youtube": {
       "cumulative": 7.0,
@@ -162,6 +167,15 @@
       "source_type": "podcast",
       "context": "not_interested",
       "timestamp_ms": 1779060349961
+    },
+    {
+      "item_id": "https://somatosphere.net/the-politics-of-isolation-caste-care-and-control-amid-covid-19-in-india/",
+      "signal": -1,
+      "signal_label": "useful",
+      "source_name": "Somatosphere",
+      "source_type": "rss",
+      "context": "too_gloomy",
+      "timestamp_ms": 1779113672328
     }
   ]
 }
