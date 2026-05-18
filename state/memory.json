@@ -1044,6 +1044,71 @@
       "native_id": "https://nautil.us/new-nasa-graphic-captures-human-activity-at-night-1280853/",
       "source_type": "rss",
       "last_seen_ms": 1779003575150
+    },
+    "31eeb2a117c3e1c656d2e151321f87d589d4ea52a3fdfadb394cb308a786c3c5": {
+      "native_id": "https://somatosphere.net/the-politics-of-isolation-caste-care-and-control-amid-covid-19-in-india/",
+      "source_type": "rss",
+      "last_seen_ms": 1779094452466
+    },
+    "0163a1c5d152f845b2f89836d00bce1cfe03872fba55485b11b0caa16ca4a69d": {
+      "native_id": "-ellvM_GPWI",
+      "source_type": "youtube",
+      "last_seen_ms": 1779094452466
+    },
+    "295168b2efa8c05c194468be2e7369d316324d8557d5b99b2441ab7e8fbb45be": {
+      "native_id": "NHSxnF7mKaY",
+      "source_type": "youtube",
+      "last_seen_ms": 1779094452466
+    },
+    "0e12ed54946eb24cb26c66f0ffd8173cb422c3558c2caf7fbba266183f93d54d": {
+      "native_id": "sndPFSiR6HM",
+      "source_type": "youtube",
+      "last_seen_ms": 1779094452466
+    },
+    "c1bbe2918b846867dd27178a0f6af8e8e404bca43c52476c192bff9050dc5a55": {
+      "native_id": "YIxjFKBl5eg",
+      "source_type": "youtube",
+      "last_seen_ms": 1779094452466
+    },
+    "b9d4d61ef2d70da25003da55876e73cb1589efd458020971d269a07f7741561c": {
+      "native_id": "p6Ejmhwb8Sc",
+      "source_type": "youtube",
+      "last_seen_ms": 1779094452466
+    },
+    "78c5f8af792a5964eda0cfb0543e822052b6f8fe38014d008989911e91e59664": {
+      "native_id": "845974",
+      "source_type": "podcast",
+      "last_seen_ms": 1779094452466
+    },
+    "ff5d6b69e2bef56f3119d4890122c583714a1f7e6f42c8b23a65cc0ddb0bac38": {
+      "native_id": "8wDha-G35KA",
+      "source_type": "youtube",
+      "last_seen_ms": 1779094452466
+    },
+    "8b4a10de9e19f3decab8c9a38288405512bdb9ae4adf3746baa3e65afb6c567e": {
+      "native_id": "gAZ8foJ0qL0",
+      "source_type": "youtube",
+      "last_seen_ms": 1779094452466
+    },
+    "384cfbb6c07795d33d3887fee5bcfd6d68550832de19372ba58f7c8a39dbd398": {
+      "native_id": "https://www.positive.news/society/good-news-stories-from-week-20-of-2026/",
+      "source_type": "rss",
+      "last_seen_ms": 1779094452466
+    },
+    "2df3492d6efb508b98e3b3e79b20031bcf433f743e03168171ee7bf980e2a103": {
+      "native_id": "https://greatergood.berkeley.edu/podcasts/item/happiness_break_the_unexpected_joy_of_slow_looking",
+      "source_type": "rss",
+      "last_seen_ms": 1779094452466
+    },
+    "20fa0b601965dc2de3c1ac67ccc0ec61fbb809357add3210a1375a92a4ce2c9a": {
+      "native_id": "https://blog.castac.org/2026/05/salt-a-provocation/",
+      "source_type": "rss",
+      "last_seen_ms": 1779094452466
+    },
+    "b74a2182cf5f3872599a309ffbf8c470058e559ce6cfb3ecdf41c99e45d751a0": {
+      "native_id": "vdi3JxJpnZo",
+      "source_type": "youtube",
+      "last_seen_ms": 1779094452466
     }
   },
   "sources_health": {
@@ -1094,11 +1159,14 @@
     },
     "2026-05-17": {
       "success": true
+    },
+    "2026-05-18": {
+      "success": true
     }
   },
   "source_history": {
     "Oxford Martin School": 1777801688500,
-    "nature video": 1777801688500,
+    "nature video": 1779094452466,
     "The Royal Society": 1778310966853,
     "SciFri": 1779003575150,
     "Knowable Magazine": 1778223634799,
@@ -1123,23 +1191,23 @@
     "The Rest Is Science": 1778916260372,
     "Wendover Productions": 1777965914867,
     "Undark Magazine": 1779003575150,
-    "Greater Good": 1778572382146,
+    "Greater Good": 1779094452466,
     "Nautilus": 1779003575150,
     "Fix The News": 1778572382146,
     "Aeon | a world of ideas": 1778916260372,
     "The Rest Is History": 1778916260372,
     "Nobel Prize": 1778053394084,
     "BBC Ideas": 1779003575150,
-    "Platypus": 1778659174006,
+    "Platypus": 1779094452466,
     "Becker Friedman Institute University of Chicago": 1778053394084,
     "American Museum of Natural History": 1779003575150,
-    "Somatosphere": 1778053394084,
-    "Positive News": 1778745081628,
+    "Somatosphere": 1779094452466,
+    "Positive News": 1779094452466,
     "Marginal REVOLUTION": 1778223634799,
     "Psyche | Know Your Self": 1778659174006,
     "Sean Carroll": 1778140198142,
     "Resolution Foundation": 1778140198142,
-    "Angela Collier ": 1778140198142,
+    "Angela Collier ": 1779094452466,
     "Computerphile": 1778140198142,
     "SmarterEveryDay": 1778140198142,
     "Conversations with Tyler": 1779003575150,
@@ -1153,7 +1221,7 @@
     "The Institute of Art and Ideas": 1778310966853,
     "Adam Savage\u2019s Tested": 1778310966853,
     "Nature": 1778916260372,
-    "PBS Eons": 1778398363664,
+    "PBS Eons": 1779094452466,
     "Stand-up Maths": 1778398363664,
     "Sprouht": 1779003575150,
     "Special Books by Special Kids": 1778572382146,
@@ -1164,13 +1232,13 @@
     "Santa Fe Institute": 1778488364002,
     "The Dissenter": 1778488364002,
     "Chris Doel": 1778572382146,
-    "minutephysics": 1778745081628,
+    "minutephysics": 1779094452466,
     "World Science Festival": 1778572382146,
     "Anthropology News": 1778572382146,
     "Invisible People": 1778659174006,
     "YaleCourses": 1778659174006,
     "AsapSCIENCE": 1778659174006,
-    "Periodic Videos": 1778659174006,
+    "Periodic Videos": 1779094452466,
     "Yale Center for Emotional Intelligence": 1778659174006,
     "Brian Colburn": 1778659174006,
     "Time We Discuss": 1778659174006,
@@ -1178,13 +1246,15 @@
     "Supreme Court asks if there was a 'proper debate' in Parliament before enacting CEC/EC appointments law": 1778659174006,
     "Beau Miles": 1778659174006,
     "Sixty Symbols": 1778745081628,
-    "The New York Academy of Sciences": 1778745081628,
+    "The New York Academy of Sciences": 1779094452466,
     "Mary Garcia / SmartSeeds": 1778745081628,
     "Lenore Elizabeth Mulets": 1778745081628,
     "Antica Productions, WWF-Canada": 1778745081628,
     "Thought For Today": 1778745081628,
     "World Wildlife Fund": 1778916260372,
-    "The Youth Sports Parenting Tribe": 1779003575150
+    "The Youth Sports Parenting Tribe": 1779003575150,
+    "JSK-Studio": 1779094452466,
+    "Dr. Brenna Hicks": 1779094452466
   },
   "source_scores": {
     "Oxford Martin School": {
@@ -1192,8 +1262,8 @@
       "n": 1
     },
     "nature video": {
-      "avg": 8.46,
-      "n": 1
+      "avg": 12.235,
+      "n": 2
     },
     "The Royal Society": {
       "avg": 7.19,
@@ -1292,8 +1362,8 @@
       "n": 4
     },
     "Greater Good": {
-      "avg": 13.435,
-      "n": 2
+      "avg": 12.66,
+      "n": 3
     },
     "Nautilus": {
       "avg": 7.74,
@@ -1320,8 +1390,8 @@
       "n": 2
     },
     "Platypus": {
-      "avg": -1.48,
-      "n": 2
+      "avg": 1.81,
+      "n": 3
     },
     "Becker Friedman Institute University of Chicago": {
       "avg": -6.26,
@@ -1332,12 +1402,12 @@
       "n": 2
     },
     "Somatosphere": {
-      "avg": -1.1,
-      "n": 1
+      "avg": -8.57,
+      "n": 2
     },
     "Positive News": {
-      "avg": 10.15,
-      "n": 3
+      "avg": 10.768,
+      "n": 4
     },
     "Marginal REVOLUTION": {
       "avg": 7.14,
@@ -1356,8 +1426,8 @@
       "n": 2
     },
     "Angela Collier ": {
-      "avg": 1.31,
-      "n": 1
+      "avg": 8.305,
+      "n": 2
     },
     "Computerphile": {
       "avg": -2.37,
@@ -1412,8 +1482,8 @@
       "n": 3
     },
     "PBS Eons": {
-      "avg": 10.58,
-      "n": 1
+      "avg": 14.255,
+      "n": 2
     },
     "Stand-up Maths": {
       "avg": 9.41,
@@ -1456,8 +1526,8 @@
       "n": 1
     },
     "minutephysics": {
-      "avg": 8.87,
-      "n": 2
+      "avg": 10.59,
+      "n": 3
     },
     "World Science Festival": {
       "avg": 10.84,
@@ -1480,8 +1550,8 @@
       "n": 1
     },
     "Periodic Videos": {
-      "avg": 9.4,
-      "n": 1
+      "avg": 12.465,
+      "n": 2
     },
     "Yale Center for Emotional Intelligence": {
       "avg": 9.23,
@@ -1512,8 +1582,8 @@
       "n": 1
     },
     "The New York Academy of Sciences": {
-      "avg": 5.0,
-      "n": 1
+      "avg": 9.42,
+      "n": 2
     },
     "Mary Garcia / SmartSeeds": {
       "avg": 9.38,
@@ -1538,20 +1608,28 @@
     "The Youth Sports Parenting Tribe": {
       "avg": -10.75,
       "n": 1
+    },
+    "JSK-Studio": {
+      "avg": 16.24,
+      "n": 2
+    },
+    "Dr. Brenna Hicks": {
+      "avg": 13.54,
+      "n": 1
     }
   },
   "type_performance": {
     "youtube": {
-      "avg": 7.422,
-      "n": 85
+      "avg": 8.129,
+      "n": 93
     },
     "rss": {
-      "avg": 7.163,
-      "n": 61
+      "avg": 6.97,
+      "n": 65
     },
     "podcast": {
-      "avg": 3.901,
-      "n": 9
+      "avg": 4.865,
+      "n": 10
     },
     "news": {
       "avg": -25.52,
@@ -1561,7 +1639,7 @@
   "monthly_source_counts": {
     "2026-05": {
       "Oxford Martin School": 1,
-      "nature video": 1,
+      "nature video": 2,
       "The Royal Society": 2,
       "SciFri": 3,
       "Knowable Magazine": 2,
@@ -1586,23 +1664,23 @@
       "The Rest Is Science": 2,
       "Wendover Productions": 1,
       "Undark Magazine": 4,
-      "Greater Good": 2,
+      "Greater Good": 3,
       "Nautilus": 5,
       "Fix The News": 3,
       "Aeon | a world of ideas": 3,
       "The Rest Is History": 3,
       "Nobel Prize": 1,
       "BBC Ideas": 2,
-      "Platypus": 2,
+      "Platypus": 3,
       "Becker Friedman Institute University of Chicago": 1,
       "American Museum of Natural History": 2,
-      "Somatosphere": 1,
-      "Positive News": 3,
+      "Somatosphere": 2,
+      "Positive News": 4,
       "Marginal REVOLUTION": 2,
       "Psyche | Know Your Self": 2,
       "Sean Carroll": 1,
       "Resolution Foundation": 2,
-      "Angela Collier ": 1,
+      "Angela Collier ": 2,
       "Computerphile": 1,
       "SmarterEveryDay": 1,
       "Conversations with Tyler": 3,
@@ -1616,7 +1694,7 @@
       "The Institute of Art and Ideas": 1,
       "Adam Savage\u2019s Tested": 1,
       "Nature": 3,
-      "PBS Eons": 1,
+      "PBS Eons": 2,
       "Stand-up Maths": 1,
       "Sprouht": 2,
       "Special Books by Special Kids": 2,
@@ -1627,13 +1705,13 @@
       "Santa Fe Institute": 1,
       "The Dissenter": 1,
       "Chris Doel": 1,
-      "minutephysics": 2,
+      "minutephysics": 3,
       "World Science Festival": 1,
       "Anthropology News": 1,
       "Invisible People": 1,
       "YaleCourses": 1,
       "AsapSCIENCE": 1,
-      "Periodic Videos": 1,
+      "Periodic Videos": 2,
       "Yale Center for Emotional Intelligence": 1,
       "Brian Colburn": 1,
       "Time We Discuss": 1,
@@ -1641,23 +1719,25 @@
       "Supreme Court asks if there was a 'proper debate' in Parliament before enacting CEC/EC appointments law": 1,
       "Beau Miles": 1,
       "Sixty Symbols": 1,
-      "The New York Academy of Sciences": 1,
+      "The New York Academy of Sciences": 2,
       "Mary Garcia / SmartSeeds": 1,
       "Lenore Elizabeth Mulets": 1,
       "Antica Productions, WWF-Canada": 1,
       "Thought For Today": 1,
       "World Wildlife Fund": 1,
-      "The Youth Sports Parenting Tribe": 1
+      "The Youth Sports Parenting Tribe": 1,
+      "JSK-Studio": 2,
+      "Dr. Brenna Hicks": 1
     }
   },
   "monthly_domain_counts": {
     "2026-05": {
       "historical": 20,
-      "optimism_tech": 84,
-      "optimism_health": 9,
-      "introspective": 5,
-      "general": 23,
-      "optimism_society": 8,
+      "optimism_tech": 92,
+      "optimism_health": 10,
+      "introspective": 6,
+      "general": 25,
+      "optimism_society": 9,
       "environmental": 3,
       "philosophical": 2,
       "economic": 2
