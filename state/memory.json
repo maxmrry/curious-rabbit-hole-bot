@@ -1109,6 +1109,61 @@
       "native_id": "vdi3JxJpnZo",
       "source_type": "youtube",
       "last_seen_ms": 1779094452466
+    },
+    "42218136a7d30916c5c34725bda39bc73841a14b37965a157a8ab811cb556c8c": {
+      "native_id": "e443b1e206654630ab24dd4c6368ef3b",
+      "source_type": "podcast",
+      "last_seen_ms": 1779179809816
+    },
+    "bac059a926de4b438208e7b59e9ac55495e55403b00a799261951635f240cd88": {
+      "native_id": "cATtVfQEhyM",
+      "source_type": "youtube",
+      "last_seen_ms": 1779179809816
+    },
+    "06ec769a487bdde195eaacc62d9a63a79096a3ffe46f55f52866b8287300e27f": {
+      "native_id": "Jp26Ivxu5es",
+      "source_type": "youtube",
+      "last_seen_ms": 1779179809816
+    },
+    "b8c9f9ba1adb7fcbce6145e141bd73ee12402ddad067112273a028b40fc6790a": {
+      "native_id": "sFBdDFQZ52w",
+      "source_type": "youtube",
+      "last_seen_ms": 1779179809816
+    },
+    "48bb44c13a6a5dedd20172e39a5c44dee931505c29de18e466917f3d979b77fc": {
+      "native_id": "CHTUOHDzOlM",
+      "source_type": "youtube",
+      "last_seen_ms": 1779179809816
+    },
+    "760aed0ee9a40326d19177ea020a8b77769b2c079d6b459e9a2d58c0a7c96824": {
+      "native_id": "QfUb5MEAOXA",
+      "source_type": "youtube",
+      "last_seen_ms": 1779179809816
+    },
+    "626f1f250e8156c0ed8aaa619e68efdd4bdcd99f7a4db9c7b5490e5ab947a60b": {
+      "native_id": "1pB2HI6IF1E",
+      "source_type": "youtube",
+      "last_seen_ms": 1779179809816
+    },
+    "d2c240f714ffc935887dd9fe1fde389d350c5045e3223c842b75be7fa7ce587a": {
+      "native_id": "https://worksinprogress.co/issue/whos-afraid-of-artificial-flavors/",
+      "source_type": "rss",
+      "last_seen_ms": 1779179809816
+    },
+    "916d8c6b06ddd6d9d0daadd1aeb748f79ce43af669866595dc0f5c9dd8f1e4fe": {
+      "native_id": "https://psyche.co/guides/how-to-come-back-to-your-senses",
+      "source_type": "rss",
+      "last_seen_ms": 1779179809816
+    },
+    "80ad71d83ba29baeb20214b3ce3cba4d7154b1706a1e13b7aedcacce17413a8f": {
+      "native_id": "https://www.notboring.co/p/riding-the-leopard",
+      "source_type": "rss",
+      "last_seen_ms": 1779179809816
+    },
+    "f2e1b55d55155bb21f5b6c324f300a63d8bf3dc31340d01190a046ec3bcda704": {
+      "native_id": "qQmfXVE6W-I",
+      "source_type": "youtube",
+      "last_seen_ms": 1779179809816
     }
   },
   "sources_health": {
@@ -1162,6 +1217,9 @@
     },
     "2026-05-18": {
       "success": true
+    },
+    "2026-05-19": {
+      "success": true
     }
   },
   "source_history": {
@@ -1178,7 +1236,7 @@
     "Dr Ben Miles": 1778488364002,
     "3Blue1Brown": 1778916260372,
     "TED-Ed": 1778488364002,
-    "Works in Progress RSS Feed": 1778745081628,
+    "Works in Progress RSS Feed": 1779179809816,
     "Closer To Truth": 1777881244701,
     "The Leakey Foundation": 1778398363664,
     "Quanta Magazine": 1778916260372,
@@ -1197,15 +1255,15 @@
     "Aeon | a world of ideas": 1778916260372,
     "The Rest Is History": 1778916260372,
     "Nobel Prize": 1778053394084,
-    "BBC Ideas": 1779003575150,
+    "BBC Ideas": 1779179809816,
     "Platypus": 1779094452466,
     "Becker Friedman Institute University of Chicago": 1778053394084,
-    "American Museum of Natural History": 1779003575150,
+    "American Museum of Natural History": 1779179809816,
     "Somatosphere": 1779094452466,
     "Positive News": 1779094452466,
     "Marginal REVOLUTION": 1778223634799,
-    "Psyche | Know Your Self": 1778659174006,
-    "Sean Carroll": 1778140198142,
+    "Psyche | Know Your Self": 1779179809816,
+    "Sean Carroll": 1779179809816,
     "Resolution Foundation": 1778140198142,
     "Angela Collier ": 1779094452466,
     "Computerphile": 1778140198142,
@@ -1215,16 +1273,16 @@
     "Numberphile": 1778223634799,
     "NileRed": 1778223634799,
     "TED": 1778745081628,
-    "Not Boring by Packy McCormick": 1779003575150,
-    "PBS Space Time": 1778310966853,
+    "Not Boring by Packy McCormick": 1779179809816,
+    "PBS Space Time": 1779179809816,
     "PBS Terra": 1778572382146,
-    "The Institute of Art and Ideas": 1778310966853,
+    "The Institute of Art and Ideas": 1779179809816,
     "Adam Savage\u2019s Tested": 1778310966853,
     "Nature": 1778916260372,
     "PBS Eons": 1779094452466,
     "Stand-up Maths": 1778398363664,
     "Sprouht": 1779003575150,
-    "Special Books by Special Kids": 1778572382146,
+    "Special Books by Special Kids": 1779179809816,
     "Our World in Data": 1778488364002,
     "The British Academy": 1779003575150,
     "Howtown": 1778488364002,
@@ -1254,7 +1312,9 @@
     "World Wildlife Fund": 1778916260372,
     "The Youth Sports Parenting Tribe": 1779003575150,
     "JSK-Studio": 1779094452466,
-    "Dr. Brenna Hicks": 1779094452466
+    "Dr. Brenna Hicks": 1779094452466,
+    "Instant Genius": 1779179809816,
+    "ColdFusion": 1779179809816
   },
   "source_scores": {
     "Oxford Martin School": {
@@ -1310,8 +1370,8 @@
       "n": 2
     },
     "Works in Progress RSS Feed": {
-      "avg": 6.402,
-      "n": 4
+      "avg": 7.318,
+      "n": 5
     },
     "Closer To Truth": {
       "avg": 3.79,
@@ -1386,8 +1446,8 @@
       "n": 1
     },
     "BBC Ideas": {
-      "avg": 5.635,
-      "n": 2
+      "avg": 7.353,
+      "n": 3
     },
     "Platypus": {
       "avg": 1.81,
@@ -1398,8 +1458,8 @@
       "n": 1
     },
     "American Museum of Natural History": {
-      "avg": 5.195,
-      "n": 2
+      "avg": 4.547,
+      "n": 3
     },
     "Somatosphere": {
       "avg": -8.57,
@@ -1414,12 +1474,12 @@
       "n": 2
     },
     "Psyche | Know Your Self": {
-      "avg": 9.89,
-      "n": 2
+      "avg": 9.217,
+      "n": 3
     },
     "Sean Carroll": {
-      "avg": 6.49,
-      "n": 1
+      "avg": 7.595,
+      "n": 2
     },
     "Resolution Foundation": {
       "avg": -4.335,
@@ -1458,20 +1518,20 @@
       "n": 2
     },
     "Not Boring by Packy McCormick": {
-      "avg": 6.94,
-      "n": 2
+      "avg": 7.073,
+      "n": 3
     },
     "PBS Space Time": {
-      "avg": 10.21,
-      "n": 1
+      "avg": 11.995,
+      "n": 2
     },
     "PBS Terra": {
       "avg": 8.955,
       "n": 2
     },
     "The Institute of Art and Ideas": {
-      "avg": 9.13,
-      "n": 1
+      "avg": 8.23,
+      "n": 2
     },
     "Adam Savage\u2019s Tested": {
       "avg": 9.09,
@@ -1494,8 +1554,8 @@
       "n": 2
     },
     "Special Books by Special Kids": {
-      "avg": 8.55,
-      "n": 2
+      "avg": 10.747,
+      "n": 3
     },
     "Our World in Data": {
       "avg": 12.51,
@@ -1616,20 +1676,28 @@
     "Dr. Brenna Hicks": {
       "avg": 13.54,
       "n": 1
+    },
+    "Instant Genius": {
+      "avg": 15.13,
+      "n": 1
+    },
+    "ColdFusion": {
+      "avg": 4.04,
+      "n": 1
     }
   },
   "type_performance": {
     "youtube": {
-      "avg": 8.129,
-      "n": 93
+      "avg": 8.19,
+      "n": 100
     },
     "rss": {
-      "avg": 6.97,
-      "n": 65
+      "avg": 7.048,
+      "n": 68
     },
     "podcast": {
-      "avg": 4.865,
-      "n": 10
+      "avg": 5.798,
+      "n": 11
     },
     "news": {
       "avg": -25.52,
@@ -1651,7 +1719,7 @@
       "Dr Ben Miles": 2,
       "3Blue1Brown": 2,
       "TED-Ed": 2,
-      "Works in Progress RSS Feed": 4,
+      "Works in Progress RSS Feed": 5,
       "Closer To Truth": 1,
       "The Leakey Foundation": 3,
       "Quanta Magazine": 4,
@@ -1670,15 +1738,15 @@
       "Aeon | a world of ideas": 3,
       "The Rest Is History": 3,
       "Nobel Prize": 1,
-      "BBC Ideas": 2,
+      "BBC Ideas": 3,
       "Platypus": 3,
       "Becker Friedman Institute University of Chicago": 1,
-      "American Museum of Natural History": 2,
+      "American Museum of Natural History": 3,
       "Somatosphere": 2,
       "Positive News": 4,
       "Marginal REVOLUTION": 2,
-      "Psyche | Know Your Self": 2,
-      "Sean Carroll": 1,
+      "Psyche | Know Your Self": 3,
+      "Sean Carroll": 2,
       "Resolution Foundation": 2,
       "Angela Collier ": 2,
       "Computerphile": 1,
@@ -1688,16 +1756,16 @@
       "Numberphile": 1,
       "NileRed": 1,
       "TED": 2,
-      "Not Boring by Packy McCormick": 2,
-      "PBS Space Time": 1,
+      "Not Boring by Packy McCormick": 3,
+      "PBS Space Time": 2,
       "PBS Terra": 2,
-      "The Institute of Art and Ideas": 1,
+      "The Institute of Art and Ideas": 2,
       "Adam Savage\u2019s Tested": 1,
       "Nature": 3,
       "PBS Eons": 2,
       "Stand-up Maths": 1,
       "Sprouht": 2,
-      "Special Books by Special Kids": 2,
+      "Special Books by Special Kids": 3,
       "Our World in Data": 1,
       "The British Academy": 2,
       "Howtown": 2,
@@ -1727,20 +1795,22 @@
       "World Wildlife Fund": 1,
       "The Youth Sports Parenting Tribe": 1,
       "JSK-Studio": 2,
-      "Dr. Brenna Hicks": 1
+      "Dr. Brenna Hicks": 1,
+      "Instant Genius": 1,
+      "ColdFusion": 1
     }
   },
   "monthly_domain_counts": {
     "2026-05": {
-      "historical": 20,
-      "optimism_tech": 92,
-      "optimism_health": 10,
-      "introspective": 6,
-      "general": 25,
+      "historical": 22,
+      "optimism_tech": 96,
+      "optimism_health": 11,
+      "introspective": 7,
+      "general": 27,
       "optimism_society": 9,
       "environmental": 3,
       "philosophical": 2,
-      "economic": 2
+      "economic": 3
     }
   }
 }
