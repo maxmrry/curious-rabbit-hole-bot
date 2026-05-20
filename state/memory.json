@@ -1164,6 +1164,66 @@
       "native_id": "qQmfXVE6W-I",
       "source_type": "youtube",
       "last_seen_ms": 1779179809816
+    },
+    "bb83c56696f0a8904f1528b66a06db7874774432a97f8793b799ef05cc98f00e": {
+      "native_id": "DWLcmq_DiaA",
+      "source_type": "youtube",
+      "last_seen_ms": 1779266107404
+    },
+    "f32c281169fda00e68fb10167eacf7a3df6d1c928253907abefc4c406596c24a": {
+      "native_id": "XIf83okkgiU",
+      "source_type": "youtube",
+      "last_seen_ms": 1779266107404
+    },
+    "91130eeb086d6a48b9b355b70cb6dc9523881a1620f7f45e159e50d202beca43": {
+      "native_id": "jytAQWCc_TI",
+      "source_type": "youtube",
+      "last_seen_ms": 1779266107404
+    },
+    "b9c18fc7013319459ccdf4f2acd8f37bccbeab42d5723747222953a008131b9a": {
+      "native_id": "4Ba-OKPbqJU",
+      "source_type": "youtube",
+      "last_seen_ms": 1779266107404
+    },
+    "5ba0cb2fdfdd7d24a4139419e45a0acc8f2fdc81bb16068d5a76d46e48f95123": {
+      "native_id": "LpJT_VLxUpk",
+      "source_type": "youtube",
+      "last_seen_ms": 1779266107404
+    },
+    "2f1821a39736096cfc987342592c431c7d7e24bcf077a6fd758431e03c57813d": {
+      "native_id": "sNov-SUyxNA",
+      "source_type": "youtube",
+      "last_seen_ms": 1779266107404
+    },
+    "1a6a7894ff4484726cb12104e6d6b469a204bd17760e26b096cc9944633f1354": {
+      "native_id": "1184818",
+      "source_type": "podcast",
+      "last_seen_ms": 1779266107404
+    },
+    "eefc2399d81985ea10b07f393892208cd75264484661f2edd3edad661bd47632": {
+      "native_id": "517662",
+      "source_type": "podcast",
+      "last_seen_ms": 1779266107404
+    },
+    "33e2fc186b5289fa6b92365e1f40a9f46382eed2460d4da24c2d768bf0c60a7c": {
+      "native_id": "L49CnTcV04w",
+      "source_type": "youtube",
+      "last_seen_ms": 1779266107404
+    },
+    "8a9f6e1804ca5f736312010a8851a9ab7db846f709285bc1a8051917696ad6b3": {
+      "native_id": "https://marginalrevolution.com/marginalrevolution/2026/05/old-space-policy-vs-new-space-policy.html",
+      "source_type": "rss",
+      "last_seen_ms": 1779266107404
+    },
+    "01d02910686239d70e1e6e24175da74d88f321494b3ece69235086f1ecfc7b70": {
+      "native_id": "https://www.yesmagazine.org/issues/2026/03/16/what-we-do-together-holds-us-together",
+      "source_type": "rss",
+      "last_seen_ms": 1779266107404
+    },
+    "080f71abbc5db9b260c45b7da8301f38e2b8a98bda328d0d7919d1c489e8cf76": {
+      "native_id": "8vCgNB6osSs",
+      "source_type": "youtube",
+      "last_seen_ms": 1779266107404
     }
   },
   "sources_health": {
@@ -1220,20 +1280,23 @@
     },
     "2026-05-19": {
       "success": true
+    },
+    "2026-05-20": {
+      "success": true
     }
   },
   "source_history": {
     "Oxford Martin School": 1777801688500,
     "nature video": 1779094452466,
     "The Royal Society": 1778310966853,
-    "SciFri": 1779003575150,
+    "SciFri": 1779266107404,
     "Knowable Magazine": 1778223634799,
     "Natural History Museum": 1778916260372,
     "Ness Labs": 1778223634799,
     "Experimental History": 1777801688500,
     "NOEMA": 1778659174006,
     "LSE": 1777881244701,
-    "Dr Ben Miles": 1778488364002,
+    "Dr Ben Miles": 1779266107404,
     "3Blue1Brown": 1778916260372,
     "TED-Ed": 1778488364002,
     "Works in Progress RSS Feed": 1779179809816,
@@ -1261,7 +1324,7 @@
     "American Museum of Natural History": 1779179809816,
     "Somatosphere": 1779094452466,
     "Positive News": 1779094452466,
-    "Marginal REVOLUTION": 1778223634799,
+    "Marginal REVOLUTION": 1779266107404,
     "Psyche | Know Your Self": 1779179809816,
     "Sean Carroll": 1779179809816,
     "Resolution Foundation": 1778140198142,
@@ -1269,10 +1332,10 @@
     "Computerphile": 1778140198142,
     "SmarterEveryDay": 1778140198142,
     "Conversations with Tyler": 1779003575150,
-    "The Royal Institution": 1778223634799,
+    "The Royal Institution": 1779266107404,
     "Numberphile": 1778223634799,
     "NileRed": 1778223634799,
-    "TED": 1778745081628,
+    "TED": 1779266107404,
     "Not Boring by Packy McCormick": 1779179809816,
     "PBS Space Time": 1779179809816,
     "PBS Terra": 1778572382146,
@@ -1286,7 +1349,7 @@
     "Our World in Data": 1778488364002,
     "The British Academy": 1779003575150,
     "Howtown": 1778488364002,
-    "Practical Engineering": 1779003575150,
+    "Practical Engineering": 1779266107404,
     "Santa Fe Institute": 1778488364002,
     "The Dissenter": 1778488364002,
     "Chris Doel": 1778572382146,
@@ -1295,7 +1358,7 @@
     "Anthropology News": 1778572382146,
     "Invisible People": 1778659174006,
     "YaleCourses": 1778659174006,
-    "AsapSCIENCE": 1778659174006,
+    "AsapSCIENCE": 1779266107404,
     "Periodic Videos": 1779094452466,
     "Yale Center for Emotional Intelligence": 1778659174006,
     "Brian Colburn": 1778659174006,
@@ -1311,10 +1374,13 @@
     "Thought For Today": 1778745081628,
     "World Wildlife Fund": 1778916260372,
     "The Youth Sports Parenting Tribe": 1779003575150,
-    "JSK-Studio": 1779094452466,
+    "JSK-Studio": 1779266107404,
     "Dr. Brenna Hicks": 1779094452466,
     "Instant Genius": 1779179809816,
-    "ColdFusion": 1779179809816
+    "ColdFusion": 1779179809816,
+    "The Craftsmanship Initiative": 1779266107404,
+    "The Makery Network": 1779266107404,
+    "YES! Magazine": 1779266107404
   },
   "source_scores": {
     "Oxford Martin School": {
@@ -1330,8 +1396,8 @@
       "n": 2
     },
     "SciFri": {
-      "avg": 8.103,
-      "n": 3
+      "avg": 8.76,
+      "n": 4
     },
     "Knowable Magazine": {
       "avg": 4.955,
@@ -1358,8 +1424,8 @@
       "n": 1
     },
     "Dr Ben Miles": {
-      "avg": 13.31,
-      "n": 2
+      "avg": 13.373,
+      "n": 3
     },
     "3Blue1Brown": {
       "avg": 6.965,
@@ -1470,8 +1536,8 @@
       "n": 4
     },
     "Marginal REVOLUTION": {
-      "avg": 7.14,
-      "n": 2
+      "avg": 8.337,
+      "n": 3
     },
     "Psyche | Know Your Self": {
       "avg": 9.217,
@@ -1502,8 +1568,8 @@
       "n": 3
     },
     "The Royal Institution": {
-      "avg": 5.99,
-      "n": 1
+      "avg": 13.163,
+      "n": 3
     },
     "Numberphile": {
       "avg": 5.16,
@@ -1514,8 +1580,8 @@
       "n": 1
     },
     "TED": {
-      "avg": 6.265,
-      "n": 2
+      "avg": 8.977,
+      "n": 3
     },
     "Not Boring by Packy McCormick": {
       "avg": 7.073,
@@ -1570,8 +1636,8 @@
       "n": 2
     },
     "Practical Engineering": {
-      "avg": 10.69,
-      "n": 2
+      "avg": 6.017,
+      "n": 3
     },
     "Santa Fe Institute": {
       "avg": 13.46,
@@ -1606,8 +1672,8 @@
       "n": 1
     },
     "AsapSCIENCE": {
-      "avg": 9.52,
-      "n": 1
+      "avg": 12.81,
+      "n": 2
     },
     "Periodic Videos": {
       "avg": 12.465,
@@ -1670,8 +1736,8 @@
       "n": 1
     },
     "JSK-Studio": {
-      "avg": 16.24,
-      "n": 2
+      "avg": 14.51,
+      "n": 3
     },
     "Dr. Brenna Hicks": {
       "avg": 13.54,
@@ -1684,20 +1750,32 @@
     "ColdFusion": {
       "avg": 4.04,
       "n": 1
+    },
+    "The Craftsmanship Initiative": {
+      "avg": 15.8,
+      "n": 1
+    },
+    "The Makery Network": {
+      "avg": 15.15,
+      "n": 1
+    },
+    "YES! Magazine": {
+      "avg": 0.52,
+      "n": 1
     }
   },
   "type_performance": {
     "youtube": {
-      "avg": 8.19,
+      "avg": 8.486,
       "n": 100
     },
     "rss": {
-      "avg": 7.048,
-      "n": 68
+      "avg": 7.007,
+      "n": 70
     },
     "podcast": {
-      "avg": 5.798,
-      "n": 11
+      "avg": 7.286,
+      "n": 13
     },
     "news": {
       "avg": -25.52,
@@ -1709,14 +1787,14 @@
       "Oxford Martin School": 1,
       "nature video": 2,
       "The Royal Society": 2,
-      "SciFri": 3,
+      "SciFri": 4,
       "Knowable Magazine": 2,
       "Natural History Museum": 3,
       "Ness Labs": 2,
       "Experimental History": 1,
       "NOEMA": 3,
       "LSE": 1,
-      "Dr Ben Miles": 2,
+      "Dr Ben Miles": 3,
       "3Blue1Brown": 2,
       "TED-Ed": 2,
       "Works in Progress RSS Feed": 5,
@@ -1744,7 +1822,7 @@
       "American Museum of Natural History": 3,
       "Somatosphere": 2,
       "Positive News": 4,
-      "Marginal REVOLUTION": 2,
+      "Marginal REVOLUTION": 3,
       "Psyche | Know Your Self": 3,
       "Sean Carroll": 2,
       "Resolution Foundation": 2,
@@ -1752,10 +1830,10 @@
       "Computerphile": 1,
       "SmarterEveryDay": 1,
       "Conversations with Tyler": 3,
-      "The Royal Institution": 1,
+      "The Royal Institution": 3,
       "Numberphile": 1,
       "NileRed": 1,
-      "TED": 2,
+      "TED": 3,
       "Not Boring by Packy McCormick": 3,
       "PBS Space Time": 2,
       "PBS Terra": 2,
@@ -1769,7 +1847,7 @@
       "Our World in Data": 1,
       "The British Academy": 2,
       "Howtown": 2,
-      "Practical Engineering": 2,
+      "Practical Engineering": 3,
       "Santa Fe Institute": 1,
       "The Dissenter": 1,
       "Chris Doel": 1,
@@ -1778,7 +1856,7 @@
       "Anthropology News": 1,
       "Invisible People": 1,
       "YaleCourses": 1,
-      "AsapSCIENCE": 1,
+      "AsapSCIENCE": 2,
       "Periodic Videos": 2,
       "Yale Center for Emotional Intelligence": 1,
       "Brian Colburn": 1,
@@ -1794,23 +1872,26 @@
       "Thought For Today": 1,
       "World Wildlife Fund": 1,
       "The Youth Sports Parenting Tribe": 1,
-      "JSK-Studio": 2,
+      "JSK-Studio": 3,
       "Dr. Brenna Hicks": 1,
       "Instant Genius": 1,
-      "ColdFusion": 1
+      "ColdFusion": 1,
+      "The Craftsmanship Initiative": 1,
+      "The Makery Network": 1,
+      "YES! Magazine": 1
     }
   },
   "monthly_domain_counts": {
     "2026-05": {
       "historical": 22,
-      "optimism_tech": 96,
-      "optimism_health": 11,
+      "optimism_tech": 103,
+      "optimism_health": 12,
       "introspective": 7,
-      "general": 27,
-      "optimism_society": 9,
+      "general": 28,
+      "optimism_society": 10,
       "environmental": 3,
       "philosophical": 2,
-      "economic": 3
+      "economic": 5
     }
   }
 }
