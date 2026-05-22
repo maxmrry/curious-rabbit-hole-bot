@@ -1284,6 +1284,66 @@
       "native_id": "OKSOaGf7pFM",
       "source_type": "youtube",
       "last_seen_ms": 1779352934769
+    },
+    "33c2e09fdd1719a431df3e4599d9cb71c7faeaaf968dd67d44471a7a43889a49": {
+      "native_id": "https://greatergood.berkeley.edu/article/item/why_you_need_rituals_in_your_life",
+      "source_type": "rss",
+      "last_seen_ms": 1779438862601
+    },
+    "c5102312a5ed7702a46ef8a9f56e28e436294ecb2e07772bbeabd092455e7d60": {
+      "native_id": "eOOsjFSL-Xo",
+      "source_type": "youtube",
+      "last_seen_ms": 1779438862601
+    },
+    "722556162080aedea25eb0703d60d9dc1e40e96a1e09e3c251a992dc55939dc0": {
+      "native_id": "YBaBlWv5klk",
+      "source_type": "youtube",
+      "last_seen_ms": 1779438862601
+    },
+    "9db5bf557c5dabe806c8b34add7071c1251882073d82657bc8d3d97150015d39": {
+      "native_id": "BO95642q1sc",
+      "source_type": "youtube",
+      "last_seen_ms": 1779438862601
+    },
+    "e8b0aa955573ccbe3499ebede813136ca8c601f965c5b5d9cc6c201c03532f3b": {
+      "native_id": "iklMZc5drcg",
+      "source_type": "youtube",
+      "last_seen_ms": 1779438862601
+    },
+    "0527f99f19a2093025c5e51a65ffe12a9ef2ff1cf8344b28fe6a4462a6df0d9d": {
+      "native_id": "K3hW-LCBy4A",
+      "source_type": "youtube",
+      "last_seen_ms": 1779438862601
+    },
+    "19123dd0fc368166f0709f6a804d0d392d0557430934c39801b7fc8bdd112792": {
+      "native_id": "https://worksinprogress.co/issue/losing-my-religion/",
+      "source_type": "rss",
+      "last_seen_ms": 1779438862601
+    },
+    "adec74ae42166742eecbb84898ef8416d9a2b22665a6582e43d686826a4b939b": {
+      "native_id": "1RerO62mSVQ",
+      "source_type": "youtube",
+      "last_seen_ms": 1779438862601
+    },
+    "4fa05d7ba5276353eef3d7f9180c82667f64c183d1fe84b74588e8c60665ba4b": {
+      "native_id": "ZHXt0-_gSj4",
+      "source_type": "youtube",
+      "last_seen_ms": 1779438862601
+    },
+    "506a471d42e17bfb70104210b5dd7f83dc407bc6f5160631de9e788a8a663284": {
+      "native_id": "https://www.nature.com/articles/d41586-026-01608-3",
+      "source_type": "rss",
+      "last_seen_ms": 1779438862601
+    },
+    "6c5b92e1639e845999251d6b8b1efc9af4d3e6c6bfaa6acca706a90bf9ac820f": {
+      "native_id": "https://www.notboring.co/p/cowboy-space-corporation",
+      "source_type": "rss",
+      "last_seen_ms": 1779438862601
+    },
+    "764cb3b70080ff8c16f31e916e449ecb55d11b716a1aa6450dfccc3a97ddf2d7": {
+      "native_id": "https://www.positive.news/society/youth/the-young-traders-reviving-britains-market-stalls/",
+      "source_type": "rss",
+      "last_seen_ms": 1779438862601
     }
   },
   "sources_health": {
@@ -1346,12 +1406,15 @@
     },
     "2026-05-21": {
       "success": true
+    },
+    "2026-05-22": {
+      "success": true
     }
   },
   "source_history": {
     "Oxford Martin School": 1777801688500,
     "nature video": 1779094452466,
-    "The Royal Society": 1778310966853,
+    "The Royal Society": 1779438862601,
     "SciFri": 1779266107404,
     "Knowable Magazine": 1778223634799,
     "Natural History Museum": 1778916260372,
@@ -1360,9 +1423,9 @@
     "NOEMA": 1779352934769,
     "LSE": 1777881244701,
     "Dr Ben Miles": 1779266107404,
-    "3Blue1Brown": 1779352934769,
+    "3Blue1Brown": 1779438862601,
     "TED-Ed": 1778488364002,
-    "Works in Progress RSS Feed": 1779179809816,
+    "Works in Progress RSS Feed": 1779438862601,
     "Closer To Truth": 1777881244701,
     "The Leakey Foundation": 1779352934769,
     "Quanta Magazine": 1778916260372,
@@ -1375,7 +1438,7 @@
     "The Rest Is Science": 1778916260372,
     "Wendover Productions": 1777965914867,
     "Undark Magazine": 1779003575150,
-    "Greater Good": 1779094452466,
+    "Greater Good": 1779438862601,
     "Nautilus": 1779003575150,
     "Fix The News": 1779352934769,
     "Aeon | a world of ideas": 1778916260372,
@@ -1386,7 +1449,7 @@
     "Becker Friedman Institute University of Chicago": 1778053394084,
     "American Museum of Natural History": 1779179809816,
     "Somatosphere": 1779094452466,
-    "Positive News": 1779094452466,
+    "Positive News": 1779438862601,
     "Marginal REVOLUTION": 1779266107404,
     "Psyche | Know Your Self": 1779179809816,
     "Sean Carroll": 1779352934769,
@@ -1399,19 +1462,19 @@
     "Numberphile": 1778223634799,
     "NileRed": 1778223634799,
     "TED": 1779266107404,
-    "Not Boring by Packy McCormick": 1779179809816,
+    "Not Boring by Packy McCormick": 1779438862601,
     "PBS Space Time": 1779179809816,
     "PBS Terra": 1778572382146,
     "The Institute of Art and Ideas": 1779179809816,
     "Adam Savage\u2019s Tested": 1778310966853,
-    "Nature": 1778916260372,
+    "Nature": 1779438862601,
     "PBS Eons": 1779094452466,
     "Stand-up Maths": 1778398363664,
-    "Sprouht": 1779352934769,
+    "Sprouht": 1779438862601,
     "Special Books by Special Kids": 1779179809816,
     "Our World in Data": 1778488364002,
     "The British Academy": 1779003575150,
-    "Howtown": 1778488364002,
+    "Howtown": 1779438862601,
     "Practical Engineering": 1779266107404,
     "Santa Fe Institute": 1778488364002,
     "The Dissenter": 1778488364002,
@@ -1428,8 +1491,8 @@
     "Time We Discuss": 1778659174006,
     "Backstage at the Vinyl Cafe": 1778659174006,
     "Supreme Court asks if there was a 'proper debate' in Parliament before enacting CEC/EC appointments law": 1778659174006,
-    "Beau Miles": 1778659174006,
-    "Sixty Symbols": 1778745081628,
+    "Beau Miles": 1779438862601,
+    "Sixty Symbols": 1779438862601,
     "The New York Academy of Sciences": 1779094452466,
     "Mary Garcia / SmartSeeds": 1778745081628,
     "Lenore Elizabeth Mulets": 1778745081628,
@@ -1446,7 +1509,8 @@
     "YES! Magazine": 1779266107404,
     "BBC World Service": 1779352934769,
     "Drug Discovery World (DDW)": 1779352934769,
-    "The Alan Turing Institute": 1779352934769
+    "The Alan Turing Institute": 1779352934769,
+    "Mind & Life Institute": 1779438862601
   },
   "source_scores": {
     "Oxford Martin School": {
@@ -1458,8 +1522,8 @@
       "n": 2
     },
     "The Royal Society": {
-      "avg": 7.19,
-      "n": 2
+      "avg": 8.143,
+      "n": 3
     },
     "SciFri": {
       "avg": 8.76,
@@ -1494,16 +1558,16 @@
       "n": 3
     },
     "3Blue1Brown": {
-      "avg": 6.643,
-      "n": 3
+      "avg": 0.895,
+      "n": 4
     },
     "TED-Ed": {
       "avg": 11.31,
       "n": 2
     },
     "Works in Progress RSS Feed": {
-      "avg": 7.318,
-      "n": 5
+      "avg": 6.565,
+      "n": 6
     },
     "Closer To Truth": {
       "avg": 3.79,
@@ -1554,8 +1618,8 @@
       "n": 4
     },
     "Greater Good": {
-      "avg": 12.66,
-      "n": 3
+      "avg": 10.27,
+      "n": 4
     },
     "Nautilus": {
       "avg": 7.74,
@@ -1598,8 +1662,8 @@
       "n": 2
     },
     "Positive News": {
-      "avg": 10.768,
-      "n": 4
+      "avg": 10.204,
+      "n": 5
     },
     "Marginal REVOLUTION": {
       "avg": 8.337,
@@ -1650,8 +1714,8 @@
       "n": 3
     },
     "Not Boring by Packy McCormick": {
-      "avg": 7.073,
-      "n": 3
+      "avg": 3.805,
+      "n": 4
     },
     "PBS Space Time": {
       "avg": 11.995,
@@ -1670,8 +1734,8 @@
       "n": 1
     },
     "Nature": {
-      "avg": 1.243,
-      "n": 3
+      "avg": 2.62,
+      "n": 4
     },
     "PBS Eons": {
       "avg": 14.255,
@@ -1682,8 +1746,8 @@
       "n": 1
     },
     "Sprouht": {
-      "avg": 8.75,
-      "n": 3
+      "avg": 3.175,
+      "n": 4
     },
     "Special Books by Special Kids": {
       "avg": 10.747,
@@ -1698,8 +1762,8 @@
       "n": 2
     },
     "Howtown": {
-      "avg": 13.81,
-      "n": 2
+      "avg": 8.84,
+      "n": 3
     },
     "Practical Engineering": {
       "avg": 6.017,
@@ -1766,12 +1830,12 @@
       "n": 1
     },
     "Beau Miles": {
-      "avg": 8.33,
-      "n": 1
+      "avg": 8.89,
+      "n": 2
     },
     "Sixty Symbols": {
-      "avg": 10.49,
-      "n": 1
+      "avg": 10.22,
+      "n": 2
     },
     "The New York Academy of Sciences": {
       "avg": 9.42,
@@ -1840,16 +1904,20 @@
     "The Alan Turing Institute": {
       "avg": 9.7,
       "n": 1
+    },
+    "Mind & Life Institute": {
+      "avg": 1.05,
+      "n": 1
     }
   },
   "type_performance": {
     "youtube": {
-      "avg": 8.356,
+      "avg": 7.777,
       "n": 100
     },
     "rss": {
-      "avg": 7.022,
-      "n": 74
+      "avg": 6.762,
+      "n": 79
     },
     "podcast": {
       "avg": 6.578,
@@ -1864,7 +1932,7 @@
     "2026-05": {
       "Oxford Martin School": 1,
       "nature video": 2,
-      "The Royal Society": 2,
+      "The Royal Society": 3,
       "SciFri": 4,
       "Knowable Magazine": 2,
       "Natural History Museum": 3,
@@ -1873,9 +1941,9 @@
       "NOEMA": 4,
       "LSE": 1,
       "Dr Ben Miles": 3,
-      "3Blue1Brown": 3,
+      "3Blue1Brown": 4,
       "TED-Ed": 2,
-      "Works in Progress RSS Feed": 5,
+      "Works in Progress RSS Feed": 6,
       "Closer To Truth": 1,
       "The Leakey Foundation": 4,
       "Quanta Magazine": 4,
@@ -1888,7 +1956,7 @@
       "The Rest Is Science": 2,
       "Wendover Productions": 1,
       "Undark Magazine": 4,
-      "Greater Good": 3,
+      "Greater Good": 4,
       "Nautilus": 5,
       "Fix The News": 5,
       "Aeon | a world of ideas": 3,
@@ -1899,7 +1967,7 @@
       "Becker Friedman Institute University of Chicago": 1,
       "American Museum of Natural History": 3,
       "Somatosphere": 2,
-      "Positive News": 4,
+      "Positive News": 5,
       "Marginal REVOLUTION": 3,
       "Psyche | Know Your Self": 3,
       "Sean Carroll": 3,
@@ -1912,19 +1980,19 @@
       "Numberphile": 1,
       "NileRed": 1,
       "TED": 3,
-      "Not Boring by Packy McCormick": 3,
+      "Not Boring by Packy McCormick": 4,
       "PBS Space Time": 2,
       "PBS Terra": 2,
       "The Institute of Art and Ideas": 2,
       "Adam Savage\u2019s Tested": 1,
-      "Nature": 3,
+      "Nature": 4,
       "PBS Eons": 2,
       "Stand-up Maths": 1,
-      "Sprouht": 3,
+      "Sprouht": 4,
       "Special Books by Special Kids": 3,
       "Our World in Data": 1,
       "The British Academy": 2,
-      "Howtown": 2,
+      "Howtown": 3,
       "Practical Engineering": 3,
       "Santa Fe Institute": 1,
       "The Dissenter": 1,
@@ -1941,8 +2009,8 @@
       "Time We Discuss": 1,
       "Backstage at the Vinyl Cafe": 1,
       "Supreme Court asks if there was a 'proper debate' in Parliament before enacting CEC/EC appointments law": 1,
-      "Beau Miles": 1,
-      "Sixty Symbols": 1,
+      "Beau Miles": 2,
+      "Sixty Symbols": 2,
       "The New York Academy of Sciences": 2,
       "Mary Garcia / SmartSeeds": 1,
       "Lenore Elizabeth Mulets": 1,
@@ -1959,16 +2027,17 @@
       "YES! Magazine": 1,
       "BBC World Service": 1,
       "Drug Discovery World (DDW)": 1,
-      "The Alan Turing Institute": 1
+      "The Alan Turing Institute": 1,
+      "Mind & Life Institute": 1
     }
   },
   "monthly_domain_counts": {
     "2026-05": {
-      "historical": 23,
-      "optimism_tech": 109,
+      "historical": 25,
+      "optimism_tech": 116,
       "optimism_health": 12,
       "introspective": 7,
-      "general": 29,
+      "general": 32,
       "optimism_society": 10,
       "environmental": 3,
       "philosophical": 2,
