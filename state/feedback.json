@@ -51,9 +51,9 @@
       "last_signal_ms": 1779533710111
     },
     "The Dissenter": {
-      "cumulative": -2.0,
-      "n": 1,
-      "last_signal_ms": 1779533729724
+      "cumulative": -4.0,
+      "n": 2,
+      "last_signal_ms": 1779533751903
     }
   },
   "source_type_adjustments": {
@@ -66,8 +66,8 @@
       "n": 3
     },
     "youtube": {
-      "cumulative": 3.0,
-      "n": 6
+      "cumulative": 1.0,
+      "n": 7
     },
     "podcast": {
       "cumulative": -2.0,
@@ -218,6 +218,15 @@
       "source_type": "youtube",
       "context": "not_interested",
       "timestamp_ms": 1779533729724
+    },
+    {
+      "item_id": "SuEd0Nbpi4Y",
+      "signal": 0,
+      "signal_label": "skip",
+      "source_name": "The Dissenter",
+      "source_type": "youtube",
+      "context": "not_interested",
+      "timestamp_ms": 1779533751903
     }
   ]
 }
