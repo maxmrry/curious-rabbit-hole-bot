@@ -44,6 +44,11 @@
       "cumulative": -2.0,
       "n": 1,
       "last_signal_ms": 1779113772024
+    },
+    "Nautilus": {
+      "cumulative": -2.0,
+      "n": 1,
+      "last_signal_ms": 1779533710111
     }
   },
   "source_type_adjustments": {
@@ -52,8 +57,8 @@
       "n": 5
     },
     "rss": {
-      "cumulative": -1.0,
-      "n": 2
+      "cumulative": -3.0,
+      "n": 3
     },
     "youtube": {
       "cumulative": 5.0,
@@ -190,6 +195,15 @@
       "source_type": "youtube",
       "context": "not_interested",
       "timestamp_ms": 1779113772024
+    },
+    {
+      "item_id": "https://nautil.us/gaze-into-the-stunning-crystal-ball-nebula-1281222/",
+      "signal": 0,
+      "signal_label": "skip",
+      "source_name": "Nautilus",
+      "source_type": "rss",
+      "context": "not_interested",
+      "timestamp_ms": 1779533710111
     }
   ]
 }
