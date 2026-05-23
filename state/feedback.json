@@ -64,6 +64,11 @@
       "cumulative": -2.0,
       "n": 1,
       "last_signal_ms": 1779533789885
+    },
+    "Adam Savage\u2019s Tested": {
+      "cumulative": -2.0,
+      "n": 1,
+      "last_signal_ms": 1779533818424
     }
   },
   "source_type_adjustments": {
@@ -76,8 +81,8 @@
       "n": 3
     },
     "youtube": {
-      "cumulative": -1.0,
-      "n": 8
+      "cumulative": -3.0,
+      "n": 9
     },
     "podcast": {
       "cumulative": -4.0,
@@ -255,6 +260,15 @@
       "source_type": "youtube",
       "context": "not_interested",
       "timestamp_ms": 1779533789885
+    },
+    {
+      "item_id": "BGLxX5_-mkA",
+      "signal": 0,
+      "signal_label": "skip",
+      "source_name": "Adam Savage\u2019s Tested",
+      "source_type": "youtube",
+      "context": "not_interested",
+      "timestamp_ms": 1779533818424
     }
   ]
 }
