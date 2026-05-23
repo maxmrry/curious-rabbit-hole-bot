@@ -54,6 +54,11 @@
       "cumulative": -4.0,
       "n": 2,
       "last_signal_ms": 1779533751903
+    },
+    "Talk Nerdy with Cara Santa Maria": {
+      "cumulative": -2.0,
+      "n": 1,
+      "last_signal_ms": 1779533771928
     }
   },
   "source_type_adjustments": {
@@ -70,8 +75,8 @@
       "n": 7
     },
     "podcast": {
-      "cumulative": -2.0,
-      "n": 1
+      "cumulative": -4.0,
+      "n": 2
     }
   },
   "recent_signals": [
@@ -227,6 +232,15 @@
       "source_type": "youtube",
       "context": "not_interested",
       "timestamp_ms": 1779533751903
+    },
+    {
+      "item_id": "3fdef8c5828d449dbdfb351c7182842b",
+      "signal": 0,
+      "signal_label": "skip",
+      "source_name": "Talk Nerdy with Cara Santa Maria",
+      "source_type": "podcast",
+      "context": "not_interested",
+      "timestamp_ms": 1779533771928
     }
   ]
 }
