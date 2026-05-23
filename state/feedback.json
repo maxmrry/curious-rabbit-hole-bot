@@ -59,6 +59,11 @@
       "cumulative": -2.0,
       "n": 1,
       "last_signal_ms": 1779533771928
+    },
+    "Natural History Museum": {
+      "cumulative": -2.0,
+      "n": 1,
+      "last_signal_ms": 1779533789885
     }
   },
   "source_type_adjustments": {
@@ -71,8 +76,8 @@
       "n": 3
     },
     "youtube": {
-      "cumulative": 1.0,
-      "n": 7
+      "cumulative": -1.0,
+      "n": 8
     },
     "podcast": {
       "cumulative": -4.0,
@@ -241,6 +246,15 @@
       "source_type": "podcast",
       "context": "not_interested",
       "timestamp_ms": 1779533771928
+    },
+    {
+      "item_id": "g2Skxjr0hw4",
+      "signal": 0,
+      "signal_label": "skip",
+      "source_name": "Natural History Museum",
+      "source_type": "youtube",
+      "context": "not_interested",
+      "timestamp_ms": 1779533789885
     }
   ]
 }
