@@ -1344,6 +1344,66 @@
       "native_id": "https://www.positive.news/society/youth/the-young-traders-reviving-britains-market-stalls/",
       "source_type": "rss",
       "last_seen_ms": 1779438862601
+    },
+    "e01d04a09f9faa064a897ae7437be1462ad603a00e8567395649ae544098022e": {
+      "native_id": "NB8mmLeTVF0",
+      "source_type": "youtube",
+      "last_seen_ms": 1779521941066
+    },
+    "bd4d5fe1a2309357e9f5a2099de178438c9cf46b85c31d3b68de44e1f6088003": {
+      "native_id": "BGLxX5_-mkA",
+      "source_type": "youtube",
+      "last_seen_ms": 1779521941066
+    },
+    "c69ef4fc50081cf1c4f5fd77c548819582bb97450651e10b4adfc6f16d1da924": {
+      "native_id": "Re9uBHP_Aqo",
+      "source_type": "youtube",
+      "last_seen_ms": 1779521941066
+    },
+    "a156d51c9b461d9d4ca1aca073ab89c2624248bed3b408d258b93e180cbe9dfd": {
+      "native_id": "g2Skxjr0hw4",
+      "source_type": "youtube",
+      "last_seen_ms": 1779521941066
+    },
+    "ff036c1886bf8004701ffec30e167ca3a712fd19b8e68e3b82f45a57cb0cc4fa": {
+      "native_id": "SAxDjUpUEug",
+      "source_type": "youtube",
+      "last_seen_ms": 1779521941066
+    },
+    "c232f22c8ee7142077e28c462c8e32d67b37e9fd000b6842da157f198c9b9a01": {
+      "native_id": "3fdef8c5828d449dbdfb351c7182842b",
+      "source_type": "podcast",
+      "last_seen_ms": 1779521941066
+    },
+    "f123b11b028b59b48fda505767aea51c641986b17ae7168275cb129422abc4f4": {
+      "native_id": "6496",
+      "source_type": "podcast",
+      "last_seen_ms": 1779521941066
+    },
+    "756783011f490a573714d51ce5d81478f0ddfac5b3cae82d3f626fadc9fcae81": {
+      "native_id": "SuEd0Nbpi4Y",
+      "source_type": "youtube",
+      "last_seen_ms": 1779521941066
+    },
+    "4fcfdff6f8de005f5091abd82b647fab0d1b88b20333c6ebca76dff5803b7302": {
+      "native_id": "UiX4CFIiegM",
+      "source_type": "youtube",
+      "last_seen_ms": 1779521941066
+    },
+    "ea49a9e141994b42e8c29b8915f85c6686425d9fa7186dcf871e06f7aa0b889a": {
+      "native_id": "YQ2VzBoeJjs",
+      "source_type": "youtube",
+      "last_seen_ms": 1779521941066
+    },
+    "8805a69530a085bec1798745c0dc812d03dedc85b2e4d0f96f0983280912ae53": {
+      "native_id": "https://www.anthropology-news.org/articles/in-memoriam-joachim-voss/",
+      "source_type": "rss",
+      "last_seen_ms": 1779521941066
+    },
+    "a79f175d9f0257d8a077986a12a89d324c06a7c6a8105bd84030f8cd97f78c28": {
+      "native_id": "https://nautil.us/gaze-into-the-stunning-crystal-ball-nebula-1281222/",
+      "source_type": "rss",
+      "last_seen_ms": 1779521941066
     }
   },
   "sources_health": {
@@ -1409,6 +1469,9 @@
     },
     "2026-05-22": {
       "success": true
+    },
+    "2026-05-23": {
+      "success": true
     }
   },
   "source_history": {
@@ -1417,7 +1480,7 @@
     "The Royal Society": 1779438862601,
     "SciFri": 1779266107404,
     "Knowable Magazine": 1778223634799,
-    "Natural History Museum": 1778916260372,
+    "Natural History Museum": 1779521941066,
     "Ness Labs": 1778223634799,
     "Experimental History": 1779352934769,
     "NOEMA": 1779352934769,
@@ -1439,10 +1502,10 @@
     "Wendover Productions": 1777965914867,
     "Undark Magazine": 1779003575150,
     "Greater Good": 1779438862601,
-    "Nautilus": 1779003575150,
+    "Nautilus": 1779521941066,
     "Fix The News": 1779352934769,
     "Aeon | a world of ideas": 1778916260372,
-    "The Rest Is History": 1778916260372,
+    "The Rest Is History": 1779521941066,
     "Nobel Prize": 1778053394084,
     "BBC Ideas": 1779179809816,
     "Platypus": 1779094452466,
@@ -1459,16 +1522,16 @@
     "SmarterEveryDay": 1778140198142,
     "Conversations with Tyler": 1779003575150,
     "The Royal Institution": 1779266107404,
-    "Numberphile": 1778223634799,
+    "Numberphile": 1779521941066,
     "NileRed": 1778223634799,
     "TED": 1779266107404,
     "Not Boring by Packy McCormick": 1779438862601,
     "PBS Space Time": 1779179809816,
     "PBS Terra": 1778572382146,
     "The Institute of Art and Ideas": 1779179809816,
-    "Adam Savage\u2019s Tested": 1778310966853,
+    "Adam Savage\u2019s Tested": 1779521941066,
     "Nature": 1779438862601,
-    "PBS Eons": 1779094452466,
+    "PBS Eons": 1779521941066,
     "Stand-up Maths": 1778398363664,
     "Sprouht": 1779438862601,
     "Special Books by Special Kids": 1779179809816,
@@ -1477,11 +1540,11 @@
     "Howtown": 1779438862601,
     "Practical Engineering": 1779266107404,
     "Santa Fe Institute": 1778488364002,
-    "The Dissenter": 1778488364002,
+    "The Dissenter": 1779521941066,
     "Chris Doel": 1778572382146,
     "minutephysics": 1779094452466,
     "World Science Festival": 1778572382146,
-    "Anthropology News": 1778572382146,
+    "Anthropology News": 1779521941066,
     "Invisible People": 1778659174006,
     "YaleCourses": 1778659174006,
     "AsapSCIENCE": 1779266107404,
@@ -1510,7 +1573,9 @@
     "BBC World Service": 1779352934769,
     "Drug Discovery World (DDW)": 1779352934769,
     "The Alan Turing Institute": 1779352934769,
-    "Mind & Life Institute": 1779438862601
+    "Mind & Life Institute": 1779521941066,
+    "Talk Nerdy with Cara Santa Maria": 1779521941066,
+    "Rob Zimmer": 1779521941066
   },
   "source_scores": {
     "Oxford Martin School": {
@@ -1534,8 +1599,8 @@
       "n": 2
     },
     "Natural History Museum": {
-      "avg": 8.39,
-      "n": 3
+      "avg": 9.185,
+      "n": 4
     },
     "Ness Labs": {
       "avg": 5.865,
@@ -1622,8 +1687,8 @@
       "n": 4
     },
     "Nautilus": {
-      "avg": 7.74,
-      "n": 5
+      "avg": 7.638,
+      "n": 6
     },
     "Fix The News": {
       "avg": 9.428,
@@ -1634,8 +1699,8 @@
       "n": 3
     },
     "The Rest Is History": {
-      "avg": 8.167,
-      "n": 3
+      "avg": 8.853,
+      "n": 4
     },
     "Nobel Prize": {
       "avg": 8.54,
@@ -1702,8 +1767,8 @@
       "n": 3
     },
     "Numberphile": {
-      "avg": 5.16,
-      "n": 1
+      "avg": 4.985,
+      "n": 2
     },
     "NileRed": {
       "avg": 4.56,
@@ -1730,16 +1795,16 @@
       "n": 2
     },
     "Adam Savage\u2019s Tested": {
-      "avg": 9.09,
-      "n": 1
+      "avg": 12.47,
+      "n": 2
     },
     "Nature": {
       "avg": 2.62,
       "n": 4
     },
     "PBS Eons": {
-      "avg": 14.255,
-      "n": 2
+      "avg": 13.997,
+      "n": 3
     },
     "Stand-up Maths": {
       "avg": 9.41,
@@ -1774,8 +1839,8 @@
       "n": 1
     },
     "The Dissenter": {
-      "avg": -1.55,
-      "n": 1
+      "avg": -1.57,
+      "n": 3
     },
     "Chris Doel": {
       "avg": 14.62,
@@ -1790,8 +1855,8 @@
       "n": 1
     },
     "Anthropology News": {
-      "avg": 9.21,
-      "n": 1
+      "avg": 3.215,
+      "n": 2
     },
     "Invisible People": {
       "avg": 9.68,
@@ -1906,22 +1971,30 @@
       "n": 1
     },
     "Mind & Life Institute": {
-      "avg": 1.05,
+      "avg": 0.715,
+      "n": 2
+    },
+    "Talk Nerdy with Cara Santa Maria": {
+      "avg": 10.82,
+      "n": 1
+    },
+    "Rob Zimmer": {
+      "avg": 9.39,
       "n": 1
     }
   },
   "type_performance": {
     "youtube": {
-      "avg": 7.777,
+      "avg": 7.689,
       "n": 100
     },
     "rss": {
-      "avg": 6.762,
-      "n": 79
+      "avg": 6.649,
+      "n": 81
     },
     "podcast": {
-      "avg": 6.578,
-      "n": 15
+      "avg": 6.993,
+      "n": 17
     },
     "news": {
       "avg": -25.52,
@@ -1935,7 +2008,7 @@
       "The Royal Society": 3,
       "SciFri": 4,
       "Knowable Magazine": 2,
-      "Natural History Museum": 3,
+      "Natural History Museum": 4,
       "Ness Labs": 2,
       "Experimental History": 2,
       "NOEMA": 4,
@@ -1957,10 +2030,10 @@
       "Wendover Productions": 1,
       "Undark Magazine": 4,
       "Greater Good": 4,
-      "Nautilus": 5,
+      "Nautilus": 6,
       "Fix The News": 5,
       "Aeon | a world of ideas": 3,
-      "The Rest Is History": 3,
+      "The Rest Is History": 4,
       "Nobel Prize": 1,
       "BBC Ideas": 3,
       "Platypus": 3,
@@ -1977,16 +2050,16 @@
       "SmarterEveryDay": 1,
       "Conversations with Tyler": 3,
       "The Royal Institution": 3,
-      "Numberphile": 1,
+      "Numberphile": 2,
       "NileRed": 1,
       "TED": 3,
       "Not Boring by Packy McCormick": 4,
       "PBS Space Time": 2,
       "PBS Terra": 2,
       "The Institute of Art and Ideas": 2,
-      "Adam Savage\u2019s Tested": 1,
+      "Adam Savage\u2019s Tested": 2,
       "Nature": 4,
-      "PBS Eons": 2,
+      "PBS Eons": 3,
       "Stand-up Maths": 1,
       "Sprouht": 4,
       "Special Books by Special Kids": 3,
@@ -1995,11 +2068,11 @@
       "Howtown": 3,
       "Practical Engineering": 3,
       "Santa Fe Institute": 1,
-      "The Dissenter": 1,
+      "The Dissenter": 3,
       "Chris Doel": 1,
       "minutephysics": 3,
       "World Science Festival": 1,
-      "Anthropology News": 1,
+      "Anthropology News": 2,
       "Invisible People": 1,
       "YaleCourses": 1,
       "AsapSCIENCE": 2,
@@ -2028,19 +2101,21 @@
       "BBC World Service": 1,
       "Drug Discovery World (DDW)": 1,
       "The Alan Turing Institute": 1,
-      "Mind & Life Institute": 1
+      "Mind & Life Institute": 2,
+      "Talk Nerdy with Cara Santa Maria": 1,
+      "Rob Zimmer": 1
     }
   },
   "monthly_domain_counts": {
     "2026-05": {
-      "historical": 25,
-      "optimism_tech": 116,
-      "optimism_health": 12,
+      "historical": 26,
+      "optimism_tech": 121,
+      "optimism_health": 13,
       "introspective": 7,
-      "general": 32,
+      "general": 34,
       "optimism_society": 10,
-      "environmental": 3,
-      "philosophical": 2,
+      "environmental": 5,
+      "philosophical": 3,
       "economic": 9
     }
   }
