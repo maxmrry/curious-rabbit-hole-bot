@@ -34,4 +34,9 @@ jobs:
           git config user.email "bot@ucurvebrain.local"
           git add state/feedback.json
           git diff --staged --quiet || git commit -m "feedback: ${{ github.event.client_payload.signal_label }} signal received"
-          git push
+          
+          # Robust push loop: If multiple buttons were clicked at once, 
+          # this pulls the newest changes before pushing to avoid crashes.
+          for i in {1..5}; do
+            git pull --rebase origin main && git push && break || sleep 5
+          done
