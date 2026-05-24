@@ -1404,6 +1404,66 @@
       "native_id": "https://nautil.us/gaze-into-the-stunning-crystal-ball-nebula-1281222/",
       "source_type": "rss",
       "last_seen_ms": 1779521941066
+    },
+    "c73adbecf9bf053f648031fe08f91d8816e0a7761207b1a5c23ba5fa6e54d061": {
+      "native_id": "0c32039df46249029052964a202ebd3d",
+      "source_type": "podcast",
+      "last_seen_ms": 1779609418294
+    },
+    "58d6b9794ec027d93cca7da2be8f029ef9e2ef75550281cc2b44d9d3f7687d2c": {
+      "native_id": "B49058Eot8w",
+      "source_type": "youtube",
+      "last_seen_ms": 1779609418294
+    },
+    "6ce4f06a6036908945d590fa2afee6904477ee73b88ba4307172b7fff634db48": {
+      "native_id": "sEQvDbyFNbo",
+      "source_type": "youtube",
+      "last_seen_ms": 1779609418294
+    },
+    "54c8c0f18cc71f546c1f91462f9868084295daff594656a1956d3ac50fabfc29": {
+      "native_id": "3w0KeFOB698",
+      "source_type": "youtube",
+      "last_seen_ms": 1779609418294
+    },
+    "49555dab7154ee1edfdc17bb3dc15ed13056b12d460372246a35d35938dd7f42": {
+      "native_id": "5201512",
+      "source_type": "podcast",
+      "last_seen_ms": 1779609418294
+    },
+    "c64f52ee212f0838f31c2692784f12135f751818ce2d6e6a6291e330c9993785": {
+      "native_id": "455792",
+      "source_type": "podcast",
+      "last_seen_ms": 1779609418294
+    },
+    "09240828363b40b28be51467c1582dc7c53e6c6d69f1dbe3e01d81b9b0cbb8fd": {
+      "native_id": "1517958",
+      "source_type": "podcast",
+      "last_seen_ms": 1779609418294
+    },
+    "3ed9857ebd996d8171265fc243decdce871820cca1b24c6a009c7c99d9eaf2ce": {
+      "native_id": "7731795",
+      "source_type": "podcast",
+      "last_seen_ms": 1779609418294
+    },
+    "6ba70efa359297d8d3ca4a425f23a57854d7dbf12c692016f22a83d0b63b7dba": {
+      "native_id": "7169293",
+      "source_type": "podcast",
+      "last_seen_ms": 1779609418294
+    },
+    "af6ee4599d9e5697e8c2f763a4c8a24c33c25e872e3f10f804538f6834a87e6b": {
+      "native_id": "https://aeon.co/essays/the-power-imbalance-between-parent-and-child-leaves-a-trace",
+      "source_type": "rss",
+      "last_seen_ms": 1779609418294
+    },
+    "78e6a68594722e136eb966c4dba36981cfa1d58a5c5e78454946cf3328178745": {
+      "native_id": "https://ourworldindata.org/population-simulation-tool",
+      "source_type": "rss",
+      "last_seen_ms": 1779609418294
+    },
+    "9d430e8fe6e6e035b0014427d60dbe57993d12c511b75bb92b6a1ce872562fc1": {
+      "native_id": "https://knowablemagazine.org/content/article/living-world/2026/epigenetic-effects-of-sperm-on-offspring",
+      "source_type": "rss",
+      "last_seen_ms": 1779609418294
     }
   },
   "sources_health": {
@@ -1472,6 +1532,9 @@
     },
     "2026-05-23": {
       "success": true
+    },
+    "2026-05-24": {
+      "success": true
     }
   },
   "source_history": {
@@ -1479,7 +1542,7 @@
     "nature video": 1779094452466,
     "The Royal Society": 1779438862601,
     "SciFri": 1779266107404,
-    "Knowable Magazine": 1778223634799,
+    "Knowable Magazine": 1779609418294,
     "Natural History Museum": 1779521941066,
     "Ness Labs": 1778223634799,
     "Experimental History": 1779352934769,
@@ -1504,7 +1567,7 @@
     "Greater Good": 1779438862601,
     "Nautilus": 1779521941066,
     "Fix The News": 1779352934769,
-    "Aeon | a world of ideas": 1778916260372,
+    "Aeon | a world of ideas": 1779609418294,
     "The Rest Is History": 1779521941066,
     "Nobel Prize": 1778053394084,
     "BBC Ideas": 1779179809816,
@@ -1528,21 +1591,21 @@
     "Not Boring by Packy McCormick": 1779438862601,
     "PBS Space Time": 1779179809816,
     "PBS Terra": 1778572382146,
-    "The Institute of Art and Ideas": 1779179809816,
+    "The Institute of Art and Ideas": 1779609418294,
     "Adam Savage\u2019s Tested": 1779521941066,
     "Nature": 1779438862601,
     "PBS Eons": 1779521941066,
     "Stand-up Maths": 1778398363664,
     "Sprouht": 1779438862601,
     "Special Books by Special Kids": 1779179809816,
-    "Our World in Data": 1778488364002,
+    "Our World in Data": 1779609418294,
     "The British Academy": 1779003575150,
     "Howtown": 1779438862601,
     "Practical Engineering": 1779266107404,
     "Santa Fe Institute": 1778488364002,
     "The Dissenter": 1779521941066,
     "Chris Doel": 1778572382146,
-    "minutephysics": 1779094452466,
+    "minutephysics": 1779609418294,
     "World Science Festival": 1778572382146,
     "Anthropology News": 1779521941066,
     "Invisible People": 1778659174006,
@@ -1566,7 +1629,7 @@
     "JSK-Studio": 1779266107404,
     "Dr. Brenna Hicks": 1779094452466,
     "Instant Genius": 1779179809816,
-    "ColdFusion": 1779179809816,
+    "ColdFusion": 1779609418294,
     "The Craftsmanship Initiative": 1779266107404,
     "The Makery Network": 1779266107404,
     "YES! Magazine": 1779266107404,
@@ -1575,7 +1638,13 @@
     "The Alan Turing Institute": 1779352934769,
     "Mind & Life Institute": 1779521941066,
     "Talk Nerdy with Cara Santa Maria": 1779521941066,
-    "Rob Zimmer": 1779521941066
+    "Rob Zimmer": 1779521941066,
+    "Recruiting Future with Matt Alder - What's Next For Talent Acquisition, HR & Hiring?": 1779609418294,
+    "Cindy Fahnestock-Schafer": 1779609418294,
+    "Priscilla Stuckey": 1779609418294,
+    "LibriVox": 1779609418294,
+    "Thomas R. Henry": 1779609418294,
+    "Ben the Quasi-Ecologist": 1779609418294
   },
   "source_scores": {
     "Oxford Martin School": {
@@ -1595,8 +1664,8 @@
       "n": 4
     },
     "Knowable Magazine": {
-      "avg": 4.955,
-      "n": 2
+      "avg": 5.647,
+      "n": 3
     },
     "Natural History Museum": {
       "avg": 9.185,
@@ -1695,8 +1764,8 @@
       "n": 5
     },
     "Aeon | a world of ideas": {
-      "avg": 11.213,
-      "n": 3
+      "avg": 10.222,
+      "n": 4
     },
     "The Rest Is History": {
       "avg": 8.853,
@@ -1791,8 +1860,8 @@
       "n": 2
     },
     "The Institute of Art and Ideas": {
-      "avg": 8.23,
-      "n": 2
+      "avg": 8.357,
+      "n": 3
     },
     "Adam Savage\u2019s Tested": {
       "avg": 12.47,
@@ -1819,8 +1888,8 @@
       "n": 3
     },
     "Our World in Data": {
-      "avg": 12.51,
-      "n": 1
+      "avg": 5.685,
+      "n": 2
     },
     "The British Academy": {
       "avg": 9.005,
@@ -1847,8 +1916,8 @@
       "n": 1
     },
     "minutephysics": {
-      "avg": 10.59,
-      "n": 3
+      "avg": 9.293,
+      "n": 4
     },
     "World Science Festival": {
       "avg": 10.84,
@@ -1943,8 +2012,8 @@
       "n": 1
     },
     "ColdFusion": {
-      "avg": 4.04,
-      "n": 1
+      "avg": 4.52,
+      "n": 2
     },
     "The Craftsmanship Initiative": {
       "avg": 15.8,
@@ -1981,20 +2050,44 @@
     "Rob Zimmer": {
       "avg": 9.39,
       "n": 1
+    },
+    "Recruiting Future with Matt Alder - What's Next For Talent Acquisition, HR & Hiring?": {
+      "avg": 9.99,
+      "n": 1
+    },
+    "Cindy Fahnestock-Schafer": {
+      "avg": -3.74,
+      "n": 1
+    },
+    "Priscilla Stuckey": {
+      "avg": 8.7,
+      "n": 1
+    },
+    "LibriVox": {
+      "avg": 8.38,
+      "n": 1
+    },
+    "Thomas R. Henry": {
+      "avg": 6.77,
+      "n": 1
+    },
+    "Ben the Quasi-Ecologist": {
+      "avg": 5.76,
+      "n": 1
     }
   },
   "type_performance": {
     "youtube": {
-      "avg": 7.689,
+      "avg": 7.649,
       "n": 100
     },
     "rss": {
-      "avg": 6.649,
-      "n": 81
+      "avg": 6.568,
+      "n": 84
     },
     "podcast": {
-      "avg": 6.993,
-      "n": 17
+      "avg": 6.728,
+      "n": 23
     },
     "news": {
       "avg": -25.52,
@@ -2007,7 +2100,7 @@
       "nature video": 2,
       "The Royal Society": 3,
       "SciFri": 4,
-      "Knowable Magazine": 2,
+      "Knowable Magazine": 3,
       "Natural History Museum": 4,
       "Ness Labs": 2,
       "Experimental History": 2,
@@ -2032,7 +2125,7 @@
       "Greater Good": 4,
       "Nautilus": 6,
       "Fix The News": 5,
-      "Aeon | a world of ideas": 3,
+      "Aeon | a world of ideas": 4,
       "The Rest Is History": 4,
       "Nobel Prize": 1,
       "BBC Ideas": 3,
@@ -2056,21 +2149,21 @@
       "Not Boring by Packy McCormick": 4,
       "PBS Space Time": 2,
       "PBS Terra": 2,
-      "The Institute of Art and Ideas": 2,
+      "The Institute of Art and Ideas": 3,
       "Adam Savage\u2019s Tested": 2,
       "Nature": 4,
       "PBS Eons": 3,
       "Stand-up Maths": 1,
       "Sprouht": 4,
       "Special Books by Special Kids": 3,
-      "Our World in Data": 1,
+      "Our World in Data": 2,
       "The British Academy": 2,
       "Howtown": 3,
       "Practical Engineering": 3,
       "Santa Fe Institute": 1,
       "The Dissenter": 3,
       "Chris Doel": 1,
-      "minutephysics": 3,
+      "minutephysics": 4,
       "World Science Festival": 1,
       "Anthropology News": 2,
       "Invisible People": 1,
@@ -2094,7 +2187,7 @@
       "JSK-Studio": 3,
       "Dr. Brenna Hicks": 1,
       "Instant Genius": 1,
-      "ColdFusion": 1,
+      "ColdFusion": 2,
       "The Craftsmanship Initiative": 1,
       "The Makery Network": 1,
       "YES! Magazine": 1,
@@ -2103,18 +2196,24 @@
       "The Alan Turing Institute": 1,
       "Mind & Life Institute": 2,
       "Talk Nerdy with Cara Santa Maria": 1,
-      "Rob Zimmer": 1
+      "Rob Zimmer": 1,
+      "Recruiting Future with Matt Alder - What's Next For Talent Acquisition, HR & Hiring?": 1,
+      "Cindy Fahnestock-Schafer": 1,
+      "Priscilla Stuckey": 1,
+      "LibriVox": 1,
+      "Thomas R. Henry": 1,
+      "Ben the Quasi-Ecologist": 1
     }
   },
   "monthly_domain_counts": {
     "2026-05": {
-      "historical": 26,
-      "optimism_tech": 121,
-      "optimism_health": 13,
+      "historical": 27,
+      "optimism_tech": 124,
+      "optimism_health": 14,
       "introspective": 7,
-      "general": 34,
+      "general": 39,
       "optimism_society": 10,
-      "environmental": 5,
+      "environmental": 7,
       "philosophical": 3,
       "economic": 9
     }
