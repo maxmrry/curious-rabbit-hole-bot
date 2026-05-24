@@ -121,8 +121,7 @@ def build_feed(selected_items):
     fg.logo(image_url)
     fg.image(url=image_url, title='U-Curve Brain', link='https://maxmrry.github.io/curious-rabbit-hole-bot/feed.xml')
 
-    # --- ENTRY 1: THE ADAGE ---
-    # We bypass the narrative, protocol, and daily intro for maximum minimalism
+    # --- ENTRY 1: THE ADAGE & MASTER RESET BUTTON ---
     daily_principle = strip_emojis(clean_quote(get_daily_principle()))
     
     fe_intro = fg.add_entry()
@@ -130,6 +129,27 @@ def build_feed(selected_items):
     fe_intro.link(href=f"https://maxmrry.github.io/curious-rabbit-hole-bot/#anchor-{now.strftime('%Y%m%d')}")
     fe_intro.pubDate(now)
     fe_intro.id(f"anchor-{now.strftime('%Y%m%d')}")
+
+    # Build the Master "Nuke the Feed" Button
+    import urllib.parse
+    redirect_base = os.getenv("REDIRECT_BASE_URL", "")
+    redirect_secret = os.getenv("REDIRECT_SECRET", "")
+    if redirect_base and redirect_secret:
+        token = urllib.parse.quote(redirect_secret)
+        nuke_url = (
+            f"{redirect_base}/signal"
+            f"?item=daily_feed_{now.strftime('%Y%m%d')}"
+            f"&signal=0"
+            f"&source=daily_experience"
+            f"&type=feed"
+            f"&context=whole_feed_boring"
+            f"&dest={urllib.parse.quote('https://maxmrry.github.io/curious-rabbit-hole-bot/')}"
+            f"&token={token}"
+        )
+        fe_intro.description(
+            f"<small><i>If today's overall curation completely missed the mark, tap below to trigger an algorithmic shake-up for tomorrow.</i></small><br><br>"
+            f"<a href='{nuke_url}' style='text-decoration:none;'>🔄 The whole feed is boring today</a>"
+        )
 
     # Update the seconds_offset for the rest of the curated items to start at 1
     seconds_offset = 1
