@@ -5,8 +5,8 @@ from src.pipeline.philosophy import safe_generate
 
 def run_weekly_reflection(policy_filepath='policy/policy.yaml', feedback_filepath='state/feedback.json'):
     """
-    The Meta-Brain. Reads Max's recent emotional signals and asks Gemini to
-    re-weight the core algorithm to mathematically course-correct the feed.
+    The Meta-Brain. Reads Max's recent emotional signals (and specific topics)
+    and asks Gemini to mathematically course-correct the feed.
     """
     print("🧠 Initiating AI Meta-Reflection...")
     
@@ -29,17 +29,20 @@ def run_weekly_reflection(policy_filepath='policy/policy.yaml', feedback_filepat
         print("   Reflected too recently. Letting the current algorithm breathe.")
         return
 
-    # Tally the emotional signals
-    tallies = {"amazingly_hopeful": 0, "pretty_positive": 0, "not_interested": 0, "too_gloomy": 0}
-    for s in signals[-20:]: # Look at the last 20 clicks
+    # Extract exactly what Max has been clicking on, including titles!
+    recent_interactions = []
+    for s in signals[-25:]: # Look at up to the last 25 clicks
         ctx = s.get("context", "")
-        if ctx in tallies:
-            tallies[ctx] += 1
+        # Filter out old clicks that don't have the new Title format
+        if "|" in ctx:
+            recent_interactions.append(f"- Reaction: {ctx} (Source: {s.get('source_name')})")
 
     # Only run if there is actual actionable data
-    if sum(tallies.values()) < 3:
-        print("   Not enough emotional data to justify a shift yet. Waiting for more clicks.")
+    if len(recent_interactions) < 3:
+        print("   Not enough topic-specific data to justify a shift yet. Waiting for more clicks.")
         return
+
+    interaction_log = "\n".join(recent_interactions)
 
     # Pull baseline weights from Policy
     import yaml
@@ -57,23 +60,23 @@ def run_weekly_reflection(policy_filepath='policy/policy.yaml', feedback_filepat
     prompt = f"""
     You are the Architect of the 'U-Curve Brain', an RSS feed designed to protect an anxious, globally aware Gen Z male from doom-scrolling, while keeping him grounded in human agency and competence.
     
-    Here is how Max has emotionally reacted to the feed recently:
-    - {tallies['amazingly_hopeful']} items made him feel amazingly positive/hopeful.
-    - {tallies['pretty_positive']} items made him feel pretty positive.
-    - {tallies['not_interested']} items bored him (Not Interested).
-    - {tallies['too_gloomy']} items triggered a negative/gloomy reaction.
+    Here is exactly what Max has reacted to recently, including the specific topics and his emotional states:
+    {interaction_log}
     
     Current Algorithm Weights:
     {json.dumps(current_weights, indent=2)}
     
     YOUR MISSION:
-    Look at his reactions. If he is feeling 'too gloomy', you must lower weights for heavy, systemic/temporal news and drastically increase weights for 'delight_score', 'wonder_score', and 'humanity_signal_score'. If he is 'not interested', you must increase 'constructive_realism' and 'grounded_tangibility' to give him more tactile, actionable engineering/maker content.
+    Look for patterns in the TOPICS. 
+    - If he clicks 'Not Interested' on abstract science or history, you must LOWER 'w_temp' and 'w_sys', and INCREASE 'w_grounded' and 'w_const' (tactile, everyday engineering/makers).
+    - If he clicks 'Too Gloomy' on certain topics, aggressively LOWER 'w_sys' (heavy news/systems) and INCREASE 'w_wonder' and 'w_humanity'.
+    - If he clicks 'Amazingly Hopeful' on a topic, adjust the weights to capture more of that exact psychological register.
     
-    Generate a new set of dynamic weights (they should roughly sum to 1.0) and write a 1-sentence internal thought explaining your reasoning.
+    Generate a new set of dynamic weights (they should roughly sum to 1.0) and write a 1-sentence internal thought explaining your reasoning based on the specific topics he liked/disliked.
     
     RETURN EXACTLY THIS JSON:
     {{
-        "ai_rationale": "Max is getting bogged down by heavy systemic news, so I am shifting the algorithm towards tactile engineering and human delight.",
+        "ai_rationale": "Max is bored by macro-economics but inspired by tactile engineering, so I am dropping w_sys and boosting w_grounded.",
         "ai_weight_overrides": {{
             "w_sys": 0.10,
             "w_nuance": 0.15,
