@@ -69,6 +69,11 @@
       "cumulative": -2.0,
       "n": 1,
       "last_signal_ms": 1779533818424
+    },
+    "PBS Eons": {
+      "cumulative": -2.0,
+      "n": 1,
+      "last_signal_ms": 1779607564402
     }
   },
   "source_type_adjustments": {
@@ -81,8 +86,8 @@
       "n": 3
     },
     "youtube": {
-      "cumulative": -3.0,
-      "n": 9
+      "cumulative": -5.0,
+      "n": 10
     },
     "podcast": {
       "cumulative": -4.0,
@@ -269,6 +274,15 @@
       "source_type": "youtube",
       "context": "not_interested",
       "timestamp_ms": 1779533818424
+    },
+    {
+      "item_id": "Re9uBHP_Aqo",
+      "signal": 0,
+      "signal_label": "skip",
+      "source_name": "PBS Eons",
+      "source_type": "youtube",
+      "context": "not_interested",
+      "timestamp_ms": 1779607564402
     }
   ]
 }
