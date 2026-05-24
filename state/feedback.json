@@ -74,6 +74,11 @@
       "cumulative": -2.0,
       "n": 1,
       "last_signal_ms": 1779607564402
+    },
+    "Recruiting Future with Matt Alder - What's Next For Talent Acquisition, HR & Hiring?": {
+      "cumulative": 1.0,
+      "n": 1,
+      "last_signal_ms": 1779611735078
     }
   },
   "source_type_adjustments": {
@@ -90,8 +95,8 @@
       "n": 10
     },
     "podcast": {
-      "cumulative": -4.0,
-      "n": 2
+      "cumulative": -3.0,
+      "n": 3
     }
   },
   "recent_signals": [
@@ -283,6 +288,15 @@
       "source_type": "youtube",
       "context": "not_interested",
       "timestamp_ms": 1779607564402
+    },
+    {
+      "item_id": "0c32039df46249029052964a202ebd3d",
+      "signal": 1,
+      "signal_label": "useful",
+      "source_name": "Recruiting Future with Matt Alder - What's Next For Talent Acquisition, HR & Hiring?",
+      "source_type": "podcast",
+      "context": "neutral_okay | Topic: Recruiting: Human Trust in Large Digital Networks",
+      "timestamp_ms": 1779611735078
     }
   ]
 }
