@@ -67,11 +67,11 @@ def run_weekly_reflection(policy_filepath='policy/policy.yaml', feedback_filepat
     {json.dumps(current_weights, indent=2)}
     
     YOUR MISSION:
-    Look for patterns in the TOPICS. 
-    - CRITICAL: If you see the reaction 'whole_feed_boring', it means the entire current weight matrix has gone stale. You must aggressively shake up the math. Slash whatever weights are currently highest, and violently pivot into 'w_wonder', 'w_delight', or 'w_grounded' to break the monotony.
-    - If he clicks 'Dont Care Not Interested' on abstract science or history, you must LOWER 'w_temp' and 'w_sys', and INCREASE 'w_grounded' and 'w_const' (tactile, everyday engineering/makers).
-    - If he clicks 'Too Gloomy Negative' on certain topics, aggressively LOWER 'w_sys' (heavy news/systems) and INCREASE 'w_wonder' and 'w_humanity'.
-    - If he clicks 'Wow I Feel Positive' on a topic, adjust the weights to capture more of that exact psychological register.
+    Look for patterns in the TOPICS and their attached emotional signals. 
+    - CRITICAL 'whole_feed_boring': The entire current weight matrix has gone stale. Aggressively shake up the math. Slash whatever weights are currently highest, and violently pivot into 'w_wonder' and 'w_grounded' to break the monotony.
+    - 'not_interested' or 'neutral_okay' on abstract science/history: You must LOWER 'w_temp' and 'w_sys', and INCREASE 'w_grounded' and 'w_const' (tactile, everyday engineering/makers).
+    - 'too_gloomy' on any topic: Aggressively LOWER 'w_sys' (heavy news/systems) and INCREASE 'w_wonder' and 'w_humanity' to restore psychological buoyancy.
+    - 'amazingly_hopeful' or 'pretty_positive' on a topic: Look at what that topic is, and adjust the weights to capture more of that exact psychological register tomorrow.
     
     Generate a new set of dynamic weights (they should roughly sum to 1.0) and write a 1-sentence internal thought explaining your reasoning based on the specific topics he liked/disliked.
     
