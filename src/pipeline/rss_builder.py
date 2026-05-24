@@ -42,7 +42,7 @@ def strip_emojis(text):
 def _build_micro_feedback(redirect_base, redirect_secret, item):
     """
     Builds item-specific psychological feedback buttons.
-    Allows Max to signal exactly *why* an item worked or failed.
+    Injects the TITLE into the context so the AI knows exactly what the topic was.
     """
     import urllib.parse
     token = urllib.parse.quote(redirect_secret)
@@ -50,15 +50,20 @@ def _build_micro_feedback(redirect_base, redirect_secret, item):
     item_id = urllib.parse.quote(item.get("native_id", "unknown"))
     source = urllib.parse.quote(item.get("source_name", "unknown"))
     source_type = urllib.parse.quote(item.get("source_type", "unknown"))
+    
+    # Grab a short, clean version of the title to send to the AI
+    short_title = item.get("title", "Unknown Title")[:80]
 
-    def make_url(signal, context):
+    def make_url(signal, emotion_label):
+        # We package the emotion AND the title together so the AI can read it later!
+        combined_context = f"{emotion_label} | Topic: {short_title}"
         return (
             f"{redirect_base}/signal"
             f"?item={item_id}"
             f"&signal={signal}"
             f"&source={source}"
             f"&type={source_type}"
-            f"&context={urllib.parse.quote(context)}"
+            f"&context={urllib.parse.quote(combined_context)}"
             f"&dest={urllib.parse.quote('https://maxmrry.github.io/curious-rabbit-hole-bot/')}"
             f"&token={token}"
         )
@@ -66,12 +71,10 @@ def _build_micro_feedback(redirect_base, redirect_secret, item):
     return (
         f"<br><br><hr>"
         f"<small><b>How did this land?</b><br>"
-        f"<a href='{make_url(3, 'amazingly_hopeful')}' style='text-decoration:none;'>🥇✅ Wow, I Feel Positive, Inspired, Impressed</a>"
-        f" &nbsp;|&nbsp; "
-        f"<a href='{make_url(2, 'pretty_positive')}' style='text-decoration:none;'>💪 Pretty Positive. Kinda Cool.</a>"
-        f" &nbsp;|&nbsp; "
-        f"<a href='{make_url(0, 'not_interested')}' style='text-decoration:none;'>🥱 Don't Care... Not Interested</a>"
-        f" &nbsp;|&nbsp; "
+        f"<a href='{make_url(3, 'amazingly_hopeful')}' style='text-decoration:none;'>🥇✅ Wow, I Feel Positive, Inspired, Impressed</a><br>"
+        f"<a href='{make_url(2, 'pretty_positive')}' style='text-decoration:none;'>💪 Pretty Positive. Kinda Cool.</a><br>"
+        f"<a href='{make_url(1, 'neutral_okay')}' style='text-decoration:none;'>🤔 Hmm. Okay, but forgettable.</a><br>"
+        f"<a href='{make_url(0, 'not_interested')}' style='text-decoration:none;'>🥱 Don't Care... Not Interested</a><br>"
         f"<a href='{make_url(-1, 'too_gloomy')}' style='text-decoration:none;'>⛔ Too Gloomy / Negative</a>"
         f"</small>"
     )
