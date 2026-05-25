@@ -1,14 +1,16 @@
 import os
 import json
 import time
-from datetime import datetime
 
 FEEDBACK_PATH = "state/feedback.json"
 
+# The new Emotional Math scale
 SIGNAL_WEIGHTS = {
-    0: -2.0,   # skip — actively disliked
-    1:  1.0,   # useful — solid, incremental positive
-    2:  3.0,   # fascinating — strong positive, high agency
+    -1: -4.0,  # too_gloomy — heavy penalty to source
+     0: -2.0,  # not_interested — moderate penalty
+     1:  0.0,  # neutral_okay — no math change, just logged for AI reflection
+     2:  2.0,  # pretty_positive — solid boost
+     3:  4.0,  # amazingly_hopeful — massive boost
 }
 
 def load_feedback():
@@ -29,22 +31,28 @@ def save_feedback(data):
 
 def ingest():
     item_id = os.getenv("ITEM_ID", "")
-    signal = int(os.getenv("SIGNAL", "1"))
+    # Default to 1 (neutral) if something goes wrong
+    try:
+        signal = int(os.getenv("SIGNAL", "1"))
+    except ValueError:
+        signal = 1
+        
     source_name = os.getenv("SOURCE_NAME", "")
     source_type = os.getenv("SOURCE_TYPE", "")
-    signal_label = os.getenv("SIGNAL_LABEL", "useful")
+    signal_label = os.getenv("SIGNAL_LABEL", "neutral_okay")
     context = os.getenv("CONTEXT", "")
 
     if not item_id:
         print("No item_id provided. Exiting.")
         return
 
-    weight_delta = SIGNAL_WEIGHTS.get(signal, 1.0)
+    # Use the default 0.0 (neutral) if a weird signal comes through
+    weight_delta = SIGNAL_WEIGHTS.get(signal, 0.0)
     feedback = load_feedback()
     now_ms = int(time.time() * 1000)
 
     # Adjust per-source score
-    if source_name:
+    if source_name and weight_delta != 0:
         prev = feedback["source_adjustments"].get(source_name, {"cumulative": 0.0, "n": 0})
         feedback["source_adjustments"][source_name] = {
             "cumulative": round(prev["cumulative"] + weight_delta, 3),
@@ -53,14 +61,14 @@ def ingest():
         }
 
     # Adjust per-type score
-    if source_type:
+    if source_type and weight_delta != 0:
         prev = feedback["source_type_adjustments"].get(source_type, {"cumulative": 0.0, "n": 0})
         feedback["source_type_adjustments"][source_type] = {
             "cumulative": round(prev["cumulative"] + weight_delta, 3),
             "n": prev["n"] + 1
         }
 
-    # Log the signal for auditability
+    # Log the signal so the AI Meta-Brain (reflection.py) can read it
     feedback["recent_signals"].append({
         "item_id": item_id,
         "signal": signal,
@@ -71,38 +79,11 @@ def ingest():
         "timestamp_ms": now_ms
     })
 
-    # Context-aware adjustments beyond simple source scoring
-    if context == "too_abstract":
-        # Reduce abstraction weight signal — log for future policy adjustment
-        feedback.setdefault("experience_flags", {})
-        feedback["experience_flags"]["too_abstract"] = (
-            feedback["experience_flags"].get("too_abstract", 0) + 1
-        )
-    elif context == "lost_credibility":
-        # Most important drift signal — flag prominently
-        feedback.setdefault("experience_flags", {})
-        feedback["experience_flags"]["lost_credibility"] = (
-            feedback["experience_flags"].get("lost_credibility", 0) + 1
-        )
-        print(f"DRIFT WARNING: Max signalled the feed has lost credibility. Review policy.yaml thresholds.")
-    elif context in ("want_more_science", "want_more_psychology", "want_more_history"):
-        # Domain preference signal
-        domain_map = {
-            "want_more_science": "optimism_tech",
-            "want_more_psychology": "introspective",
-            "want_more_history": "historical"
-        }
-        preferred_domain = domain_map[context]
-        feedback.setdefault("domain_preferences", {})
-        feedback["domain_preferences"][preferred_domain] = (
-            feedback["domain_preferences"].get(preferred_domain, 0) + 1
-        )
-
-    # Keep only last 90 signals
-    feedback["recent_signals"] = feedback["recent_signals"][-90:]
+    # Keep only last 100 signals to prevent the file from getting too massive
+    feedback["recent_signals"] = feedback["recent_signals"][-100:]
 
     save_feedback(feedback)
-    print(f"Signal recorded: {signal_label} for '{source_name}' ({source_type})")
+    print(f"Signal recorded: {signal_label} ({weight_delta} weight) for '{source_name}'")
 
 if __name__ == "__main__":
     ingest()
