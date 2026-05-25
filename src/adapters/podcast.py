@@ -70,11 +70,16 @@ def fetch_podcast_index(query):
         
         results = []
         for item in data.get("feeds", []):
+            
+            # 🛑 FIX: Podcast Index API's 'url' field is the raw XML file. 
+            # We force it to use the Podcast Index Web Player so you can actually click and listen.
+            safe_url = f"https://podcastindex.org/podcast/{item['id']}"
+            
             normalized = create_standard_item(
                 native_id=item["id"],
                 title=item["title"],
                 description=item.get("description", ""),
-                url=item["url"],
+                url=safe_url, # <--- Now points to a playable web interface!
                 source_type="podcast",
                 source_name=item["author"] or "Unknown Author",
                 date_ms=item.get("newestItemPubdate", int(time.time())) * 1000,
