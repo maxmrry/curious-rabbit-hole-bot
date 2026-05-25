@@ -1464,6 +1464,61 @@
       "native_id": "https://knowablemagazine.org/content/article/living-world/2026/epigenetic-effects-of-sperm-on-offspring",
       "source_type": "rss",
       "last_seen_ms": 1779609418294
+    },
+    "8711c3b1c92addd8b1e22e0db02bfb3b23d3c99a5ced3ea44bc35d8c073b0aac": {
+      "native_id": "https://behavioralscientist.org/what-becomes-of-second-chances/",
+      "source_type": "rss",
+      "last_seen_ms": 1779744391994
+    },
+    "3cc24f4cb34b1435df7ef3355573df7ca44b798bad79d51706c292f5f40d5d19": {
+      "native_id": "ewv5_FhnZns",
+      "source_type": "youtube",
+      "last_seen_ms": 1779744391994
+    },
+    "cae28c0dac3d86cad2b730f3c6ed0dc3262654484954dd59408083a0059b2d14": {
+      "native_id": "AwnA63_w3Sg",
+      "source_type": "youtube",
+      "last_seen_ms": 1779744391994
+    },
+    "e5e3a1efd35a2129afd34480d395fb27a3ef38c82b6b5217bd590abf0385b271": {
+      "native_id": "a84J54i_na8",
+      "source_type": "youtube",
+      "last_seen_ms": 1779744391994
+    },
+    "ce1f1ccf38eb80a3572f98acfd7ca3293036a80c2434246618b539fe4c0f6140": {
+      "native_id": "OyuQDMau9K4",
+      "source_type": "youtube",
+      "last_seen_ms": 1779744391994
+    },
+    "fa23b745d81173facc8d7e002f45455c9bd92ca0a4fdf14b1f753b8072b7f66c": {
+      "native_id": "7592787",
+      "source_type": "podcast",
+      "last_seen_ms": 1779744391994
+    },
+    "628d97393e966318cc1cd8fe4c660c73c17b286bd346d80c302aff344eea6af6": {
+      "native_id": "XmoNt0bDCF0",
+      "source_type": "youtube",
+      "last_seen_ms": 1779744391994
+    },
+    "3348b58888209073a2a726619f145cd7c30c1eff05e802b8032616d43d33abbc": {
+      "native_id": "https://www.quantamagazine.org/how-ecotypes-harbor-the-genetic-memory-of-a-species-past-20260521/",
+      "source_type": "rss",
+      "last_seen_ms": 1779744391994
+    },
+    "734a827e97f59eeeb2792339273de2a1d2caef9a1d0cfaaac4c441a3d31b0dc8": {
+      "native_id": "https://marginalrevolution.com/marginalrevolution/2026/05/campo-grande-bleg-brazil.html",
+      "source_type": "rss",
+      "last_seen_ms": 1779744391994
+    },
+    "c2a4656f0f2b469317d9eb43710eaab5b7aa77c418931a0ca033ff6a7066694c": {
+      "native_id": "https://psyche.co/ideas/its-not-always-clear-when-someones-lost-the-ability-to-decide",
+      "source_type": "rss",
+      "last_seen_ms": 1779744391994
+    },
+    "f9b5ad94118897b79dc8ff25dfc3f2abc100f09f8bd2d213ab65bc111e7af8fb": {
+      "native_id": "https://reasonstobecheerful.world/sceaux-tree-charter/",
+      "source_type": "rss",
+      "last_seen_ms": 1779744391994
     }
   },
   "sources_health": {
@@ -1535,6 +1590,9 @@
     },
     "2026-05-24": {
       "success": true
+    },
+    "2026-05-25": {
+      "success": true
     }
   },
   "source_history": {
@@ -1554,10 +1612,10 @@
     "Works in Progress RSS Feed": 1779438862601,
     "Closer To Truth": 1777881244701,
     "The Leakey Foundation": 1779352934769,
-    "Quanta Magazine": 1778916260372,
+    "Quanta Magazine": 1779744391994,
     "Farnam Street": 1778916260372,
-    "Reasons to be Cheerful": 1778488364002,
-    "Behavioral Scientist": 1778572382146,
+    "Reasons to be Cheerful": 1779744391994,
+    "Behavioral Scientist": 1779744391994,
     "Intelligence Squared": 1778140198142,
     "Wellcome Collection": 1778310966853,
     "Smithsonian": 1778916260372,
@@ -1576,11 +1634,11 @@
     "American Museum of Natural History": 1779179809816,
     "Somatosphere": 1779094452466,
     "Positive News": 1779438862601,
-    "Marginal REVOLUTION": 1779266107404,
-    "Psyche | Know Your Self": 1779179809816,
+    "Marginal REVOLUTION": 1779744391994,
+    "Psyche | Know Your Self": 1779744391994,
     "Sean Carroll": 1779352934769,
     "Resolution Foundation": 1779352934769,
-    "Angela Collier ": 1779094452466,
+    "Angela Collier ": 1779744391994,
     "Computerphile": 1778140198142,
     "SmarterEveryDay": 1778140198142,
     "Conversations with Tyler": 1779003575150,
@@ -1592,7 +1650,7 @@
     "PBS Space Time": 1779179809816,
     "PBS Terra": 1778572382146,
     "The Institute of Art and Ideas": 1779609418294,
-    "Adam Savage\u2019s Tested": 1779521941066,
+    "Adam Savage\u2019s Tested": 1779744391994,
     "Nature": 1779438862601,
     "PBS Eons": 1779521941066,
     "Stand-up Maths": 1778398363664,
@@ -1603,21 +1661,21 @@
     "Howtown": 1779438862601,
     "Practical Engineering": 1779266107404,
     "Santa Fe Institute": 1778488364002,
-    "The Dissenter": 1779521941066,
+    "The Dissenter": 1779744391994,
     "Chris Doel": 1778572382146,
     "minutephysics": 1779609418294,
     "World Science Festival": 1778572382146,
     "Anthropology News": 1779521941066,
     "Invisible People": 1778659174006,
     "YaleCourses": 1778659174006,
-    "AsapSCIENCE": 1779266107404,
+    "AsapSCIENCE": 1779744391994,
     "Periodic Videos": 1779094452466,
     "Yale Center for Emotional Intelligence": 1778659174006,
     "Brian Colburn": 1778659174006,
     "Time We Discuss": 1778659174006,
     "Backstage at the Vinyl Cafe": 1778659174006,
     "Supreme Court asks if there was a 'proper debate' in Parliament before enacting CEC/EC appointments law": 1778659174006,
-    "Beau Miles": 1779438862601,
+    "Beau Miles": 1779744391994,
     "Sixty Symbols": 1779438862601,
     "The New York Academy of Sciences": 1779094452466,
     "Mary Garcia / SmartSeeds": 1778745081628,
@@ -1644,7 +1702,8 @@
     "Priscilla Stuckey": 1779609418294,
     "LibriVox": 1779609418294,
     "Thomas R. Henry": 1779609418294,
-    "Ben the Quasi-Ecologist": 1779609418294
+    "Ben the Quasi-Ecologist": 1779609418294,
+    "Witty Prince": 1779744391994
   },
   "source_scores": {
     "Oxford Martin School": {
@@ -1712,20 +1771,20 @@
       "n": 4
     },
     "Quanta Magazine": {
-      "avg": 8.098,
-      "n": 4
+      "avg": 8.564,
+      "n": 5
     },
     "Farnam Street": {
       "avg": 9.573,
       "n": 3
     },
     "Reasons to be Cheerful": {
-      "avg": 10.592,
-      "n": 4
+      "avg": 10.306,
+      "n": 5
     },
     "Behavioral Scientist": {
-      "avg": 5.41,
-      "n": 3
+      "avg": 6.748,
+      "n": 4
     },
     "Intelligence Squared": {
       "avg": 0.065,
@@ -1800,12 +1859,12 @@
       "n": 5
     },
     "Marginal REVOLUTION": {
-      "avg": 8.337,
-      "n": 3
+      "avg": 7.678,
+      "n": 4
     },
     "Psyche | Know Your Self": {
-      "avg": 9.217,
-      "n": 3
+      "avg": 7.38,
+      "n": 4
     },
     "Sean Carroll": {
       "avg": 6.313,
@@ -1816,8 +1875,8 @@
       "n": 3
     },
     "Angela Collier ": {
-      "avg": 8.305,
-      "n": 2
+      "avg": 5.917,
+      "n": 3
     },
     "Computerphile": {
       "avg": -2.37,
@@ -1864,8 +1923,8 @@
       "n": 3
     },
     "Adam Savage\u2019s Tested": {
-      "avg": 12.47,
-      "n": 2
+      "avg": 9.383,
+      "n": 3
     },
     "Nature": {
       "avg": 2.62,
@@ -1908,8 +1967,8 @@
       "n": 1
     },
     "The Dissenter": {
-      "avg": -1.57,
-      "n": 3
+      "avg": -3.827,
+      "n": 4
     },
     "Chris Doel": {
       "avg": 14.62,
@@ -1936,8 +1995,8 @@
       "n": 1
     },
     "AsapSCIENCE": {
-      "avg": 12.81,
-      "n": 2
+      "avg": 6.977,
+      "n": 3
     },
     "Periodic Videos": {
       "avg": 12.465,
@@ -1964,8 +2023,8 @@
       "n": 1
     },
     "Beau Miles": {
-      "avg": 8.89,
-      "n": 2
+      "avg": 8.573,
+      "n": 3
     },
     "Sixty Symbols": {
       "avg": 10.22,
@@ -2074,20 +2133,24 @@
     "Ben the Quasi-Ecologist": {
       "avg": 5.76,
       "n": 1
+    },
+    "Witty Prince": {
+      "avg": -47.65,
+      "n": 1
     }
   },
   "type_performance": {
     "youtube": {
-      "avg": 7.649,
+      "avg": 7.245,
       "n": 100
     },
     "rss": {
-      "avg": 6.568,
-      "n": 84
+      "avg": 6.625,
+      "n": 89
     },
     "podcast": {
-      "avg": 6.728,
-      "n": 23
+      "avg": 4.462,
+      "n": 24
     },
     "news": {
       "avg": -25.52,
@@ -2112,10 +2175,10 @@
       "Works in Progress RSS Feed": 6,
       "Closer To Truth": 1,
       "The Leakey Foundation": 4,
-      "Quanta Magazine": 4,
+      "Quanta Magazine": 5,
       "Farnam Street": 3,
-      "Reasons to be Cheerful": 4,
-      "Behavioral Scientist": 3,
+      "Reasons to be Cheerful": 5,
+      "Behavioral Scientist": 4,
       "Intelligence Squared": 2,
       "Wellcome Collection": 2,
       "Smithsonian": 4,
@@ -2134,11 +2197,11 @@
       "American Museum of Natural History": 3,
       "Somatosphere": 2,
       "Positive News": 5,
-      "Marginal REVOLUTION": 3,
-      "Psyche | Know Your Self": 3,
+      "Marginal REVOLUTION": 4,
+      "Psyche | Know Your Self": 4,
       "Sean Carroll": 3,
       "Resolution Foundation": 3,
-      "Angela Collier ": 2,
+      "Angela Collier ": 3,
       "Computerphile": 1,
       "SmarterEveryDay": 1,
       "Conversations with Tyler": 3,
@@ -2150,7 +2213,7 @@
       "PBS Space Time": 2,
       "PBS Terra": 2,
       "The Institute of Art and Ideas": 3,
-      "Adam Savage\u2019s Tested": 2,
+      "Adam Savage\u2019s Tested": 3,
       "Nature": 4,
       "PBS Eons": 3,
       "Stand-up Maths": 1,
@@ -2161,21 +2224,21 @@
       "Howtown": 3,
       "Practical Engineering": 3,
       "Santa Fe Institute": 1,
-      "The Dissenter": 3,
+      "The Dissenter": 4,
       "Chris Doel": 1,
       "minutephysics": 4,
       "World Science Festival": 1,
       "Anthropology News": 2,
       "Invisible People": 1,
       "YaleCourses": 1,
-      "AsapSCIENCE": 2,
+      "AsapSCIENCE": 3,
       "Periodic Videos": 2,
       "Yale Center for Emotional Intelligence": 1,
       "Brian Colburn": 1,
       "Time We Discuss": 1,
       "Backstage at the Vinyl Cafe": 1,
       "Supreme Court asks if there was a 'proper debate' in Parliament before enacting CEC/EC appointments law": 1,
-      "Beau Miles": 2,
+      "Beau Miles": 3,
       "Sixty Symbols": 2,
       "The New York Academy of Sciences": 2,
       "Mary Garcia / SmartSeeds": 1,
@@ -2202,16 +2265,17 @@
       "Priscilla Stuckey": 1,
       "LibriVox": 1,
       "Thomas R. Henry": 1,
-      "Ben the Quasi-Ecologist": 1
+      "Ben the Quasi-Ecologist": 1,
+      "Witty Prince": 1
     }
   },
   "monthly_domain_counts": {
     "2026-05": {
-      "historical": 27,
-      "optimism_tech": 124,
+      "historical": 28,
+      "optimism_tech": 130,
       "optimism_health": 14,
       "introspective": 7,
-      "general": 39,
+      "general": 43,
       "optimism_society": 10,
       "environmental": 7,
       "philosophical": 3,
