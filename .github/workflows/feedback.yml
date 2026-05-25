@@ -35,8 +35,9 @@ jobs:
           git add state/feedback.json
           git diff --staged --quiet || git commit -m "feedback: ${{ github.event.client_payload.signal_label }} signal received"
           
-          # Robust push loop: If multiple buttons were clicked at once, 
-          # this pulls the newest changes before pushing to avoid crashes.
-          for i in {1..5}; do
-            git pull --rebase origin main && git push && break || sleep 5
+          # Titanium Push Loop: Tries for up to 5 minutes to survive GitHub outages
+          for i in {1..10}; do
+            git pull --rebase origin main && git push && break
+            echo "Push failed. GitHub servers might be choking or a race condition occurred. Retrying in 30 seconds..."
+            sleep 30
           done
