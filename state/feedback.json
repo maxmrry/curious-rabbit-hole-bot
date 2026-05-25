@@ -79,6 +79,11 @@
       "cumulative": 1.0,
       "n": 1,
       "last_signal_ms": 1779611735078
+    },
+    "Behavioral Scientist": {
+      "cumulative": -2.0,
+      "n": 1,
+      "last_signal_ms": 1779748751907
     }
   },
   "source_type_adjustments": {
@@ -87,8 +92,8 @@
       "n": 5
     },
     "rss": {
-      "cumulative": -3.0,
-      "n": 3
+      "cumulative": -5.0,
+      "n": 4
     },
     "youtube": {
       "cumulative": -5.0,
@@ -297,6 +302,15 @@
       "source_type": "podcast",
       "context": "neutral_okay | Topic: Recruiting: Human Trust in Large Digital Networks",
       "timestamp_ms": 1779611735078
+    },
+    {
+      "item_id": "https://behavioralscientist.org/what-becomes-of-second-chances/",
+      "signal": 0,
+      "signal_label": "not_interested",
+      "source_name": "Behavioral Scientist",
+      "source_type": "rss",
+      "context": "not_interested | Topic: US prosecutor leniency reduces reoffending by 50%",
+      "timestamp_ms": 1779748751907
     }
   ]
 }
