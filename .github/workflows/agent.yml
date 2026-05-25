@@ -20,7 +20,8 @@ jobs:
         python-version: '3.11'
         
     - name: Install dependencies
-      run: pip install -r requirements.txt
+      # Added break-system-packages to prevent ubuntu-latest pip errors
+      run: pip install -r requirements.txt --break-system-packages
         
     - name: Run Agent
       env:
@@ -38,24 +39,21 @@ jobs:
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
         
-        # Track the new folder structure
-        git add state/memory.json docs/feed.xml
+        # Track memory, RSS feed, AND the new AI weight overrides in feedback.json
+        git add state/memory.json docs/feed.xml state/feedback.json
         
         if git diff --quiet && git diff --staged --quiet; then
           echo "No changes to commit."
         else
           git commit -m "🤖 Brain updated memory and RSS feed"
           
-          max_attempts=3
-          attempt=1
-          while ! git push; do
-            if [ $attempt -eq $max_attempts ]; then
-              echo "Git push failed after $max_attempts attempts. Exiting."
-              exit 1
-            fi
-            echo "GitHub server error on push. Retrying in 2 minutes (Attempt $attempt of $max_attempts)..."
-            sleep 120
-            attempt=$((attempt + 1))
+          # Titanium Push Loop: Handles both server crashes and race conditions
+          for i in {1..10}; do
+            git pull --rebase origin main && git push && exit 0
+            echo "Push failed. GitHub servers might be choking or a race condition occurred. Retrying in 30 seconds (Attempt $i of 10)..."
+            sleep 30
           done
-          echo "Push successful!"
+          
+          echo "Git push failed after 10 attempts. Exiting."
+          exit 1
         fi
