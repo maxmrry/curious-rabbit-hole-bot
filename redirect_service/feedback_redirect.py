@@ -13,9 +13,11 @@ GITHUB_REPO = os.getenv("GITHUB_REPO")  # e.g. "maxmrry/curious-rabbit-hole-bot"
 REDIRECT_SECRET = os.getenv("REDIRECT_SECRET")  # simple shared secret
 
 SIGNAL_LABELS = {
-    "1": "useful",
-    "2": "fascinating",
-    "0": "skip"
+    "3": "amazingly_hopeful",
+    "2": "pretty_positive",
+    "1": "neutral_okay",
+    "0": "not_interested",
+    "-1": "too_gloomy"
 }
 
 @app.route("/signal")
