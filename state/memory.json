@@ -1519,6 +1519,66 @@
       "native_id": "https://reasonstobecheerful.world/sceaux-tree-charter/",
       "source_type": "rss",
       "last_seen_ms": 1779744391994
+    },
+    "8f6ac2664a5cde8ceccd2cf2fc67277f12cd649ccefa03d01dc9d37eaa7c528d": {
+      "native_id": "b-d-5z3CUxQ",
+      "source_type": "youtube",
+      "last_seen_ms": 1779784757690
+    },
+    "3916a2c444fdded9aeca08a437c1a9a1282a806a6ed9477121a100e84c410bf4": {
+      "native_id": "9_Im4o-XIYE",
+      "source_type": "youtube",
+      "last_seen_ms": 1779784757690
+    },
+    "81271ace9c3f666dabe4287de3d859d1ac912dc1657df03aa8f795b07d99b105": {
+      "native_id": "-aoD9qv01GI",
+      "source_type": "youtube",
+      "last_seen_ms": 1779784757690
+    },
+    "5cb3c18ddc5d69c4d1e34ffc839b3ea2f599eec4a21f1a57ab01fc466a2fb00d": {
+      "native_id": "UfP83M07s24",
+      "source_type": "youtube",
+      "last_seen_ms": 1779784757690
+    },
+    "691f06a8607d19bef652de39a434fe34324721e889e3379c2508fbe9f688f101": {
+      "native_id": "GnSUre9C_Nc",
+      "source_type": "youtube",
+      "last_seen_ms": 1779784757690
+    },
+    "f9df129e756ebdbe41b1522734a9a35aefaf6ffbd24184d137c20afde881fb55": {
+      "native_id": "https://www.nature.com/articles/d41586-026-01621-6",
+      "source_type": "rss",
+      "last_seen_ms": 1779784757690
+    },
+    "7266c22d94651ccb012ac07d1202aa07b5b53bd2c488b9ef86a5ce709d117877": {
+      "native_id": "6682040",
+      "source_type": "podcast",
+      "last_seen_ms": 1779784757690
+    },
+    "5420505196cb1d32cd92139b922b32242e74ec1e8806fa58feaff84295e221a9": {
+      "native_id": "6697306",
+      "source_type": "podcast",
+      "last_seen_ms": 1779784757690
+    },
+    "c38caab9ba0abea5e962bec434376206810c3117e7de0c920f28669a4bf87f3a": {
+      "native_id": "6664858",
+      "source_type": "podcast",
+      "last_seen_ms": 1779784757690
+    },
+    "bedb37b00b9062e3b173880d632f92fd5542d587e40e9f88112b900d76ae3bc8": {
+      "native_id": "https://www.nature.com/articles/s41562-026-02483-8",
+      "source_type": "rss",
+      "last_seen_ms": 1779784757690
+    },
+    "8b457fa3b13f6bfb3784f731be0941f2a757985ea030ac337718a680c491f37f": {
+      "native_id": "https://ourworldindata.org/five-million-children-die-every-year-what-do-they-die-from",
+      "source_type": "rss",
+      "last_seen_ms": 1779784757690
+    },
+    "3d6f52743c077fa527bd183ce49eb47b17c58f1fc04fd7017e086baa44330dc6": {
+      "native_id": "lbouGy-SMQ8",
+      "source_type": "youtube",
+      "last_seen_ms": 1779784757690
     }
   },
   "sources_health": {
@@ -1593,6 +1653,9 @@
     },
     "2026-05-25": {
       "success": true
+    },
+    "2026-05-26": {
+      "success": true
     }
   },
   "source_history": {
@@ -1619,7 +1682,7 @@
     "Intelligence Squared": 1778140198142,
     "Wellcome Collection": 1778310966853,
     "Smithsonian": 1778916260372,
-    "The Rest Is Science": 1778916260372,
+    "The Rest Is Science": 1779784757690,
     "Wendover Productions": 1777965914867,
     "Undark Magazine": 1779003575150,
     "Greater Good": 1779438862601,
@@ -1636,14 +1699,14 @@
     "Positive News": 1779438862601,
     "Marginal REVOLUTION": 1779744391994,
     "Psyche | Know Your Self": 1779744391994,
-    "Sean Carroll": 1779352934769,
+    "Sean Carroll": 1779784757690,
     "Resolution Foundation": 1779352934769,
     "Angela Collier ": 1779744391994,
     "Computerphile": 1778140198142,
     "SmarterEveryDay": 1778140198142,
     "Conversations with Tyler": 1779003575150,
     "The Royal Institution": 1779266107404,
-    "Numberphile": 1779521941066,
+    "Numberphile": 1779784757690,
     "NileRed": 1778223634799,
     "TED": 1779266107404,
     "Not Boring by Packy McCormick": 1779438862601,
@@ -1651,16 +1714,16 @@
     "PBS Terra": 1778572382146,
     "The Institute of Art and Ideas": 1779609418294,
     "Adam Savage\u2019s Tested": 1779744391994,
-    "Nature": 1779438862601,
+    "Nature": 1779784757690,
     "PBS Eons": 1779521941066,
     "Stand-up Maths": 1778398363664,
     "Sprouht": 1779438862601,
     "Special Books by Special Kids": 1779179809816,
-    "Our World in Data": 1779609418294,
+    "Our World in Data": 1779784757690,
     "The British Academy": 1779003575150,
     "Howtown": 1779438862601,
     "Practical Engineering": 1779266107404,
-    "Santa Fe Institute": 1778488364002,
+    "Santa Fe Institute": 1779784757690,
     "The Dissenter": 1779744391994,
     "Chris Doel": 1778572382146,
     "minutephysics": 1779609418294,
@@ -1675,7 +1738,7 @@
     "Time We Discuss": 1778659174006,
     "Backstage at the Vinyl Cafe": 1778659174006,
     "Supreme Court asks if there was a 'proper debate' in Parliament before enacting CEC/EC appointments law": 1778659174006,
-    "Beau Miles": 1779744391994,
+    "Beau Miles": 1779784757690,
     "Sixty Symbols": 1779438862601,
     "The New York Academy of Sciences": 1779094452466,
     "Mary Garcia / SmartSeeds": 1778745081628,
@@ -1703,7 +1766,11 @@
     "LibriVox": 1779609418294,
     "Thomas R. Henry": 1779609418294,
     "Ben the Quasi-Ecologist": 1779609418294,
-    "Witty Prince": 1779744391994
+    "Witty Prince": 1779744391994,
+    "Blades, craftsmanship, creativity, and laughs!": 1779784757690,
+    "Fabvisuals": 1779784757690,
+    "Floret Boutique": 1779784757690,
+    "Nature Human Behaviour": 1779784757690
   },
   "source_scores": {
     "Oxford Martin School": {
@@ -1799,8 +1866,8 @@
       "n": 4
     },
     "The Rest Is Science": {
-      "avg": 9.825,
-      "n": 2
+      "avg": 8.967,
+      "n": 3
     },
     "Wendover Productions": {
       "avg": 12.21,
@@ -1867,8 +1934,8 @@
       "n": 4
     },
     "Sean Carroll": {
-      "avg": 6.313,
-      "n": 3
+      "avg": 6.797,
+      "n": 4
     },
     "Resolution Foundation": {
       "avg": -1.507,
@@ -1895,8 +1962,8 @@
       "n": 3
     },
     "Numberphile": {
-      "avg": 4.985,
-      "n": 2
+      "avg": 4.893,
+      "n": 3
     },
     "NileRed": {
       "avg": 4.56,
@@ -1927,8 +1994,8 @@
       "n": 3
     },
     "Nature": {
-      "avg": 2.62,
-      "n": 4
+      "avg": 3.466,
+      "n": 5
     },
     "PBS Eons": {
       "avg": 13.997,
@@ -1947,8 +2014,8 @@
       "n": 3
     },
     "Our World in Data": {
-      "avg": 5.685,
-      "n": 2
+      "avg": 0.02,
+      "n": 3
     },
     "The British Academy": {
       "avg": 9.005,
@@ -1963,8 +2030,8 @@
       "n": 3
     },
     "Santa Fe Institute": {
-      "avg": 13.46,
-      "n": 1
+      "avg": 11.257,
+      "n": 3
     },
     "The Dissenter": {
       "avg": -3.827,
@@ -2023,8 +2090,8 @@
       "n": 1
     },
     "Beau Miles": {
-      "avg": 8.573,
-      "n": 3
+      "avg": 2.05,
+      "n": 4
     },
     "Sixty Symbols": {
       "avg": 10.22,
@@ -2137,20 +2204,36 @@
     "Witty Prince": {
       "avg": -47.65,
       "n": 1
+    },
+    "Blades, craftsmanship, creativity, and laughs!": {
+      "avg": 5.7,
+      "n": 1
+    },
+    "Fabvisuals": {
+      "avg": -14.14,
+      "n": 1
+    },
+    "Floret Boutique": {
+      "avg": -14.77,
+      "n": 1
+    },
+    "Nature Human Behaviour": {
+      "avg": 0.79,
+      "n": 1
     }
   },
   "type_performance": {
     "youtube": {
-      "avg": 7.245,
+      "avg": 7.045,
       "n": 100
     },
     "rss": {
-      "avg": 6.625,
-      "n": 89
+      "avg": 6.37,
+      "n": 92
     },
     "podcast": {
-      "avg": 4.462,
-      "n": 24
+      "avg": 3.107,
+      "n": 27
     },
     "news": {
       "avg": -25.52,
@@ -2182,7 +2265,7 @@
       "Intelligence Squared": 2,
       "Wellcome Collection": 2,
       "Smithsonian": 4,
-      "The Rest Is Science": 2,
+      "The Rest Is Science": 3,
       "Wendover Productions": 1,
       "Undark Magazine": 4,
       "Greater Good": 4,
@@ -2199,14 +2282,14 @@
       "Positive News": 5,
       "Marginal REVOLUTION": 4,
       "Psyche | Know Your Self": 4,
-      "Sean Carroll": 3,
+      "Sean Carroll": 4,
       "Resolution Foundation": 3,
       "Angela Collier ": 3,
       "Computerphile": 1,
       "SmarterEveryDay": 1,
       "Conversations with Tyler": 3,
       "The Royal Institution": 3,
-      "Numberphile": 2,
+      "Numberphile": 3,
       "NileRed": 1,
       "TED": 3,
       "Not Boring by Packy McCormick": 4,
@@ -2214,16 +2297,16 @@
       "PBS Terra": 2,
       "The Institute of Art and Ideas": 3,
       "Adam Savage\u2019s Tested": 3,
-      "Nature": 4,
+      "Nature": 5,
       "PBS Eons": 3,
       "Stand-up Maths": 1,
       "Sprouht": 4,
       "Special Books by Special Kids": 3,
-      "Our World in Data": 2,
+      "Our World in Data": 3,
       "The British Academy": 2,
       "Howtown": 3,
       "Practical Engineering": 3,
-      "Santa Fe Institute": 1,
+      "Santa Fe Institute": 3,
       "The Dissenter": 4,
       "Chris Doel": 1,
       "minutephysics": 4,
@@ -2238,7 +2321,7 @@
       "Time We Discuss": 1,
       "Backstage at the Vinyl Cafe": 1,
       "Supreme Court asks if there was a 'proper debate' in Parliament before enacting CEC/EC appointments law": 1,
-      "Beau Miles": 3,
+      "Beau Miles": 4,
       "Sixty Symbols": 2,
       "The New York Academy of Sciences": 2,
       "Mary Garcia / SmartSeeds": 1,
@@ -2266,20 +2349,24 @@
       "LibriVox": 1,
       "Thomas R. Henry": 1,
       "Ben the Quasi-Ecologist": 1,
-      "Witty Prince": 1
+      "Witty Prince": 1,
+      "Blades, craftsmanship, creativity, and laughs!": 1,
+      "Fabvisuals": 1,
+      "Floret Boutique": 1,
+      "Nature Human Behaviour": 1
     }
   },
   "monthly_domain_counts": {
     "2026-05": {
-      "historical": 28,
-      "optimism_tech": 130,
-      "optimism_health": 14,
+      "historical": 29,
+      "optimism_tech": 135,
+      "optimism_health": 15,
       "introspective": 7,
-      "general": 43,
-      "optimism_society": 10,
+      "general": 46,
+      "optimism_society": 11,
       "environmental": 7,
       "philosophical": 3,
-      "economic": 9
+      "economic": 10
     }
   }
 }
