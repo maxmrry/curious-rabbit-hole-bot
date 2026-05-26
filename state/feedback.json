@@ -84,6 +84,11 @@
       "cumulative": -2.0,
       "n": 1,
       "last_signal_ms": 1779748751907
+    },
+    "Sean Carroll": {
+      "cumulative": -2.0,
+      "n": 1,
+      "last_signal_ms": 1779788699660
     }
   },
   "source_type_adjustments": {
@@ -96,8 +101,8 @@
       "n": 4
     },
     "youtube": {
-      "cumulative": -5.0,
-      "n": 10
+      "cumulative": -7.0,
+      "n": 11
     },
     "podcast": {
       "cumulative": -3.0,
@@ -311,6 +316,15 @@
       "source_type": "rss",
       "context": "not_interested | Topic: US prosecutor leniency reduces reoffending by 50%",
       "timestamp_ms": 1779748751907
+    },
+    {
+      "item_id": "b-d-5z3CUxQ",
+      "signal": 0,
+      "signal_label": "not_interested",
+      "source_name": "Sean Carroll",
+      "source_type": "youtube",
+      "context": "not_interested | Topic: Sean Carroll Discusses Quantum Mechanics Foundations",
+      "timestamp_ms": 1779788699660
     }
   ]
 }
