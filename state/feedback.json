@@ -352,6 +352,15 @@
       "source_type": "youtube",
       "context": "amazingly_hopeful | Topic: Lithium-Free Battery Enters Mass Production",
       "timestamp_ms": 1779925741935
+    },
+    {
+      "item_id": "9_D0NembBYs",
+      "signal": 1,
+      "signal_label": "neutral_okay",
+      "source_name": "Conversations with Tyler",
+      "source_type": "youtube",
+      "context": "neutral_okay | Topic: Craig Newmark on Building 'Networks of Networks'",
+      "timestamp_ms": 1779925950797
     }
   ],
   "ai_weight_overrides": {
