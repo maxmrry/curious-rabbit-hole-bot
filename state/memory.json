@@ -1579,6 +1579,66 @@
       "native_id": "lbouGy-SMQ8",
       "source_type": "youtube",
       "last_seen_ms": 1779784757690
+    },
+    "77ed7904dd57d291af9c7377458594a71028d80e0ba903d2c431eddd6d94dd50": {
+      "native_id": "Af5LICjFIBc",
+      "source_type": "youtube",
+      "last_seen_ms": 1779871851419
+    },
+    "42fd3f38c2c9fec95bbd97aef3f7c3b2f0640670673f6de151b236c957457eef": {
+      "native_id": "6MIBsuC9REo",
+      "source_type": "youtube",
+      "last_seen_ms": 1779871851419
+    },
+    "9f6ecc4e6f906ea7f28d07cf6f31496cba1557407789db7e35afbc4408e0e2d0": {
+      "native_id": "9_D0NembBYs",
+      "source_type": "youtube",
+      "last_seen_ms": 1779871851419
+    },
+    "9d2f19c893db7a086be027b359b0f66d924f9e4c4dd7471240a81865d5ef73dc": {
+      "native_id": "Wu8xNx4njoM",
+      "source_type": "youtube",
+      "last_seen_ms": 1779871851419
+    },
+    "8f93861c53d84fa993b9900c681cc27c0cfd2f02cd2f4d2cade300a50c4ba546": {
+      "native_id": "7705374",
+      "source_type": "podcast",
+      "last_seen_ms": 1779871851419
+    },
+    "27bd9c259205f0de2ecdebce3653423394b7b939df93a7509b92bd3bf6c7d663": {
+      "native_id": "7465450",
+      "source_type": "podcast",
+      "last_seen_ms": 1779871851419
+    },
+    "01b4497f07a9b37d780caf3c45211636d566ad243e17081d7281828fa7d22d33": {
+      "native_id": "7568555",
+      "source_type": "podcast",
+      "last_seen_ms": 1779871851419
+    },
+    "c549f14a6b6d2cc869cbf61183495789bc8a9c7e910671b39f912c7f6fb7d599": {
+      "native_id": "6616535",
+      "source_type": "podcast",
+      "last_seen_ms": 1779871851419
+    },
+    "e169a02c1a73e9f487f5a507c38b13e8c5f6dc077bec77c0216e9d3a7a6a3369": {
+      "native_id": "6469494",
+      "source_type": "podcast",
+      "last_seen_ms": 1779871851419
+    },
+    "92e73d9db174ab104eae27d2123e9674574ddde9af6ec3d82dbd06b63a7caab8": {
+      "native_id": "https://undark.org/2026/05/21/opinion-hantavirus-medical-mistrust/",
+      "source_type": "rss",
+      "last_seen_ms": 1779871851419
+    },
+    "753915b460bd85a2113f03839cc9ad34c66a5a44b1dbd35e94683b0b2daf2fab": {
+      "native_id": "https://knowablemagazine.org/content/article/food-environment/2026/fragile-future-of-biodiversity",
+      "source_type": "rss",
+      "last_seen_ms": 1779871851419
+    },
+    "3e2dfdff385ddfa7ca4dc45f58bb205273ec40c12b9ffad280fbd5019a05e273": {
+      "native_id": "https://undark.org/2026/05/22/book-review-beyond-belief/",
+      "source_type": "rss",
+      "last_seen_ms": 1779871851419
     }
   },
   "sources_health": {
@@ -1656,6 +1716,9 @@
     },
     "2026-05-26": {
       "success": true
+    },
+    "2026-05-27": {
+      "success": true
     }
   },
   "source_history": {
@@ -1663,13 +1726,13 @@
     "nature video": 1779094452466,
     "The Royal Society": 1779438862601,
     "SciFri": 1779266107404,
-    "Knowable Magazine": 1779609418294,
+    "Knowable Magazine": 1779871851419,
     "Natural History Museum": 1779521941066,
     "Ness Labs": 1778223634799,
     "Experimental History": 1779352934769,
     "NOEMA": 1779352934769,
     "LSE": 1777881244701,
-    "Dr Ben Miles": 1779266107404,
+    "Dr Ben Miles": 1779871851419,
     "3Blue1Brown": 1779438862601,
     "TED-Ed": 1778488364002,
     "Works in Progress RSS Feed": 1779438862601,
@@ -1684,7 +1747,7 @@
     "Smithsonian": 1778916260372,
     "The Rest Is Science": 1779784757690,
     "Wendover Productions": 1777965914867,
-    "Undark Magazine": 1779003575150,
+    "Undark Magazine": 1779871851419,
     "Greater Good": 1779438862601,
     "Nautilus": 1779521941066,
     "Fix The News": 1779352934769,
@@ -1704,13 +1767,13 @@
     "Angela Collier ": 1779744391994,
     "Computerphile": 1778140198142,
     "SmarterEveryDay": 1778140198142,
-    "Conversations with Tyler": 1779003575150,
+    "Conversations with Tyler": 1779871851419,
     "The Royal Institution": 1779266107404,
     "Numberphile": 1779784757690,
     "NileRed": 1778223634799,
     "TED": 1779266107404,
     "Not Boring by Packy McCormick": 1779438862601,
-    "PBS Space Time": 1779179809816,
+    "PBS Space Time": 1779871851419,
     "PBS Terra": 1778572382146,
     "The Institute of Art and Ideas": 1779609418294,
     "Adam Savage\u2019s Tested": 1779744391994,
@@ -1727,7 +1790,7 @@
     "The Dissenter": 1779744391994,
     "Chris Doel": 1778572382146,
     "minutephysics": 1779609418294,
-    "World Science Festival": 1778572382146,
+    "World Science Festival": 1779871851419,
     "Anthropology News": 1779521941066,
     "Invisible People": 1778659174006,
     "YaleCourses": 1778659174006,
@@ -1770,7 +1833,12 @@
     "Blades, craftsmanship, creativity, and laughs!": 1779784757690,
     "Fabvisuals": 1779784757690,
     "Floret Boutique": 1779784757690,
-    "Nature Human Behaviour": 1779784757690
+    "Nature Human Behaviour": 1779784757690,
+    "Patrick Duriaux \u2014 Host of BrightBond & Founder of ALTO.cool, building real human connection across generations": 1779871851419,
+    "Habitat for Humanity of Greater Memphis": 1779871851419,
+    "Rhythm Studio": 1779871851419,
+    "Michelle Renee, Human Connection Coach": 1779871851419,
+    "Pet Life Radio": 1779871851419
   },
   "source_scores": {
     "Oxford Martin School": {
@@ -1790,8 +1858,8 @@
       "n": 4
     },
     "Knowable Magazine": {
-      "avg": 5.647,
-      "n": 3
+      "avg": 0.093,
+      "n": 4
     },
     "Natural History Museum": {
       "avg": 9.185,
@@ -1814,8 +1882,8 @@
       "n": 1
     },
     "Dr Ben Miles": {
-      "avg": 13.373,
-      "n": 3
+      "avg": 13.866,
+      "n": 4
     },
     "3Blue1Brown": {
       "avg": 0.895,
@@ -1874,8 +1942,8 @@
       "n": 1
     },
     "Undark Magazine": {
-      "avg": 2.793,
-      "n": 4
+      "avg": 3.257,
+      "n": 6
     },
     "Greater Good": {
       "avg": 10.27,
@@ -1954,8 +2022,8 @@
       "n": 1
     },
     "Conversations with Tyler": {
-      "avg": 7.46,
-      "n": 3
+      "avg": 9.036,
+      "n": 4
     },
     "The Royal Institution": {
       "avg": 13.163,
@@ -1978,8 +2046,8 @@
       "n": 4
     },
     "PBS Space Time": {
-      "avg": 11.995,
-      "n": 2
+      "avg": 12.485,
+      "n": 3
     },
     "PBS Terra": {
       "avg": 8.955,
@@ -2046,8 +2114,8 @@
       "n": 4
     },
     "World Science Festival": {
-      "avg": 10.84,
-      "n": 1
+      "avg": 12.328,
+      "n": 2
     },
     "Anthropology News": {
       "avg": 3.215,
@@ -2220,20 +2288,40 @@
     "Nature Human Behaviour": {
       "avg": 0.79,
       "n": 1
+    },
+    "Patrick Duriaux \u2014 Host of BrightBond & Founder of ALTO.cool, building real human connection across generations": {
+      "avg": 15.42,
+      "n": 1
+    },
+    "Habitat for Humanity of Greater Memphis": {
+      "avg": 15.37,
+      "n": 1
+    },
+    "Rhythm Studio": {
+      "avg": 13.8,
+      "n": 1
+    },
+    "Michelle Renee, Human Connection Coach": {
+      "avg": 13.02,
+      "n": 1
+    },
+    "Pet Life Radio": {
+      "avg": 12.83,
+      "n": 1
     }
   },
   "type_performance": {
     "youtube": {
-      "avg": 7.045,
+      "avg": 7.32,
       "n": 100
     },
     "rss": {
-      "avg": 6.37,
-      "n": 92
+      "avg": 6.082,
+      "n": 95
     },
     "podcast": {
-      "avg": 3.107,
-      "n": 27
+      "avg": 4.823,
+      "n": 32
     },
     "news": {
       "avg": -25.52,
@@ -2246,13 +2334,13 @@
       "nature video": 2,
       "The Royal Society": 3,
       "SciFri": 4,
-      "Knowable Magazine": 3,
+      "Knowable Magazine": 4,
       "Natural History Museum": 4,
       "Ness Labs": 2,
       "Experimental History": 2,
       "NOEMA": 4,
       "LSE": 1,
-      "Dr Ben Miles": 3,
+      "Dr Ben Miles": 4,
       "3Blue1Brown": 4,
       "TED-Ed": 2,
       "Works in Progress RSS Feed": 6,
@@ -2267,7 +2355,7 @@
       "Smithsonian": 4,
       "The Rest Is Science": 3,
       "Wendover Productions": 1,
-      "Undark Magazine": 4,
+      "Undark Magazine": 6,
       "Greater Good": 4,
       "Nautilus": 6,
       "Fix The News": 5,
@@ -2287,13 +2375,13 @@
       "Angela Collier ": 3,
       "Computerphile": 1,
       "SmarterEveryDay": 1,
-      "Conversations with Tyler": 3,
+      "Conversations with Tyler": 4,
       "The Royal Institution": 3,
       "Numberphile": 3,
       "NileRed": 1,
       "TED": 3,
       "Not Boring by Packy McCormick": 4,
-      "PBS Space Time": 2,
+      "PBS Space Time": 3,
       "PBS Terra": 2,
       "The Institute of Art and Ideas": 3,
       "Adam Savage\u2019s Tested": 3,
@@ -2310,7 +2398,7 @@
       "The Dissenter": 4,
       "Chris Doel": 1,
       "minutephysics": 4,
-      "World Science Festival": 1,
+      "World Science Festival": 2,
       "Anthropology News": 2,
       "Invisible People": 1,
       "YaleCourses": 1,
@@ -2353,20 +2441,25 @@
       "Blades, craftsmanship, creativity, and laughs!": 1,
       "Fabvisuals": 1,
       "Floret Boutique": 1,
-      "Nature Human Behaviour": 1
+      "Nature Human Behaviour": 1,
+      "Patrick Duriaux \u2014 Host of BrightBond & Founder of ALTO.cool, building real human connection across generations": 1,
+      "Habitat for Humanity of Greater Memphis": 1,
+      "Rhythm Studio": 1,
+      "Michelle Renee, Human Connection Coach": 1,
+      "Pet Life Radio": 1
     }
   },
   "monthly_domain_counts": {
     "2026-05": {
-      "historical": 29,
-      "optimism_tech": 135,
+      "historical": 30,
+      "optimism_tech": 141,
       "optimism_health": 15,
       "introspective": 7,
-      "general": 46,
-      "optimism_society": 11,
+      "general": 48,
+      "optimism_society": 13,
       "environmental": 7,
       "philosophical": 3,
-      "economic": 10
+      "economic": 11
     }
   }
 }
