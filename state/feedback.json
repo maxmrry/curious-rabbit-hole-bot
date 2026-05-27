@@ -89,6 +89,11 @@
       "cumulative": -2.0,
       "n": 1,
       "last_signal_ms": 1779788699660
+    },
+    "Dr Ben Miles": {
+      "cumulative": 4.0,
+      "n": 1,
+      "last_signal_ms": 1779925741935
     }
   },
   "source_type_adjustments": {
@@ -101,8 +106,8 @@
       "n": 4
     },
     "youtube": {
-      "cumulative": -7.0,
-      "n": 11
+      "cumulative": -3.0,
+      "n": 12
     },
     "podcast": {
       "cumulative": -3.0,
@@ -338,6 +343,15 @@
       "source_type": "feed",
       "context": "whole_feed_boring",
       "timestamp_ms": 1779836609399
+    },
+    {
+      "item_id": "6MIBsuC9REo",
+      "signal": 3,
+      "signal_label": "amazingly_hopeful",
+      "source_name": "Dr Ben Miles",
+      "source_type": "youtube",
+      "context": "amazingly_hopeful | Topic: Lithium-Free Battery Enters Mass Production",
+      "timestamp_ms": 1779925741935
     }
   ],
   "ai_weight_overrides": {
