@@ -1639,6 +1639,56 @@
       "native_id": "https://undark.org/2026/05/22/book-review-beyond-belief/",
       "source_type": "rss",
       "last_seen_ms": 1779871851419
+    },
+    "93e1ffbec259f321a5aaabe32052a8a781a6355e40fe3914ffa0c104f664d42f": {
+      "native_id": "uBwkMc1llmM",
+      "source_type": "youtube",
+      "last_seen_ms": 1779958281740
+    },
+    "99455c03819c8e236225aa2611893a2cdfc3c336587ebe429437f5c7b02346c5": {
+      "native_id": "Oim8c_PzF6Q",
+      "source_type": "youtube",
+      "last_seen_ms": 1779958281740
+    },
+    "25dfca6fdbc4b79380f0fef69fe08aee904f0c3334dd826439eef557dc85c775": {
+      "native_id": "OTO-uYjbTxs",
+      "source_type": "youtube",
+      "last_seen_ms": 1779958281740
+    },
+    "0552ad59182f886f9a1ba480194f106814636b338348f4229e14811a53581c91": {
+      "native_id": "aluDNv1cFEQ",
+      "source_type": "youtube",
+      "last_seen_ms": 1779958281740
+    },
+    "d6ec90a3ef010413f154fff77d721869948c0c7e6744f7fed417af684f627778": {
+      "native_id": "GREaEG_0Xcw",
+      "source_type": "youtube",
+      "last_seen_ms": 1779958281740
+    },
+    "782b3caeb116143e700b2bddf877a0e7cc5782c66e807319f765f4d64ed34121": {
+      "native_id": "FCaTFLdtsco",
+      "source_type": "youtube",
+      "last_seen_ms": 1779958281740
+    },
+    "4a819595ec00a8671f6e5a1c4997ab133308ac9d7a7d83140d4c1bc9c9d3318f": {
+      "native_id": "https://undark.org/2026/05/28/opinion-postpartum-checkup-too-late/",
+      "source_type": "rss",
+      "last_seen_ms": 1779958281740
+    },
+    "ec6f96e058326467f7d43c67fe377c2af106729b1a06a38f5aaac49147943fe0": {
+      "native_id": "https://www.yesmagazine.org/issues/2026/04/15/planting-the-seeds-for-a-youth-driven-antimilitarism-movement",
+      "source_type": "rss",
+      "last_seen_ms": 1779958281740
+    },
+    "bb70ceee9840de9c74627ee93d3740f67d961eee75757401c9c82c5f84edb7f7": {
+      "native_id": "https://www.experimental-history.com/p/shame-them-shun-them-ban-them-beat",
+      "source_type": "rss",
+      "last_seen_ms": 1779958281740
+    },
+    "293086a489582ba2335ce3337c1abc85b8567054602d69d12473fe082925193c": {
+      "native_id": "https://nautil.us/the-supernova-that-sparked-the-original-scientific-revolution-1281459/",
+      "source_type": "rss",
+      "last_seen_ms": 1779958281740
     }
   },
   "sources_health": {
@@ -1719,6 +1769,9 @@
     },
     "2026-05-27": {
       "success": true
+    },
+    "2026-05-28": {
+      "success": true
     }
   },
   "source_history": {
@@ -1729,12 +1782,12 @@
     "Knowable Magazine": 1779871851419,
     "Natural History Museum": 1779521941066,
     "Ness Labs": 1778223634799,
-    "Experimental History": 1779352934769,
+    "Experimental History": 1779958281740,
     "NOEMA": 1779352934769,
     "LSE": 1777881244701,
     "Dr Ben Miles": 1779871851419,
     "3Blue1Brown": 1779438862601,
-    "TED-Ed": 1778488364002,
+    "TED-Ed": 1779958281740,
     "Works in Progress RSS Feed": 1779438862601,
     "Closer To Truth": 1777881244701,
     "The Leakey Foundation": 1779352934769,
@@ -1743,13 +1796,13 @@
     "Reasons to be Cheerful": 1779744391994,
     "Behavioral Scientist": 1779744391994,
     "Intelligence Squared": 1778140198142,
-    "Wellcome Collection": 1778310966853,
+    "Wellcome Collection": 1779958281740,
     "Smithsonian": 1778916260372,
     "The Rest Is Science": 1779784757690,
-    "Wendover Productions": 1777965914867,
-    "Undark Magazine": 1779871851419,
+    "Wendover Productions": 1779958281740,
+    "Undark Magazine": 1779958281740,
     "Greater Good": 1779438862601,
-    "Nautilus": 1779521941066,
+    "Nautilus": 1779958281740,
     "Fix The News": 1779352934769,
     "Aeon | a world of ideas": 1779609418294,
     "The Rest Is History": 1779521941066,
@@ -1794,7 +1847,7 @@
     "Anthropology News": 1779521941066,
     "Invisible People": 1778659174006,
     "YaleCourses": 1778659174006,
-    "AsapSCIENCE": 1779744391994,
+    "AsapSCIENCE": 1779958281740,
     "Periodic Videos": 1779094452466,
     "Yale Center for Emotional Intelligence": 1778659174006,
     "Brian Colburn": 1778659174006,
@@ -1803,7 +1856,7 @@
     "Supreme Court asks if there was a 'proper debate' in Parliament before enacting CEC/EC appointments law": 1778659174006,
     "Beau Miles": 1779784757690,
     "Sixty Symbols": 1779438862601,
-    "The New York Academy of Sciences": 1779094452466,
+    "The New York Academy of Sciences": 1779958281740,
     "Mary Garcia / SmartSeeds": 1778745081628,
     "Lenore Elizabeth Mulets": 1778745081628,
     "Antica Productions, WWF-Canada": 1778745081628,
@@ -1816,11 +1869,11 @@
     "ColdFusion": 1779609418294,
     "The Craftsmanship Initiative": 1779266107404,
     "The Makery Network": 1779266107404,
-    "YES! Magazine": 1779266107404,
+    "YES! Magazine": 1779958281740,
     "BBC World Service": 1779352934769,
     "Drug Discovery World (DDW)": 1779352934769,
     "The Alan Turing Institute": 1779352934769,
-    "Mind & Life Institute": 1779521941066,
+    "Mind & Life Institute": 1779958281740,
     "Talk Nerdy with Cara Santa Maria": 1779521941066,
     "Rob Zimmer": 1779521941066,
     "Recruiting Future with Matt Alder - What's Next For Talent Acquisition, HR & Hiring?": 1779609418294,
@@ -1870,8 +1923,8 @@
       "n": 2
     },
     "Experimental History": {
-      "avg": 8.325,
-      "n": 2
+      "avg": 4.387,
+      "n": 3
     },
     "NOEMA": {
       "avg": 4.167,
@@ -1890,8 +1943,8 @@
       "n": 4
     },
     "TED-Ed": {
-      "avg": 11.31,
-      "n": 2
+      "avg": 13.083,
+      "n": 3
     },
     "Works in Progress RSS Feed": {
       "avg": 6.565,
@@ -1926,8 +1979,8 @@
       "n": 2
     },
     "Wellcome Collection": {
-      "avg": 11.195,
-      "n": 2
+      "avg": 7.68,
+      "n": 3
     },
     "Smithsonian": {
       "avg": 8.693,
@@ -1938,20 +1991,20 @@
       "n": 3
     },
     "Wendover Productions": {
-      "avg": 12.21,
-      "n": 1
+      "avg": 5.055,
+      "n": 2
     },
     "Undark Magazine": {
-      "avg": 3.257,
-      "n": 6
+      "avg": 1.469,
+      "n": 7
     },
     "Greater Good": {
       "avg": 10.27,
       "n": 4
     },
     "Nautilus": {
-      "avg": 7.638,
-      "n": 6
+      "avg": 8.033,
+      "n": 7
     },
     "Fix The News": {
       "avg": 9.428,
@@ -2130,8 +2183,8 @@
       "n": 1
     },
     "AsapSCIENCE": {
-      "avg": 6.977,
-      "n": 3
+      "avg": 1.758,
+      "n": 4
     },
     "Periodic Videos": {
       "avg": 12.465,
@@ -2166,8 +2219,8 @@
       "n": 2
     },
     "The New York Academy of Sciences": {
-      "avg": 9.42,
-      "n": 2
+      "avg": 10.76,
+      "n": 3
     },
     "Mary Garcia / SmartSeeds": {
       "avg": 9.38,
@@ -2218,8 +2271,8 @@
       "n": 1
     },
     "YES! Magazine": {
-      "avg": 0.52,
-      "n": 1
+      "avg": -0.24,
+      "n": 2
     },
     "BBC World Service": {
       "avg": 7.7,
@@ -2234,8 +2287,8 @@
       "n": 1
     },
     "Mind & Life Institute": {
-      "avg": 0.715,
-      "n": 2
+      "avg": 1.043,
+      "n": 3
     },
     "Talk Nerdy with Cara Santa Maria": {
       "avg": 10.82,
@@ -2312,12 +2365,12 @@
   },
   "type_performance": {
     "youtube": {
-      "avg": 7.32,
+      "avg": 7.045,
       "n": 100
     },
     "rss": {
-      "avg": 6.082,
-      "n": 95
+      "avg": 5.803,
+      "n": 99
     },
     "podcast": {
       "avg": 4.823,
@@ -2337,12 +2390,12 @@
       "Knowable Magazine": 4,
       "Natural History Museum": 4,
       "Ness Labs": 2,
-      "Experimental History": 2,
+      "Experimental History": 3,
       "NOEMA": 4,
       "LSE": 1,
       "Dr Ben Miles": 4,
       "3Blue1Brown": 4,
-      "TED-Ed": 2,
+      "TED-Ed": 3,
       "Works in Progress RSS Feed": 6,
       "Closer To Truth": 1,
       "The Leakey Foundation": 4,
@@ -2351,13 +2404,13 @@
       "Reasons to be Cheerful": 5,
       "Behavioral Scientist": 4,
       "Intelligence Squared": 2,
-      "Wellcome Collection": 2,
+      "Wellcome Collection": 3,
       "Smithsonian": 4,
       "The Rest Is Science": 3,
-      "Wendover Productions": 1,
-      "Undark Magazine": 6,
+      "Wendover Productions": 2,
+      "Undark Magazine": 7,
       "Greater Good": 4,
-      "Nautilus": 6,
+      "Nautilus": 7,
       "Fix The News": 5,
       "Aeon | a world of ideas": 4,
       "The Rest Is History": 4,
@@ -2402,7 +2455,7 @@
       "Anthropology News": 2,
       "Invisible People": 1,
       "YaleCourses": 1,
-      "AsapSCIENCE": 3,
+      "AsapSCIENCE": 4,
       "Periodic Videos": 2,
       "Yale Center for Emotional Intelligence": 1,
       "Brian Colburn": 1,
@@ -2411,7 +2464,7 @@
       "Supreme Court asks if there was a 'proper debate' in Parliament before enacting CEC/EC appointments law": 1,
       "Beau Miles": 4,
       "Sixty Symbols": 2,
-      "The New York Academy of Sciences": 2,
+      "The New York Academy of Sciences": 3,
       "Mary Garcia / SmartSeeds": 1,
       "Lenore Elizabeth Mulets": 1,
       "Antica Productions, WWF-Canada": 1,
@@ -2424,11 +2477,11 @@
       "ColdFusion": 2,
       "The Craftsmanship Initiative": 1,
       "The Makery Network": 1,
-      "YES! Magazine": 1,
+      "YES! Magazine": 2,
       "BBC World Service": 1,
       "Drug Discovery World (DDW)": 1,
       "The Alan Turing Institute": 1,
-      "Mind & Life Institute": 2,
+      "Mind & Life Institute": 3,
       "Talk Nerdy with Cara Santa Maria": 1,
       "Rob Zimmer": 1,
       "Recruiting Future with Matt Alder - What's Next For Talent Acquisition, HR & Hiring?": 1,
@@ -2452,10 +2505,10 @@
   "monthly_domain_counts": {
     "2026-05": {
       "historical": 30,
-      "optimism_tech": 141,
-      "optimism_health": 15,
-      "introspective": 7,
-      "general": 48,
+      "optimism_tech": 144,
+      "optimism_health": 16,
+      "introspective": 8,
+      "general": 53,
       "optimism_society": 13,
       "environmental": 7,
       "philosophical": 3,
