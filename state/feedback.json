@@ -99,6 +99,11 @@
       "cumulative": 2.0,
       "n": 1,
       "last_signal_ms": 1780047567683
+    },
+    "The Royal Society": {
+      "cumulative": -2.0,
+      "n": 1,
+      "last_signal_ms": 1780047678418
     }
   },
   "source_type_adjustments": {
@@ -111,8 +116,8 @@
       "n": 4
     },
     "youtube": {
-      "cumulative": -1.0,
-      "n": 13
+      "cumulative": -3.0,
+      "n": 14
     },
     "podcast": {
       "cumulative": -3.0,
@@ -375,6 +380,15 @@
       "source_type": "youtube",
       "context": "pretty_positive | Topic: The historical evolution of children's play",
       "timestamp_ms": 1780047567683
+    },
+    {
+      "item_id": "g-SMawIWlwY",
+      "signal": 0,
+      "signal_label": "not_interested",
+      "source_name": "The Royal Society",
+      "source_type": "youtube",
+      "context": "not_interested | Topic: Engineer Katrina Skerratt-Love's STEM education with undiagnosed autism and dysl",
+      "timestamp_ms": 1780047678418
     }
   ],
   "ai_weight_overrides": {
