@@ -1689,6 +1689,66 @@
       "native_id": "https://nautil.us/the-supernova-that-sparked-the-original-scientific-revolution-1281459/",
       "source_type": "rss",
       "last_seen_ms": 1779958281740
+    },
+    "590c12cf9a1b36a5178930299f83a20b66108e9d7e196b0e2b70b20940234666": {
+      "native_id": "aob7rM5PV5A",
+      "source_type": "youtube",
+      "last_seen_ms": 1780044608000
+    },
+    "248b7b87795caefaa70d0ccab5049a2f8ac66b1927f84878cf37043c16df3676": {
+      "native_id": "CiqwNVlqTks",
+      "source_type": "youtube",
+      "last_seen_ms": 1780044608000
+    },
+    "d96edf9d3322632f9a0146c35f5d96591c839c411845a8e1da3b0eb6b5ae3bb7": {
+      "native_id": "g-SMawIWlwY",
+      "source_type": "youtube",
+      "last_seen_ms": 1780044608000
+    },
+    "2395cffd73e296698a02423d5b7faddd72ee9fabc27aff6ca8e0fdb1df52c20a": {
+      "native_id": "RDFGkBE2O50",
+      "source_type": "youtube",
+      "last_seen_ms": 1780044608000
+    },
+    "45c285c1b54daa8b0662636f53e010078b785d8669206e58ff32ef2b84744dbd": {
+      "native_id": "v8e-tYey7ts",
+      "source_type": "youtube",
+      "last_seen_ms": 1780044608000
+    },
+    "a445ddd800f0d8416cae9368f1fd6de78c587f3cd9b54c619cb8beab5852b3df": {
+      "native_id": "LYzjCMcdnsI",
+      "source_type": "youtube",
+      "last_seen_ms": 1780044608000
+    },
+    "ac649aa8ba1cd249fa0f1d799bcec76d317cde09f1c761784cd8fcd1cd34bcd1": {
+      "native_id": "9b7a1ee7342a411db4e1eb2e38319e12",
+      "source_type": "podcast",
+      "last_seen_ms": 1780044608000
+    },
+    "e0334d2af3725ceaeeb1d6d0c9a153b9f4a4cfcf7705602c8e25e32d3fc67617": {
+      "native_id": "7df147c4a01d45559a700331e52fee48",
+      "source_type": "podcast",
+      "last_seen_ms": 1780044608000
+    },
+    "c9055177229b5b380cdd798e921e579a0f1bf2eaed3628133ec0e158b821e52d": {
+      "native_id": "7742704",
+      "source_type": "podcast",
+      "last_seen_ms": 1780044608000
+    },
+    "86509861fb3b8b039f04468322ce7d55202b250707bf929cf44f034befa8cc3b": {
+      "native_id": "https://fs.blog/knowledge-project-podcast/mark-pincus/",
+      "source_type": "rss",
+      "last_seen_ms": 1780044608000
+    },
+    "0d48b7538b9ea4e759417480f6efc89778948116f78af7e492485a61881ebab4": {
+      "native_id": "https://blog.castac.org/2026/05/domesticating-affordances-from-surveillance-to-navigation-of-interfaces-how-affordances-are-reappropriated-across-contexts-by-rural-indian-women/",
+      "source_type": "rss",
+      "last_seen_ms": 1780044608000
+    },
+    "eb1fb4385daf9d55bdc71c307910d8b3c4396f8e210e9e492bf84daebafa575a": {
+      "native_id": "https://www.notboring.co/p/weekly-dose-of-optimism-194",
+      "source_type": "rss",
+      "last_seen_ms": 1780044608000
     }
   },
   "sources_health": {
@@ -1772,12 +1832,15 @@
     },
     "2026-05-28": {
       "success": true
+    },
+    "2026-05-29": {
+      "success": true
     }
   },
   "source_history": {
     "Oxford Martin School": 1777801688500,
     "nature video": 1779094452466,
-    "The Royal Society": 1779438862601,
+    "The Royal Society": 1780044608000,
     "SciFri": 1779266107404,
     "Knowable Magazine": 1779871851419,
     "Natural History Museum": 1779521941066,
@@ -1787,12 +1850,12 @@
     "LSE": 1777881244701,
     "Dr Ben Miles": 1779871851419,
     "3Blue1Brown": 1779438862601,
-    "TED-Ed": 1779958281740,
+    "TED-Ed": 1780044608000,
     "Works in Progress RSS Feed": 1779438862601,
     "Closer To Truth": 1777881244701,
     "The Leakey Foundation": 1779352934769,
     "Quanta Magazine": 1779744391994,
-    "Farnam Street": 1778916260372,
+    "Farnam Street": 1780044608000,
     "Reasons to be Cheerful": 1779744391994,
     "Behavioral Scientist": 1779744391994,
     "Intelligence Squared": 1778140198142,
@@ -1807,8 +1870,8 @@
     "Aeon | a world of ideas": 1779609418294,
     "The Rest Is History": 1779521941066,
     "Nobel Prize": 1778053394084,
-    "BBC Ideas": 1779179809816,
-    "Platypus": 1779094452466,
+    "BBC Ideas": 1780044608000,
+    "Platypus": 1780044608000,
     "Becker Friedman Institute University of Chicago": 1778053394084,
     "American Museum of Natural History": 1779179809816,
     "Somatosphere": 1779094452466,
@@ -1822,10 +1885,10 @@
     "SmarterEveryDay": 1778140198142,
     "Conversations with Tyler": 1779871851419,
     "The Royal Institution": 1779266107404,
-    "Numberphile": 1779784757690,
+    "Numberphile": 1780044608000,
     "NileRed": 1778223634799,
-    "TED": 1779266107404,
-    "Not Boring by Packy McCormick": 1779438862601,
+    "TED": 1780044608000,
+    "Not Boring by Packy McCormick": 1780044608000,
     "PBS Space Time": 1779871851419,
     "PBS Terra": 1778572382146,
     "The Institute of Art and Ideas": 1779609418294,
@@ -1845,7 +1908,7 @@
     "minutephysics": 1779609418294,
     "World Science Festival": 1779871851419,
     "Anthropology News": 1779521941066,
-    "Invisible People": 1778659174006,
+    "Invisible People": 1780044608000,
     "YaleCourses": 1778659174006,
     "AsapSCIENCE": 1779958281740,
     "Periodic Videos": 1779094452466,
@@ -1891,7 +1954,10 @@
     "Habitat for Humanity of Greater Memphis": 1779871851419,
     "Rhythm Studio": 1779871851419,
     "Michelle Renee, Human Connection Coach": 1779871851419,
-    "Pet Life Radio": 1779871851419
+    "Pet Life Radio": 1779871851419,
+    "Aaron Mahnke's Cabinet of Curiosities": 1780044608000,
+    "www.drkenner.com Answers Your Questions": 1780044608000,
+    "Allen Salyer": 1780044608000
   },
   "source_scores": {
     "Oxford Martin School": {
@@ -1903,8 +1969,8 @@
       "n": 2
     },
     "The Royal Society": {
-      "avg": 8.143,
-      "n": 3
+      "avg": 8.507,
+      "n": 4
     },
     "SciFri": {
       "avg": 8.76,
@@ -1943,8 +2009,8 @@
       "n": 4
     },
     "TED-Ed": {
-      "avg": 13.083,
-      "n": 3
+      "avg": 9.062,
+      "n": 4
     },
     "Works in Progress RSS Feed": {
       "avg": 6.565,
@@ -1963,8 +2029,8 @@
       "n": 5
     },
     "Farnam Street": {
-      "avg": 9.573,
-      "n": 3
+      "avg": 8.017,
+      "n": 4
     },
     "Reasons to be Cheerful": {
       "avg": 10.306,
@@ -2023,12 +2089,12 @@
       "n": 1
     },
     "BBC Ideas": {
-      "avg": 7.353,
-      "n": 3
+      "avg": 8.052,
+      "n": 4
     },
     "Platypus": {
-      "avg": 1.81,
-      "n": 3
+      "avg": 0.757,
+      "n": 4
     },
     "Becker Friedman Institute University of Chicago": {
       "avg": -6.26,
@@ -2083,20 +2149,20 @@
       "n": 3
     },
     "Numberphile": {
-      "avg": 4.893,
-      "n": 3
+      "avg": 1.482,
+      "n": 4
     },
     "NileRed": {
       "avg": 4.56,
       "n": 1
     },
     "TED": {
-      "avg": 8.977,
-      "n": 3
+      "avg": 8.983,
+      "n": 4
     },
     "Not Boring by Packy McCormick": {
-      "avg": 3.805,
-      "n": 4
+      "avg": 4.734,
+      "n": 5
     },
     "PBS Space Time": {
       "avg": 12.485,
@@ -2175,8 +2241,8 @@
       "n": 2
     },
     "Invisible People": {
-      "avg": 9.68,
-      "n": 1
+      "avg": -6.085,
+      "n": 2
     },
     "YaleCourses": {
       "avg": 9.61,
@@ -2361,20 +2427,32 @@
     "Pet Life Radio": {
       "avg": 12.83,
       "n": 1
+    },
+    "Aaron Mahnke's Cabinet of Curiosities": {
+      "avg": 0.6,
+      "n": 1
+    },
+    "www.drkenner.com Answers Your Questions": {
+      "avg": -2.25,
+      "n": 1
+    },
+    "Allen Salyer": {
+      "avg": -8.95,
+      "n": 1
     }
   },
   "type_performance": {
     "youtube": {
-      "avg": 7.045,
+      "avg": 6.584,
       "n": 100
     },
     "rss": {
-      "avg": 5.803,
-      "n": 99
+      "avg": 5.724,
+      "n": 100
     },
     "podcast": {
-      "avg": 4.823,
-      "n": 32
+      "avg": 4.107,
+      "n": 35
     },
     "news": {
       "avg": -25.52,
@@ -2385,7 +2463,7 @@
     "2026-05": {
       "Oxford Martin School": 1,
       "nature video": 2,
-      "The Royal Society": 3,
+      "The Royal Society": 4,
       "SciFri": 4,
       "Knowable Magazine": 4,
       "Natural History Museum": 4,
@@ -2395,12 +2473,12 @@
       "LSE": 1,
       "Dr Ben Miles": 4,
       "3Blue1Brown": 4,
-      "TED-Ed": 3,
+      "TED-Ed": 4,
       "Works in Progress RSS Feed": 6,
       "Closer To Truth": 1,
       "The Leakey Foundation": 4,
       "Quanta Magazine": 5,
-      "Farnam Street": 3,
+      "Farnam Street": 4,
       "Reasons to be Cheerful": 5,
       "Behavioral Scientist": 4,
       "Intelligence Squared": 2,
@@ -2415,8 +2493,8 @@
       "Aeon | a world of ideas": 4,
       "The Rest Is History": 4,
       "Nobel Prize": 1,
-      "BBC Ideas": 3,
-      "Platypus": 3,
+      "BBC Ideas": 4,
+      "Platypus": 4,
       "Becker Friedman Institute University of Chicago": 1,
       "American Museum of Natural History": 3,
       "Somatosphere": 2,
@@ -2430,10 +2508,10 @@
       "SmarterEveryDay": 1,
       "Conversations with Tyler": 4,
       "The Royal Institution": 3,
-      "Numberphile": 3,
+      "Numberphile": 4,
       "NileRed": 1,
-      "TED": 3,
-      "Not Boring by Packy McCormick": 4,
+      "TED": 4,
+      "Not Boring by Packy McCormick": 5,
       "PBS Space Time": 3,
       "PBS Terra": 2,
       "The Institute of Art and Ideas": 3,
@@ -2453,7 +2531,7 @@
       "minutephysics": 4,
       "World Science Festival": 2,
       "Anthropology News": 2,
-      "Invisible People": 1,
+      "Invisible People": 2,
       "YaleCourses": 1,
       "AsapSCIENCE": 4,
       "Periodic Videos": 2,
@@ -2499,20 +2577,23 @@
       "Habitat for Humanity of Greater Memphis": 1,
       "Rhythm Studio": 1,
       "Michelle Renee, Human Connection Coach": 1,
-      "Pet Life Radio": 1
+      "Pet Life Radio": 1,
+      "Aaron Mahnke's Cabinet of Curiosities": 1,
+      "www.drkenner.com Answers Your Questions": 1,
+      "Allen Salyer": 1
     }
   },
   "monthly_domain_counts": {
     "2026-05": {
-      "historical": 30,
-      "optimism_tech": 144,
+      "historical": 31,
+      "optimism_tech": 148,
       "optimism_health": 16,
-      "introspective": 8,
-      "general": 53,
+      "introspective": 9,
+      "general": 58,
       "optimism_society": 13,
       "environmental": 7,
       "philosophical": 3,
-      "economic": 11
+      "economic": 12
     }
   }
 }
