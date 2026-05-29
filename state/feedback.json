@@ -94,6 +94,11 @@
       "cumulative": 4.0,
       "n": 1,
       "last_signal_ms": 1779925741935
+    },
+    "TED-Ed": {
+      "cumulative": 2.0,
+      "n": 1,
+      "last_signal_ms": 1780047567683
     }
   },
   "source_type_adjustments": {
@@ -106,8 +111,8 @@
       "n": 4
     },
     "youtube": {
-      "cumulative": -3.0,
-      "n": 12
+      "cumulative": -1.0,
+      "n": 13
     },
     "podcast": {
       "cumulative": -3.0,
@@ -361,6 +366,15 @@
       "source_type": "youtube",
       "context": "neutral_okay | Topic: Craig Newmark on Building 'Networks of Networks'",
       "timestamp_ms": 1779925950797
+    },
+    {
+      "item_id": "aob7rM5PV5A",
+      "signal": 2,
+      "signal_label": "pretty_positive",
+      "source_name": "TED-Ed",
+      "source_type": "youtube",
+      "context": "pretty_positive | Topic: The historical evolution of children's play",
+      "timestamp_ms": 1780047567683
     }
   ],
   "ai_weight_overrides": {
