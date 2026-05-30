@@ -1,8 +1,14 @@
 import os
-import json
 import time
 import random
 import datetime
+import json
+import re
+
+# Mute Google's annoying deprecation warnings
+import warnings
+warnings.simplefilter('ignore', FutureWarning)
+
 import google.generativeai as genai
 
 # Seasonal psychological context for UK latitude
@@ -67,14 +73,28 @@ def _get_seasonal_context(dt):
 api_key = os.getenv("GEMINI_API_KEY")
 if api_key:
     genai.configure(api_key=api_key)
-    model = genai.GenerativeModel('gemini-2.5-flash', generation_config={"response_mime_type": "application/json"})
+    model = genai.GenerativeModel(
+        "gemini-2.5-flash",
+        generation_config={
+            "response_mime_type": "application/json",
+            "temperature": 0.2,
+        }
+    )
     text_model = genai.GenerativeModel('gemini-2.5-flash') # Standard text model for anchors
 
 def safe_generate(prompt, retries=3, is_json=True):
     for attempt in range(retries):
         try:
             if is_json:
-                return model.generate_content(prompt)
+                response = model.generate_content(prompt)
+
+                if response and hasattr(response, "text"):
+                    print(
+                        f"📥 Gemini JSON response received "
+                        f"({len(response.text)} chars)"
+                    )
+
+                return response
             else:
                 return text_model.generate_content(prompt)
         except Exception as e:
@@ -83,6 +103,25 @@ def safe_generate(prompt, retries=3, is_json=True):
             else:
                 print(f"🚨 Gemini completely failed: {e}")
                 return None
+
+def clean_gemini_json(text):
+    if not text:
+        return ""
+
+    text = text.strip()
+
+    # Remove markdown fences
+    text = re.sub(r"^```(?:json)?\s*", "", text, flags=re.IGNORECASE)
+    text = re.sub(r"\s*```$", "", text)
+
+    # Extract JSON object if Gemini added commentary
+    first_brace = text.find("{")
+    last_brace = text.rfind("}")
+
+    if first_brace != -1 and last_brace != -1:
+        text = text[first_brace:last_brace + 1]
+
+    return text.strip()
 
 def semantic_triage(candidates):
     if not candidates:
@@ -138,13 +177,23 @@ umor, charm, playfulness, enthusiasm, eccentric hobbies, joyful competence, or e
     {pool_text}
     """
 
+    print(f"📊 PHILOSOPHY PY DIAGNOSTIC: Sent {len(candidates)} items to Gemini.")
     response = safe_generate(prompt)
     if not response: return []
 
     try:
-        parsed = json.loads(response.text)
-        return parsed.get("scores", [])
-    except json.JSONDecodeError:
+        cleaned_text = clean_gemini_json(response.text)
+        parsed = json.loads(cleaned_text)
+
+        scores = parsed.get("scores", [])
+
+        print(f"📊 DIAGNOSTIC: Gemini successfully scored {len(scores)} items.")
+
+        return scores
+
+    except Exception as e:
+        print(f"🚨 Gemini scoring parse failure: {e}")
+        print(f"🚨 Raw Gemini response:\n{response.text}")
         return []
 
 # Emotional register taxonomy for variety checking
@@ -268,7 +317,8 @@ def reframe_items(selected_items):
     if not response: return selected_items
 
     try:
-        parsed = json.loads(response.text)
+        cleaned_text = clean_gemini_json(response.text)
+        parsed = json.loads(cleaned_text)
         rewrites = {x["native_id"]: x for x in parsed.get("rewrites", [])}
         for item in selected_items:
             update = rewrites.get(item["native_id"])
@@ -281,7 +331,9 @@ def reframe_items(selected_items):
                     item["has_inoculation"] = True
                 item["description"] = desc
         return selected_items
-    except json.JSONDecodeError:
+    except Exception as e:
+        print(f"🚨 Reframe parse failure: {e}")
+        print(f"🚨 Raw Gemini response:\n{response.text}")
         return selected_items
 
 # Narrative theme families - prevents the same emotional arc repeating
@@ -337,14 +389,17 @@ def generate_daily_narrative(selected_items):
         return {"headline": "Today's Pattern: Quiet Resilience", "explanation": "Systems are holding steady."}
 
     try:
-        result = json.loads(response.text)
+        cleaned_text = clean_gemini_json(response.text)
+        result = json.loads(cleaned_text)
         # Record the theme family used
         used_family = _classify_narrative_theme(result.get("headline", ""))
         memory.setdefault("used_narrative_themes", []).append(used_family)
         memory["used_narrative_themes"] = memory["used_narrative_themes"][-30:]
         save_memory(memory)
         return result
-    except json.JSONDecodeError:
+    except Exception as e:
+        print(f"🚨 Narrative parse failure: {e}")
+        print(f"🚨 Raw Gemini response:\n{response.text}")
         return {"headline": "Today's Pattern: Quiet Resilience", "explanation": "Systems are holding steady."}
 
 def get_ratchet_memory_note(memory):
