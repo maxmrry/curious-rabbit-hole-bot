@@ -1,9 +1,9 @@
 {
   "source_adjustments": {
     "daily_experience": {
-      "cumulative": -9.0,
-      "n": 6,
-      "last_signal_ms": 1779836609399
+      "cumulative": -11.0,
+      "n": 7,
+      "last_signal_ms": 1780184240520
     },
     "Undark Magazine": {
       "cumulative": -2.0,
@@ -124,8 +124,8 @@
       "n": 3
     },
     "feed": {
-      "cumulative": -2.0,
-      "n": 1
+      "cumulative": -4.0,
+      "n": 2
     }
   },
   "recent_signals": [
@@ -389,6 +389,15 @@
       "source_type": "youtube",
       "context": "not_interested | Topic: Engineer Katrina Skerratt-Love's STEM education with undiagnosed autism and dysl",
       "timestamp_ms": 1780047678418
+    },
+    {
+      "item_id": "daily_feed_20260530",
+      "signal": 0,
+      "signal_label": "not_interested",
+      "source_name": "daily_experience",
+      "source_type": "feed",
+      "context": "whole_feed_boring",
+      "timestamp_ms": 1780184240520
     }
   ],
   "ai_weight_overrides": {
