@@ -1804,6 +1804,66 @@
       "native_id": "https://fixthenewspodcast.transistor.fm/episodes/inside-women-deliver-2026-feminist-leadership-climate-action-youth-power",
       "source_type": "rss",
       "last_seen_ms": 1780129643340
+    },
+    "3e48cc9003f76260146b671f1c6015f05c9886d64430d0e17215179f1e9e1a3c": {
+      "native_id": "274857",
+      "source_type": "podcast",
+      "last_seen_ms": 1780215786633
+    },
+    "3fef734ff75836aee228438c6095d64315e704f52396cd6a3f0dbb11f46e7b6e": {
+      "native_id": "-JvP4GDo2HM",
+      "source_type": "youtube",
+      "last_seen_ms": 1780215786633
+    },
+    "18922f4c7cee08857e008f55403f5cd52926166ab36a7dcaf384c1916e8ff720": {
+      "native_id": "ZfHCYZWnhdM",
+      "source_type": "youtube",
+      "last_seen_ms": 1780215786633
+    },
+    "38d7f0eef4c5cfcd9f93d029fc620c19dda7a1c12c9d58bb922aaeaa6234a3f8": {
+      "native_id": "3471418",
+      "source_type": "podcast",
+      "last_seen_ms": 1780215786633
+    },
+    "6a13fb18a558f0146540910a3184ef01d7a3aae4aeded4deb28c5a1f535f5cd3": {
+      "native_id": "5066934",
+      "source_type": "podcast",
+      "last_seen_ms": 1780215786633
+    },
+    "d5a0fc1e424646e4f27f4ac9a535e430c9c77c510b020626f50a3f39195ed94b": {
+      "native_id": "665483",
+      "source_type": "podcast",
+      "last_seen_ms": 1780215786633
+    },
+    "79c2926c29b6c2e841f04653645a1fd54b2612089c3c0116fa1a0f7430d7013b": {
+      "native_id": "759556",
+      "source_type": "podcast",
+      "last_seen_ms": 1780215786633
+    },
+    "ee8175a1ffa16645e9b5a36e9b095ddaf4865f69dae8aa7b761a3a0352a98ec9": {
+      "native_id": "3553881",
+      "source_type": "podcast",
+      "last_seen_ms": 1780215786633
+    },
+    "64cfe68be88db1ef23e04359d0f3308a4fed97d2012e1d00592bc4e726ea5834": {
+      "native_id": "5565157",
+      "source_type": "podcast",
+      "last_seen_ms": 1780215786633
+    },
+    "792a205e68b993828e39e75b23d940165b4415bf5767018fba3a4d2b3f8ddb67": {
+      "native_id": "https://www.experimental-history.com/p/only-insane-people-use-the-internet",
+      "source_type": "rss",
+      "last_seen_ms": 1780215786633
+    },
+    "c6c90ee234ab99c0a9f2f6db67d77e8a4993f756c4907b0200469fc96889c13e": {
+      "native_id": "https://nautil.us/these-stars-swallowed-their-earth-like-planets-1281535/",
+      "source_type": "rss",
+      "last_seen_ms": 1780215786633
+    },
+    "7729ae619387fc9ca6d7ac2eb9e6c1613597efed7de2844cc8b51b13f34a6f10": {
+      "native_id": "kjvGbkIxJZw",
+      "source_type": "youtube",
+      "last_seen_ms": 1780215786633
     }
   },
   "sources_health": {
@@ -1893,6 +1953,9 @@
     },
     "2026-05-30": {
       "success": true
+    },
+    "2026-05-31": {
+      "success": true
     }
   },
   "source_history": {
@@ -1903,7 +1966,7 @@
     "Knowable Magazine": 1780129643340,
     "Natural History Museum": 1779521941066,
     "Ness Labs": 1778223634799,
-    "Experimental History": 1779958281740,
+    "Experimental History": 1780215786633,
     "NOEMA": 1779352934769,
     "LSE": 1777881244701,
     "Dr Ben Miles": 1779871851419,
@@ -1923,7 +1986,7 @@
     "Wendover Productions": 1779958281740,
     "Undark Magazine": 1779958281740,
     "Greater Good": 1779438862601,
-    "Nautilus": 1779958281740,
+    "Nautilus": 1780215786633,
     "Fix The News": 1780129643340,
     "Aeon | a world of ideas": 1779609418294,
     "The Rest Is History": 1779521941066,
@@ -1941,7 +2004,7 @@
     "Angela Collier ": 1779744391994,
     "Computerphile": 1778140198142,
     "SmarterEveryDay": 1778140198142,
-    "Conversations with Tyler": 1779871851419,
+    "Conversations with Tyler": 1780215786633,
     "The Royal Institution": 1779266107404,
     "Numberphile": 1780044608000,
     "NileRed": 1778223634799,
@@ -1970,7 +2033,7 @@
     "YaleCourses": 1778659174006,
     "AsapSCIENCE": 1779958281740,
     "Periodic Videos": 1779094452466,
-    "Yale Center for Emotional Intelligence": 1778659174006,
+    "Yale Center for Emotional Intelligence": 1780215786633,
     "Brian Colburn": 1778659174006,
     "Time We Discuss": 1778659174006,
     "Backstage at the Vinyl Cafe": 1778659174006,
@@ -1987,7 +2050,7 @@
     "JSK-Studio": 1779266107404,
     "Dr. Brenna Hicks": 1779094452466,
     "Instant Genius": 1779179809816,
-    "ColdFusion": 1779609418294,
+    "ColdFusion": 1780215786633,
     "The Craftsmanship Initiative": 1779266107404,
     "The Makery Network": 1779266107404,
     "YES! Magazine": 1780129643340,
@@ -2017,7 +2080,14 @@
     "www.drkenner.com Answers Your Questions": 1780044608000,
     "Allen Salyer": 1780044608000,
     "Jim Gain": 1780129643340,
-    "Circle Of Insight Productions": 1780129643340
+    "Circle Of Insight Productions": 1780129643340,
+    "American Printing House": 1780215786633,
+    "Rebecca Ickes Carra": 1780215786633,
+    "Amplified Studios, Gary Lee, Gabe Dagrezio, Marc Polit": 1780215786633,
+    "Stephen Roach": 1780215786633,
+    "Thank the Maker": 1780215786633,
+    "AmplifyME": 1780215786633,
+    "Market Makers": 1780215786633
   },
   "source_scores": {
     "Oxford Martin School": {
@@ -2049,8 +2119,8 @@
       "n": 2
     },
     "Experimental History": {
-      "avg": 4.387,
-      "n": 3
+      "avg": 0.153,
+      "n": 4
     },
     "NOEMA": {
       "avg": 4.167,
@@ -2129,8 +2199,8 @@
       "n": 4
     },
     "Nautilus": {
-      "avg": 8.033,
-      "n": 7
+      "avg": 7.449,
+      "n": 8
     },
     "Fix The News": {
       "avg": 9.373,
@@ -2201,8 +2271,8 @@
       "n": 1
     },
     "Conversations with Tyler": {
-      "avg": 9.036,
-      "n": 4
+      "avg": 8.954,
+      "n": 5
     },
     "The Royal Institution": {
       "avg": 13.163,
@@ -2317,8 +2387,8 @@
       "n": 2
     },
     "Yale Center for Emotional Intelligence": {
-      "avg": 9.23,
-      "n": 1
+      "avg": 2.742,
+      "n": 2
     },
     "Brian Colburn": {
       "avg": 9.72,
@@ -2385,8 +2455,8 @@
       "n": 1
     },
     "ColdFusion": {
-      "avg": 4.52,
-      "n": 2
+      "avg": 4.841,
+      "n": 3
     },
     "The Craftsmanship Initiative": {
       "avg": 15.8,
@@ -2507,20 +2577,48 @@
     "Circle Of Insight Productions": {
       "avg": -24.6,
       "n": 1
+    },
+    "American Printing House": {
+      "avg": 11.17,
+      "n": 1
+    },
+    "Rebecca Ickes Carra": {
+      "avg": 10.57,
+      "n": 1
+    },
+    "Amplified Studios, Gary Lee, Gabe Dagrezio, Marc Polit": {
+      "avg": 10.0,
+      "n": 1
+    },
+    "Stephen Roach": {
+      "avg": 4.88,
+      "n": 1
+    },
+    "Thank the Maker": {
+      "avg": -0.41,
+      "n": 1
+    },
+    "AmplifyME": {
+      "avg": -5.83,
+      "n": 1
+    },
+    "Market Makers": {
+      "avg": -21.54,
+      "n": 1
     }
   },
   "type_performance": {
     "youtube": {
-      "avg": 6.517,
+      "avg": 6.427,
       "n": 100
     },
     "rss": {
-      "avg": 5.527,
+      "avg": 5.328,
       "n": 100
     },
     "podcast": {
-      "avg": 3.378,
-      "n": 37
+      "avg": 3.04,
+      "n": 44
     },
     "news": {
       "avg": -25.52,
@@ -2536,7 +2634,7 @@
       "Knowable Magazine": 5,
       "Natural History Museum": 4,
       "Ness Labs": 2,
-      "Experimental History": 3,
+      "Experimental History": 4,
       "NOEMA": 4,
       "LSE": 1,
       "Dr Ben Miles": 4,
@@ -2556,7 +2654,7 @@
       "Wendover Productions": 2,
       "Undark Magazine": 7,
       "Greater Good": 4,
-      "Nautilus": 7,
+      "Nautilus": 8,
       "Fix The News": 6,
       "Aeon | a world of ideas": 4,
       "The Rest Is History": 4,
@@ -2574,7 +2672,7 @@
       "Angela Collier ": 3,
       "Computerphile": 1,
       "SmarterEveryDay": 1,
-      "Conversations with Tyler": 4,
+      "Conversations with Tyler": 5,
       "The Royal Institution": 3,
       "Numberphile": 4,
       "NileRed": 1,
@@ -2603,7 +2701,7 @@
       "YaleCourses": 1,
       "AsapSCIENCE": 4,
       "Periodic Videos": 2,
-      "Yale Center for Emotional Intelligence": 1,
+      "Yale Center for Emotional Intelligence": 2,
       "Brian Colburn": 1,
       "Time We Discuss": 1,
       "Backstage at the Vinyl Cafe": 1,
@@ -2620,7 +2718,7 @@
       "JSK-Studio": 3,
       "Dr. Brenna Hicks": 1,
       "Instant Genius": 1,
-      "ColdFusion": 2,
+      "ColdFusion": 3,
       "The Craftsmanship Initiative": 1,
       "The Makery Network": 1,
       "YES! Magazine": 3,
@@ -2650,20 +2748,27 @@
       "www.drkenner.com Answers Your Questions": 1,
       "Allen Salyer": 1,
       "Jim Gain": 1,
-      "Circle Of Insight Productions": 1
+      "Circle Of Insight Productions": 1,
+      "American Printing House": 1,
+      "Rebecca Ickes Carra": 1,
+      "Amplified Studios, Gary Lee, Gabe Dagrezio, Marc Polit": 1,
+      "Stephen Roach": 1,
+      "Thank the Maker": 1,
+      "AmplifyME": 1,
+      "Market Makers": 1
     }
   },
   "monthly_domain_counts": {
     "2026-05": {
       "historical": 32,
-      "optimism_tech": 154,
+      "optimism_tech": 161,
       "optimism_health": 16,
       "introspective": 9,
-      "general": 60,
+      "general": 62,
       "optimism_society": 14,
-      "environmental": 7,
-      "philosophical": 3,
-      "economic": 13
+      "environmental": 8,
+      "philosophical": 4,
+      "economic": 14
     }
   }
 }
