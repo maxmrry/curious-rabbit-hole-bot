@@ -109,6 +109,11 @@
       "cumulative": -2.0,
       "n": 1,
       "last_signal_ms": 1780314736395
+    },
+    "SciFri": {
+      "cumulative": -2.0,
+      "n": 1,
+      "last_signal_ms": 1780314861598
     }
   },
   "source_type_adjustments": {
@@ -121,8 +126,8 @@
       "n": 5
     },
     "youtube": {
-      "cumulative": -3.0,
-      "n": 14
+      "cumulative": -5.0,
+      "n": 15
     },
     "podcast": {
       "cumulative": -3.0,
@@ -412,6 +417,15 @@
       "source_type": "rss",
       "context": "not_interested | Topic: US Dam Removal: Indigenous Leadership Restores Klamath River Salmon",
       "timestamp_ms": 1780314736395
+    },
+    {
+      "item_id": "IUx8HG6bvYE",
+      "signal": 0,
+      "signal_label": "not_interested",
+      "source_name": "SciFri",
+      "source_type": "youtube",
+      "context": "not_interested | Topic: Daniel H. Wilson Live Q&A on Robotics and Science Fiction",
+      "timestamp_ms": 1780314861598
     }
   ],
   "ai_weight_overrides": {
