@@ -104,6 +104,11 @@
       "cumulative": -2.0,
       "n": 1,
       "last_signal_ms": 1780047678418
+    },
+    "Fix The News": {
+      "cumulative": -2.0,
+      "n": 1,
+      "last_signal_ms": 1780314736395
     }
   },
   "source_type_adjustments": {
@@ -112,8 +117,8 @@
       "n": 5
     },
     "rss": {
-      "cumulative": -5.0,
-      "n": 4
+      "cumulative": -7.0,
+      "n": 5
     },
     "youtube": {
       "cumulative": -3.0,
@@ -398,6 +403,15 @@
       "source_type": "feed",
       "context": "whole_feed_boring",
       "timestamp_ms": 1780184240520
+    },
+    {
+      "item_id": "https://fixthenewspodcast.transistor.fm/episodes/the-largest-dam-removal-in-u-s-history-indigenous-leadership-the-klamath-river-lessons-in-repair",
+      "signal": 0,
+      "signal_label": "not_interested",
+      "source_name": "Fix The News",
+      "source_type": "rss",
+      "context": "not_interested | Topic: US Dam Removal: Indigenous Leadership Restores Klamath River Salmon",
+      "timestamp_ms": 1780314736395
     }
   ],
   "ai_weight_overrides": {
