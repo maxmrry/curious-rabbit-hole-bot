@@ -1924,6 +1924,66 @@
       "native_id": "Foj_sPFjWtQ",
       "source_type": "youtube",
       "last_seen_ms": 1780309850831
+    },
+    "95c2d6b5e2e11109a07aa42a7f3243bda5465ad78a6d4b9ebb31dfed3265354d": {
+      "native_id": "https://worksinprogress.co/issue/samurai-city/",
+      "source_type": "rss",
+      "last_seen_ms": 1780391854803
+    },
+    "376fb75700ccf256229cca15a362ba9351972133fcb34109270934aed751bb70": {
+      "native_id": "yP8IdptL-mo",
+      "source_type": "youtube",
+      "last_seen_ms": 1780391854803
+    },
+    "d7fc24a68aafab9fc40cd4fc6b8ebf6801bab50532d9816d67c5e5f0ed198e54": {
+      "native_id": "Fz9KmEZ-Rk4",
+      "source_type": "youtube",
+      "last_seen_ms": 1780391854803
+    },
+    "6becf82df17100b0d9ec0414a01829eec40e8b53263707fe06b61fdee7aca814": {
+      "native_id": "35uzebloQ2E",
+      "source_type": "youtube",
+      "last_seen_ms": 1780391854803
+    },
+    "3449aa1fec22f20d66af11aae9dba4d75badab0a3e8ec07f892667a20708c5bf": {
+      "native_id": "vksqpcfd2eI",
+      "source_type": "youtube",
+      "last_seen_ms": 1780391854803
+    },
+    "ed5f89e7c467dc208879e769d1cf75368ddd60698c36c213227cc7028a5f212f": {
+      "native_id": "8bQvt25CP0s",
+      "source_type": "youtube",
+      "last_seen_ms": 1780391854803
+    },
+    "084bfb75fa050f81a32238d50cc13ec223ec2d5c303d6028ec2562d04684e2a5": {
+      "native_id": "734792",
+      "source_type": "podcast",
+      "last_seen_ms": 1780391854803
+    },
+    "6bbcfb4c6c222b25f60c465a62b90a3848e14c2dfbd0ad326e7411caff08a549": {
+      "native_id": "404897",
+      "source_type": "podcast",
+      "last_seen_ms": 1780391854803
+    },
+    "686100004de2c888e9c2998eca08c36098c71ae8346dba84004c79039da2d340": {
+      "native_id": "701910",
+      "source_type": "podcast",
+      "last_seen_ms": 1780391854803
+    },
+    "1944a11db286c052cebc276df8c4bf99ea4b627ceffbafe1ae1bec7b103756c6": {
+      "native_id": "https://marginalrevolution.com/marginalrevolution/2026/06/monday-assorted-links-562.html",
+      "source_type": "rss",
+      "last_seen_ms": 1780391854803
+    },
+    "813067bcd3535135da791e0c1c7d3af8ce1f6b1b3360ea6cf377893ad3b4c1b5": {
+      "native_id": "https://www.notboring.co/p/weekly-dose-of-optimism-195",
+      "source_type": "rss",
+      "last_seen_ms": 1780391854803
+    },
+    "08980cb32cee08d7ccec4c5fa5f78b2ad76a582921c5e4a0e07dbe7ecf43e3d4": {
+      "native_id": "https://psyche.co/ideas/the-special-kind-of-knowledge-that-cant-be-put-into-words",
+      "source_type": "rss",
+      "last_seen_ms": 1780391854803
     }
   },
   "sources_health": {
@@ -2019,15 +2079,18 @@
     },
     "2026-06-01": {
       "success": true
+    },
+    "2026-06-02": {
+      "success": true
     }
   },
   "source_history": {
     "Oxford Martin School": 1777801688500,
-    "nature video": 1780129643340,
-    "The Royal Society": 1780044608000,
+    "nature video": 1780391854803,
+    "The Royal Society": 1780391854803,
     "SciFri": 1780309850831,
     "Knowable Magazine": 1780129643340,
-    "Natural History Museum": 1779521941066,
+    "Natural History Museum": 1780391854803,
     "Ness Labs": 1778223634799,
     "Experimental History": 1780215786633,
     "NOEMA": 1779352934769,
@@ -2035,7 +2098,7 @@
     "Dr Ben Miles": 1780309850831,
     "3Blue1Brown": 1779438862601,
     "TED-Ed": 1780044608000,
-    "Works in Progress RSS Feed": 1780309850831,
+    "Works in Progress RSS Feed": 1780391854803,
     "Closer To Truth": 1777881244701,
     "The Leakey Foundation": 1779352934769,
     "Quanta Magazine": 1780309850831,
@@ -2057,12 +2120,12 @@
     "BBC Ideas": 1780044608000,
     "Platypus": 1780044608000,
     "Becker Friedman Institute University of Chicago": 1778053394084,
-    "American Museum of Natural History": 1779179809816,
+    "American Museum of Natural History": 1780391854803,
     "Somatosphere": 1779094452466,
     "Positive News": 1779438862601,
-    "Marginal REVOLUTION": 1779744391994,
-    "Psyche | Know Your Self": 1779744391994,
-    "Sean Carroll": 1779784757690,
+    "Marginal REVOLUTION": 1780391854803,
+    "Psyche | Know Your Self": 1780391854803,
+    "Sean Carroll": 1780391854803,
     "Resolution Foundation": 1779352934769,
     "Angela Collier ": 1779744391994,
     "Computerphile": 1778140198142,
@@ -2072,7 +2135,7 @@
     "Numberphile": 1780044608000,
     "NileRed": 1778223634799,
     "TED": 1780044608000,
-    "Not Boring by Packy McCormick": 1780044608000,
+    "Not Boring by Packy McCormick": 1780391854803,
     "PBS Space Time": 1779871851419,
     "PBS Terra": 1778572382146,
     "The Institute of Art and Ideas": 1779609418294,
@@ -2153,7 +2216,10 @@
     "Market Makers": 1780215786633,
     "Vicki Holloway": 1780309850831,
     "Hobby Golfer Jens Zielinski, Golf Coach Florian Fritsch, Golf Profi Bernd Ritthammer": 1780309850831,
-    "Matthew (@1956ToppsGuy), Nate (@incardboardveritas), Jonathan (@sportscards.and.sunsets)": 1780309850831
+    "Matthew (@1956ToppsGuy), Nate (@incardboardveritas), Jonathan (@sportscards.and.sunsets)": 1780309850831,
+    "Meg Ferrell": 1780391854803,
+    "CiRCE Podcast Network": 1780391854803,
+    "Jackie Flynn, EMDRIA Approved Consultant": 1780391854803
   },
   "source_scores": {
     "Oxford Martin School": {
@@ -2161,12 +2227,12 @@
       "n": 1
     },
     "nature video": {
-      "avg": 11.128,
-      "n": 3
+      "avg": 9.995,
+      "n": 4
     },
     "The Royal Society": {
-      "avg": 8.507,
-      "n": 4
+      "avg": 8.479,
+      "n": 5
     },
     "SciFri": {
       "avg": 8.937,
@@ -2177,8 +2243,8 @@
       "n": 5
     },
     "Natural History Museum": {
-      "avg": 9.185,
-      "n": 4
+      "avg": 9.595,
+      "n": 5
     },
     "Ness Labs": {
       "avg": 5.865,
@@ -2209,8 +2275,8 @@
       "n": 4
     },
     "Works in Progress RSS Feed": {
-      "avg": 7.299,
-      "n": 7
+      "avg": 6.03,
+      "n": 8
     },
     "Closer To Truth": {
       "avg": 3.79,
@@ -2297,8 +2363,8 @@
       "n": 1
     },
     "American Museum of Natural History": {
-      "avg": 4.547,
-      "n": 3
+      "avg": 5.644,
+      "n": 4
     },
     "Somatosphere": {
       "avg": -8.57,
@@ -2309,16 +2375,16 @@
       "n": 5
     },
     "Marginal REVOLUTION": {
-      "avg": 7.678,
-      "n": 4
+      "avg": 8.082,
+      "n": 5
     },
     "Psyche | Know Your Self": {
-      "avg": 7.38,
-      "n": 4
+      "avg": 7.584,
+      "n": 5
     },
     "Sean Carroll": {
-      "avg": 6.797,
-      "n": 4
+      "avg": 5.707,
+      "n": 5
     },
     "Resolution Foundation": {
       "avg": -1.507,
@@ -2357,8 +2423,8 @@
       "n": 4
     },
     "Not Boring by Packy McCormick": {
-      "avg": 4.734,
-      "n": 5
+      "avg": 5.402,
+      "n": 6
     },
     "PBS Space Time": {
       "avg": 12.485,
@@ -2683,20 +2749,32 @@
     "Matthew (@1956ToppsGuy), Nate (@incardboardveritas), Jonathan (@sportscards.and.sunsets)": {
       "avg": 8.93,
       "n": 1
+    },
+    "Meg Ferrell": {
+      "avg": 9.29,
+      "n": 1
+    },
+    "CiRCE Podcast Network": {
+      "avg": 8.68,
+      "n": 1
+    },
+    "Jackie Flynn, EMDRIA Approved Consultant": {
+      "avg": 4.14,
+      "n": 1
     }
   },
   "type_performance": {
     "youtube": {
-      "avg": 6.692,
+      "avg": 6.719,
       "n": 100
     },
     "rss": {
-      "avg": 5.396,
+      "avg": 5.42,
       "n": 100
     },
     "podcast": {
-      "avg": 3.473,
-      "n": 47
+      "avg": 3.707,
+      "n": 50
     },
     "news": {
       "avg": -25.52,
@@ -2845,8 +2923,19 @@
       "Vicki Holloway": 1,
       "Hobby Golfer Jens Zielinski, Golf Coach Florian Fritsch, Golf Profi Bernd Ritthammer": 1,
       "Matthew (@1956ToppsGuy), Nate (@incardboardveritas), Jonathan (@sportscards.and.sunsets)": 1,
-      "Works in Progress RSS Feed": 1,
-      "Quanta Magazine": 1
+      "Works in Progress RSS Feed": 2,
+      "Quanta Magazine": 1,
+      "Natural History Museum": 1,
+      "American Museum of Natural History": 1,
+      "The Royal Society": 1,
+      "nature video": 1,
+      "Sean Carroll": 1,
+      "Meg Ferrell": 1,
+      "CiRCE Podcast Network": 1,
+      "Jackie Flynn, EMDRIA Approved Consultant": 1,
+      "Marginal REVOLUTION": 1,
+      "Not Boring by Packy McCormick": 1,
+      "Psyche | Know Your Self": 1
     }
   },
   "monthly_domain_counts": {
@@ -2862,11 +2951,13 @@
       "economic": 14
     },
     "2026-06": {
-      "optimism_tech": 5,
+      "optimism_tech": 13,
       "historical": 1,
-      "economic": 1,
+      "economic": 2,
       "optimism_society": 3,
-      "general": 2
+      "general": 3,
+      "introspective": 1,
+      "optimism_health": 1
     }
   }
 }
