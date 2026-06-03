@@ -1984,6 +1984,46 @@
       "native_id": "https://psyche.co/ideas/the-special-kind-of-knowledge-that-cant-be-put-into-words",
       "source_type": "rss",
       "last_seen_ms": 1780391854803
+    },
+    "1c75dacd2ffe11a526798cbd1068c76bfd31d7b8a7b8a5650fba92ccdc467e26": {
+      "native_id": "https://aeon.co/videos/the-first-scientists-to-splice-dna-faced-a-daunting-question-should-we",
+      "source_type": "rss",
+      "last_seen_ms": 1780480908614
+    },
+    "4f4f0dda598b32223c47f2844adf63c9f67b48243cf8c96a5882b8c81d17249b": {
+      "native_id": "3YvwqMDDb3k",
+      "source_type": "youtube",
+      "last_seen_ms": 1780480908614
+    },
+    "41e4f21106e422df5e931b22ca1e0418a41016c96fcdd4aee89738b4214f0d38": {
+      "native_id": "7URrwAIHkLY",
+      "source_type": "youtube",
+      "last_seen_ms": 1780480908614
+    },
+    "a98eb2cad653b534ea6425c984b345ee46ebbd82936449c89b00cc757e5fa498": {
+      "native_id": "bYWEh6WtjLU",
+      "source_type": "youtube",
+      "last_seen_ms": 1780480908614
+    },
+    "934f44bd212ff93781376c70a5e62697e66875069e66ec13e8509c416c3032de": {
+      "native_id": "https://www.positive.news/society/what-do-you-do-to-actively-forge-human-connections/",
+      "source_type": "rss",
+      "last_seen_ms": 1780480908614
+    },
+    "ef1c2899dd441f0e358e7a13162d8069ea14fe87a28d2b5f1508ec242045c7c8": {
+      "native_id": "https://www.positive.news/society/democracy/why-children-are-being-given-a-say-in-how-their-school-is-run/",
+      "source_type": "rss",
+      "last_seen_ms": 1780480908614
+    },
+    "1560e0d36984a18347dfbb1066073d2fd79ce917bc4a551590302ebb6f0ef401": {
+      "native_id": "https://behavioralscientist.org/what-its-like-to-be-a-correctional-officer/",
+      "source_type": "rss",
+      "last_seen_ms": 1780480908614
+    },
+    "2473ed546cc223f5737dd8f6883a16ef81dfe2a4391e7e69649d1596230521f1": {
+      "native_id": "https://behavioralscientist.org/the-psychology-of-the-home-run-in-1921/",
+      "source_type": "rss",
+      "last_seen_ms": 1780480908614
     }
   },
   "sources_health": {
@@ -2082,6 +2122,9 @@
     },
     "2026-06-02": {
       "success": true
+    },
+    "2026-06-03": {
+      "success": true
     }
   },
   "source_history": {
@@ -2104,7 +2147,7 @@
     "Quanta Magazine": 1780309850831,
     "Farnam Street": 1780044608000,
     "Reasons to be Cheerful": 1780309850831,
-    "Behavioral Scientist": 1779744391994,
+    "Behavioral Scientist": 1780480908614,
     "Intelligence Squared": 1778140198142,
     "Wellcome Collection": 1779958281740,
     "Smithsonian": 1778916260372,
@@ -2114,7 +2157,7 @@
     "Greater Good": 1779438862601,
     "Nautilus": 1780215786633,
     "Fix The News": 1780309850831,
-    "Aeon | a world of ideas": 1779609418294,
+    "Aeon | a world of ideas": 1780480908614,
     "The Rest Is History": 1780309850831,
     "Nobel Prize": 1778053394084,
     "BBC Ideas": 1780044608000,
@@ -2122,7 +2165,7 @@
     "Becker Friedman Institute University of Chicago": 1778053394084,
     "American Museum of Natural History": 1780391854803,
     "Somatosphere": 1779094452466,
-    "Positive News": 1779438862601,
+    "Positive News": 1780480908614,
     "Marginal REVOLUTION": 1780391854803,
     "Psyche | Know Your Self": 1780391854803,
     "Sean Carroll": 1780391854803,
@@ -2141,14 +2184,14 @@
     "The Institute of Art and Ideas": 1779609418294,
     "Adam Savage\u2019s Tested": 1779744391994,
     "Nature": 1779784757690,
-    "PBS Eons": 1779521941066,
+    "PBS Eons": 1780480908614,
     "Stand-up Maths": 1780309850831,
     "Sprouht": 1779438862601,
     "Special Books by Special Kids": 1780129643340,
     "Our World in Data": 1779784757690,
     "The British Academy": 1779003575150,
     "Howtown": 1779438862601,
-    "Practical Engineering": 1779266107404,
+    "Practical Engineering": 1780480908614,
     "Santa Fe Institute": 1779784757690,
     "The Dissenter": 1779744391994,
     "Chris Doel": 1778572382146,
@@ -2183,7 +2226,7 @@
     "BBC World Service": 1779352934769,
     "Drug Discovery World (DDW)": 1779352934769,
     "The Alan Turing Institute": 1779352934769,
-    "Mind & Life Institute": 1779958281740,
+    "Mind & Life Institute": 1780480908614,
     "Talk Nerdy with Cara Santa Maria": 1779521941066,
     "Rob Zimmer": 1779521941066,
     "Recruiting Future with Matt Alder - What's Next For Talent Acquisition, HR & Hiring?": 1779609418294,
@@ -2299,8 +2342,8 @@
       "n": 6
     },
     "Behavioral Scientist": {
-      "avg": 6.748,
-      "n": 4
+      "avg": 8.385,
+      "n": 6
     },
     "Intelligence Squared": {
       "avg": 0.065,
@@ -2339,8 +2382,8 @@
       "n": 7
     },
     "Aeon | a world of ideas": {
-      "avg": 10.222,
-      "n": 4
+      "avg": 9.76,
+      "n": 5
     },
     "The Rest Is History": {
       "avg": 9.232,
@@ -2371,8 +2414,8 @@
       "n": 2
     },
     "Positive News": {
-      "avg": 10.204,
-      "n": 5
+      "avg": 11.14,
+      "n": 7
     },
     "Marginal REVOLUTION": {
       "avg": 8.082,
@@ -2447,8 +2490,8 @@
       "n": 5
     },
     "PBS Eons": {
-      "avg": 13.997,
-      "n": 3
+      "avg": 13.717,
+      "n": 4
     },
     "Stand-up Maths": {
       "avg": 12.152,
@@ -2475,8 +2518,8 @@
       "n": 3
     },
     "Practical Engineering": {
-      "avg": 6.017,
-      "n": 3
+      "avg": 7.984,
+      "n": 4
     },
     "Santa Fe Institute": {
       "avg": 11.257,
@@ -2615,8 +2658,8 @@
       "n": 1
     },
     "Mind & Life Institute": {
-      "avg": 1.043,
-      "n": 3
+      "avg": 3.021,
+      "n": 4
     },
     "Talk Nerdy with Cara Santa Maria": {
       "avg": 10.82,
@@ -2765,11 +2808,11 @@
   },
   "type_performance": {
     "youtube": {
-      "avg": 6.719,
+      "avg": 6.871,
       "n": 100
     },
     "rss": {
-      "avg": 5.42,
+      "avg": 5.723,
       "n": 100
     },
     "podcast": {
@@ -2935,7 +2978,13 @@
       "Jackie Flynn, EMDRIA Approved Consultant": 1,
       "Marginal REVOLUTION": 1,
       "Not Boring by Packy McCormick": 1,
-      "Psyche | Know Your Self": 1
+      "Psyche | Know Your Self": 1,
+      "Aeon | a world of ideas": 1,
+      "Practical Engineering": 1,
+      "PBS Eons": 1,
+      "Mind & Life Institute": 1,
+      "Positive News": 2,
+      "Behavioral Scientist": 2
     }
   },
   "monthly_domain_counts": {
@@ -2951,13 +3000,14 @@
       "economic": 14
     },
     "2026-06": {
-      "optimism_tech": 13,
-      "historical": 1,
-      "economic": 2,
+      "optimism_tech": 17,
+      "historical": 2,
+      "economic": 3,
       "optimism_society": 3,
       "general": 3,
-      "introspective": 1,
-      "optimism_health": 1
+      "introspective": 2,
+      "optimism_health": 1,
+      "philosophical": 1
     }
   }
 }
