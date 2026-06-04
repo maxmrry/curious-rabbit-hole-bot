@@ -2024,6 +2024,66 @@
       "native_id": "https://behavioralscientist.org/the-psychology-of-the-home-run-in-1921/",
       "source_type": "rss",
       "last_seen_ms": 1780480908614
+    },
+    "425931175427dac7f83695e64e599b8bf6e3cd494f1eae86203f16102d8a823f": {
+      "native_id": "https://blog.castac.org/2026/06/food-insecurity-under-the-microscope/",
+      "source_type": "rss",
+      "last_seen_ms": 1780563477981
+    },
+    "6774f0bd1309466ba8965222d0d51583510c653ea70f093cc57035f7bd8d243f": {
+      "native_id": "_8bIDAJ3eCA",
+      "source_type": "youtube",
+      "last_seen_ms": 1780563477981
+    },
+    "6e71ce7ff098a3a676625917c72f029cc656ebefc10cb6464b973daca6e5d5d1": {
+      "native_id": "BI3TXc1WtJ8",
+      "source_type": "youtube",
+      "last_seen_ms": 1780563477981
+    },
+    "5d97c91f7eb00caf5fe3c8d9b7cf3f2655c5a6e652c1d51ae1e38ef6d4f45357": {
+      "native_id": "e1_NXWjmwhc",
+      "source_type": "youtube",
+      "last_seen_ms": 1780563477981
+    },
+    "e4c85bbd2c3ff1b0a669fc1d1eb337129879b4de2866472349eeb6fe23b6918b": {
+      "native_id": "qRfuFTpldAk",
+      "source_type": "youtube",
+      "last_seen_ms": 1780563477981
+    },
+    "7107863de610fce5e1003202625423791402c5475263889b8c966f9e695d8047": {
+      "native_id": "1512933",
+      "source_type": "podcast",
+      "last_seen_ms": 1780563477981
+    },
+    "274ff5cb29456c2eed33ca64763051f741d0941f7ac1c129a720d662e68737e1": {
+      "native_id": "5830520",
+      "source_type": "podcast",
+      "last_seen_ms": 1780563477981
+    },
+    "354c5575e50586b5a6799cd3d060a714a503c209986ca42f51a1b1eeacfe2f11": {
+      "native_id": "7470319",
+      "source_type": "podcast",
+      "last_seen_ms": 1780563477981
+    },
+    "0c4970d54cfa3622e206955b506bf8bc1140f25fb65774479d500bce997beeee": {
+      "native_id": "6448100",
+      "source_type": "podcast",
+      "last_seen_ms": 1780563477981
+    },
+    "d142bbcef90c92b9753e500034d41702e51f04a9d2b3f9fa31450f736ba71391": {
+      "native_id": "https://leakeyfoundation.org/homo-erectus-may-have-left-a-genetic-legacy-in-people-today/",
+      "source_type": "rss",
+      "last_seen_ms": 1780563477981
+    },
+    "e0e89aab36057e065b2a1ea569a6ed89a6ffcef446d5d423210277116e4f25e6": {
+      "native_id": "https://undark.org/2026/06/04/opinion-risk-aversion-innovation/",
+      "source_type": "rss",
+      "last_seen_ms": 1780563477981
+    },
+    "fbc6981c213cd1ca5677e5181d7344eb1862416b029c1e9d33302caf5783ddb8": {
+      "native_id": "949080",
+      "source_type": "podcast",
+      "last_seen_ms": 1780563477981
     }
   },
   "sources_health": {
@@ -2125,6 +2185,9 @@
     },
     "2026-06-03": {
       "success": true
+    },
+    "2026-06-04": {
+      "success": true
     }
   },
   "source_history": {
@@ -2138,12 +2201,12 @@
     "Experimental History": 1780215786633,
     "NOEMA": 1779352934769,
     "LSE": 1777881244701,
-    "Dr Ben Miles": 1780309850831,
+    "Dr Ben Miles": 1780563477981,
     "3Blue1Brown": 1779438862601,
     "TED-Ed": 1780044608000,
     "Works in Progress RSS Feed": 1780391854803,
     "Closer To Truth": 1777881244701,
-    "The Leakey Foundation": 1779352934769,
+    "The Leakey Foundation": 1780563477981,
     "Quanta Magazine": 1780309850831,
     "Farnam Street": 1780044608000,
     "Reasons to be Cheerful": 1780309850831,
@@ -2153,7 +2216,7 @@
     "Smithsonian": 1778916260372,
     "The Rest Is Science": 1780129643340,
     "Wendover Productions": 1779958281740,
-    "Undark Magazine": 1779958281740,
+    "Undark Magazine": 1780563477981,
     "Greater Good": 1779438862601,
     "Nautilus": 1780215786633,
     "Fix The News": 1780309850831,
@@ -2161,7 +2224,7 @@
     "The Rest Is History": 1780309850831,
     "Nobel Prize": 1778053394084,
     "BBC Ideas": 1780044608000,
-    "Platypus": 1780044608000,
+    "Platypus": 1780563477981,
     "Becker Friedman Institute University of Chicago": 1778053394084,
     "American Museum of Natural History": 1780391854803,
     "Somatosphere": 1779094452466,
@@ -2175,9 +2238,9 @@
     "SmarterEveryDay": 1778140198142,
     "Conversations with Tyler": 1780215786633,
     "The Royal Institution": 1779266107404,
-    "Numberphile": 1780044608000,
+    "Numberphile": 1780563477981,
     "NileRed": 1778223634799,
-    "TED": 1780044608000,
+    "TED": 1780563477981,
     "Not Boring by Packy McCormick": 1780391854803,
     "PBS Space Time": 1779871851419,
     "PBS Terra": 1778572382146,
@@ -2198,7 +2261,7 @@
     "minutephysics": 1779609418294,
     "World Science Festival": 1779871851419,
     "Anthropology News": 1780129643340,
-    "Invisible People": 1780129643340,
+    "Invisible People": 1780563477981,
     "YaleCourses": 1778659174006,
     "AsapSCIENCE": 1779958281740,
     "Periodic Videos": 1779094452466,
@@ -2232,7 +2295,7 @@
     "Recruiting Future with Matt Alder - What's Next For Talent Acquisition, HR & Hiring?": 1779609418294,
     "Cindy Fahnestock-Schafer": 1779609418294,
     "Priscilla Stuckey": 1779609418294,
-    "LibriVox": 1779609418294,
+    "LibriVox": 1780563477981,
     "Thomas R. Henry": 1779609418294,
     "Ben the Quasi-Ecologist": 1779609418294,
     "Witty Prince": 1779744391994,
@@ -2262,7 +2325,11 @@
     "Matthew (@1956ToppsGuy), Nate (@incardboardveritas), Jonathan (@sportscards.and.sunsets)": 1780309850831,
     "Meg Ferrell": 1780391854803,
     "CiRCE Podcast Network": 1780391854803,
-    "Jackie Flynn, EMDRIA Approved Consultant": 1780391854803
+    "Jackie Flynn, EMDRIA Approved Consultant": 1780391854803,
+    "Joost en Jesse": 1780563477981,
+    "Adam and Mick": 1780563477981,
+    "Justin Stohlton & Bruce Peck": 1780563477981,
+    "Courtney": 1780563477981
   },
   "source_scores": {
     "Oxford Martin School": {
@@ -2306,8 +2373,8 @@
       "n": 1
     },
     "Dr Ben Miles": {
-      "avg": 14.086,
-      "n": 5
+      "avg": 12.474,
+      "n": 6
     },
     "3Blue1Brown": {
       "avg": 0.895,
@@ -2326,8 +2393,8 @@
       "n": 1
     },
     "The Leakey Foundation": {
-      "avg": 6.862,
-      "n": 4
+      "avg": 7.128,
+      "n": 5
     },
     "Quanta Magazine": {
       "avg": 8.427,
@@ -2366,8 +2433,8 @@
       "n": 2
     },
     "Undark Magazine": {
-      "avg": 1.469,
-      "n": 7
+      "avg": 2.084,
+      "n": 8
     },
     "Greater Good": {
       "avg": 10.27,
@@ -2398,8 +2465,8 @@
       "n": 4
     },
     "Platypus": {
-      "avg": 0.757,
-      "n": 4
+      "avg": 1.964,
+      "n": 5
     },
     "Becker Friedman Institute University of Chicago": {
       "avg": -6.26,
@@ -2454,16 +2521,16 @@
       "n": 3
     },
     "Numberphile": {
-      "avg": 1.482,
-      "n": 4
+      "avg": 2.299,
+      "n": 5
     },
     "NileRed": {
       "avg": 4.56,
       "n": 1
     },
     "TED": {
-      "avg": 8.983,
-      "n": 4
+      "avg": 8.67,
+      "n": 5
     },
     "Not Boring by Packy McCormick": {
       "avg": 5.402,
@@ -2546,8 +2613,8 @@
       "n": 3
     },
     "Invisible People": {
-      "avg": -5.219,
-      "n": 3
+      "avg": -1.91,
+      "n": 4
     },
     "YaleCourses": {
       "avg": 9.61,
@@ -2682,8 +2749,8 @@
       "n": 1
     },
     "LibriVox": {
-      "avg": 8.38,
-      "n": 1
+      "avg": 6.015,
+      "n": 2
     },
     "Thomas R. Henry": {
       "avg": 6.77,
@@ -2804,20 +2871,36 @@
     "Jackie Flynn, EMDRIA Approved Consultant": {
       "avg": 4.14,
       "n": 1
+    },
+    "Joost en Jesse": {
+      "avg": 8.45,
+      "n": 1
+    },
+    "Adam and Mick": {
+      "avg": 8.15,
+      "n": 1
+    },
+    "Justin Stohlton & Bruce Peck": {
+      "avg": 8.0,
+      "n": 1
+    },
+    "Courtney": {
+      "avg": 8.2,
+      "n": 1
     }
   },
   "type_performance": {
     "youtube": {
-      "avg": 6.871,
+      "avg": 6.85,
       "n": 100
     },
     "rss": {
-      "avg": 5.723,
+      "avg": 5.764,
       "n": 100
     },
     "podcast": {
-      "avg": 3.707,
-      "n": 50
+      "avg": 4.032,
+      "n": 55
     },
     "news": {
       "avg": -25.52,
@@ -2958,7 +3041,7 @@
     },
     "2026-06": {
       "Fix The News": 1,
-      "Dr Ben Miles": 1,
+      "Dr Ben Miles": 2,
       "Stand-up Maths": 1,
       "The Rest Is History": 2,
       "SciFri": 1,
@@ -2984,7 +3067,18 @@
       "PBS Eons": 1,
       "Mind & Life Institute": 1,
       "Positive News": 2,
-      "Behavioral Scientist": 2
+      "Behavioral Scientist": 2,
+      "Platypus": 1,
+      "Invisible People": 1,
+      "TED": 1,
+      "Numberphile": 1,
+      "LibriVox": 1,
+      "Joost en Jesse": 1,
+      "Adam and Mick": 1,
+      "Justin Stohlton & Bruce Peck": 1,
+      "The Leakey Foundation": 1,
+      "Undark Magazine": 1,
+      "Courtney": 1
     }
   },
   "monthly_domain_counts": {
@@ -3000,11 +3094,11 @@
       "economic": 14
     },
     "2026-06": {
-      "optimism_tech": 17,
-      "historical": 2,
+      "optimism_tech": 26,
+      "historical": 3,
       "economic": 3,
-      "optimism_society": 3,
-      "general": 3,
+      "optimism_society": 4,
+      "general": 4,
       "introspective": 2,
       "optimism_health": 1,
       "philosophical": 1
