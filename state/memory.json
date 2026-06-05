@@ -2084,6 +2084,66 @@
       "native_id": "949080",
       "source_type": "podcast",
       "last_seen_ms": 1780563477981
+    },
+    "c9be1b7db4457281d2dfdcf78e7f21a3b9f516c3a69ad86627378ce629d17b91": {
+      "native_id": "https://marginalrevolution.com/marginalrevolution/2026/06/rubber-rationing-in-world-war-ii.html",
+      "source_type": "rss",
+      "last_seen_ms": 1780649469308
+    },
+    "ad0491213ede39174cd83f3f75e0f6a3cde6dcf73f8b6295754a7d9c674e2a71": {
+      "native_id": "hgK_NNRJv6M",
+      "source_type": "youtube",
+      "last_seen_ms": 1780649469308
+    },
+    "05c498347f2cc40c49b21c54af7ac5ac9296e8a3822b083f6f3af49ac371edd0": {
+      "native_id": "Hk5UdIM5jzM",
+      "source_type": "youtube",
+      "last_seen_ms": 1780649469308
+    },
+    "f4132ce47bb7add2eb441d3b6e4b8a764525e0e2e04cc9e648040ed04da8e5b0": {
+      "native_id": "SJocPm2E8eQ",
+      "source_type": "youtube",
+      "last_seen_ms": 1780649469308
+    },
+    "fe4ad577587884bc00efa91890a35f62dc0f18546668d8c5845b08c37f9f5e1c": {
+      "native_id": "hIOW2HKgzPk",
+      "source_type": "youtube",
+      "last_seen_ms": 1780649469308
+    },
+    "7787c29fbc51a3569422e6324f78f6a16a3cccc80befb31c90d1a033d74d45b3": {
+      "native_id": "hFIuIhKAPK0",
+      "source_type": "youtube",
+      "last_seen_ms": 1780649469308
+    },
+    "740aee41c3ddfe340117567bf774ff92e649d619692fd65e2a26263476a9cb6c": {
+      "native_id": "899030",
+      "source_type": "podcast",
+      "last_seen_ms": 1780649469308
+    },
+    "186d99c569261d5dc69b78969a1b677e2d56bbd27a7b4bb87bbbae8b7f2f9b99": {
+      "native_id": "5790479",
+      "source_type": "podcast",
+      "last_seen_ms": 1780649469308
+    },
+    "65c60822c1c2be8517f23e774285aac8e5bb73df9ca0215653cb464dafc158b5": {
+      "native_id": "5989841",
+      "source_type": "podcast",
+      "last_seen_ms": 1780649469308
+    },
+    "2be82f24f16a80d6e816b6ec902c43066b99998cb79cf2b13aa0a83a27777e39": {
+      "native_id": "https://greatergood.berkeley.edu/podcasts/item/finding_common_ground_in_uncomfortable_times",
+      "source_type": "rss",
+      "last_seen_ms": 1780649469308
+    },
+    "e547fa7d2dd2716191170c4d6c2ca97b7fa43326524cb0e1352b4ae9c7aec853": {
+      "native_id": "https://reasonstobecheerful.world/the-spark-transportation/",
+      "source_type": "rss",
+      "last_seen_ms": 1780649469308
+    },
+    "dd9791a94ef32d2116d847e101794cdf6d842843db93e089c63563f745eb2913": {
+      "native_id": "https://greatergood.berkeley.edu/article/item/five_ways_parents_can_help_teens_connect_across_differences",
+      "source_type": "rss",
+      "last_seen_ms": 1780649469308
     }
   },
   "sources_health": {
@@ -2188,12 +2248,15 @@
     },
     "2026-06-04": {
       "success": true
+    },
+    "2026-06-05": {
+      "success": true
     }
   },
   "source_history": {
     "Oxford Martin School": 1777801688500,
     "nature video": 1780391854803,
-    "The Royal Society": 1780391854803,
+    "The Royal Society": 1780649469308,
     "SciFri": 1780309850831,
     "Knowable Magazine": 1780129643340,
     "Natural History Museum": 1780391854803,
@@ -2209,15 +2272,15 @@
     "The Leakey Foundation": 1780563477981,
     "Quanta Magazine": 1780309850831,
     "Farnam Street": 1780044608000,
-    "Reasons to be Cheerful": 1780309850831,
+    "Reasons to be Cheerful": 1780649469308,
     "Behavioral Scientist": 1780480908614,
     "Intelligence Squared": 1778140198142,
-    "Wellcome Collection": 1779958281740,
+    "Wellcome Collection": 1780649469308,
     "Smithsonian": 1778916260372,
     "The Rest Is Science": 1780129643340,
-    "Wendover Productions": 1779958281740,
+    "Wendover Productions": 1780649469308,
     "Undark Magazine": 1780563477981,
-    "Greater Good": 1779438862601,
+    "Greater Good": 1780649469308,
     "Nautilus": 1780215786633,
     "Fix The News": 1780309850831,
     "Aeon | a world of ideas": 1780480908614,
@@ -2229,12 +2292,12 @@
     "American Museum of Natural History": 1780391854803,
     "Somatosphere": 1779094452466,
     "Positive News": 1780480908614,
-    "Marginal REVOLUTION": 1780391854803,
+    "Marginal REVOLUTION": 1780649469308,
     "Psyche | Know Your Self": 1780391854803,
     "Sean Carroll": 1780391854803,
     "Resolution Foundation": 1779352934769,
     "Angela Collier ": 1779744391994,
-    "Computerphile": 1778140198142,
+    "Computerphile": 1780649469308,
     "SmarterEveryDay": 1778140198142,
     "Conversations with Tyler": 1780215786633,
     "The Royal Institution": 1779266107404,
@@ -2252,7 +2315,7 @@
     "Sprouht": 1779438862601,
     "Special Books by Special Kids": 1780129643340,
     "Our World in Data": 1779784757690,
-    "The British Academy": 1779003575150,
+    "The British Academy": 1780649469308,
     "Howtown": 1779438862601,
     "Practical Engineering": 1780480908614,
     "Santa Fe Institute": 1779784757690,
@@ -2329,7 +2392,10 @@
     "Joost en Jesse": 1780563477981,
     "Adam and Mick": 1780563477981,
     "Justin Stohlton & Bruce Peck": 1780563477981,
-    "Courtney": 1780563477981
+    "Courtney": 1780563477981,
+    "Steve Dawson": 1780649469308,
+    "Tina VanDenburg": 1780649469308,
+    "Alex Koons": 1780649469308
   },
   "source_scores": {
     "Oxford Martin School": {
@@ -2341,8 +2407,8 @@
       "n": 4
     },
     "The Royal Society": {
-      "avg": 8.479,
-      "n": 5
+      "avg": 8.644,
+      "n": 6
     },
     "SciFri": {
       "avg": 8.937,
@@ -2405,8 +2471,8 @@
       "n": 4
     },
     "Reasons to be Cheerful": {
-      "avg": 9.075,
-      "n": 6
+      "avg": 9.477,
+      "n": 7
     },
     "Behavioral Scientist": {
       "avg": 8.385,
@@ -2417,8 +2483,8 @@
       "n": 2
     },
     "Wellcome Collection": {
-      "avg": 7.68,
-      "n": 3
+      "avg": 9.262,
+      "n": 4
     },
     "Smithsonian": {
       "avg": 8.693,
@@ -2429,16 +2495,16 @@
       "n": 4
     },
     "Wendover Productions": {
-      "avg": 5.055,
-      "n": 2
+      "avg": 7.052,
+      "n": 3
     },
     "Undark Magazine": {
       "avg": 2.084,
       "n": 8
     },
     "Greater Good": {
-      "avg": 10.27,
-      "n": 4
+      "avg": 11.047,
+      "n": 6
     },
     "Nautilus": {
       "avg": 7.449,
@@ -2485,8 +2551,8 @@
       "n": 7
     },
     "Marginal REVOLUTION": {
-      "avg": 8.082,
-      "n": 5
+      "avg": 8.052,
+      "n": 6
     },
     "Psyche | Know Your Self": {
       "avg": 7.584,
@@ -2505,8 +2571,8 @@
       "n": 3
     },
     "Computerphile": {
-      "avg": -2.37,
-      "n": 1
+      "avg": 5.353,
+      "n": 2
     },
     "SmarterEveryDay": {
       "avg": -9.88,
@@ -2577,8 +2643,8 @@
       "n": 3
     },
     "The British Academy": {
-      "avg": 9.005,
-      "n": 2
+      "avg": 10.752,
+      "n": 3
     },
     "Howtown": {
       "avg": 8.84,
@@ -2887,20 +2953,32 @@
     "Courtney": {
       "avg": 8.2,
       "n": 1
+    },
+    "Steve Dawson": {
+      "avg": 15.3,
+      "n": 1
+    },
+    "Tina VanDenburg": {
+      "avg": 15.1,
+      "n": 1
+    },
+    "Alex Koons": {
+      "avg": 15.1,
+      "n": 1
     }
   },
   "type_performance": {
     "youtube": {
-      "avg": 6.85,
+      "avg": 7.117,
       "n": 100
     },
     "rss": {
-      "avg": 5.764,
+      "avg": 5.978,
       "n": 100
     },
     "podcast": {
-      "avg": 4.032,
-      "n": 55
+      "avg": 4.608,
+      "n": 58
     },
     "news": {
       "avg": -25.52,
@@ -3045,7 +3123,7 @@
       "Stand-up Maths": 1,
       "The Rest Is History": 2,
       "SciFri": 1,
-      "Reasons to be Cheerful": 1,
+      "Reasons to be Cheerful": 2,
       "Vicki Holloway": 1,
       "Hobby Golfer Jens Zielinski, Golf Coach Florian Fritsch, Golf Profi Bernd Ritthammer": 1,
       "Matthew (@1956ToppsGuy), Nate (@incardboardveritas), Jonathan (@sportscards.and.sunsets)": 1,
@@ -3053,13 +3131,13 @@
       "Quanta Magazine": 1,
       "Natural History Museum": 1,
       "American Museum of Natural History": 1,
-      "The Royal Society": 1,
+      "The Royal Society": 2,
       "nature video": 1,
       "Sean Carroll": 1,
       "Meg Ferrell": 1,
       "CiRCE Podcast Network": 1,
       "Jackie Flynn, EMDRIA Approved Consultant": 1,
-      "Marginal REVOLUTION": 1,
+      "Marginal REVOLUTION": 2,
       "Not Boring by Packy McCormick": 1,
       "Psyche | Know Your Self": 1,
       "Aeon | a world of ideas": 1,
@@ -3078,7 +3156,15 @@
       "Justin Stohlton & Bruce Peck": 1,
       "The Leakey Foundation": 1,
       "Undark Magazine": 1,
-      "Courtney": 1
+      "Courtney": 1,
+      "The British Academy": 1,
+      "Wellcome Collection": 1,
+      "Computerphile": 1,
+      "Wendover Productions": 1,
+      "Steve Dawson": 1,
+      "Tina VanDenburg": 1,
+      "Alex Koons": 1,
+      "Greater Good": 2
     }
   },
   "monthly_domain_counts": {
@@ -3094,12 +3180,12 @@
       "economic": 14
     },
     "2026-06": {
-      "optimism_tech": 26,
-      "historical": 3,
+      "optimism_tech": 28,
+      "historical": 6,
       "economic": 3,
-      "optimism_society": 4,
-      "general": 4,
-      "introspective": 2,
+      "optimism_society": 5,
+      "general": 8,
+      "introspective": 4,
       "optimism_health": 1,
       "philosophical": 1
     }
