@@ -2144,6 +2144,66 @@
       "native_id": "https://greatergood.berkeley.edu/article/item/five_ways_parents_can_help_teens_connect_across_differences",
       "source_type": "rss",
       "last_seen_ms": 1780649469308
+    },
+    "1b8002c7d8318d56dcd3e7b0c397b4c20d8aa5e614d5a4945e800b785d07b231": {
+      "native_id": "a-7dj65bTZo",
+      "source_type": "youtube",
+      "last_seen_ms": 1780732437598
+    },
+    "55ea5fb60bb5b31b6eaac0d848649f74ae0d9b309fcd98b762c9fd469df55714": {
+      "native_id": "LqyVtmAxZrc",
+      "source_type": "youtube",
+      "last_seen_ms": 1780732437598
+    },
+    "012b5853ab7a30716673190e5d5809d5e5d24a39c960a3440b1a727cdbd3d345": {
+      "native_id": "5lCWqEFVzbY",
+      "source_type": "youtube",
+      "last_seen_ms": 1780732437598
+    },
+    "e7b6610742d96b8c89de0b3f6cd13061adab40003017e44b968a42e430606df5": {
+      "native_id": "xCtcDll-fNE",
+      "source_type": "youtube",
+      "last_seen_ms": 1780732437598
+    },
+    "6fed9f9e5534bd3c03d57b3b4694338a641cbd4692c7078ceff3ffa5a9080be1": {
+      "native_id": "Ng3WvmU7YuU",
+      "source_type": "youtube",
+      "last_seen_ms": 1780732437598
+    },
+    "70f846d3ecf054cd9fe2c71e90d25f1786f6a39528f797753fe770e1b247472e": {
+      "native_id": "OAIlucguNzY",
+      "source_type": "youtube",
+      "last_seen_ms": 1780732437598
+    },
+    "55f94a08ecb658fdb3983f537d0ec845de884ed03d8c1b264e065aadc1e3a77e": {
+      "native_id": "5593035",
+      "source_type": "podcast",
+      "last_seen_ms": 1780732437598
+    },
+    "cba4a3dc0be3ac4a5d517235239840edf0bc474dcda3406b42524a659b142d92": {
+      "native_id": "7045251",
+      "source_type": "podcast",
+      "last_seen_ms": 1780732437598
+    },
+    "a38ab7bcb0e52f401da95d0c385c00ccacad4f2c34e07f8ebd8d2c36ebd8e039": {
+      "native_id": "876167",
+      "source_type": "podcast",
+      "last_seen_ms": 1780732437598
+    },
+    "12cfda45666ab6aedba044b288a8290fd1edd48a7c48bc31c4e1d36d9f2e59a6": {
+      "native_id": "https://www.nature.com/articles/d41586-026-01831-y",
+      "source_type": "rss",
+      "last_seen_ms": 1780732437598
+    },
+    "8c679df7fa0a81a00f41e302026d4b3b6300daf476808683da8898f4434a15d9": {
+      "native_id": "https://nautil.us/ice-age-csi-mammoth-cold-case-files-1281756/",
+      "source_type": "rss",
+      "last_seen_ms": 1780732437598
+    },
+    "a771e30419215a4ada64792c0f0d8a9b2075c5e84319ae9ebf7e6b714e31c0f7": {
+      "native_id": "https://nautil.us/newly-discovered-four-winged-dinosaur-didnt-need-to-fly-to-hunt-birds-1281759/",
+      "source_type": "rss",
+      "last_seen_ms": 1780732437598
     }
   },
   "sources_health": {
@@ -2251,6 +2311,9 @@
     },
     "2026-06-05": {
       "success": true
+    },
+    "2026-06-06": {
+      "success": true
     }
   },
   "source_history": {
@@ -2269,7 +2332,7 @@
     "TED-Ed": 1780044608000,
     "Works in Progress RSS Feed": 1780391854803,
     "Closer To Truth": 1777881244701,
-    "The Leakey Foundation": 1780563477981,
+    "The Leakey Foundation": 1780732437598,
     "Quanta Magazine": 1780309850831,
     "Farnam Street": 1780044608000,
     "Reasons to be Cheerful": 1780649469308,
@@ -2281,7 +2344,7 @@
     "Wendover Productions": 1780649469308,
     "Undark Magazine": 1780563477981,
     "Greater Good": 1780649469308,
-    "Nautilus": 1780215786633,
+    "Nautilus": 1780732437598,
     "Fix The News": 1780309850831,
     "Aeon | a world of ideas": 1780480908614,
     "The Rest Is History": 1780309850831,
@@ -2298,18 +2361,18 @@
     "Resolution Foundation": 1779352934769,
     "Angela Collier ": 1779744391994,
     "Computerphile": 1780649469308,
-    "SmarterEveryDay": 1778140198142,
-    "Conversations with Tyler": 1780215786633,
-    "The Royal Institution": 1779266107404,
+    "SmarterEveryDay": 1780732437598,
+    "Conversations with Tyler": 1780732437598,
+    "The Royal Institution": 1780732437598,
     "Numberphile": 1780563477981,
     "NileRed": 1778223634799,
-    "TED": 1780563477981,
+    "TED": 1780732437598,
     "Not Boring by Packy McCormick": 1780391854803,
     "PBS Space Time": 1779871851419,
     "PBS Terra": 1778572382146,
     "The Institute of Art and Ideas": 1779609418294,
-    "Adam Savage\u2019s Tested": 1779744391994,
-    "Nature": 1779784757690,
+    "Adam Savage\u2019s Tested": 1780732437598,
+    "Nature": 1780732437598,
     "PBS Eons": 1780480908614,
     "Stand-up Maths": 1780309850831,
     "Sprouht": 1779438862601,
@@ -2395,7 +2458,10 @@
     "Courtney": 1780563477981,
     "Steve Dawson": 1780649469308,
     "Tina VanDenburg": 1780649469308,
-    "Alex Koons": 1780649469308
+    "Alex Koons": 1780649469308,
+    "U.S. National Science Foundation": 1780732437598,
+    "Bethany Grace Armitt-Brewster": 1780732437598,
+    "Society of Economic Geologists": 1780732437598
   },
   "source_scores": {
     "Oxford Martin School": {
@@ -2459,8 +2525,8 @@
       "n": 1
     },
     "The Leakey Foundation": {
-      "avg": 7.128,
-      "n": 5
+      "avg": 7.213,
+      "n": 6
     },
     "Quanta Magazine": {
       "avg": 8.427,
@@ -2507,8 +2573,8 @@
       "n": 6
     },
     "Nautilus": {
-      "avg": 7.449,
-      "n": 8
+      "avg": 8.247,
+      "n": 10
     },
     "Fix The News": {
       "avg": 8.887,
@@ -2575,16 +2641,16 @@
       "n": 2
     },
     "SmarterEveryDay": {
-      "avg": -9.88,
-      "n": 1
+      "avg": 2.668,
+      "n": 2
     },
     "Conversations with Tyler": {
-      "avg": 8.954,
-      "n": 5
+      "avg": 9.344,
+      "n": 6
     },
     "The Royal Institution": {
-      "avg": 13.163,
-      "n": 3
+      "avg": 13.884,
+      "n": 4
     },
     "Numberphile": {
       "avg": 2.299,
@@ -2595,8 +2661,8 @@
       "n": 1
     },
     "TED": {
-      "avg": 8.67,
-      "n": 5
+      "avg": 8.403,
+      "n": 6
     },
     "Not Boring by Packy McCormick": {
       "avg": 5.402,
@@ -2615,12 +2681,12 @@
       "n": 3
     },
     "Adam Savage\u2019s Tested": {
-      "avg": 9.383,
-      "n": 3
+      "avg": 10.829,
+      "n": 4
     },
     "Nature": {
-      "avg": 3.466,
-      "n": 5
+      "avg": 5.058,
+      "n": 6
     },
     "PBS Eons": {
       "avg": 13.717,
@@ -2965,20 +3031,32 @@
     "Alex Koons": {
       "avg": 15.1,
       "n": 1
+    },
+    "U.S. National Science Foundation": {
+      "avg": 14.44,
+      "n": 1
+    },
+    "Bethany Grace Armitt-Brewster": {
+      "avg": 14.09,
+      "n": 1
+    },
+    "Society of Economic Geologists": {
+      "avg": 13.99,
+      "n": 1
     }
   },
   "type_performance": {
     "youtube": {
-      "avg": 7.117,
+      "avg": 7.403,
       "n": 100
     },
     "rss": {
-      "avg": 5.978,
+      "avg": 6.154,
       "n": 100
     },
     "podcast": {
-      "avg": 4.608,
-      "n": 58
+      "avg": 5.079,
+      "n": 61
     },
     "news": {
       "avg": -25.52,
@@ -3148,13 +3226,13 @@
       "Behavioral Scientist": 2,
       "Platypus": 1,
       "Invisible People": 1,
-      "TED": 1,
+      "TED": 2,
       "Numberphile": 1,
       "LibriVox": 1,
       "Joost en Jesse": 1,
       "Adam and Mick": 1,
       "Justin Stohlton & Bruce Peck": 1,
-      "The Leakey Foundation": 1,
+      "The Leakey Foundation": 2,
       "Undark Magazine": 1,
       "Courtney": 1,
       "The British Academy": 1,
@@ -3164,7 +3242,16 @@
       "Steve Dawson": 1,
       "Tina VanDenburg": 1,
       "Alex Koons": 1,
-      "Greater Good": 2
+      "Greater Good": 2,
+      "The Royal Institution": 1,
+      "SmarterEveryDay": 1,
+      "Adam Savage\u2019s Tested": 1,
+      "Conversations with Tyler": 1,
+      "U.S. National Science Foundation": 1,
+      "Bethany Grace Armitt-Brewster": 1,
+      "Society of Economic Geologists": 1,
+      "Nature": 1,
+      "Nautilus": 2
     }
   },
   "monthly_domain_counts": {
@@ -3180,13 +3267,13 @@
       "economic": 14
     },
     "2026-06": {
-      "optimism_tech": 28,
-      "historical": 6,
-      "economic": 3,
+      "optimism_tech": 36,
+      "historical": 7,
+      "economic": 4,
       "optimism_society": 5,
       "general": 8,
-      "introspective": 4,
-      "optimism_health": 1,
+      "introspective": 5,
+      "optimism_health": 2,
       "philosophical": 1
     }
   }
