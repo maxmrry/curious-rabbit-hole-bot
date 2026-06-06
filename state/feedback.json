@@ -1,9 +1,9 @@
 {
   "source_adjustments": {
     "daily_experience": {
-      "cumulative": -11.0,
-      "n": 7,
-      "last_signal_ms": 1780184240520
+      "cumulative": -13.0,
+      "n": 8,
+      "last_signal_ms": 1780739172132
     },
     "Undark Magazine": {
       "cumulative": -2.0,
@@ -134,8 +134,8 @@
       "n": 3
     },
     "feed": {
-      "cumulative": -4.0,
-      "n": 2
+      "cumulative": -6.0,
+      "n": 3
     }
   },
   "recent_signals": [
@@ -426,6 +426,15 @@
       "source_type": "youtube",
       "context": "not_interested | Topic: Daniel H. Wilson Live Q&A on Robotics and Science Fiction",
       "timestamp_ms": 1780314861598
+    },
+    {
+      "item_id": "daily_feed_20260606",
+      "signal": 0,
+      "signal_label": "not_interested",
+      "source_name": "daily_experience",
+      "source_type": "feed",
+      "context": "whole_feed_boring",
+      "timestamp_ms": 1780739172132
     }
   ],
   "ai_weight_overrides": {
