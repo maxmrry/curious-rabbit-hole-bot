@@ -114,6 +114,11 @@
       "cumulative": -2.0,
       "n": 1,
       "last_signal_ms": 1780314861598
+    },
+    "Smithsonian's National Museum of Natural History": {
+      "cumulative": -2.0,
+      "n": 1,
+      "last_signal_ms": 1780860636712
     }
   },
   "source_type_adjustments": {
@@ -126,8 +131,8 @@
       "n": 5
     },
     "youtube": {
-      "cumulative": -5.0,
-      "n": 15
+      "cumulative": -7.0,
+      "n": 16
     },
     "podcast": {
       "cumulative": -3.0,
@@ -435,6 +440,15 @@
       "source_type": "feed",
       "context": "whole_feed_boring",
       "timestamp_ms": 1780739172132
+    },
+    {
+      "item_id": "GPzT5mH4CAE",
+      "signal": 0,
+      "signal_label": "not_interested",
+      "source_name": "Smithsonian's National Museum of Natural History",
+      "source_type": "youtube",
+      "context": "not_interested | Topic: Kiowa Storyteller Amanda Hill Explains Tipi Origins",
+      "timestamp_ms": 1780860636712
     }
   ],
   "ai_weight_overrides": {
