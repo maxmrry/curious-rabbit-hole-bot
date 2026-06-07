@@ -2204,6 +2204,66 @@
       "native_id": "https://nautil.us/newly-discovered-four-winged-dinosaur-didnt-need-to-fly-to-hunt-birds-1281759/",
       "source_type": "rss",
       "last_seen_ms": 1780732437598
+    },
+    "7731d857db088d9c3127e3b63fb3e6b230d4e400657b601a418d71ef74f1245d": {
+      "native_id": "https://fixthenews.com/p/the-largest-dam-removal-in-us-history-943",
+      "source_type": "rss",
+      "last_seen_ms": 1780821101304
+    },
+    "7f04ca71fab027717c63f34a965ce55ba663de2e42b41097627a477e81362c54": {
+      "native_id": "GPzT5mH4CAE",
+      "source_type": "youtube",
+      "last_seen_ms": 1780821101304
+    },
+    "02b678f5ac9a00cae71d49ac2612a498595dec6351f2d4681d249f322ad4a14e": {
+      "native_id": "2LNOq4LRLzg",
+      "source_type": "youtube",
+      "last_seen_ms": 1780821101304
+    },
+    "14920d2fe9a692a96b1bbf2e0f598f64831f1acaec75b5f46e0b3bd36fb8b7da": {
+      "native_id": "iFABNlbl7n8",
+      "source_type": "youtube",
+      "last_seen_ms": 1780821101304
+    },
+    "417eac800bda9b1d6447ef9b7306f0e6a94873f3afcd5f27e21335c9e18934fd": {
+      "native_id": "ua9-ZBUyRHE",
+      "source_type": "youtube",
+      "last_seen_ms": 1780821101304
+    },
+    "576691b437c665d933bba29d6369e300e1232cabf1a23cdde40ff1ec994b1e31": {
+      "native_id": "CQY1bIwQL6g",
+      "source_type": "youtube",
+      "last_seen_ms": 1780821101304
+    },
+    "39bd3be9188b929bc89a099048ad107f0669ad971513c7af41b046c6adfe16dd": {
+      "native_id": "388181",
+      "source_type": "podcast",
+      "last_seen_ms": 1780821101304
+    },
+    "79fed1058abd202bdb231ba3c0df50e07ecca1c3aa5d55ec364e6ad209bd36c3": {
+      "native_id": "445910",
+      "source_type": "podcast",
+      "last_seen_ms": 1780821101304
+    },
+    "d16896e31f1232b5782cf76e89d9e0163511a573e484eb6d6d0f750d25723574": {
+      "native_id": "11751",
+      "source_type": "podcast",
+      "last_seen_ms": 1780821101304
+    },
+    "a741ebf178cdc55a15c4df815579364baf44bbd1a3b6091ba3270259bbda8d08": {
+      "native_id": "https://knowablemagazine.org/content/article/mind/2026/why-we-crave-social-interaction",
+      "source_type": "rss",
+      "last_seen_ms": 1780821101304
+    },
+    "cde1a7f06056ebf86a45982cff6b49e73ec86dee5578149753017c88a227a8a7": {
+      "native_id": "410151",
+      "source_type": "podcast",
+      "last_seen_ms": 1780821101304
+    },
+    "0e2ca81ffa3f245483112a949c99f37c4631b0f79ef601866a12219f6116b6e5": {
+      "native_id": "https://reasonstobecheerful.world/what-were-reading-young-entrepreneurs-uk-market-stalls/",
+      "source_type": "rss",
+      "last_seen_ms": 1780821101304
     }
   },
   "sources_health": {
@@ -2314,6 +2374,9 @@
     },
     "2026-06-06": {
       "success": true
+    },
+    "2026-06-07": {
+      "success": true
     }
   },
   "source_history": {
@@ -2321,7 +2384,7 @@
     "nature video": 1780391854803,
     "The Royal Society": 1780649469308,
     "SciFri": 1780309850831,
-    "Knowable Magazine": 1780129643340,
+    "Knowable Magazine": 1780821101304,
     "Natural History Museum": 1780391854803,
     "Ness Labs": 1778223634799,
     "Experimental History": 1780215786633,
@@ -2335,24 +2398,24 @@
     "The Leakey Foundation": 1780732437598,
     "Quanta Magazine": 1780309850831,
     "Farnam Street": 1780044608000,
-    "Reasons to be Cheerful": 1780649469308,
+    "Reasons to be Cheerful": 1780821101304,
     "Behavioral Scientist": 1780480908614,
     "Intelligence Squared": 1778140198142,
-    "Wellcome Collection": 1780649469308,
+    "Wellcome Collection": 1780821101304,
     "Smithsonian": 1778916260372,
     "The Rest Is Science": 1780129643340,
     "Wendover Productions": 1780649469308,
     "Undark Magazine": 1780563477981,
     "Greater Good": 1780649469308,
     "Nautilus": 1780732437598,
-    "Fix The News": 1780309850831,
+    "Fix The News": 1780821101304,
     "Aeon | a world of ideas": 1780480908614,
     "The Rest Is History": 1780309850831,
     "Nobel Prize": 1778053394084,
     "BBC Ideas": 1780044608000,
     "Platypus": 1780563477981,
     "Becker Friedman Institute University of Chicago": 1778053394084,
-    "American Museum of Natural History": 1780391854803,
+    "American Museum of Natural History": 1780821101304,
     "Somatosphere": 1779094452466,
     "Positive News": 1780480908614,
     "Marginal REVOLUTION": 1780649469308,
@@ -2397,7 +2460,7 @@
     "Backstage at the Vinyl Cafe": 1778659174006,
     "Supreme Court asks if there was a 'proper debate' in Parliament before enacting CEC/EC appointments law": 1778659174006,
     "Beau Miles": 1779784757690,
-    "Sixty Symbols": 1779438862601,
+    "Sixty Symbols": 1780821101304,
     "The New York Academy of Sciences": 1779958281740,
     "Mary Garcia / SmartSeeds": 1778745081628,
     "Lenore Elizabeth Mulets": 1778745081628,
@@ -2405,7 +2468,7 @@
     "Thought For Today": 1778745081628,
     "World Wildlife Fund": 1778916260372,
     "The Youth Sports Parenting Tribe": 1779003575150,
-    "JSK-Studio": 1779266107404,
+    "JSK-Studio": 1780821101304,
     "Dr. Brenna Hicks": 1779094452466,
     "Instant Genius": 1779179809816,
     "ColdFusion": 1780215786633,
@@ -2461,7 +2524,12 @@
     "Alex Koons": 1780649469308,
     "U.S. National Science Foundation": 1780732437598,
     "Bethany Grace Armitt-Brewster": 1780732437598,
-    "Society of Economic Geologists": 1780732437598
+    "Society of Economic Geologists": 1780732437598,
+    "Smithsonian's National Museum of Natural History": 1780821101304,
+    "Monocle": 1780821101304,
+    "Country and Town House": 1780821101304,
+    "Catherine Baumgardner - Costume Designer and Educator": 1780821101304,
+    "Josh Cooperman": 1780821101304
   },
   "source_scores": {
     "Oxford Martin School": {
@@ -2481,8 +2549,8 @@
       "n": 5
     },
     "Knowable Magazine": {
-      "avg": 0.644,
-      "n": 5
+      "avg": 1.748,
+      "n": 6
     },
     "Natural History Museum": {
       "avg": 9.595,
@@ -2537,8 +2605,8 @@
       "n": 4
     },
     "Reasons to be Cheerful": {
-      "avg": 9.477,
-      "n": 7
+      "avg": 9.407,
+      "n": 8
     },
     "Behavioral Scientist": {
       "avg": 8.385,
@@ -2549,8 +2617,8 @@
       "n": 2
     },
     "Wellcome Collection": {
-      "avg": 9.262,
-      "n": 4
+      "avg": 9.531,
+      "n": 5
     },
     "Smithsonian": {
       "avg": 8.693,
@@ -2577,8 +2645,8 @@
       "n": 10
     },
     "Fix The News": {
-      "avg": 8.887,
-      "n": 7
+      "avg": 8.669,
+      "n": 8
     },
     "Aeon | a world of ideas": {
       "avg": 9.76,
@@ -2605,8 +2673,8 @@
       "n": 1
     },
     "American Museum of Natural History": {
-      "avg": 5.644,
-      "n": 4
+      "avg": 6.059,
+      "n": 5
     },
     "Somatosphere": {
       "avg": -8.57,
@@ -2785,8 +2853,8 @@
       "n": 4
     },
     "Sixty Symbols": {
-      "avg": 10.22,
-      "n": 2
+      "avg": 10.099,
+      "n": 3
     },
     "The New York Academy of Sciences": {
       "avg": 10.76,
@@ -2817,8 +2885,8 @@
       "n": 1
     },
     "JSK-Studio": {
-      "avg": 14.51,
-      "n": 3
+      "avg": 13.352,
+      "n": 4
     },
     "Dr. Brenna Hicks": {
       "avg": 13.54,
@@ -3043,20 +3111,40 @@
     "Society of Economic Geologists": {
       "avg": 13.99,
       "n": 1
+    },
+    "Smithsonian's National Museum of Natural History": {
+      "avg": 15.057,
+      "n": 1
+    },
+    "Monocle": {
+      "avg": 10.45,
+      "n": 1
+    },
+    "Country and Town House": {
+      "avg": 10.37,
+      "n": 1
+    },
+    "Catherine Baumgardner - Costume Designer and Educator": {
+      "avg": 10.25,
+      "n": 1
+    },
+    "Josh Cooperman": {
+      "avg": 10.11,
+      "n": 1
     }
   },
   "type_performance": {
     "youtube": {
-      "avg": 7.403,
+      "avg": 7.558,
       "n": 100
     },
     "rss": {
-      "avg": 6.154,
+      "avg": 6.202,
       "n": 100
     },
     "podcast": {
-      "avg": 5.079,
-      "n": 61
+      "avg": 5.401,
+      "n": 65
     },
     "news": {
       "avg": -25.52,
@@ -3196,19 +3284,19 @@
       "Market Makers": 1
     },
     "2026-06": {
-      "Fix The News": 1,
+      "Fix The News": 2,
       "Dr Ben Miles": 2,
       "Stand-up Maths": 1,
       "The Rest Is History": 2,
       "SciFri": 1,
-      "Reasons to be Cheerful": 2,
+      "Reasons to be Cheerful": 3,
       "Vicki Holloway": 1,
       "Hobby Golfer Jens Zielinski, Golf Coach Florian Fritsch, Golf Profi Bernd Ritthammer": 1,
       "Matthew (@1956ToppsGuy), Nate (@incardboardveritas), Jonathan (@sportscards.and.sunsets)": 1,
       "Works in Progress RSS Feed": 2,
       "Quanta Magazine": 1,
       "Natural History Museum": 1,
-      "American Museum of Natural History": 1,
+      "American Museum of Natural History": 2,
       "The Royal Society": 2,
       "nature video": 1,
       "Sean Carroll": 1,
@@ -3236,7 +3324,7 @@
       "Undark Magazine": 1,
       "Courtney": 1,
       "The British Academy": 1,
-      "Wellcome Collection": 1,
+      "Wellcome Collection": 2,
       "Computerphile": 1,
       "Wendover Productions": 1,
       "Steve Dawson": 1,
@@ -3251,7 +3339,15 @@
       "Bethany Grace Armitt-Brewster": 1,
       "Society of Economic Geologists": 1,
       "Nature": 1,
-      "Nautilus": 2
+      "Nautilus": 2,
+      "Smithsonian's National Museum of Natural History": 1,
+      "JSK-Studio": 1,
+      "Sixty Symbols": 1,
+      "Monocle": 1,
+      "Country and Town House": 1,
+      "Catherine Baumgardner - Costume Designer and Educator": 1,
+      "Knowable Magazine": 1,
+      "Josh Cooperman": 1
     }
   },
   "monthly_domain_counts": {
@@ -3267,13 +3363,13 @@
       "economic": 14
     },
     "2026-06": {
-      "optimism_tech": 36,
-      "historical": 7,
-      "economic": 4,
-      "optimism_society": 5,
-      "general": 8,
+      "optimism_tech": 40,
+      "historical": 8,
+      "economic": 6,
+      "optimism_society": 6,
+      "general": 11,
       "introspective": 5,
-      "optimism_health": 2,
+      "optimism_health": 3,
       "philosophical": 1
     }
   }

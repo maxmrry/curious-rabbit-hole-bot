@@ -438,12 +438,12 @@
     }
   ],
   "ai_weight_overrides": {
-    "w_sys": 0.1,
-    "w_nuance": 0.15,
-    "w_temp": 0.1,
+    "w_sys": 0.08,
+    "w_nuance": 0.12,
+    "w_temp": 0.08,
     "w_const": 0.25,
-    "w_grounded": 0.25,
-    "w_wonder": 0.15
+    "w_grounded": 0.27,
+    "w_wonder": 0.2
   },
-  "last_reflection_ms": 1780480684750
+  "last_reflection_ms": 1780820781527
 }
