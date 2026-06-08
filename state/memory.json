@@ -2264,6 +2264,66 @@
       "native_id": "https://reasonstobecheerful.world/what-were-reading-young-entrepreneurs-uk-market-stalls/",
       "source_type": "rss",
       "last_seen_ms": 1780821101304
+    },
+    "d6e379ad7a1c229ef3796447c22eac55d72cdbb8797fe4d569cd40752471f735": {
+      "native_id": "jITZ_lIlpH8",
+      "source_type": "youtube",
+      "last_seen_ms": 1780911243522
+    },
+    "9476f548db8e1095f1a9e56e2c0e1b4d620e8813350616238040ff7746f0a6e9": {
+      "native_id": "l6DKRf-fAAM",
+      "source_type": "youtube",
+      "last_seen_ms": 1780911243522
+    },
+    "56b3f8cc4d6938ea40768c35d01e91e2df44c3dedbe09864fb2ff0e646c02098": {
+      "native_id": "3wLU9cyNNMM",
+      "source_type": "youtube",
+      "last_seen_ms": 1780911243522
+    },
+    "0ea6590482bb214adde36ed18d54e7a9456349c69948852626daf4935ec3f3b7": {
+      "native_id": "LoGklKZVkpg",
+      "source_type": "youtube",
+      "last_seen_ms": 1780911243522
+    },
+    "1f348d61f2b9de04aabca95735b8985b16bdddbac0e9840bab24a5f0e16d4306": {
+      "native_id": "m_hcwPm16nA",
+      "source_type": "youtube",
+      "last_seen_ms": 1780911243522
+    },
+    "19de4fdf6be43c18bec59097302eb8e2b22babb5954f16741c6bdd94b7b9b142": {
+      "native_id": "Mrtd-lgADQo",
+      "source_type": "youtube",
+      "last_seen_ms": 1780911243522
+    },
+    "8793bd5319f8d066921e5ac23d5269d20d84f9bf25d45de5174fca12a6c009fb": {
+      "native_id": "2667",
+      "source_type": "podcast",
+      "last_seen_ms": 1780911243522
+    },
+    "0dccad84d9e683ba111bd0ed7880d6f2d793feae489035b81214eb3665761ebd": {
+      "native_id": "434033",
+      "source_type": "podcast",
+      "last_seen_ms": 1780911243522
+    },
+    "425a97350ec70752dc9b6cbfd0853e21b536120dbe40150f318985cce1104f23": {
+      "native_id": "316130",
+      "source_type": "podcast",
+      "last_seen_ms": 1780911243522
+    },
+    "810b52fa9eb8fed72c7dfc763eb026f6261a60a8e21d07e8c0542eafde338e0f": {
+      "native_id": "https://fs.blog/knowledge-project-podcast/bill-gurley/",
+      "source_type": "rss",
+      "last_seen_ms": 1780911243522
+    },
+    "8f6a98360db2ad8d3508a4c851ee21f5c7c9d5f2299beb3bc4540b93a26d22c3": {
+      "native_id": "5UjrVboq9zM",
+      "source_type": "youtube",
+      "last_seen_ms": 1780911243522
+    },
+    "b722c9caaa55038bc5f812d37a672b3dc1344804e05ceeda7afdc54c5496f77a": {
+      "native_id": "5006",
+      "source_type": "podcast",
+      "last_seen_ms": 1780911243522
     }
   },
   "sources_health": {
@@ -2377,10 +2437,13 @@
     },
     "2026-06-07": {
       "success": true
+    },
+    "2026-06-08": {
+      "success": true
     }
   },
   "source_history": {
-    "Oxford Martin School": 1777801688500,
+    "Oxford Martin School": 1780911243522,
     "nature video": 1780391854803,
     "The Royal Society": 1780649469308,
     "SciFri": 1780309850831,
@@ -2391,13 +2454,13 @@
     "NOEMA": 1779352934769,
     "LSE": 1777881244701,
     "Dr Ben Miles": 1780563477981,
-    "3Blue1Brown": 1779438862601,
+    "3Blue1Brown": 1780911243522,
     "TED-Ed": 1780044608000,
     "Works in Progress RSS Feed": 1780391854803,
     "Closer To Truth": 1777881244701,
     "The Leakey Foundation": 1780732437598,
-    "Quanta Magazine": 1780309850831,
-    "Farnam Street": 1780044608000,
+    "Quanta Magazine": 1780911243522,
+    "Farnam Street": 1780911243522,
     "Reasons to be Cheerful": 1780821101304,
     "Behavioral Scientist": 1780480908614,
     "Intelligence Squared": 1778140198142,
@@ -2412,7 +2475,7 @@
     "Aeon | a world of ideas": 1780480908614,
     "The Rest Is History": 1780309850831,
     "Nobel Prize": 1778053394084,
-    "BBC Ideas": 1780044608000,
+    "BBC Ideas": 1780911243522,
     "Platypus": 1780563477981,
     "Becker Friedman Institute University of Chicago": 1778053394084,
     "American Museum of Natural History": 1780821101304,
@@ -2420,13 +2483,13 @@
     "Positive News": 1780480908614,
     "Marginal REVOLUTION": 1780649469308,
     "Psyche | Know Your Self": 1780391854803,
-    "Sean Carroll": 1780391854803,
+    "Sean Carroll": 1780911243522,
     "Resolution Foundation": 1779352934769,
     "Angela Collier ": 1779744391994,
     "Computerphile": 1780649469308,
     "SmarterEveryDay": 1780732437598,
     "Conversations with Tyler": 1780732437598,
-    "The Royal Institution": 1780732437598,
+    "The Royal Institution": 1780911243522,
     "Numberphile": 1780563477981,
     "NileRed": 1778223634799,
     "TED": 1780732437598,
@@ -2454,7 +2517,7 @@
     "YaleCourses": 1778659174006,
     "AsapSCIENCE": 1779958281740,
     "Periodic Videos": 1779094452466,
-    "Yale Center for Emotional Intelligence": 1780215786633,
+    "Yale Center for Emotional Intelligence": 1780911243522,
     "Brian Colburn": 1778659174006,
     "Time We Discuss": 1778659174006,
     "Backstage at the Vinyl Cafe": 1778659174006,
@@ -2529,12 +2592,16 @@
     "Monocle": 1780821101304,
     "Country and Town House": 1780821101304,
     "Catherine Baumgardner - Costume Designer and Educator": 1780821101304,
-    "Josh Cooperman": 1780821101304
+    "Josh Cooperman": 1780821101304,
+    "Tabletop Champions Podcast": 1780911243522,
+    "Backwater Bastards | Realm": 1780911243522,
+    "Happy Jacks RPG Network": 1780911243522,
+    "Secrets of Organ Playing": 1780911243522
   },
   "source_scores": {
     "Oxford Martin School": {
-      "avg": 1.1,
-      "n": 1
+      "avg": 2.602,
+      "n": 2
     },
     "nature video": {
       "avg": 9.995,
@@ -2577,8 +2644,8 @@
       "n": 6
     },
     "3Blue1Brown": {
-      "avg": 0.895,
-      "n": 4
+      "avg": 3.319,
+      "n": 5
     },
     "TED-Ed": {
       "avg": 9.062,
@@ -2597,12 +2664,12 @@
       "n": 6
     },
     "Quanta Magazine": {
-      "avg": 8.427,
-      "n": 6
+      "avg": 8.792,
+      "n": 7
     },
     "Farnam Street": {
-      "avg": 8.017,
-      "n": 4
+      "avg": 8.9,
+      "n": 5
     },
     "Reasons to be Cheerful": {
       "avg": 9.407,
@@ -2661,8 +2728,8 @@
       "n": 1
     },
     "BBC Ideas": {
-      "avg": 8.052,
-      "n": 4
+      "avg": 6.157,
+      "n": 5
     },
     "Platypus": {
       "avg": 1.964,
@@ -2693,8 +2760,8 @@
       "n": 5
     },
     "Sean Carroll": {
-      "avg": 5.707,
-      "n": 5
+      "avg": 6.397,
+      "n": 6
     },
     "Resolution Foundation": {
       "avg": -1.507,
@@ -2717,8 +2784,8 @@
       "n": 6
     },
     "The Royal Institution": {
-      "avg": 13.884,
-      "n": 4
+      "avg": 13.034,
+      "n": 5
     },
     "Numberphile": {
       "avg": 2.299,
@@ -2829,8 +2896,8 @@
       "n": 2
     },
     "Yale Center for Emotional Intelligence": {
-      "avg": 2.742,
-      "n": 2
+      "avg": 5.583,
+      "n": 3
     },
     "Brian Colburn": {
       "avg": 9.72,
@@ -3131,20 +3198,36 @@
     "Josh Cooperman": {
       "avg": 10.11,
       "n": 1
+    },
+    "Tabletop Champions Podcast": {
+      "avg": 12.67,
+      "n": 1
+    },
+    "Backwater Bastards | Realm": {
+      "avg": 12.67,
+      "n": 1
+    },
+    "Happy Jacks RPG Network": {
+      "avg": 12.67,
+      "n": 1
+    },
+    "Secrets of Organ Playing": {
+      "avg": 14.08,
+      "n": 1
     }
   },
   "type_performance": {
     "youtube": {
-      "avg": 7.558,
+      "avg": 7.598,
       "n": 100
     },
     "rss": {
-      "avg": 6.202,
+      "avg": 6.264,
       "n": 100
     },
     "podcast": {
-      "avg": 5.401,
-      "n": 65
+      "avg": 5.843,
+      "n": 69
     },
     "news": {
       "avg": -25.52,
@@ -3294,12 +3377,12 @@
       "Hobby Golfer Jens Zielinski, Golf Coach Florian Fritsch, Golf Profi Bernd Ritthammer": 1,
       "Matthew (@1956ToppsGuy), Nate (@incardboardveritas), Jonathan (@sportscards.and.sunsets)": 1,
       "Works in Progress RSS Feed": 2,
-      "Quanta Magazine": 1,
+      "Quanta Magazine": 2,
       "Natural History Museum": 1,
       "American Museum of Natural History": 2,
       "The Royal Society": 2,
       "nature video": 1,
-      "Sean Carroll": 1,
+      "Sean Carroll": 2,
       "Meg Ferrell": 1,
       "CiRCE Podcast Network": 1,
       "Jackie Flynn, EMDRIA Approved Consultant": 1,
@@ -3331,7 +3414,7 @@
       "Tina VanDenburg": 1,
       "Alex Koons": 1,
       "Greater Good": 2,
-      "The Royal Institution": 1,
+      "The Royal Institution": 2,
       "SmarterEveryDay": 1,
       "Adam Savage\u2019s Tested": 1,
       "Conversations with Tyler": 1,
@@ -3347,7 +3430,16 @@
       "Country and Town House": 1,
       "Catherine Baumgardner - Costume Designer and Educator": 1,
       "Knowable Magazine": 1,
-      "Josh Cooperman": 1
+      "Josh Cooperman": 1,
+      "3Blue1Brown": 1,
+      "Yale Center for Emotional Intelligence": 1,
+      "Oxford Martin School": 1,
+      "Tabletop Champions Podcast": 1,
+      "Backwater Bastards | Realm": 1,
+      "Happy Jacks RPG Network": 1,
+      "Farnam Street": 1,
+      "BBC Ideas": 1,
+      "Secrets of Organ Playing": 1
     }
   },
   "monthly_domain_counts": {
@@ -3363,13 +3455,13 @@
       "economic": 14
     },
     "2026-06": {
-      "optimism_tech": 40,
-      "historical": 8,
+      "optimism_tech": 44,
+      "historical": 9,
       "economic": 6,
       "optimism_society": 6,
-      "general": 11,
+      "general": 14,
       "introspective": 5,
-      "optimism_health": 3,
+      "optimism_health": 7,
       "philosophical": 1
     }
   }
