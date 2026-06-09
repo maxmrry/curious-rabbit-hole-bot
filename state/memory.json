@@ -2324,6 +2324,66 @@
       "native_id": "5006",
       "source_type": "podcast",
       "last_seen_ms": 1780911243522
+    },
+    "0723bd7c3e42d37a189b84c1911488d1d0562e4695e4afa946e4c111c95003cf": {
+      "native_id": "https://aeon.co/essays/why-did-measuring-earths-true-shape-matter-for-science",
+      "source_type": "rss",
+      "last_seen_ms": 1780994344009
+    },
+    "06ff03ba29e8c4fd031190ba858d0c4a1f36416e0be87c7466a2ba7eaa83f005": {
+      "native_id": "q9WFLi0nJFg",
+      "source_type": "youtube",
+      "last_seen_ms": 1780994344009
+    },
+    "7582d45145fc9354396208b45cff6d5b7c3e3968b3276dd29f1df642ad058eec": {
+      "native_id": "cYmaLMkN7pE",
+      "source_type": "youtube",
+      "last_seen_ms": 1780994344009
+    },
+    "7f11cfad10447ab336c37e79fd7ac1e04b836b26a41fec136733c94e400e3752": {
+      "native_id": "E9jcZOY4iqc",
+      "source_type": "youtube",
+      "last_seen_ms": 1780994344009
+    },
+    "486ce8db6de696406c26e1bc86c9ee652dbe423a76de11fd542a1bae296a5934": {
+      "native_id": "W6GkPcMC_v8",
+      "source_type": "youtube",
+      "last_seen_ms": 1780994344009
+    },
+    "b222b4ccaa06a5504a28a25f3771164a5167e18c9a05cfe2b82f1e6275858754": {
+      "native_id": "https://psyche.co/videos/a-beekeeper-braves-a-fatal-allergy-to-tend-the-rooftops-of-new-york",
+      "source_type": "rss",
+      "last_seen_ms": 1780994344009
+    },
+    "a848122852c75676b847cf37a20a5bd66f05b32eb6913b5b87721d30e0db4c25": {
+      "native_id": "256787",
+      "source_type": "podcast",
+      "last_seen_ms": 1780994344009
+    },
+    "5bc0e4e9230ed836a64444f83e5534f42e83ba9f960bb8e8471b86f4ea0533d1": {
+      "native_id": "104371",
+      "source_type": "podcast",
+      "last_seen_ms": 1780994344009
+    },
+    "91fb52f3cdcc36bc6fd43a1b4615d9a1becdbbc5c4881617ed8035924136d02d": {
+      "native_id": "96794",
+      "source_type": "podcast",
+      "last_seen_ms": 1780994344009
+    },
+    "1337357dcdba9c7d3ad1d813f07688f519ed93b610600de3891750078fdbacdf": {
+      "native_id": "https://www.positive.news/environment/the-island-festival-putting-nature-before-acts/",
+      "source_type": "rss",
+      "last_seen_ms": 1780994344009
+    },
+    "90a2873d794ebba30f5176b4a1005a2da67a846e5fda05a5c452bcfe5a97573a": {
+      "native_id": "https://www.notboring.co/p/weekly-dose-of-optimism-196",
+      "source_type": "rss",
+      "last_seen_ms": 1780994344009
+    },
+    "ad126037a9a01beb27f599d7b7ede646a6d0acd4cf9c1a66cf9895cb4f03d800": {
+      "native_id": "22687",
+      "source_type": "podcast",
+      "last_seen_ms": 1780994344009
     }
   },
   "sources_health": {
@@ -2440,13 +2500,16 @@
     },
     "2026-06-08": {
       "success": true
+    },
+    "2026-06-09": {
+      "success": true
     }
   },
   "source_history": {
     "Oxford Martin School": 1780911243522,
     "nature video": 1780391854803,
     "The Royal Society": 1780649469308,
-    "SciFri": 1780309850831,
+    "SciFri": 1780994344009,
     "Knowable Magazine": 1780821101304,
     "Natural History Museum": 1780391854803,
     "Ness Labs": 1778223634799,
@@ -2472,28 +2535,28 @@
     "Greater Good": 1780649469308,
     "Nautilus": 1780732437598,
     "Fix The News": 1780821101304,
-    "Aeon | a world of ideas": 1780480908614,
-    "The Rest Is History": 1780309850831,
+    "Aeon | a world of ideas": 1780994344009,
+    "The Rest Is History": 1780994344009,
     "Nobel Prize": 1778053394084,
     "BBC Ideas": 1780911243522,
     "Platypus": 1780563477981,
     "Becker Friedman Institute University of Chicago": 1778053394084,
     "American Museum of Natural History": 1780821101304,
     "Somatosphere": 1779094452466,
-    "Positive News": 1780480908614,
+    "Positive News": 1780994344009,
     "Marginal REVOLUTION": 1780649469308,
-    "Psyche | Know Your Self": 1780391854803,
+    "Psyche | Know Your Self": 1780994344009,
     "Sean Carroll": 1780911243522,
     "Resolution Foundation": 1779352934769,
     "Angela Collier ": 1779744391994,
     "Computerphile": 1780649469308,
     "SmarterEveryDay": 1780732437598,
-    "Conversations with Tyler": 1780732437598,
+    "Conversations with Tyler": 1780994344009,
     "The Royal Institution": 1780911243522,
     "Numberphile": 1780563477981,
     "NileRed": 1778223634799,
     "TED": 1780732437598,
-    "Not Boring by Packy McCormick": 1780391854803,
+    "Not Boring by Packy McCormick": 1780994344009,
     "PBS Space Time": 1779871851419,
     "PBS Terra": 1778572382146,
     "The Institute of Art and Ideas": 1779609418294,
@@ -2501,7 +2564,7 @@
     "Nature": 1780732437598,
     "PBS Eons": 1780480908614,
     "Stand-up Maths": 1780309850831,
-    "Sprouht": 1779438862601,
+    "Sprouht": 1780994344009,
     "Special Books by Special Kids": 1780129643340,
     "Our World in Data": 1779784757690,
     "The British Academy": 1780649469308,
@@ -2596,7 +2659,11 @@
     "Tabletop Champions Podcast": 1780911243522,
     "Backwater Bastards | Realm": 1780911243522,
     "Happy Jacks RPG Network": 1780911243522,
-    "Secrets of Organ Playing": 1780911243522
+    "Secrets of Organ Playing": 1780911243522,
+    "Rubin Museum of Himalayan Art": 1780994344009,
+    "Heidi Zuckerman": 1780994344009,
+    "Emory Arts": 1780994344009,
+    "Timothy Kimo Brien": 1780994344009
   },
   "source_scores": {
     "Oxford Martin School": {
@@ -2612,8 +2679,8 @@
       "n": 6
     },
     "SciFri": {
-      "avg": 8.937,
-      "n": 5
+      "avg": 9.552,
+      "n": 6
     },
     "Knowable Magazine": {
       "avg": 1.748,
@@ -2716,12 +2783,12 @@
       "n": 8
     },
     "Aeon | a world of ideas": {
-      "avg": 9.76,
-      "n": 5
+      "avg": 10.182,
+      "n": 6
     },
     "The Rest Is History": {
-      "avg": 9.232,
-      "n": 6
+      "avg": 9.662,
+      "n": 7
     },
     "Nobel Prize": {
       "avg": 8.54,
@@ -2748,16 +2815,16 @@
       "n": 2
     },
     "Positive News": {
-      "avg": 11.14,
-      "n": 7
+      "avg": 11.348,
+      "n": 8
     },
     "Marginal REVOLUTION": {
       "avg": 8.052,
       "n": 6
     },
     "Psyche | Know Your Self": {
-      "avg": 7.584,
-      "n": 5
+      "avg": 7.548,
+      "n": 6
     },
     "Sean Carroll": {
       "avg": 6.397,
@@ -2780,8 +2847,8 @@
       "n": 2
     },
     "Conversations with Tyler": {
-      "avg": 9.344,
-      "n": 6
+      "avg": 9.027,
+      "n": 7
     },
     "The Royal Institution": {
       "avg": 13.034,
@@ -2800,8 +2867,8 @@
       "n": 6
     },
     "Not Boring by Packy McCormick": {
-      "avg": 5.402,
-      "n": 6
+      "avg": 6.336,
+      "n": 7
     },
     "PBS Space Time": {
       "avg": 12.485,
@@ -2832,8 +2899,8 @@
       "n": 2
     },
     "Sprouht": {
-      "avg": 3.175,
-      "n": 4
+      "avg": 5.519,
+      "n": 5
     },
     "Special Books by Special Kids": {
       "avg": 10.176,
@@ -3214,20 +3281,36 @@
     "Secrets of Organ Playing": {
       "avg": 14.08,
       "n": 1
+    },
+    "Rubin Museum of Himalayan Art": {
+      "avg": 13.86,
+      "n": 1
+    },
+    "Heidi Zuckerman": {
+      "avg": 13.35,
+      "n": 1
+    },
+    "Emory Arts": {
+      "avg": 11.76,
+      "n": 1
+    },
+    "Timothy Kimo Brien": {
+      "avg": 13.6,
+      "n": 1
     }
   },
   "type_performance": {
     "youtube": {
-      "avg": 7.598,
+      "avg": 7.758,
       "n": 100
     },
     "rss": {
-      "avg": 6.264,
+      "avg": 6.453,
       "n": 100
     },
     "podcast": {
-      "avg": 5.843,
-      "n": 69
+      "avg": 6.243,
+      "n": 73
     },
     "news": {
       "avg": -25.52,
@@ -3370,8 +3453,8 @@
       "Fix The News": 2,
       "Dr Ben Miles": 2,
       "Stand-up Maths": 1,
-      "The Rest Is History": 2,
-      "SciFri": 1,
+      "The Rest Is History": 3,
+      "SciFri": 2,
       "Reasons to be Cheerful": 3,
       "Vicki Holloway": 1,
       "Hobby Golfer Jens Zielinski, Golf Coach Florian Fritsch, Golf Profi Bernd Ritthammer": 1,
@@ -3387,13 +3470,13 @@
       "CiRCE Podcast Network": 1,
       "Jackie Flynn, EMDRIA Approved Consultant": 1,
       "Marginal REVOLUTION": 2,
-      "Not Boring by Packy McCormick": 1,
-      "Psyche | Know Your Self": 1,
-      "Aeon | a world of ideas": 1,
+      "Not Boring by Packy McCormick": 2,
+      "Psyche | Know Your Self": 2,
+      "Aeon | a world of ideas": 2,
       "Practical Engineering": 1,
       "PBS Eons": 1,
       "Mind & Life Institute": 1,
-      "Positive News": 2,
+      "Positive News": 3,
       "Behavioral Scientist": 2,
       "Platypus": 1,
       "Invisible People": 1,
@@ -3417,7 +3500,7 @@
       "The Royal Institution": 2,
       "SmarterEveryDay": 1,
       "Adam Savage\u2019s Tested": 1,
-      "Conversations with Tyler": 1,
+      "Conversations with Tyler": 2,
       "U.S. National Science Foundation": 1,
       "Bethany Grace Armitt-Brewster": 1,
       "Society of Economic Geologists": 1,
@@ -3439,7 +3522,12 @@
       "Happy Jacks RPG Network": 1,
       "Farnam Street": 1,
       "BBC Ideas": 1,
-      "Secrets of Organ Playing": 1
+      "Secrets of Organ Playing": 1,
+      "Sprouht": 1,
+      "Rubin Museum of Himalayan Art": 1,
+      "Heidi Zuckerman": 1,
+      "Emory Arts": 1,
+      "Timothy Kimo Brien": 1
     }
   },
   "monthly_domain_counts": {
@@ -3455,12 +3543,12 @@
       "economic": 14
     },
     "2026-06": {
-      "optimism_tech": 44,
+      "optimism_tech": 51,
       "historical": 9,
       "economic": 6,
       "optimism_society": 6,
-      "general": 14,
-      "introspective": 5,
+      "general": 18,
+      "introspective": 6,
       "optimism_health": 7,
       "philosophical": 1
     }
