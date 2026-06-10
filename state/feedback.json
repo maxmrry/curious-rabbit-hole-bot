@@ -1,9 +1,9 @@
 {
   "source_adjustments": {
     "daily_experience": {
-      "cumulative": -13.0,
-      "n": 8,
-      "last_signal_ms": 1780739172132
+      "cumulative": -15.0,
+      "n": 9,
+      "last_signal_ms": 1781135788241
     },
     "Undark Magazine": {
       "cumulative": -2.0,
@@ -139,8 +139,8 @@
       "n": 3
     },
     "feed": {
-      "cumulative": -6.0,
-      "n": 3
+      "cumulative": -8.0,
+      "n": 4
     }
   },
   "recent_signals": [
@@ -449,6 +449,15 @@
       "source_type": "youtube",
       "context": "not_interested | Topic: Kiowa Storyteller Amanda Hill Explains Tipi Origins",
       "timestamp_ms": 1780860636712
+    },
+    {
+      "item_id": "daily_feed_20260610",
+      "signal": 0,
+      "signal_label": "not_interested",
+      "source_name": "daily_experience",
+      "source_type": "feed",
+      "context": "whole_feed_boring",
+      "timestamp_ms": 1781135788241
     }
   ],
   "ai_weight_overrides": {
