@@ -2384,6 +2384,66 @@
       "native_id": "22687",
       "source_type": "podcast",
       "last_seen_ms": 1780994344009
+    },
+    "d8ea58e85e4626b7f134c926f2f835dd9ba66d3d2d902a5d7ef829ed548bad0c": {
+      "native_id": "https://fixthenewspodcast.transistor.fm/episodes/how-colombia-ended-a-60-year-war-lessons-from-nobel-peace-prize-laureate-juan-manuel-santos",
+      "source_type": "rss",
+      "last_seen_ms": 1781081870861
+    },
+    "02c9fa3243339e2ded153af43446284ee0e74ee079db5e8063244644728bb10a": {
+      "native_id": "DmGJBZgzZv4",
+      "source_type": "youtube",
+      "last_seen_ms": 1781081870861
+    },
+    "1211a55daa8b2f7929166a24554366556c416731cd2f44f752d10d088034d72a": {
+      "native_id": "jeDybFOQv_4",
+      "source_type": "youtube",
+      "last_seen_ms": 1781081870861
+    },
+    "ba962c1006ff77967ad5f278293c06ec8e1fd1d1895b8e8d1589f9fe8a590f53": {
+      "native_id": "4OM0zTfdsPo",
+      "source_type": "youtube",
+      "last_seen_ms": 1781081870861
+    },
+    "b7f1d3b1a303a06d1c2ad7ec6ad4a4e2b2a9f47548ca001b049a7ad1f0a79e2c": {
+      "native_id": "lBx86QE4k3s",
+      "source_type": "youtube",
+      "last_seen_ms": 1781081870861
+    },
+    "5009bb98c25ccc0ee8b5e218dc0d58cf2e9d0689d210a74ea152d27fb18c18ee": {
+      "native_id": "E8V6Hyop7bw",
+      "source_type": "youtube",
+      "last_seen_ms": 1781081870861
+    },
+    "2e7f40f6a06d220bb2b98f2e8464fb3e76a0f4d8e12cff78135f9449ff02d122": {
+      "native_id": "6858802",
+      "source_type": "podcast",
+      "last_seen_ms": 1781081870861
+    },
+    "1cfd865b70f448cd3050aa9ca135173e59de9d61cb2d7c83241fe511f47baf27": {
+      "native_id": "hqz_RCMcM9A",
+      "source_type": "youtube",
+      "last_seen_ms": 1781081870861
+    },
+    "627bcdee3829f763f023e941a5ef69c996e04e5b8d04bda0d9d713ae2bbc1950": {
+      "native_id": "dLtRtdg67PU",
+      "source_type": "youtube",
+      "last_seen_ms": 1781081870861
+    },
+    "74aa2e7719cf69bc07666f0ba2dd362b37e467df1ddb8a5a21ccb64106096df8": {
+      "native_id": "https://worksinprogress.co/issue/how-the-squamish-struck-gold-in-vancouver/",
+      "source_type": "rss",
+      "last_seen_ms": 1781081870861
+    },
+    "e518fe3779486279f9e220bd6b65d55865b4b29a96fa895d3777c5b629bf1e0f": {
+      "native_id": "https://marginalrevolution.com/marginalrevolution/2026/06/stanislaw-lem-foresaw-drones.html",
+      "source_type": "rss",
+      "last_seen_ms": 1781081870861
+    },
+    "c2e5f303faeba136035990fa3898cb88819d6a2af28aea759235192c21adfa6e": {
+      "native_id": "oUJ4AY_tn0M",
+      "source_type": "youtube",
+      "last_seen_ms": 1781081870861
     }
   },
   "sources_health": {
@@ -2503,6 +2563,9 @@
     },
     "2026-06-09": {
       "success": true
+    },
+    "2026-06-10": {
+      "success": true
     }
   },
   "source_history": {
@@ -2519,7 +2582,7 @@
     "Dr Ben Miles": 1780563477981,
     "3Blue1Brown": 1780911243522,
     "TED-Ed": 1780044608000,
-    "Works in Progress RSS Feed": 1780391854803,
+    "Works in Progress RSS Feed": 1781081870861,
     "Closer To Truth": 1777881244701,
     "The Leakey Foundation": 1780732437598,
     "Quanta Magazine": 1780911243522,
@@ -2529,12 +2592,12 @@
     "Intelligence Squared": 1778140198142,
     "Wellcome Collection": 1780821101304,
     "Smithsonian": 1778916260372,
-    "The Rest Is Science": 1780129643340,
+    "The Rest Is Science": 1781081870861,
     "Wendover Productions": 1780649469308,
     "Undark Magazine": 1780563477981,
     "Greater Good": 1780649469308,
     "Nautilus": 1780732437598,
-    "Fix The News": 1780821101304,
+    "Fix The News": 1781081870861,
     "Aeon | a world of ideas": 1780994344009,
     "The Rest Is History": 1780994344009,
     "Nobel Prize": 1778053394084,
@@ -2544,7 +2607,7 @@
     "American Museum of Natural History": 1780821101304,
     "Somatosphere": 1779094452466,
     "Positive News": 1780994344009,
-    "Marginal REVOLUTION": 1780649469308,
+    "Marginal REVOLUTION": 1781081870861,
     "Psyche | Know Your Self": 1780994344009,
     "Sean Carroll": 1780911243522,
     "Resolution Foundation": 1779352934769,
@@ -2555,9 +2618,9 @@
     "The Royal Institution": 1780911243522,
     "Numberphile": 1780563477981,
     "NileRed": 1778223634799,
-    "TED": 1780732437598,
+    "TED": 1781081870861,
     "Not Boring by Packy McCormick": 1780994344009,
-    "PBS Space Time": 1779871851419,
+    "PBS Space Time": 1781081870861,
     "PBS Terra": 1778572382146,
     "The Institute of Art and Ideas": 1779609418294,
     "Adam Savage\u2019s Tested": 1780732437598,
@@ -2573,10 +2636,10 @@
     "Santa Fe Institute": 1779784757690,
     "The Dissenter": 1779744391994,
     "Chris Doel": 1778572382146,
-    "minutephysics": 1779609418294,
+    "minutephysics": 1781081870861,
     "World Science Festival": 1779871851419,
     "Anthropology News": 1780129643340,
-    "Invisible People": 1780563477981,
+    "Invisible People": 1781081870861,
     "YaleCourses": 1778659174006,
     "AsapSCIENCE": 1779958281740,
     "Periodic Videos": 1779094452466,
@@ -2587,7 +2650,7 @@
     "Supreme Court asks if there was a 'proper debate' in Parliament before enacting CEC/EC appointments law": 1778659174006,
     "Beau Miles": 1779784757690,
     "Sixty Symbols": 1780821101304,
-    "The New York Academy of Sciences": 1779958281740,
+    "The New York Academy of Sciences": 1781081870861,
     "Mary Garcia / SmartSeeds": 1778745081628,
     "Lenore Elizabeth Mulets": 1778745081628,
     "Antica Productions, WWF-Canada": 1778745081628,
@@ -2604,7 +2667,7 @@
     "BBC World Service": 1779352934769,
     "Drug Discovery World (DDW)": 1779352934769,
     "The Alan Turing Institute": 1779352934769,
-    "Mind & Life Institute": 1780480908614,
+    "Mind & Life Institute": 1781081870861,
     "Talk Nerdy with Cara Santa Maria": 1779521941066,
     "Rob Zimmer": 1779521941066,
     "Recruiting Future with Matt Alder - What's Next For Talent Acquisition, HR & Hiring?": 1779609418294,
@@ -2663,7 +2726,8 @@
     "Rubin Museum of Himalayan Art": 1780994344009,
     "Heidi Zuckerman": 1780994344009,
     "Emory Arts": 1780994344009,
-    "Timothy Kimo Brien": 1780994344009
+    "Timothy Kimo Brien": 1780994344009,
+    "Kc Essentials": 1781081870861
   },
   "source_scores": {
     "Oxford Martin School": {
@@ -2719,8 +2783,8 @@
       "n": 4
     },
     "Works in Progress RSS Feed": {
-      "avg": 6.03,
-      "n": 8
+      "avg": 7.011,
+      "n": 9
     },
     "Closer To Truth": {
       "avg": 3.79,
@@ -2759,8 +2823,8 @@
       "n": 4
     },
     "The Rest Is Science": {
-      "avg": 8.179,
-      "n": 4
+      "avg": 9.446,
+      "n": 5
     },
     "Wendover Productions": {
       "avg": 7.052,
@@ -2779,8 +2843,8 @@
       "n": 10
     },
     "Fix The News": {
-      "avg": 8.669,
-      "n": 8
+      "avg": 8.688,
+      "n": 9
     },
     "Aeon | a world of ideas": {
       "avg": 10.182,
@@ -2819,8 +2883,8 @@
       "n": 8
     },
     "Marginal REVOLUTION": {
-      "avg": 8.052,
-      "n": 6
+      "avg": 8.313,
+      "n": 7
     },
     "Psyche | Know Your Self": {
       "avg": 7.548,
@@ -2863,16 +2927,16 @@
       "n": 1
     },
     "TED": {
-      "avg": 8.403,
-      "n": 6
+      "avg": 9.291,
+      "n": 8
     },
     "Not Boring by Packy McCormick": {
       "avg": 6.336,
       "n": 7
     },
     "PBS Space Time": {
-      "avg": 12.485,
-      "n": 3
+      "avg": 12.602,
+      "n": 4
     },
     "PBS Terra": {
       "avg": 8.955,
@@ -2935,8 +2999,8 @@
       "n": 1
     },
     "minutephysics": {
-      "avg": 9.293,
-      "n": 4
+      "avg": 9.709,
+      "n": 5
     },
     "World Science Festival": {
       "avg": 12.328,
@@ -2947,8 +3011,8 @@
       "n": 3
     },
     "Invisible People": {
-      "avg": -1.91,
-      "n": 4
+      "avg": 0.763,
+      "n": 5
     },
     "YaleCourses": {
       "avg": 9.61,
@@ -2991,8 +3055,8 @@
       "n": 3
     },
     "The New York Academy of Sciences": {
-      "avg": 10.76,
-      "n": 3
+      "avg": 11.351,
+      "n": 4
     },
     "Mary Garcia / SmartSeeds": {
       "avg": 9.38,
@@ -3059,8 +3123,8 @@
       "n": 1
     },
     "Mind & Life Institute": {
-      "avg": 3.021,
-      "n": 4
+      "avg": 4.706,
+      "n": 5
     },
     "Talk Nerdy with Cara Santa Maria": {
       "avg": 10.82,
@@ -3297,20 +3361,24 @@
     "Timothy Kimo Brien": {
       "avg": 13.6,
       "n": 1
+    },
+    "Kc Essentials": {
+      "avg": 11.84,
+      "n": 1
     }
   },
   "type_performance": {
     "youtube": {
-      "avg": 7.758,
+      "avg": 8.107,
       "n": 100
     },
     "rss": {
-      "avg": 6.453,
+      "avg": 6.593,
       "n": 100
     },
     "podcast": {
-      "avg": 6.243,
-      "n": 73
+      "avg": 6.319,
+      "n": 74
     },
     "news": {
       "avg": -25.52,
@@ -3450,7 +3518,7 @@
       "Market Makers": 1
     },
     "2026-06": {
-      "Fix The News": 2,
+      "Fix The News": 3,
       "Dr Ben Miles": 2,
       "Stand-up Maths": 1,
       "The Rest Is History": 3,
@@ -3459,7 +3527,7 @@
       "Vicki Holloway": 1,
       "Hobby Golfer Jens Zielinski, Golf Coach Florian Fritsch, Golf Profi Bernd Ritthammer": 1,
       "Matthew (@1956ToppsGuy), Nate (@incardboardveritas), Jonathan (@sportscards.and.sunsets)": 1,
-      "Works in Progress RSS Feed": 2,
+      "Works in Progress RSS Feed": 3,
       "Quanta Magazine": 2,
       "Natural History Museum": 1,
       "American Museum of Natural History": 2,
@@ -3469,18 +3537,18 @@
       "Meg Ferrell": 1,
       "CiRCE Podcast Network": 1,
       "Jackie Flynn, EMDRIA Approved Consultant": 1,
-      "Marginal REVOLUTION": 2,
+      "Marginal REVOLUTION": 3,
       "Not Boring by Packy McCormick": 2,
       "Psyche | Know Your Self": 2,
       "Aeon | a world of ideas": 2,
       "Practical Engineering": 1,
       "PBS Eons": 1,
-      "Mind & Life Institute": 1,
+      "Mind & Life Institute": 2,
       "Positive News": 3,
       "Behavioral Scientist": 2,
       "Platypus": 1,
-      "Invisible People": 1,
-      "TED": 2,
+      "Invisible People": 2,
+      "TED": 4,
       "Numberphile": 1,
       "LibriVox": 1,
       "Joost en Jesse": 1,
@@ -3527,7 +3595,12 @@
       "Rubin Museum of Himalayan Art": 1,
       "Heidi Zuckerman": 1,
       "Emory Arts": 1,
-      "Timothy Kimo Brien": 1
+      "Timothy Kimo Brien": 1,
+      "The Rest Is Science": 1,
+      "The New York Academy of Sciences": 1,
+      "PBS Space Time": 1,
+      "Kc Essentials": 1,
+      "minutephysics": 1
     }
   },
   "monthly_domain_counts": {
@@ -3543,13 +3616,13 @@
       "economic": 14
     },
     "2026-06": {
-      "optimism_tech": 51,
-      "historical": 9,
+      "optimism_tech": 55,
+      "historical": 12,
       "economic": 6,
       "optimism_society": 6,
-      "general": 18,
+      "general": 22,
       "introspective": 6,
-      "optimism_health": 7,
+      "optimism_health": 8,
       "philosophical": 1
     }
   }
