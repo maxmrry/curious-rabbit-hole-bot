@@ -2444,6 +2444,66 @@
       "native_id": "oUJ4AY_tn0M",
       "source_type": "youtube",
       "last_seen_ms": 1781081870861
+    },
+    "144fe688609457a2715efb02895cbec288874d33a66f940357acaff196c88c0f": {
+      "native_id": "https://greatergood.berkeley.edu/article/item/what_is_social_resilienceand_how_can_you_foster_it",
+      "source_type": "rss",
+      "last_seen_ms": 1781169863375
+    },
+    "e4245a4d8faf1725d14a2a4c0f7ff89802d6ff480831d1714854bc478b3c1cef": {
+      "native_id": "RX7IPT80AcM",
+      "source_type": "youtube",
+      "last_seen_ms": 1781169863375
+    },
+    "4ff708eb62a1497873d91ac959980f3974dce56b2b89feb196f878b95eda096c": {
+      "native_id": "U90s0Zz9hXM",
+      "source_type": "youtube",
+      "last_seen_ms": 1781169863375
+    },
+    "43665a560aea921649f30fe57c7184bc9d340c35380bfaeae452c88c2d80c97c": {
+      "native_id": "_-_-qdDjyVw",
+      "source_type": "youtube",
+      "last_seen_ms": 1781169863375
+    },
+    "bd9d785dc406847713600b80a74277b084302d023cbc7665a01925cc4bec7a84": {
+      "native_id": "mf5envOypNU",
+      "source_type": "youtube",
+      "last_seen_ms": 1781169863375
+    },
+    "268ccc83aca177a8a00f12125766f0ca25a49ae33fad010c3f08ec82f5a4eb84": {
+      "native_id": "https://aeon.co/essays/why-being-autistic-can-be-a-lot-of-fun",
+      "source_type": "rss",
+      "last_seen_ms": 1781169863375
+    },
+    "ebdc35c6a323f2541068e2ffc6680bbdc933366d63a2ae4bfa0651c71564274b": {
+      "native_id": "7167696",
+      "source_type": "podcast",
+      "last_seen_ms": 1781169863375
+    },
+    "1e2fd1f573c8f073d65ce07f4d64602fecf592ec7b1ac475cf1aea898899608f": {
+      "native_id": "342916",
+      "source_type": "podcast",
+      "last_seen_ms": 1781169863375
+    },
+    "3ba33e731a250261b96a02227c370abc656b1436b04fba7a1576c5687267fe28": {
+      "native_id": "7271611",
+      "source_type": "podcast",
+      "last_seen_ms": 1781169863375
+    },
+    "5bc6efac55e7309e95007ddc13b1f1bafcbd603126b49a4df62acb64ed7b0972": {
+      "native_id": "https://nautil.us/listen-to-the-sound-of-the-most-massive-organism-on-earth-1281878/",
+      "source_type": "rss",
+      "last_seen_ms": 1781169863375
+    },
+    "1da38fd399890f7c32c7f29d99d8d59e2cd437ccc018c8f8cad367a9f3d206d4": {
+      "native_id": "https://www.experimental-history.com/p/stop-eating-lady-gagas-oreos",
+      "source_type": "rss",
+      "last_seen_ms": 1781169863375
+    },
+    "b790aecfb0e40ef734468ff0937bf69a88ffe05e89675c85360df8a27b3ebaff": {
+      "native_id": "https://leakeyfoundation.org/grantee-spotlight-dominic-mayo/",
+      "source_type": "rss",
+      "last_seen_ms": 1781169863375
     }
   },
   "sources_health": {
@@ -2566,6 +2626,9 @@
     },
     "2026-06-10": {
       "success": true
+    },
+    "2026-06-11": {
+      "success": true
     }
   },
   "source_history": {
@@ -2576,7 +2639,7 @@
     "Knowable Magazine": 1780821101304,
     "Natural History Museum": 1780391854803,
     "Ness Labs": 1778223634799,
-    "Experimental History": 1780215786633,
+    "Experimental History": 1781169863375,
     "NOEMA": 1779352934769,
     "LSE": 1777881244701,
     "Dr Ben Miles": 1780563477981,
@@ -2584,21 +2647,21 @@
     "TED-Ed": 1780044608000,
     "Works in Progress RSS Feed": 1781081870861,
     "Closer To Truth": 1777881244701,
-    "The Leakey Foundation": 1780732437598,
-    "Quanta Magazine": 1780911243522,
+    "The Leakey Foundation": 1781169863375,
+    "Quanta Magazine": 1781169863375,
     "Farnam Street": 1780911243522,
     "Reasons to be Cheerful": 1780821101304,
     "Behavioral Scientist": 1780480908614,
     "Intelligence Squared": 1778140198142,
     "Wellcome Collection": 1780821101304,
-    "Smithsonian": 1778916260372,
+    "Smithsonian": 1781169863375,
     "The Rest Is Science": 1781081870861,
     "Wendover Productions": 1780649469308,
     "Undark Magazine": 1780563477981,
-    "Greater Good": 1780649469308,
-    "Nautilus": 1780732437598,
+    "Greater Good": 1781169863375,
+    "Nautilus": 1781169863375,
     "Fix The News": 1781081870861,
-    "Aeon | a world of ideas": 1780994344009,
+    "Aeon | a world of ideas": 1781169863375,
     "The Rest Is History": 1780994344009,
     "Nobel Prize": 1778053394084,
     "BBC Ideas": 1780911243522,
@@ -2634,13 +2697,13 @@
     "Howtown": 1779438862601,
     "Practical Engineering": 1780480908614,
     "Santa Fe Institute": 1779784757690,
-    "The Dissenter": 1779744391994,
+    "The Dissenter": 1781169863375,
     "Chris Doel": 1778572382146,
     "minutephysics": 1781081870861,
     "World Science Festival": 1779871851419,
     "Anthropology News": 1780129643340,
     "Invisible People": 1781081870861,
-    "YaleCourses": 1778659174006,
+    "YaleCourses": 1781169863375,
     "AsapSCIENCE": 1779958281740,
     "Periodic Videos": 1779094452466,
     "Yale Center for Emotional Intelligence": 1780911243522,
@@ -2727,7 +2790,10 @@
     "Heidi Zuckerman": 1780994344009,
     "Emory Arts": 1780994344009,
     "Timothy Kimo Brien": 1780994344009,
-    "Kc Essentials": 1781081870861
+    "Kc Essentials": 1781081870861,
+    "Jerremy Alexander Newsome & Dave Conley": 1781169863375,
+    "Institute of Industrial and Systems Engineers": 1781169863375,
+    "Dr. Leah Clionsky": 1781169863375
   },
   "source_scores": {
     "Oxford Martin School": {
@@ -2759,8 +2825,8 @@
       "n": 2
     },
     "Experimental History": {
-      "avg": 0.153,
-      "n": 4
+      "avg": 2.194,
+      "n": 5
     },
     "NOEMA": {
       "avg": 4.167,
@@ -2791,12 +2857,12 @@
       "n": 1
     },
     "The Leakey Foundation": {
-      "avg": 7.213,
-      "n": 6
+      "avg": 7.698,
+      "n": 7
     },
     "Quanta Magazine": {
-      "avg": 8.792,
-      "n": 7
+      "avg": 8.599,
+      "n": 8
     },
     "Farnam Street": {
       "avg": 8.9,
@@ -2819,8 +2885,8 @@
       "n": 5
     },
     "Smithsonian": {
-      "avg": 8.693,
-      "n": 4
+      "avg": 9.999,
+      "n": 5
     },
     "The Rest Is Science": {
       "avg": 9.446,
@@ -2835,20 +2901,20 @@
       "n": 8
     },
     "Greater Good": {
-      "avg": 11.047,
-      "n": 6
+      "avg": 10.435,
+      "n": 7
     },
     "Nautilus": {
-      "avg": 8.247,
-      "n": 10
+      "avg": 8.462,
+      "n": 11
     },
     "Fix The News": {
       "avg": 8.688,
       "n": 9
     },
     "Aeon | a world of ideas": {
-      "avg": 10.182,
-      "n": 6
+      "avg": 10.059,
+      "n": 7
     },
     "The Rest Is History": {
       "avg": 9.662,
@@ -2991,8 +3057,8 @@
       "n": 3
     },
     "The Dissenter": {
-      "avg": -3.827,
-      "n": 4
+      "avg": -0.763,
+      "n": 5
     },
     "Chris Doel": {
       "avg": 14.62,
@@ -3015,8 +3081,8 @@
       "n": 5
     },
     "YaleCourses": {
-      "avg": 9.61,
-      "n": 1
+      "avg": 11.707,
+      "n": 2
     },
     "AsapSCIENCE": {
       "avg": 1.758,
@@ -3365,20 +3431,32 @@
     "Kc Essentials": {
       "avg": 11.84,
       "n": 1
+    },
+    "Jerremy Alexander Newsome & Dave Conley": {
+      "avg": 14.03,
+      "n": 1
+    },
+    "Institute of Industrial and Systems Engineers": {
+      "avg": 13.7,
+      "n": 1
+    },
+    "Dr. Leah Clionsky": {
+      "avg": 13.69,
+      "n": 1
     }
   },
   "type_performance": {
     "youtube": {
-      "avg": 8.107,
+      "avg": 8.255,
       "n": 100
     },
     "rss": {
-      "avg": 6.593,
+      "avg": 6.737,
       "n": 100
     },
     "podcast": {
-      "avg": 6.319,
-      "n": 74
+      "avg": 6.611,
+      "n": 77
     },
     "news": {
       "avg": -25.52,
@@ -3528,7 +3606,7 @@
       "Hobby Golfer Jens Zielinski, Golf Coach Florian Fritsch, Golf Profi Bernd Ritthammer": 1,
       "Matthew (@1956ToppsGuy), Nate (@incardboardveritas), Jonathan (@sportscards.and.sunsets)": 1,
       "Works in Progress RSS Feed": 3,
-      "Quanta Magazine": 2,
+      "Quanta Magazine": 3,
       "Natural History Museum": 1,
       "American Museum of Natural History": 2,
       "The Royal Society": 2,
@@ -3540,7 +3618,7 @@
       "Marginal REVOLUTION": 3,
       "Not Boring by Packy McCormick": 2,
       "Psyche | Know Your Self": 2,
-      "Aeon | a world of ideas": 2,
+      "Aeon | a world of ideas": 3,
       "Practical Engineering": 1,
       "PBS Eons": 1,
       "Mind & Life Institute": 2,
@@ -3554,7 +3632,7 @@
       "Joost en Jesse": 1,
       "Adam and Mick": 1,
       "Justin Stohlton & Bruce Peck": 1,
-      "The Leakey Foundation": 2,
+      "The Leakey Foundation": 3,
       "Undark Magazine": 1,
       "Courtney": 1,
       "The British Academy": 1,
@@ -3564,7 +3642,7 @@
       "Steve Dawson": 1,
       "Tina VanDenburg": 1,
       "Alex Koons": 1,
-      "Greater Good": 2,
+      "Greater Good": 3,
       "The Royal Institution": 2,
       "SmarterEveryDay": 1,
       "Adam Savage\u2019s Tested": 1,
@@ -3573,7 +3651,7 @@
       "Bethany Grace Armitt-Brewster": 1,
       "Society of Economic Geologists": 1,
       "Nature": 1,
-      "Nautilus": 2,
+      "Nautilus": 3,
       "Smithsonian's National Museum of Natural History": 1,
       "JSK-Studio": 1,
       "Sixty Symbols": 1,
@@ -3600,7 +3678,14 @@
       "The New York Academy of Sciences": 1,
       "PBS Space Time": 1,
       "Kc Essentials": 1,
-      "minutephysics": 1
+      "minutephysics": 1,
+      "Smithsonian": 1,
+      "YaleCourses": 1,
+      "The Dissenter": 1,
+      "Jerremy Alexander Newsome & Dave Conley": 1,
+      "Institute of Industrial and Systems Engineers": 1,
+      "Dr. Leah Clionsky": 1,
+      "Experimental History": 1
     }
   },
   "monthly_domain_counts": {
@@ -3616,12 +3701,12 @@
       "economic": 14
     },
     "2026-06": {
-      "optimism_tech": 55,
-      "historical": 12,
-      "economic": 6,
-      "optimism_society": 6,
+      "optimism_tech": 61,
+      "historical": 13,
+      "economic": 9,
+      "optimism_society": 7,
       "general": 22,
-      "introspective": 6,
+      "introspective": 7,
       "optimism_health": 8,
       "philosophical": 1
     }
