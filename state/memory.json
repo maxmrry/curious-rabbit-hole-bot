@@ -2504,6 +2504,56 @@
       "native_id": "https://leakeyfoundation.org/grantee-spotlight-dominic-mayo/",
       "source_type": "rss",
       "last_seen_ms": 1781169863375
+    },
+    "9d7b091687590cf59cbb92970d48f0a513e85524cdfe52c96dd4e5f1c95d23d8": {
+      "native_id": "https://blog.castac.org/2026/06/viral-afterlives-toponymy-of-zoonotic-ruptures-in-west-malaysia/",
+      "source_type": "rss",
+      "last_seen_ms": 1781255281022
+    },
+    "72d15edab33413fc02853f39968ca722cfd5fd04295bed655467150ba8fb039f": {
+      "native_id": "HDt_rTPPh70",
+      "source_type": "youtube",
+      "last_seen_ms": 1781255281022
+    },
+    "af54245941d2f3dba0ad2408ed8bc1969786b2c62a3d55c7fec5dc136083bef0": {
+      "native_id": "7L_eTem1SQ4",
+      "source_type": "youtube",
+      "last_seen_ms": 1781255281022
+    },
+    "efca79abc4195b6b26fb3990d596e3d53ab1b41e74c2fe3f9b4e8af84615c80c": {
+      "native_id": "Q9Vt6NGBVBc",
+      "source_type": "youtube",
+      "last_seen_ms": 1781255281022
+    },
+    "7ffed032bb595569bd99c87de9d7bc52cca2f14c5df73c925a09172e3c636670": {
+      "native_id": "0Tes4Hhh4N4",
+      "source_type": "youtube",
+      "last_seen_ms": 1781255281022
+    },
+    "bddd0f3ce9a0d033628a2981924ca275542da510bb7e7838b4f04b46949f4e94": {
+      "native_id": "puUZNjqb5Is",
+      "source_type": "youtube",
+      "last_seen_ms": 1781255281022
+    },
+    "780172a3d0ebf8c650ab2e3c57884b2dde1a498f123ab302e87cbd58db7ef55c": {
+      "native_id": "da758957841a40578728be7752d59050",
+      "source_type": "podcast",
+      "last_seen_ms": 1781255281022
+    },
+    "abbd37450c2d9c266e08d4865a1195813b2b7080690962611a4b9fbe2ef4c1bf": {
+      "native_id": "https://www.nature.com/articles/d41586-026-01886-x",
+      "source_type": "rss",
+      "last_seen_ms": 1781255281022
+    },
+    "dca84431ef0d2ee33d9b684c960b23acdaf38659cf0e98f0db33eda0d6a580e5": {
+      "native_id": "https://www.noemamag.com/heritage-exists-beyond-humankind",
+      "source_type": "rss",
+      "last_seen_ms": 1781255281022
+    },
+    "1b93e92ff62f7e6e29bc43fde29d5c8e953df003c9ee49b51e4710f4732abf35": {
+      "native_id": "https://blog.castac.org/2026/06/tracing-the-legacy-of-human-resilience-in-the-debris-of-ancient-campfires/",
+      "source_type": "rss",
+      "last_seen_ms": 1781255281022
     }
   },
   "sources_health": {
@@ -2629,22 +2679,25 @@
     },
     "2026-06-11": {
       "success": true
+    },
+    "2026-06-12": {
+      "success": true
     }
   },
   "source_history": {
-    "Oxford Martin School": 1780911243522,
+    "Oxford Martin School": 1781255281022,
     "nature video": 1780391854803,
-    "The Royal Society": 1780649469308,
+    "The Royal Society": 1781255281022,
     "SciFri": 1780994344009,
     "Knowable Magazine": 1780821101304,
     "Natural History Museum": 1780391854803,
     "Ness Labs": 1778223634799,
     "Experimental History": 1781169863375,
-    "NOEMA": 1779352934769,
+    "NOEMA": 1781255281022,
     "LSE": 1777881244701,
     "Dr Ben Miles": 1780563477981,
-    "3Blue1Brown": 1780911243522,
-    "TED-Ed": 1780044608000,
+    "3Blue1Brown": 1781255281022,
+    "TED-Ed": 1781255281022,
     "Works in Progress RSS Feed": 1781081870861,
     "Closer To Truth": 1777881244701,
     "The Leakey Foundation": 1781169863375,
@@ -2665,7 +2718,7 @@
     "The Rest Is History": 1780994344009,
     "Nobel Prize": 1778053394084,
     "BBC Ideas": 1780911243522,
-    "Platypus": 1780563477981,
+    "Platypus": 1781255281022,
     "Becker Friedman Institute University of Chicago": 1778053394084,
     "American Museum of Natural History": 1780821101304,
     "Somatosphere": 1779094452466,
@@ -2687,7 +2740,7 @@
     "PBS Terra": 1778572382146,
     "The Institute of Art and Ideas": 1779609418294,
     "Adam Savage\u2019s Tested": 1780732437598,
-    "Nature": 1780732437598,
+    "Nature": 1781255281022,
     "PBS Eons": 1780480908614,
     "Stand-up Maths": 1780309850831,
     "Sprouht": 1780994344009,
@@ -2793,20 +2846,21 @@
     "Kc Essentials": 1781081870861,
     "Jerremy Alexander Newsome & Dave Conley": 1781169863375,
     "Institute of Industrial and Systems Engineers": 1781169863375,
-    "Dr. Leah Clionsky": 1781169863375
+    "Dr. Leah Clionsky": 1781169863375,
+    "The Analyst Inside Cricket": 1781255281022
   },
   "source_scores": {
     "Oxford Martin School": {
-      "avg": 2.602,
-      "n": 2
+      "avg": 3.976,
+      "n": 3
     },
     "nature video": {
       "avg": 9.995,
       "n": 4
     },
     "The Royal Society": {
-      "avg": 8.644,
-      "n": 6
+      "avg": 6.588,
+      "n": 7
     },
     "SciFri": {
       "avg": 9.552,
@@ -2829,8 +2883,8 @@
       "n": 5
     },
     "NOEMA": {
-      "avg": 4.167,
-      "n": 4
+      "avg": 5.742,
+      "n": 5
     },
     "LSE": {
       "avg": 7.43,
@@ -2841,12 +2895,12 @@
       "n": 6
     },
     "3Blue1Brown": {
-      "avg": 3.319,
-      "n": 5
+      "avg": 4.458,
+      "n": 6
     },
     "TED-Ed": {
-      "avg": 9.062,
-      "n": 4
+      "avg": 11.102,
+      "n": 6
     },
     "Works in Progress RSS Feed": {
       "avg": 7.011,
@@ -2929,8 +2983,8 @@
       "n": 5
     },
     "Platypus": {
-      "avg": 1.964,
-      "n": 5
+      "avg": 5.062,
+      "n": 7
     },
     "Becker Friedman Institute University of Chicago": {
       "avg": -6.26,
@@ -3017,8 +3071,8 @@
       "n": 4
     },
     "Nature": {
-      "avg": 5.058,
-      "n": 6
+      "avg": 6.213,
+      "n": 7
     },
     "PBS Eons": {
       "avg": 13.717,
@@ -3443,20 +3497,24 @@
     "Dr. Leah Clionsky": {
       "avg": 13.69,
       "n": 1
+    },
+    "The Analyst Inside Cricket": {
+      "avg": 14.8,
+      "n": 1
     }
   },
   "type_performance": {
     "youtube": {
-      "avg": 8.255,
+      "avg": 8.252,
       "n": 100
     },
     "rss": {
-      "avg": 6.737,
+      "avg": 6.971,
       "n": 100
     },
     "podcast": {
-      "avg": 6.611,
-      "n": 77
+      "avg": 6.716,
+      "n": 78
     },
     "news": {
       "avg": -25.52,
@@ -3609,7 +3667,7 @@
       "Quanta Magazine": 3,
       "Natural History Museum": 1,
       "American Museum of Natural History": 2,
-      "The Royal Society": 2,
+      "The Royal Society": 3,
       "nature video": 1,
       "Sean Carroll": 2,
       "Meg Ferrell": 1,
@@ -3624,7 +3682,7 @@
       "Mind & Life Institute": 2,
       "Positive News": 3,
       "Behavioral Scientist": 2,
-      "Platypus": 1,
+      "Platypus": 3,
       "Invisible People": 2,
       "TED": 4,
       "Numberphile": 1,
@@ -3650,7 +3708,7 @@
       "U.S. National Science Foundation": 1,
       "Bethany Grace Armitt-Brewster": 1,
       "Society of Economic Geologists": 1,
-      "Nature": 1,
+      "Nature": 2,
       "Nautilus": 3,
       "Smithsonian's National Museum of Natural History": 1,
       "JSK-Studio": 1,
@@ -3660,9 +3718,9 @@
       "Catherine Baumgardner - Costume Designer and Educator": 1,
       "Knowable Magazine": 1,
       "Josh Cooperman": 1,
-      "3Blue1Brown": 1,
+      "3Blue1Brown": 2,
       "Yale Center for Emotional Intelligence": 1,
-      "Oxford Martin School": 1,
+      "Oxford Martin School": 2,
       "Tabletop Champions Podcast": 1,
       "Backwater Bastards | Realm": 1,
       "Happy Jacks RPG Network": 1,
@@ -3685,7 +3743,10 @@
       "Jerremy Alexander Newsome & Dave Conley": 1,
       "Institute of Industrial and Systems Engineers": 1,
       "Dr. Leah Clionsky": 1,
-      "Experimental History": 1
+      "Experimental History": 1,
+      "TED-Ed": 2,
+      "The Analyst Inside Cricket": 1,
+      "NOEMA": 1
     }
   },
   "monthly_domain_counts": {
@@ -3701,13 +3762,13 @@
       "economic": 14
     },
     "2026-06": {
-      "optimism_tech": 61,
-      "historical": 13,
+      "optimism_tech": 65,
+      "historical": 16,
       "economic": 9,
       "optimism_society": 7,
-      "general": 22,
+      "general": 23,
       "introspective": 7,
-      "optimism_health": 8,
+      "optimism_health": 10,
       "philosophical": 1
     }
   }
