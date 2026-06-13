@@ -2554,6 +2554,66 @@
       "native_id": "https://blog.castac.org/2026/06/tracing-the-legacy-of-human-resilience-in-the-debris-of-ancient-campfires/",
       "source_type": "rss",
       "last_seen_ms": 1781255281022
+    },
+    "be060be863a2d0f35d3337cd3ca49333c5b8b933d872868e1f3b6b9765d55adf": {
+      "native_id": "FibMPsgb6Lo",
+      "source_type": "youtube",
+      "last_seen_ms": 1781339462559
+    },
+    "98d1833780ca6c606a75e192445756e22fa565e4d44029d3ab2a78b2aced7285": {
+      "native_id": "IgJatH3qwtY",
+      "source_type": "youtube",
+      "last_seen_ms": 1781339462559
+    },
+    "a1728b6a695b167eda2ecd0bf9c4650f6b312e080a6d205ab899293379ec809e": {
+      "native_id": "accHqUSFPvs",
+      "source_type": "youtube",
+      "last_seen_ms": 1781339462559
+    },
+    "9ac33c7304ff03e89c94086c8346b2769e08f5d65c117167dd718f27b20247dd": {
+      "native_id": "4b_6ylPGXd8",
+      "source_type": "youtube",
+      "last_seen_ms": 1781339462559
+    },
+    "5105f771b08bc6e55f19a77f89d8a242641b98ac37954bb3886f27d2258dd82a": {
+      "native_id": "b2UUG9GmBds",
+      "source_type": "youtube",
+      "last_seen_ms": 1781339462559
+    },
+    "f5cbc4c936993bb6376d2c8771ee923b72e971b58c526785688f776f12316e14": {
+      "native_id": "9t-5lQ2mzuw",
+      "source_type": "youtube",
+      "last_seen_ms": 1781339462559
+    },
+    "efb0eb2a4157d33ef120836c8fe04baac565e3e31b393524b8794b39b6dce7f1": {
+      "native_id": "431199",
+      "source_type": "podcast",
+      "last_seen_ms": 1781339462559
+    },
+    "ff2c5f6337789dc5f10f0d09f45b6051e0d95b3c7cdf6389390279df8fd2243d": {
+      "native_id": "14029",
+      "source_type": "podcast",
+      "last_seen_ms": 1781339462559
+    },
+    "cd270a287219fd01b4163cde5f86a23938059f2e3f4a0da941d01e367a9b0f3f": {
+      "native_id": "344354",
+      "source_type": "podcast",
+      "last_seen_ms": 1781339462559
+    },
+    "3b82e45bde17110c97ddbff34235313a9fb8d2641b8b4ef2ce21e64caff28f3f": {
+      "native_id": "https://somatosphere.net/book-review-get-it-out-on-the-politics-of-hysterectomy/",
+      "source_type": "rss",
+      "last_seen_ms": 1781339462559
+    },
+    "fe41bb1478191c16908cf0c7dc01f0e711cb4f4b4d8958117160e2c1317d1157": {
+      "native_id": "https://www.positive.news/environment/corporate-courage-how-cross-sector-talent-is-powering-renewables-innovation/",
+      "source_type": "rss",
+      "last_seen_ms": 1781339462559
+    },
+    "52c16baac6420248a3dd4b1b38832a507f73d3789923496c2cae476f1f16297d": {
+      "native_id": "https://reasonstobecheerful.world/masaka-youth-desk/",
+      "source_type": "rss",
+      "last_seen_ms": 1781339462559
     }
   },
   "sources_health": {
@@ -2682,11 +2742,14 @@
     },
     "2026-06-12": {
       "success": true
+    },
+    "2026-06-13": {
+      "success": true
     }
   },
   "source_history": {
     "Oxford Martin School": 1781255281022,
-    "nature video": 1780391854803,
+    "nature video": 1781339462559,
     "The Royal Society": 1781255281022,
     "SciFri": 1780994344009,
     "Knowable Magazine": 1780821101304,
@@ -2695,7 +2758,7 @@
     "Experimental History": 1781169863375,
     "NOEMA": 1781255281022,
     "LSE": 1777881244701,
-    "Dr Ben Miles": 1780563477981,
+    "Dr Ben Miles": 1781339462559,
     "3Blue1Brown": 1781255281022,
     "TED-Ed": 1781255281022,
     "Works in Progress RSS Feed": 1781081870861,
@@ -2703,30 +2766,30 @@
     "The Leakey Foundation": 1781169863375,
     "Quanta Magazine": 1781169863375,
     "Farnam Street": 1780911243522,
-    "Reasons to be Cheerful": 1780821101304,
+    "Reasons to be Cheerful": 1781339462559,
     "Behavioral Scientist": 1780480908614,
     "Intelligence Squared": 1778140198142,
     "Wellcome Collection": 1780821101304,
     "Smithsonian": 1781169863375,
-    "The Rest Is Science": 1781081870861,
+    "The Rest Is Science": 1781339462559,
     "Wendover Productions": 1780649469308,
     "Undark Magazine": 1780563477981,
     "Greater Good": 1781169863375,
     "Nautilus": 1781169863375,
     "Fix The News": 1781081870861,
     "Aeon | a world of ideas": 1781169863375,
-    "The Rest Is History": 1780994344009,
+    "The Rest Is History": 1781339462559,
     "Nobel Prize": 1778053394084,
     "BBC Ideas": 1780911243522,
     "Platypus": 1781255281022,
     "Becker Friedman Institute University of Chicago": 1778053394084,
     "American Museum of Natural History": 1780821101304,
-    "Somatosphere": 1779094452466,
-    "Positive News": 1780994344009,
+    "Somatosphere": 1781339462559,
+    "Positive News": 1781339462559,
     "Marginal REVOLUTION": 1781081870861,
     "Psyche | Know Your Self": 1780994344009,
     "Sean Carroll": 1780911243522,
-    "Resolution Foundation": 1779352934769,
+    "Resolution Foundation": 1781339462559,
     "Angela Collier ": 1779744391994,
     "Computerphile": 1780649469308,
     "SmarterEveryDay": 1780732437598,
@@ -2753,7 +2816,7 @@
     "The Dissenter": 1781169863375,
     "Chris Doel": 1778572382146,
     "minutephysics": 1781081870861,
-    "World Science Festival": 1779871851419,
+    "World Science Festival": 1781339462559,
     "Anthropology News": 1780129643340,
     "Invisible People": 1781081870861,
     "YaleCourses": 1781169863375,
@@ -2847,7 +2910,10 @@
     "Jerremy Alexander Newsome & Dave Conley": 1781169863375,
     "Institute of Industrial and Systems Engineers": 1781169863375,
     "Dr. Leah Clionsky": 1781169863375,
-    "The Analyst Inside Cricket": 1781255281022
+    "The Analyst Inside Cricket": 1781255281022,
+    "Tyler Green": 1781339462559,
+    "Museum of Northwest Art": 1781339462559,
+    "Art of the Frame": 1781339462559
   },
   "source_scores": {
     "Oxford Martin School": {
@@ -2855,8 +2921,8 @@
       "n": 3
     },
     "nature video": {
-      "avg": 9.995,
-      "n": 4
+      "avg": 9.821,
+      "n": 5
     },
     "The Royal Society": {
       "avg": 6.588,
@@ -2891,8 +2957,8 @@
       "n": 1
     },
     "Dr Ben Miles": {
-      "avg": 12.474,
-      "n": 6
+      "avg": 12.253,
+      "n": 7
     },
     "3Blue1Brown": {
       "avg": 4.458,
@@ -2923,8 +2989,8 @@
       "n": 5
     },
     "Reasons to be Cheerful": {
-      "avg": 9.407,
-      "n": 8
+      "avg": 9.088,
+      "n": 9
     },
     "Behavioral Scientist": {
       "avg": 8.385,
@@ -2943,8 +3009,8 @@
       "n": 5
     },
     "The Rest Is Science": {
-      "avg": 9.446,
-      "n": 5
+      "avg": 8.126,
+      "n": 6
     },
     "Wendover Productions": {
       "avg": 7.052,
@@ -2971,8 +3037,8 @@
       "n": 7
     },
     "The Rest Is History": {
-      "avg": 9.662,
-      "n": 7
+      "avg": 9.207,
+      "n": 8
     },
     "Nobel Prize": {
       "avg": 8.54,
@@ -2995,12 +3061,12 @@
       "n": 5
     },
     "Somatosphere": {
-      "avg": -8.57,
-      "n": 2
+      "avg": -3.233,
+      "n": 3
     },
     "Positive News": {
-      "avg": 11.348,
-      "n": 8
+      "avg": 10.803,
+      "n": 9
     },
     "Marginal REVOLUTION": {
       "avg": 8.313,
@@ -3015,8 +3081,8 @@
       "n": 6
     },
     "Resolution Foundation": {
-      "avg": -1.507,
-      "n": 3
+      "avg": -1.274,
+      "n": 4
     },
     "Angela Collier ": {
       "avg": 5.917,
@@ -3123,8 +3189,8 @@
       "n": 5
     },
     "World Science Festival": {
-      "avg": 12.328,
-      "n": 2
+      "avg": 11.194,
+      "n": 3
     },
     "Anthropology News": {
       "avg": -2.607,
@@ -3501,20 +3567,32 @@
     "The Analyst Inside Cricket": {
       "avg": 14.8,
       "n": 1
+    },
+    "Tyler Green": {
+      "avg": 8.25,
+      "n": 1
+    },
+    "Museum of Northwest Art": {
+      "avg": 7.15,
+      "n": 1
+    },
+    "Art of the Frame": {
+      "avg": 7.15,
+      "n": 1
     }
   },
   "type_performance": {
     "youtube": {
-      "avg": 8.252,
+      "avg": 8.12,
       "n": 100
     },
     "rss": {
-      "avg": 6.971,
+      "avg": 6.967,
       "n": 100
     },
     "podcast": {
-      "avg": 6.716,
-      "n": 78
+      "avg": 6.745,
+      "n": 81
     },
     "news": {
       "avg": -25.52,
@@ -3655,11 +3733,11 @@
     },
     "2026-06": {
       "Fix The News": 3,
-      "Dr Ben Miles": 2,
+      "Dr Ben Miles": 3,
       "Stand-up Maths": 1,
-      "The Rest Is History": 3,
+      "The Rest Is History": 4,
       "SciFri": 2,
-      "Reasons to be Cheerful": 3,
+      "Reasons to be Cheerful": 4,
       "Vicki Holloway": 1,
       "Hobby Golfer Jens Zielinski, Golf Coach Florian Fritsch, Golf Profi Bernd Ritthammer": 1,
       "Matthew (@1956ToppsGuy), Nate (@incardboardveritas), Jonathan (@sportscards.and.sunsets)": 1,
@@ -3668,7 +3746,7 @@
       "Natural History Museum": 1,
       "American Museum of Natural History": 2,
       "The Royal Society": 3,
-      "nature video": 1,
+      "nature video": 2,
       "Sean Carroll": 2,
       "Meg Ferrell": 1,
       "CiRCE Podcast Network": 1,
@@ -3680,7 +3758,7 @@
       "Practical Engineering": 1,
       "PBS Eons": 1,
       "Mind & Life Institute": 2,
-      "Positive News": 3,
+      "Positive News": 4,
       "Behavioral Scientist": 2,
       "Platypus": 3,
       "Invisible People": 2,
@@ -3732,7 +3810,7 @@
       "Heidi Zuckerman": 1,
       "Emory Arts": 1,
       "Timothy Kimo Brien": 1,
-      "The Rest Is Science": 1,
+      "The Rest Is Science": 2,
       "The New York Academy of Sciences": 1,
       "PBS Space Time": 1,
       "Kc Essentials": 1,
@@ -3746,7 +3824,13 @@
       "Experimental History": 1,
       "TED-Ed": 2,
       "The Analyst Inside Cricket": 1,
-      "NOEMA": 1
+      "NOEMA": 1,
+      "Resolution Foundation": 1,
+      "World Science Festival": 1,
+      "Tyler Green": 1,
+      "Museum of Northwest Art": 1,
+      "Art of the Frame": 1,
+      "Somatosphere": 1
     }
   },
   "monthly_domain_counts": {
@@ -3762,11 +3846,11 @@
       "economic": 14
     },
     "2026-06": {
-      "optimism_tech": 65,
-      "historical": 16,
+      "optimism_tech": 70,
+      "historical": 18,
       "economic": 9,
       "optimism_society": 7,
-      "general": 23,
+      "general": 28,
       "introspective": 7,
       "optimism_health": 10,
       "philosophical": 1
