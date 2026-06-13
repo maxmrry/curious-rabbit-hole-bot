@@ -124,6 +124,11 @@
       "cumulative": 2.0,
       "n": 1,
       "last_signal_ms": 1781343229765
+    },
+    "Resolution Foundation": {
+      "cumulative": -2.0,
+      "n": 1,
+      "last_signal_ms": 1781343300530
     }
   },
   "source_type_adjustments": {
@@ -136,8 +141,8 @@
       "n": 5
     },
     "youtube": {
-      "cumulative": -5.0,
-      "n": 17
+      "cumulative": -7.0,
+      "n": 18
     },
     "podcast": {
       "cumulative": -3.0,
@@ -472,6 +477,15 @@
       "source_type": "youtube",
       "context": "pretty_positive | Topic: Ancient whale graveyard discovered, spanning a thousand kilometers",
       "timestamp_ms": 1781343229765
+    },
+    {
+      "item_id": "FibMPsgb6Lo",
+      "signal": 0,
+      "signal_label": "not_interested",
+      "source_name": "Resolution Foundation",
+      "source_type": "youtube",
+      "context": "not_interested | Topic: Workers in precarious sectors seek influence over pay and conditions",
+      "timestamp_ms": 1781343300530
     }
   ],
   "ai_weight_overrides": {
