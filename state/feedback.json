@@ -119,6 +119,11 @@
       "cumulative": -2.0,
       "n": 1,
       "last_signal_ms": 1780860636712
+    },
+    "nature video": {
+      "cumulative": 2.0,
+      "n": 1,
+      "last_signal_ms": 1781343229765
     }
   },
   "source_type_adjustments": {
@@ -131,8 +136,8 @@
       "n": 5
     },
     "youtube": {
-      "cumulative": -7.0,
-      "n": 16
+      "cumulative": -5.0,
+      "n": 17
     },
     "podcast": {
       "cumulative": -3.0,
@@ -458,6 +463,15 @@
       "source_type": "feed",
       "context": "whole_feed_boring",
       "timestamp_ms": 1781135788241
+    },
+    {
+      "item_id": "accHqUSFPvs",
+      "signal": 2,
+      "signal_label": "pretty_positive",
+      "source_name": "nature video",
+      "source_type": "youtube",
+      "context": "pretty_positive | Topic: Ancient whale graveyard discovered, spanning a thousand kilometers",
+      "timestamp_ms": 1781343229765
     }
   ],
   "ai_weight_overrides": {
